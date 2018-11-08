@@ -4,7 +4,7 @@
 
 ### I. SDK 패키지 다운로드하기
 
-먼저 [UPSDK Download](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad")에서 UPSDK Egret TypeScript Plugin 패키지를 다운로드하고 압축해제 하시면, <br />
+먼저 [UPSDK Download](../chapters/chapter09.html "SDKDownLoad")에서 UPSDK Egret TypeScript Plugin 패키지를 다운로드하고 압축해제 하시면, <br />
 아래와 같은 세 개의 디렉토리들이 보입니다.
 
 - `UPSDK.framework`: UPSDK 메인 패키지이므로 현재 프로젝트에 추가합니다.

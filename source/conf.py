@@ -150,7 +150,8 @@ latex_elements = {
 
         \usepackage[utf8]{inputenc}
         \usepackage[T1]{fontenc}
-        \usepackage{CJKutf8}
+        \usepackage{xeCJK}
+        \setCJKmainfont{batang.ttc}
         \usepackage[english]{babel}
         \usepackage{etoolbox}
         \usepackage{newunicodechar}
@@ -161,13 +162,11 @@ latex_elements = {
 
         \begin{center}
 
-        \begin{CJK}{UTF8}{mj}
 
         \newunicodechar{λ}{$\lambda$}
         \newunicodechar{⇒}{$\rightarrow$}
         \newunicodechar{←}{$\leftarrow$}
         \texttt{(λ x ⇒ y ← x; y)}
-        \end{CJK}
         \end{center}
         \end{document}
         ''',

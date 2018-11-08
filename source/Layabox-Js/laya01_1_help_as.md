@@ -3,7 +3,7 @@
 ### I. UPSDK JavaScriptPlugin의 구조
 
 Android 스튜디오나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 *.aar 형식으로 가져와야 합니다. <br />
-UPSDK CppPlugin( [Android-LayaboxJsSDK](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad") UPSDK JsPlugin)를 다운받아 압축해제 하시면 <br />
+UPSDK CppPlugin( [Android-LayaboxJsSDK](../chapters/chapter09.html "SDKDownLoad") UPSDK JsPlugin)를 다운받아 압축해제 하시면 <br />
 아래의 그림과 같은 디렉토리 구조를 보실 수 있습니다.
 
 ![](http://docc.upltv.com/uploads/201809/5b98ed83ade86_5b98ed83.png)
@@ -199,4 +199,4 @@ UPSDK는 `*.js` 소스 파일을 통해 네이티브 인터페이스(Native Inte
 ### Ⅶ. 65535 제한문제 해결
 
 UPSDK 액세스의 메서드 수가 65535를 초과하여 빌드할 수 없는 경우 `MultiDex`를 사용합니다. 자세한 내용은 <br />
-[MultiDex Scheme](http://docs.upltv.com/docs/show/78 "Fix up 65535")을 참조하시기 바랍니다.
+[MultiDex Scheme](../Android/android02_65535.html "Fix up 65535")을 참조하시기 바랍니다.
