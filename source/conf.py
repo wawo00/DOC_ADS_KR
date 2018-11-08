@@ -66,7 +66,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'kr'
+language = 'ko'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -149,6 +149,7 @@ latex_elements = {
         \documentclass{article}
 
         \usepackage[utf8]{inputenc}
+        \usepackage{kotex}
         \usepackage[english]{babel}
         \usepackage[T1]{fontenc}
         \usepackage{etoolbox}
