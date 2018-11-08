@@ -133,55 +133,58 @@ htmlhelp_basename = 'UPInteractiveDocumentdoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
-# latex_elements = {
-#     # The paper size ('letterpaper' or 'a4paper').
-#     #
-#     # 'papersize': 'letterpaper',
-#
-#     # The font size ('10pt', '11pt' or '12pt').
-#     #
-#     # 'pointsize': '10pt',
-#
-#     # Additional stuff for the LaTeX preamble.
-#     #
-#     # 'preamble': '',
-#     'preamble': r'''
-#         \documentclass{article}
-#
-#         \usepackage[utf8]{inputenc}
-#         \usepackage[T1]{fontenc}
-#         \usepackage{CJK}
-#         \setCJKmainfont{batang.ttc}
-#         \usepackage[english]{babel}
-#         \usepackage{etoolbox}
-#         \let\xnewunicodechar\newunicodechar
-#         \AfterEndPreamble{\let\newunicodechar\xnewunicodechar}
-#
-#         \begin{document}
-#
-#         \begin{center}
-#
-#
-#         \newunicodechar{λ}{$\lambda$}
-#         \newunicodechar{⇒}{$\rightarrow$}
-#         \newunicodechar{←}{$\leftarrow$}
-#         \texttt{(λ x ⇒ y ← x; y)}
-#         \end{center}
-#         \end{document}
-#         ''',
-#
-#     # Latex figure (float) alignment
-#     #
-#     # 'figure_align': 'htbp',
-# }
+latex_elements = {
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    # 'papersize': 'letterpaper',
+
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    # 'pointsize': '10pt',
+
+    # Additional stuff for the LaTeX preamble.
+    #
+    # 'preamble': '',
+    'preamble': r'''
+        \documentclass{article}
+
+        \usepackage[utf8]{inputenc}
+        \usepackage[T1]{fontenc}
+        \usepackage{xeCJK}
+        \setCJKmainfont{ipaexm.ttf}
+        \setCJKmainfont{batang.ttc}
+        \usepackage[english]{babel}
+        \usepackage{etoolbox}
+        \usepackage{newunicodechar}
+        \let\xnewunicodechar\newunicodechar
+        \AfterEndPreamble{\let\newunicodechar\xnewunicodechar}
+
+        \begin{document}
+
+        \begin{center}
+
+
+        \newunicodechar{λ}{$\lambda$}
+        \newunicodechar{⇒}{$\rightarrow$}
+        \newunicodechar{←}{$\leftarrow$}
+        \newunicodechar{λ}{$\alpha + \beta = \int_a^b \sqrt{c + d} dx$}
+        \texttt{(λ x ⇒ y ← x; y)}
+        \end{center}
+        \end{document}
+        ''',
+
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-# latex_documents = [
-#     (master_doc, 'UPInteractiveDocument.tex', 'UPInteractive Document Documentation',
-#      'upltv', 'manual'),
-# ]
+latex_documents = [
+    (master_doc, 'UPInteractiveDocument.tex', 'UPInteractive Document Documentation',
+     'upltv', 'manual'),
+]
 
 
 # -- Options for manual page output ------------------------------------------
