@@ -163,11 +163,7 @@ latex_elements = {
 
         \begin{center}
 
-
-        \newunicodechar{λ}{$\lambda$}
-        \newunicodechar{⇒}{$\rightarrow$}
-        \newunicodechar{←}{$\leftarrow$}
-        \newunicodechar{λ}{$\alpha + \beta = \int_a^b \sqrt{c + d} dx$}
+        \weCJK{$\alpha + \beta = \int_a^b \sqrt{c + d} dx$}
         \texttt{(λ x ⇒ y ← x; y)}
         \end{center}
         \end{document}
