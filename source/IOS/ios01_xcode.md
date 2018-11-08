@@ -16,7 +16,7 @@
 
 ### 타사 라이브러리 추가하기
 타사와의 연결을 위해 타사 라이브러리를 프로젝트에 추가합니다. <br />
-타사 라이브러리는 [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html)에서 다운로드하세요.
+타사 라이브러리는 [이곳](../chapters/chapter09.html)에서 다운로드하세요.
 현재 UPSDK의 주요 타사는 아래와 같습니다.
 
 ![ios_02](http://docc.upltv.com/uploads/201808/5b88d65b062ae_5b88d65b.png "ios_02")

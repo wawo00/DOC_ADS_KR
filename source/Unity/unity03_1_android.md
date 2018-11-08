@@ -38,13 +38,13 @@ V24.1.1 버전은 Plugin이 권장하는 버전입니다. 프로젝트에 다른
 
 2. 5.0.0 버전에서는 apk 패키징 프로세스 동안, AndroidManifest.xml합병 후 권한을 잃어버렸다면 <br />
 \Assets\Plugins\Android 페이지에 AndroidManifest.xml을 추가해야 합니다. <br />
-[5.0.0 AndroidManifest 다운로드 페이지](../chapters/chapter09 "SDKDownLoad")
+[5.0.0 AndroidManifest 다운로드 페이지](../chapters/chapter09.html "SDKDownLoad")
 
 > 필요한 파일을 찾지 못한 경우 UPLTV의 기술 지원팀 담당자와 상의하세요.
 
 ### IV. Unity 프로젝트의 컴파일 에러
 
-Unity 컴파일 에러 해결 방법은 [이곳](../Android/android01_3_help_faq "常见问题")에서 Android 결합 문제 솔루션을 참조하시기 바랍니다.
+Unity 컴파일 에러 해결 방법은 [이곳](../Android/android01_3_help_faq.html "常见问题")에서 Android 결합 문제 솔루션을 참조하시기 바랍니다.
 
 ### V. Unity Android proguard 구성
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04807914-d837-4091-a2a1-0a4092b74880" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/IOS/ios01_xcode.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/IOS/ios01_xcode.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="chapter10.rst" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chapter10.rst" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/chapters/chapter10.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="126">
+              <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -26,8 +27,20 @@
         <entry file="file://$PROJECT_DIR$/source/Unity/unity06_1_multidex_guide.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="126">
-                <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+              <first_editor relative-caret-position="226">
+                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ios01_xcode.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/IOS/ios01_xcode.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="250">
+                <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               </first_editor>
               <second_editor />
             </state>
@@ -98,15 +111,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chapter00.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/chapters/chapter00.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="39" column="138" selection-start-line="39" selection-start-column="138" selection-end-line="39" selection-end-column="138" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="android01_1_help_as.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/Android/android01_1_help_as.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -135,9 +139,10 @@
         <option value="$PROJECT_DIR$/source/conf.py" />
         <option value="$PROJECT_DIR$/source/chapters/chapter00.rst" />
         <option value="$PROJECT_DIR$/source/Android/android01_1_help_as.md" />
-        <option value="$PROJECT_DIR$/source/Unity/unity06_1_multidex_guide.md" />
         <option value="$PROJECT_DIR$/source/Unity/unity03_1_android.md" />
         <option value="$PROJECT_DIR$/source/chapters/chapter10.rst" />
+        <option value="$PROJECT_DIR$/source/Unity/unity06_1_multidex_guide.md" />
+        <option value="$PROJECT_DIR$/source/IOS/ios01_xcode.md" />
       </list>
     </option>
   </component>
@@ -189,7 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="cha&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/chapters/chapter10.rst&#10;unity03_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity03_1_android.md&#10;unity06_multi_gu&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity06_1_multidex_guide.md&#10;chapter10&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/chapters/chapter10.rst" />
+    <property name="SearchEverywhereHistoryKey" value="03_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity03_1_android.md&#10;ios01_xcode&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/IOS/ios01_xcode.md&#10;unity06_1_multidex_guid&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity06_1_multidex_guide.md&#10;cha&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/chapters/chapter10.rst&#10;unity03_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity03_1_android.md&#10;unity06_multi_gu&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity06_1_multidex_guide.md&#10;chapter10&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/chapters/chapter10.rst" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../upsdk.zh_CN" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -222,10 +227,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5873000" />
+    <option name="totallyTimeSpent" value="6164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -236,7 +242,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.53352356" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.26961485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -347,16 +353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Unity/unity06_1_multidex_guide.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="126">
-            <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/Unity/unity03_1_android.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -369,8 +365,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/chapters/chapter10.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="126">
+          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Unity/unity06_1_multidex_guide.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="226">
+            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/IOS/ios01_xcode.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="250">
+            <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
