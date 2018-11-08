@@ -150,11 +150,10 @@ latex_elements = {
 
         \usepackage[utf8]{inputenc}
         \usepackage[T1]{fontenc}
-        \usepackage{xeCJK}
+        \usepackage{CJK}
         \setCJKmainfont{batang.ttc}
         \usepackage[english]{babel}
         \usepackage{etoolbox}
-        \usepackage{newunicodechar}
         \let\xnewunicodechar\newunicodechar
         \AfterEndPreamble{\let\newunicodechar\xnewunicodechar}
 
