@@ -1,27 +1,33 @@
-## UnityPlugin Guide
+## Unity Plugin 가이드
 
-UPSDK Unity Plugin including UPLTV AD SDK (Android,IOS platform and dependent library), designed for C#, provides native API calls, and implements business functions such as interstitial ad, reward video ad, and banner ad.
+C#으로 설계된 UPLTV AD SDK(Android,iOS 플랫폼 및 의존성 라이브러리)를 포함하는 <br />
+UPSDK Unity Plugin은 native API 호출을 제공하며, 삽입 광고(Interstitial Ad), 삽입 광고(Interstitial Ad) <br />
+및 배너 광고(Banner Ad)와 같은 비즈니스 기능을 구현합니다.
 
-Due to the excessive versions of Unity , we have support for the following versions of the following platforms:
-1. Android,only support Unity 5.0.0 and following version
-2. Ios,only support Unity 5.1.0 and following version
+UPLTV는 아래와 같은 플랫폼 및 버전을 지원합니다.
 
-> If you need to support an earlier version, please contact us.
+- `Android`에서는 Unity 5.0.0 및 상위 버전만 지원합니다.
+- `iOS`에서는 Unity 5.1.0 및 상위 버전만 지원합니다.
 
-The UPSDK Unity Plugin contains the support components needed for the android and ios platforms. Considering that the IOS SDK body size is very different from the Android version, three access methods will be provided, please choose the suitable way according to the actual situation.
+> 하위 버전에 대한 지원이 필요하시다면 담당자에게 문의하여 추가 지원을 받아보세요.
 
-1. Only Android platform
-    
-    If your app is only be released for the Android market, only the Android platform plugin is your best choice. The size of the plugin is less than 10M , is very lightweight compared to IOS (540 M).
-	
-2. Only Ios platform
+UPSDK Unity Plugin에는 Android 및 iOS 플랫폼에 필요한 지원 요소가 포함되어 있습니다. <br />
+iOS SDK의 용량은 Android 버전과 차이가 크므로, 세 가지 액세스 방법이 제공됩니다. <br />
+상황에 따라 적절한 방법을 선택하시기 바랍니다.
 
-	If your app is only be released for the Ios market, only the Ios platform plugin is your best choice. Since the plug-in package is large (including the IOS support of UPSDK and the third-party library), please keep the network connection stable when downloading.
-	
-> As the IOS plugin package is much larger than Android, we will no longer provide a individual IOS plugin package..
-	
-3. Android and Ios platform
+##### 1. Android 플랫폼 전용
+> Android 플랫폼용으로만 앱을 출시하는 경우 Android 플랫폼 Plugin만 선택하는 것이 좋습니다. <br />
+Plugin의 크기(<10M)는 iOS(540M)에 비해 매우 가볍습니다. <br />
 
-	If your app designed  for both Android and iOS markets, such plugin will be your best choice. This package includes Android and Ios support of UPSDK and corresponding third-party libraries (about 550M, please keep the network work well when downloading),
+##### 2. iOS 플랫폼 전용
+>iOS 플랫폼용으로만 앱을 출시하는 경우 iOS 플랫폼 Plugin만 선택하는 것이 좋습니다. <br />
+Plugin 패키지가 크므로(UPSDK의 iOS 지원 및 타사 라이브러리 포함) 다운로드할 때 네트워크 연결을 <br />
+안정적으로 유지하시기바랍니다. <br />
+> iOS Plugin 패키지가 Android보다 훨씬 크기 때문에, 더 이상 iOS Plugin 패키지를 개별로 제공하지 않습니다. <br />
 
-#### Download in [UPSDK Unity Plugin DownLoad](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad") .
+##### 3. Android and iOS
+> Android 및 iOS 플랫폼을 모두 고려해 설계된 앱인 경우, UPSDK Unity Plugin을 권장합니다. <br />
+이 패키지(550M)에는 UPSDK 및 해당 타사 라이브러리의 Android 및 iOS 지원이 포함됩니다. <br />
+(다운로드 시 안정된 네트워크 상태를 유지하시기 바랍니다).
+
+#### [UPSDK Unity Plugin 다운로드](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad")

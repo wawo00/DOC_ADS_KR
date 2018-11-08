@@ -1,23 +1,28 @@
-## Reward video Ad
+## 리워드 동영상 광고(Reward video Ad)
 
-#### 1. Load callback of Reward video
-  This API is used to listen for the loading results of the current excited video. Once this interface is called back, the internal will be automatically released, and the callback interface needs to be reset when listening again.
+#### 1. 리워드 동영상 광고 콜백 로드하기
+
+  이 API는 현재 진행 중인 리워드 동영상 광고의 로딩 결과를 수신하는 데 사용됩니다. 이 인터페이스가 호출되면 <br />
+  내부가 자동으로 릴리즈되며 광고를 다시 수신할 때, 콜백 인터페이스를 재설정해야 합니다.
+
 ```cpp
 /**
-* Set the reward video load callback interface method
-* @param successCall Motivate the callback when the video is loaded successfully，successCall(cpadid, msg)
-* @param failCall    Motivate the callback when the video is loaded failed，failCall(cpadid, msg)
+* 리워드 동영상 광고 로드 콜백 인터페이스 메소드를 설정합니다.
+* @param successCall 동영상이 성공적으로 로드됐을 때 콜백을 활성화 합니다.(cpadid, msg)
+* @param failCall    동영상이 성공적으로 로드되지못했을 때 콜백을 활성화 합니다.(cpadid, msg)
 */
 static void setRewardVideoLoadCallback(UpltvSdkStringCallback_2 successCall, UpltvSdkStringCallback_2 failCall);
 ```
-For example：
+
+예시：
+
 ```cpp
-// This method is called back when the video is loaded successfully
+// 이 메소드는 광고가 성공적으로 로드되었을 때 호출 됩니다.
 void rdLoadCallSuccess(const char *cpid, const char *msg) {
     log("====> reward video didLoad Success at cpid: %s", (cpid != nullptr ? cpid : ""));
 }
 
-// This method is called back when the video is loaded failed
+// 이 메소드는 광고가 성공적으로 로드되지 못했을 때 호출 됩니다.
 void rdLoadCallFail(const char *cpid, const char *msg) {
     log("====> reward video didLoad Fail at cpid: %s", (cpid != nullptr ? cpid : ""));
 }
@@ -29,7 +34,7 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
         {
             case 1001:
             {
-                // Set the reward video load callback interface
+                // 리워드 동영상 로드 콜백 인터페이스를 설정합니다.
                 UpltvSdkStringCallback_2 loadSuccess = rdLoadCallSuccess;
                 UpltvSdkStringCallback_2 loadFail = rdLoadCallFail;
                 UpltvBridge::setRewardVideoLoadCallback(loadSuccess, loadFail);
@@ -39,8 +44,12 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
    }
 }
 ```
-#### 2. Show callback of Reward video Ad
-  Set up the callback interface of video show to listen to the callback of the event (click, close, reward, etc.) of the video advertisement. Reward video shows that the reference to the callback interface is stored internally and not released, so you only need to set it once.
+
+#### 2. 리워드 동영상 광고의 실행 콜백
+
+리워드 동영상 광고의 이벤트(클릭, 닫기, 보상 등) 콜백을 수신하도록 콜백 인터페이스를 설정합니다. <br />
+리워드 동영상은 콜백 인터페이스에 대한 참조가 내부적으로 저장되고 릴리스되지 않으므로 한 번만 설정하면 됩니다.
+
 ```cpp
 /**
 * @param callback(type, cpid)
@@ -48,9 +57,10 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
 static void setRewardVideoShowCallback(UpltvSdkStringCallback_1 callback);
 ```
 
-For example：
+예시：
+
 ```cpp
-// Call back this method to listen for the event type when the video is showing
+// 동영상이 재생되는 동안 이벤트 유형에 따른 메소드를 콜백하여 수신합니다.
 void rdShowCallback(UpltvAdEventEnum::AdEventType type, const char *cpid) {
     string s = "unkown";
     switch (type) {
@@ -87,7 +97,7 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
             case 1001:
             {
                 {
-                //Set up the callback interface of the video show to listen to the callback of events such as click, close, and award during a display of the video advertisement
+                //동영상 광고가 실행되는 동안 이벤트(클릭, 닫기, 보상 등) 콜백을 수신하도록 콜백 인터페이스를 설정합니다.
                 UpltvBridge::setRewardVideoShowCallback(rdShowCallback);
             }
                 break;
@@ -95,17 +105,22 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
    }
 }
 ```
-#### 3. Judge if the Reward Video ad is ready
-Synchronously return Boolean results, true indicates that the AD is ready to be displayed, and false indicates that the AD is not show and still  in the request
-  ```cpp
+
+#### 3. 리워드 동영상 광고 준비 여부 확인하기
+
+Bool 결과를 동시에 반환합니다. True는 광고가 디스플레이 준비가 되었다는 것을 의미하고, <br />
+False는 광고가 실행되지 않고, 여전히 요청상태에 있다는 것을 의미합니다.
+
+```cpp
  /**
-* This method is usually called before showRewardVideo(cpPlaceId)
+* 이 메소드는 showRewardVideo(cpPlaceId) 전에 호출합니다.
 * @return bool
 */
 static bool isRewardReady();
 ```
 
-For example：
+예시：
+
 ```cpp
 void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEventType type, int tag)
 {
@@ -115,7 +130,7 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
             case 1001:
             {
                 {
-                // judge if the video ad is ready
+                // 동영상이 준비되었는지 판단합니다.
                 bool r = UpltvBridge::isRewardReady();
                 log("====> cpp print isRewardReady : %s",(r?"true":"false"));
             }
@@ -124,8 +139,11 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
    }
 }
 ```
-#### 4. Show Reward Video Ad 
-When show the Reward Video ad, you need to upload a cpPlaceId, which is the placementid , used for business management, in order to distinguish the source of revenue.
+#### 4. 리워드 동영상 광고 실행하기
+
+리워드 동영상 광고를 실행 할 때, cpPlaceld를 업로드 해야합니다. cpPlaceld는 비즈니스 관리와 같은 <br />
+수익 소스를 구분하기 위한 매개변수입니다.
+
 ```cpp
 /**
 * @param cpPlaceId placementid
@@ -133,7 +151,9 @@ When show the Reward Video ad, you need to upload a cpPlaceId, which is the plac
 static void showRewardVideo(const char* cpPlaceId);
 
 ```
-For example：
+
+예시：
+
 ```cpp
 void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEventType type, int tag)
 {
@@ -152,12 +172,18 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
    }
 }
 ```
-#### 5. Debug view of Reward Video Ad
-In order to help developers to view the use and loading status of ad, we provide a debug page for the ad of the screen, which can be opened to observe the configuration parameters and loading status of the ad.
+
+#### 5. 리워드 동영상 광고의 디버그 페이지
+
+개발자가 광고의 사용 및 로딩 상태를 볼 수 있도록 하기 위해, UPLTV는 스크린 광고에 대한 디버그 페이지를 제공합니다. <br />
+광고의 매개변수 및 로딩 상태 구조를 확인하실 수 있습니다.
+
 ```cpp
 static void showRewardVideoDebugUI();
 ```
-For example：
+
+예시：
+
 ```cpp
 void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEventType type, int tag)
 {
@@ -175,4 +201,3 @@ void HelloWorld::touchEvent(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEve
    }
 }
 ```
-

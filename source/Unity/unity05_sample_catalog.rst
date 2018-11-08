@@ -1,11 +1,11 @@
 =============================
-UnityPlugin API 
+Unity Plugin API
 =============================
 
-Introduce api of UPSDK and Sample.
+UPSDK의 API와 샘플 소개
 
 
-Contents:
+콘텐츠:
 
 .. toctree::
    :maxdepth: 1

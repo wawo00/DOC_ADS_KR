@@ -1,30 +1,32 @@
 
 ## GDPR
 
-`GDPR "The General Data Protection Regulation" is a data protection program issued by the European Union. `
-If your product is intended for EU users, we offer the following solutions to ensure that `UPSDK` complies with the `GDPR' rules.
+`GDPR(The General Data Protection Regulation)`은 2018년 5월 25일부터 시행된 EU(유럽연합)의 개인정보보호 법령이며, <br />
+`UPSDK`는 아래와 같은 솔루션을 제공함으로써 `GDPR`을 준수하고 있습니다. EU 지역에서 서비스 하실 때에 안심하고 <br />
+ 사용하실 수 있습니다.
 
-`UPSDK` supports the EU `GDPR` rules in the `3.0.03` version, and developers who will distribute in EU region must handle this logic.
+GDPR을 따른 UPSDK 버전은 `3.0.03`부터 적용되어 있습니다.
 
-### GDPR Samples
-#### Customizing implementation
-Customized dialog of GDPR according to the style of your game to ensure the best product experience.
-When adopting this scheme, it is only necessary to inform the UPSDK of the authorization result before initializing the UPSDK.
 
-Sample：
+### GDPR 샘플
+#### I. 맞춤형 구현
+서비스를 최상의 상태로 구현하기 위해, 각 사의 게임 화면의 스타일에 따라 GDPR 권한 승인 창을 설정합니다. <br />
+맞춤형 구현을 하셨다면, GDPR 권한 승인 결과를 UPSDK에 알려주시고 초기화를 진행합니다.
+
+샘플:
 ```csharp
 {
-    // old code for initialization
+    // 이전 초기화 코드
     // AvidlyAdsSdk.init(xxxx);
 
-    // new code for GDPR
+    //  GDPR을 위한 새로운 초기화 코드
     AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum result=UPAdsSdk.getAccessPrivacyInfoStatus(MainActivity.this);
     if (result ==  AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusUnkown
         || result ==  AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusDefined) {
-         // if the user is in the EU
+         // 게임 유저가 EU 지역에 있을 경우
         UPAdsSdk.isEuropeanUnionUser (MainActivity.this,isEuropeanUserCallback);
     } else {
-        
+
         UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
     }
 
@@ -35,22 +37,22 @@ UPAdsSdk.UPEuropeanUnionUserCheckCallBack isEuropeanUserCallback=new UPAdsSdk.UP
     @Override
     public void isEuropeanUnionUser(boolean result) {
         if (result) {
-            // client in the EU，ask for authorizing
+            // EU 지역 게임 유저에게 GDPR권한 요청합니다.
             // ......
             // ......
-    
-            // please use this method
-            // if people deny this protocol,tell upsdk throught following method
+
+            // 이 메소드를 사용합니다.
+            // 게임 유저가 권한을 거부하였다면 아래의 매소드를 통하여 UPSDK에 알려주시기 바랍니다.
             UPAdsSdk.updateAccessPrivacyInfoStatus(this, AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusDefined);
-  
-            //  if people agree this protocol,tell upsdk throught following method
+
+            //  게임 유저가 권한을 승인하였다면 아래의 매소드를 통하여 UPSDK에 알려주시기 바랍니다.
             UPAdsSdk.updateAccessPrivacyInfoStatus(this, AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusAccepted);
 
-            // initializing after calling  updateAccessPrivacyInfoStatus()
+            // updateAccessPrivacyInfoStatus() 호출 이후 초기화
             UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
 
         } else {
-            // if client is not in the EU,just initializing upsdk
+            // 게임 유저가 EU 역외에 있을 경우, UPSDK를 바로 초기화 합니다
             UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
         }
     }
@@ -58,23 +60,23 @@ UPAdsSdk.UPEuropeanUnionUserCheckCallBack isEuropeanUserCallback=new UPAdsSdk.UP
 
 ```
 
-#### Quick implementation
-If you use the standard authorization process provided by UPSDK, please refer to the following code .
+#### II. 빠른 구현
+UPSDK에서 제공하는 표준 승인 프로세스를 사용하신다면 아래와 같은 코드를 사용합니다.
 
-Sample：
+샘플：
 
 ```csharp
 
 {
-    // old code for initialization
+    // 이전 초기화 코드
     // AvidlyAdsSdk.init(xxxx);
 
-    // new code for GDPR
+    // GDPR을 위한 새로운 초기화 코드
     AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum result=UPAdsSdk.getAccessPrivacyInfoStatus(MainActivity.this);
     if (result ==  AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusUnkown
         || result ==  AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusDefined) {
 
-        //if the user is in the EU
+        //게임 유저가 EU 지역에 있을 경우
         UPAdsSdk.isEuropeanUnionUser (MainActivity.this,isEuropeanUserCallback);
     } else {
         UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
@@ -86,14 +88,14 @@ UPAdsSdk.UPEuropeanUnionUserCheckCallBack isEuropeanUserCallback = new UPAdsSdk.
     @Override
     public void isEuropeanUnionUser(boolean result) {
         if (result) {
-            // result: true means that client in the EU
+            // result: true는 게임 유저가 EU 지역에 있다는 것을 의미합니다.
             // ......
             // ......
 
-            //pop up Dialog to ask authorizing
+            // EU 지역 게임 유저에게 GDPR권한 요청합니다.
              UPAdsSdk.notifyAccessPrivacyInfoStatus(MainActivity.this,myAccessPrivacyStatusInfoCallBack);
         } else {
-            // if client is not in the EU,just initializing upsdk
+            // 게임 유저가 EU 역외에 있을 경우, UPSDK를 바로 초기화 합니다.
             UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
         }
     }
@@ -120,14 +122,15 @@ private UPAdsSdk.UPAccessPrivacyInfoStatusCallBack myAccessPrivacyStatusInfoCall
 ```
 ### GDPR API
 
-#### 1.notifyAccessPrivacyInfoStatus
+#### 1. 개발자가 스스로 GDPR 권한 요청 가능한 상황
 
-The authorization window pops up to explain to the user that we will collect data and ask the user whether to approve the authorization. If the user refuses to authorize, the collection of related data will be abandoned. Please call before initializing the UPSDK.
+권한 부여 창이 팝업되어 유저에게 데이터 수집 권한을 요청합니다. <br />
+유저가 권한을 거부하면 관련 데이터 수집이 취소됩니다. UPSDK를 초기화 하기 전에 호출하시기 바랍니다.
 
 ```csharp
 public static void notifyAccessPrivacyInfoStatus(final Context context, final UPAdsSdk.UPAccessPrivacyInfoStatusCallBack callback)
 ```
-Sample：
+샘플：
 
 ```csharp
 UPAdsSdk.notifyAccessPrivacyInfoStatus(MainActivity.this,myAccessPrivacyStatusInfoCallBack);
@@ -143,12 +146,13 @@ private UPAdsSdk.UPAccessPrivacyInfoStatusCallBack myAccessPrivacyStatusInfoCall
        Log.i(TAG, "onAccessPrivacyInfoDefined");
    }
 };
-  
+
 ```
 
 
-#### 2.updateAccessPrivacyInfoStatus
-When externally asking GDPR authorization, this method is called to inform the UPSDK of the user authorization result, and UPSDK will no longer perform authorization popup management. Please call before initializing the UPSDK.
+#### 2. 개발자가 스스로 게임유저에게 개인정보 사용에 관한 권한 요청을 할 수 없는 상황
+외부에서 GDPR 권한을 요청할 경우 이 메소드를 통해 UPSDK에 유저 권한 결과를 업로드합니다. <br />
+UPSDK는 더 이상 권한 부여 팝업 창을 띄우지 않습니다. UPSDK를 초기화하기 전에 호출하시기 바랍니다.
 
 ```csharp
 public static void updateAccessPrivacyInfoStatus(final Context context,UPConstant.UPAccessPrivacyInfoStatusEnum enumValue)
@@ -158,37 +162,37 @@ Sample：
 
 ```csharp
 /**
-* agree to collect data
+* 데이터 수집을 승인
 */
 UPAdsSdk.updateAccessPrivacyInfoStatus(this, AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusAccepted);
 
 /**
- * disagree to collect data
+ * 데이터 수집을 거부
  */
 UPAdsSdk.updateAccessPrivacyInfoStatus(this, AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusDefined);
 
 ```
 
 
-#### 3.getAccessPrivacyInfoStatus
-Obtain the user authorization result, which can be called before initializing the UPSDK.
+#### 3. GDPR 승인 여부 확인하기
+게임유저의 권한 승인 여부를 UPSDK를 초기화하기 전에 호출하실 수 있습니다.
 
 ```groovy
 public static UPAccessPrivacyInfoStatusEnum getAccessPrivacyInfoStatuss(Context context)
 ```
 
-Sample：
+샘플：
 ```csharp
 AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum result=UPAdsSdk.getAccessPrivacyInfoStatus(MainActivity.this);
 ```
 
-#### 4.isEuropeanUnionUser
-Determine whether the user belongs to the EU region,which can be called before initializing the UPSDK 
+#### 4. 게임유저의 지역 확인하기
+게임유저가 EU 지역에 있는지에 대한 여부를 UPSDK를 초기화하기 전에 호출하실 수 있습니다.
 
 ```csharp
 public static void isEuropeanUnionUser(Context context, UPAdsSdk.UPEuropeanUnionUserCheckCallBack callback)
 ```
-Sample：
+샘플：
 ```csharp
  UPAdsSdk.isEuropeanUnionUser(MainActivity.this, new UPAdsSdk.UPEuropeanUnionUserCheckCallBack() {
     @Override
@@ -201,4 +205,3 @@ Sample：
     }
 });
 ```
-

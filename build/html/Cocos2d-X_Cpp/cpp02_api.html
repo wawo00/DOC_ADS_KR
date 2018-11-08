@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CppPlugin Sample" href="cpp03_sample_catalog.html" />
-    <link rel="prev" title="IOS" href="cpp01_3_help_ios.html" /> 
+    <link rel="next" title="CppPlugin 샘플" href="cpp03_sample_catalog.html" />
+    <link rel="prev" title="iOS" href="cpp01_3_help_ios.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,19 +82,19 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="cpp01_help_catalog.html">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp01_help_catalog.html">빠른 시작</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">UPSDK cocos2d-X Cpp API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cpp03_sample_catalog.html">CppPlugin Sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp03_sample_catalog.html">CppPlugin 샘플</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -158,12 +158,12 @@
             
   <div class="section" id="upsdk-cocos2d-x-cpp-api">
 <span id="upsdk-cocos2d-x-cpp-api"></span><h1>UPSDK cocos2d-X Cpp API<a class="headerlink" href="#upsdk-cocos2d-x-cpp-api" title="Permalink to this headline">¶</a></h1>
-<p>Under the entire <strong>UpltvCppBridge</strong> directory, there is a * upltvbridge.h * file, which mainly defines some external access apis and callback functions.</p>
+<p>전체 <strong>UpltvCppBridge</strong> 디렉토리에는 * upltvbridge.h * 파일, 주로 외부 액세스 API 및 콜백 기능을 정의합니다.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;UpltvBridge.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
-<div class="section" id="the-callback-function-definition">
-<span id="the-callback-function-definition"></span><h2>1. The callback function definition：<a class="headerlink" href="#the-callback-function-definition" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id1"></span><h2>1. 콜백 기능 정의<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">UpltvSdkBoolCallback</span><span class="p">)(</span><span class="kt">bool</span> <span class="n">r</span><span class="p">);</span>
 <span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">UpltvSdkStringBoolCallback</span><span class="p">)(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpadid</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">r</span><span class="p">);</span>
 <span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">UpltvSdkStringCallback_1</span><span class="p">)(</span><span class="n">UpltvAdEventEnum</span><span class="o">::</span><span class="n">AdEventType</span> <span class="n">type</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpadid</span><span class="p">);</span>
@@ -172,32 +172,33 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="enumerated-type">
-<span id="enumerated-type"></span><h2>2. Enumerated type<a class="headerlink" href="#enumerated-type" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ad-callback-event">
-<span id="ad-callback-event"></span><h3>2.1 AD callback event<a class="headerlink" href="#ad-callback-event" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="">
+<span id="id2"></span><h2>2. 열거형<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id3"></span><h3>2.1  광고 콜백 이벤트<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UpltvAdEventEnum</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
     <span class="k">enum</span> <span class="k">class</span> <span class="nc">AdEventType</span>
     <span class="p">{</span>
-        <span class="c1">// reward video callback event type</span>
-        <span class="n">VIDEO_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">//reward video show</span>
-        <span class="n">VIDEO_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">//reward video click</span>
-        <span class="n">VIDEO_EVENT_DID_CLOSE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">//reward video close</span>
-        <span class="n">VIDEO_EVENT_DID_GIVEN_REWARD</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">//reward video give reward</span>
-        <span class="n">VIDEO_EVENT_DID_ABANDON_REWARD</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">//rewardvideo ads don‘t meet the criteria and give up the rewards</span>
+        <span class="c1">// 리워드 동영상 콜백 이벤트 유형</span>
+        <span class="n">VIDEO_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">//리워드 동영상 실행하기</span>
+        <span class="n">VIDEO_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">//리워드 동영상 클릭하기</span>
+        <span class="n">VIDEO_EVENT_DID_CLOSE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">//리워드 동영상 닫기</span>
+        <span class="n">VIDEO_EVENT_DID_GIVEN_REWARD</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">//리워드 동영상을 통해 보상하기</span>
+        <span class="n">VIDEO_EVENT_DID_ABANDON_REWARD</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">//보상 조건을 충족하지 못했으므로 보상하지 않기</span>
 
-        <span class="c1">// interstitial callback event type</span>
-        <span class="n">INTERSTITIAL_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">//interstitial show</span>
-        <span class="n">INTERSTITIAL_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>  <span class="c1">//interstitial click        INTERSTITIAL_EVENT_DID_CLOSE = 7,  //interstitial close</span>
+        <span class="c1">// 삽입 광고 콜백 이벤트 유형</span>
+        <span class="n">INTERSTITIAL_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>   <span class="c1">//삽입 광고 실행하기</span>
+        <span class="n">INTERSTITIAL_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>  <span class="c1">//삽입 광고 클릭하기        </span>
+        <span class="n">INTERSTITIAL_EVENT_DID_CLOSE</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 삽입 광고 닫기</span>
 
-        <span class="c1">// Banner callback event type</span>
-        <span class="n">BANNER_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>  <span class="c1">//banner show</span>
-        <span class="n">BANNER_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>  <span class="c1">//banner click</span>
-        <span class="n">BANNER_EVENT_DID_REMOVED</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">//remove banner</span>
+        <span class="c1">// 배너 광고 콜백 이벤트 유형</span>
+        <span class="n">BANNER_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>  <span class="c1">//배너 광고 실행하기</span>
+        <span class="n">BANNER_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>  <span class="c1">//배너 광고 클릭하기</span>
+        <span class="n">BANNER_EVENT_DID_REMOVED</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">//배너 광고 삭제하기</span>
 
-        <span class="c1">// exit event type</span>
+        <span class="c1">// exit 이벤트 유형</span>
         <span class="n">EXITAD_EVENT_DID_SHOW</span> <span class="o">=</span> <span class="mi">11</span><span class="p">,</span>
         <span class="n">EXITAD_EVENT_DID_CLICK</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
         <span class="n">EXITAD_EVENT_DID_CLICKMORE</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span>
@@ -209,8 +210,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="authorized-status-of-gdpr">
-<span id="authorized-status-of-gdpr"></span><h3>2.2 Authorized status of GDPR<a class="headerlink" href="#authorized-status-of-gdpr" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gdpr">
+<span id="gdpr"></span><h3>2.2 GDPR 승인 상황<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UpltvGDPRPermissionEnum</span> <span class="p">{</span>
 
 <span class="k">public</span><span class="o">:</span>
@@ -226,111 +227,111 @@
 </div>
 </div>
 </div>
-<div class="section" id="introduction-to-api">
-<span id="introduction-to-api"></span><h2>3. Introduction to API<a class="headerlink" href="#introduction-to-api" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="initialize-the-sdk">
-<span id="initialize-the-sdk"></span><h3>3.1 Initialize the SDK ：<a class="headerlink" href="#initialize-the-sdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="api">
+<span id="api"></span><h2>3. API 도입<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sdk">
+<span id="sdk"></span><h3>3.1 SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Initialize the UPSDK</span>
-<span class="cm">* Be sure to complete the SDK initialization first before using the SDK&#39;s other API interfaces</span>
-<span class="cm">* @param zone Product distribution area, 0 overseas, 1 domestic, 2 automatically based on IP positioning</span>
-<span class="cm">*/</span>
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">initSdkByZone</span><span class="p">(</span><span class="kt">int</span> <span class="n">zone</span><span class="p">);</span>
+<span class="cm">* UPSDK를 초기화합니다</span>
+<span class="cm">* SDK의 다른 API 인터페이스를 사용하기 전에 SDK 초기화를 완료하시기 바랍니다</span>
+<span class="cm">* @param zone 제품 배포 지역, 0: 중국을 제외한 해외, 1: 중국,  2: IP에 의해 자동 설정</span>
+<span class="cm">static void initSdkByZone(int zone);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Initialize the UPSDK</span>
-<span class="cm">* Be sure to complete the SDK initialization first before using the SDK&#39;s other API interfaces</span>
-<span class="cm">* @param zone Product distribution area, 0 overseas, 1 domestic, 2 automatically based on IP positioning</span>
-<span class="cm">* @param callback The callback interface after the SDK initialization is completed. The callback interface contains a Boolean parameter callback(Boolean). True indicates success or failure</span>
+<span class="cm">* UPSDK를 초기화합니다</span>
+<span class="cm">* SDK의 다른 API 인터페이스를 사용하기 전에 SDK 초기화를 완료하시기 바랍니다</span>
+<span class="cm">* @param zone 제품 배포 지역, 0: 중국을 제외한 해외, 1: 중국,  2: IP에 의해 자동 설정</span>
+<span class="cm">* @param callback SDK 초기화가 완료된 후 콜백 인터페이스, 콜백 인터페이스는 Boolean 매개변수 콜백(Boolean)을 포함하며, 성공 및 실패를 나타냅니다</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">initSdkByZoneWithCall</span><span class="p">(</span><span class="kt">int</span> <span class="n">zone</span><span class="p">,</span> <span class="n">UpltvSdkBoolCallback</span> <span class="n">callback</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* 当前游戏或应用进行后台或前台时，请调用此接口通知upsdk状态的改变</span>
-<span class="cm">* 进入后台时，参数hasfocus设置为fasle，进入前台活跃时，设置为true</span>
-<span class="cm">* 请在cocos2d-x 当前工程AppDelegate.cpp中添加此方法，详情可参考使用示例-&gt;UPSDK初始化-&gt;onApplicationFocus()添加</span>
+<span class="cm">* 게임 혹은 앱이 실행되고 있을 때, 아래를 호출하여 UPSDK에게 상태 변동을 알려줍니다</span>
+<span class="cm">* 백그라운드에 진입할 때 hasfocus 매개변수를 false로 설정하고, 포그라운드로 진입 할 때에는  true로 설정합니다</span>
+<span class="cm">* cocos2d-x에서, 현재 프로젝트 AppDelegate.cpp에 이 메소드를 추가합니다. 자세한 내용은 샘플 -&gt; UPSDK 초기화 -&gt; onApplicationFocus() 추가하기 를 참고합니다</span>
 <span class="cm">* @param hasfocus</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">onApplicationFocus</span><span class="p">(</span><span class="kt">bool</span> <span class="n">hasfocus</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="a-b-test-initialization-and-got-data">
-<span id="a-b-test-initialization-and-got-data"></span><h3>3.2 A/B Test initialization and got data<a class="headerlink" href="#a-b-test-initialization-and-got-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="a-b">
+<span id="a-b"></span><h3>3.2 A/B 테스트 초기화 및 데이터 가져오기<a class="headerlink" href="#a-b" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Call this method to complete A/B Test initialization after initializing the SDK when performing A/B tests</span>
-<span class="cm">* @param gameAccountId          const char*type，user&#39;s account id in the game (required)</span>
-<span class="cm">* @param completeTask           bool type，Whether or not the novice task in the game has been completed</span>
-<span class="cm">* @param isPaid                 int type，If the user pays, 0 does not pay</span>
-<span class="cm">* @param promotionChannelName   const char* type，Promotion channels, no value can be passed &quot;&quot;</span>
-<span class="cm">* @param gender                 const char*，&quot;M&quot;, &quot;F&quot;，Unknown can be passed&quot;&quot;</span>
-<span class="cm">* @param age                    int type，Unknown can be passed -1</span>
-<span class="cm">* @param tags                   vector type，tips，no value can be passed nullptr</span>
+<span class="cm">* A/B 테스트를 할 때, SDK 초기화 후 A/B테스트 초기화하는데 아래 메소드를 호출합니다.</span>
+<span class="cm">* @param gameAccountId          const char*유형, 게임 유저의 id (필수사항)</span>
+<span class="cm">* @param completeTask           bool 유형, 게임에서 튜토리얼 완수 여부</span>
+<span class="cm">* @param isPaid                 int 유형, 결제 유저 판단, 0이면 비결제 유저</span>
+<span class="cm">* @param promotionChannelName   const char* 유형, 광고 채널, 없으면 &quot;&quot; 전송 가능</span>
+<span class="cm">* @param gender                 const char* 유형，성별 &quot;M&quot;, &quot;F&quot;，모르면 &quot;&quot; 전송가능</span>
+<span class="cm">* @param age                    int 유형, 연령, -1은 unknown</span>
+<span class="cm">* @param tags                   vector 유형, 태그, 없으면 null 전송 가능</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">initAbtConfigJson</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">gameAccountId</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">completeTask</span><span class="p">,</span> <span class="kt">int</span> <span class="n">isPaid</span><span class="p">,</span>
                                   <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">promotionChannelName</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">gender</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">tags</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* After completing A/B Testing initialization, the results are obtained through this method</span>
-<span class="cm">* To ensure that the results are correctly obtained, the call time is recommended to delay initAbtConfigJson() by more than 2 seconds</span>
-<span class="cm">* @param cpPlaceId  string type， ad placement ID</span>
+<span class="cm">* A/B 테스트 초기화가 완료된 후, 결과는 이 메소드를 통해 가져옵니다.</span>
+<span class="cm">* 가져온 결과가 올바른지 확인하기 위해 initAbtConfigJson() 콜타임을 2초 이상 딜레이 하기를 권장합니다.</span>
+<span class="cm">* @param cpPlaceId  string 유형, 광고 placement ID</span>
 <span class="cm">* @return const char*</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">getAbtConfig</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="reward-video-ad">
-<span id="reward-video-ad"></span><h3>3.3 Reward video Ad：<a class="headerlink" href="#reward-video-ad" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rewarded-video-ad">
+<span id="rewarded-video-ad"></span><h3>3.3 리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Open the debug interface for reward video</span>
+<span class="cm">* 리워드 동영상의 디버그 인터페이스를 엽니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">showRewardVideoDebugUI</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Set the reward video load callback interface method</span>
-<span class="cm">* Load results (success or failure) to listen for the current excitation video</span>
-<span class="cm">* This interface is automatically released once a callback is made, and the callback interface needs to be reset when listening again</span>
-<span class="cm">* @param successCall Motivate the callback when the video is loaded successfully，successCall(cpadid, msg)</span>
-<span class="cm">* @param failCall    Motivate the callback when the video is loaded failed，failCall(cpadid, msg)</span>
+<span class="cm">* 리워드 동영상 로드 콜백 인터페이스 메소드를 설정합니다.</span>
+<span class="cm">* 현재 삽입 광고를 수신하기 위해 성공 또는 실패 결과를 로드합니다.</span>
+<span class="cm">* 이 인터페이스는 콜백이 발생하면 자동으로 릴리즈되며 광고를 다시 수신할 때, 콜백 인터페이스를 재설정해야 합니다.</span>
+<span class="cm">* @param successCall 동영상이 성공적으로 로드됐을 때 콜백을 활성화 합니다.(cpadid, msg)</span>
+<span class="cm">* @param failCall    동영상이 성공적으로 로드되지 못했을 때 콜백을 활성화 합니다.(cpadid, msg)</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setRewardVideoLoadCallback</span><span class="p">(</span><span class="n">UpltvSdkStringCallback_2</span> <span class="n">successCall</span><span class="p">,</span> <span class="n">UpltvSdkStringCallback_2</span> <span class="n">failCall</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Set up the callback interface of the video show to listen to the callback of events such as click, close, and award during a display of the video advertisement</span>
-<span class="cm">* References to the presentation interface are stored internally and not released</span>
-<span class="cm">* Callback interface invocation method, callback(type, cpid),and there are five types: display callback, click callback, close callback, successful callback, failed callback</span>
+<span class="cm">* 리워드 동영상 광고의 이벤트(클릭, 닫기, 보상 등) 콜백을 수신하도록 콜백 인터페이스를 설정합니다.</span>
+<span class="cm">* 실행화면 인터페이스에 대한 참조는 내부적으로 저장되며 릴리즈되지 않습니다.</span>
+<span class="cm">* 콜백 인터페이스 호출 방법, 콜백(유형, cpid)와 디스플레이 콜백, 클릭 콜백, 닫기 콜백, 성공적인 콜백, 실패한 콜백이 있습니다.</span>
 <span class="cm">* @param callback(type, cpid)</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setRewardVideoShowCallback</span><span class="p">(</span><span class="n">UpltvSdkStringCallback_1</span> <span class="n">callback</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* judge if the video ad is ready</span>
-<span class="cm">* Synchronously return Boolean results, true indicates that the AD is ready to be displayed, and false indicates that the AD is not show and still  in the request</span>
-<span class="cm">* This method is usually called before showRewardVideo(cpPlaceId)</span>
+<span class="cm">* 리워드 동영상 광고가 준비되었는지 판단합니다.</span>
+<span class="cm">* Boolean 결과를 동기화 리턴합니다. True는 광고가 디스플레이 준비가 되었다는 것을 의미하고, false 는 광고가 실행되지 않거나, 요청 중에 있다는 것을 의미합니다.</span>
+<span class="cm">* 이 메소드는 showRewardVideo(cpPlaceId) 전에 호출합니다.</span>
 <span class="cm">* @return bool</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isRewardReady</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">* show reward video ad</span>
-<span class="cm">* @param cpPlaceId To motivate the advertising space in the video display, which is used to make the point of business and facilitate the differentiation of revenue sources</span>
+<span class="cm">* 리워드 동영상 광고 실행하기</span>
+<span class="cm">* @param cpPlaceId 동영상 디스플레이의 광고 공간을 활성화합니다, 이는 사업 시작점이자 수익원을 쉽게 구별하기 위해 사용됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">showRewardVideo</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h3>3.4 Interstitial Ad：<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h3>
+<span id="interstitial-ad"></span><h3>3.4 삽입 광고(Interstitial Ad)<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Open the debug interface for interstitial ad</span>
+<span class="cm">* 삽입 광고 디버그 인터페이스를 엽니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">showInterstitialDebugUI</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Set up the callback interface for the display of interstitial ad which is used to listen to the callback of events such as clicking and closing during the show time</span>
-<span class="cm">* The  interstitial ad shows that references to the callback interface are stored internally and not released</span>
-<span class="cm">* Callback interface invocation method，callback(type, cpid)，type represents the event type, and there are: show callback, click callback, and close callback</span>
+<span class="cm">* 재생 시간 동안 클릭 및 닫기 등의 이벤트 콜백을 수신하는 데 사용되는 삽입 광고의 디스플레이를 위한 콜백 인터페이스를 설정합니다.</span>
+<span class="cm">* 삽입 광고는 콜백 인터페이스에 대한 참조가 내부적으로 저장되고 릴리스되지 않았음을 나타냅니다.</span>
+<span class="cm">* 콜백 인터페이스 호출 메소드, 콜백(유형, cpid), 유형은 이벤트 유형을 나타내며, 재생 콜백, 클릭 콜백, 닫기 콜백이 있습니다</span>
+
 
 <span class="cm">* @param cpPlaceId</span>
 <span class="cm">* @param callback</span>
@@ -338,160 +339,137 @@
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setInterstitialShowCallback</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">,</span> <span class="n">UpltvSdkStringCallback_1</span> <span class="n">callback</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Set the interstitial load callback interface method</span>
-<span class="cm">* Load results (success or failure) to listen for the current interstitial ad</span>
-<span class="cm">* This interface is automatically released once a callback is made, and the callback interface needs to be reset when listening again</span>
-<span class="cm">* @param successCall Motivate the callback when the video is loaded successfully，successCall(cpadid, msg)</span>
-<span class="cm">* @param failCall    Motivate the callback when the video is loaded failed，failCall(cpadid, msg)</span>
+<span class="cm">* 삽입 광고 로드 콜백 인터페이스 메소드 설정하기.</span>
+<span class="cm">* 삽입 광고를 수신하기 위해 성공 또는 실패 결과를 로드합니다.</span>
+<span class="cm">* 이 인터페이스는 콜백이 발생하면 자동으로 릴리즈되며 광고를 다시 수신할 때, 콜백 인터페이스를 재설정해야 합니다.</span>
+<span class="cm">* @param successCall 동영상이 성공적으로 로드됐을 때 콜백을 활성화 합니다.(cpadid, msg)</span>
+<span class="cm">* @param failCall    동영상이 성공적으로 로드되지 못했을 때 콜백을 활성화 합니다.(cpadid, msg)</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setInterstitialLoadCallback</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">,</span> <span class="n">UpltvSdkStringCallback_2</span> <span class="n">loadSuccess</span><span class="p">,</span> <span class="n">UpltvSdkStringCallback_2</span> <span class="n">loadFail</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Depending on the ad placementID decide on a interstitial ad is ready</span>
-<span class="cm">* r is the AD load result, true means the AD is ready to be displayed, and false means the AD is not show and still  in the request</span>
-<span class="cm">* @param cpPlaceId ad placementID，must be specified correctly and cannot be empty</span>
+<span class="cm">* placementID에 따른 삽입 광고가 준비되었는지 판단합니다.</span>
+<span class="cm">* r은 광고 로드의 결과이며, True는 광고가 디스플레이 준비가 되었다는 것을 의미하고, false 는 광고가 실행되지 않거나, 요청 중에 있다는 것을 의미합니다.</span>
+<span class="cm">* @param cpPlaceId 광고 placementID이니, 상세하고 정확한 값을 가져야 하며, 공백으로 남겨두지 않습니다.</span>
 <span class="cm">* @param callback</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">isInterstitialReadyAsyn</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">,</span> <span class="n">UpltvSdkBoolStringCallback</span> <span class="n">callback</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Judge if the interstitial ad is ready</span>
-<span class="cm">* Synchronously return Boolean results, true indicates that the AD is ready to be displayed, and false indicates that the AD is not show and still  in the request</span>
-<span class="cm">* This method is usually called before show interstitial AD(cpPlaceId)</span>
+<span class="cm">* 삽입 광고가 준비되었는지 판단합니다.</span>
+<span class="cm">* Boolean 결과를 동기화 리턴합니다. True는 광고가 디스플레이 준비가 되었다는 것을 의미하고, false 는 광고가 실행되지 않거나, 요청 중에 있다는 것을 의미합니다.</span>
+<span class="cm">* 이 메소드는 초기화 광고 실행 전에 호출합니다.(cpPlaceId)</span>
 <span class="cm">* @param cpPlaceId</span>
 <span class="cm">* @return bool</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isInterstitialReady</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * show a interstitial ad according to the ad placement ID</span>
+<span class="cm"> * 광고 placement ID에 따른 삽입 광고를 실행합니다.</span>
 <span class="cm"> * @param cpPlaceId</span>
 <span class="cm"> */</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">showInterstitialAd</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="banner">
-<span id="banner"></span><h3>3.5 banner：<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="banner-ad">
+<span id="banner-ad"></span><h3>3.5 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Set the show callback interface for a banner AD placement ID, and the callback interface will be saved and only removed by calling upltv:removeBannerAdAt(cpPlaceId)</span>
+<span class="cm">* 배너 광고 placement ID의 콜백 인터페이스를 설정합니다. 콜백 인터페이스는 저장되어</span>
+<span class="cm">upltv:removeBannerAdAt(cpPlaceId) 를 호출할 때 삭제됩니다.</span>
 <span class="cm">* @param cpPlaceId</span>
 <span class="cm">* @param callback</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setBannerShowCallback</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpPlaceId</span><span class="p">,</span> <span class="n">UpltvSdkStringCallback_1</span> <span class="n">callback</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Show a banner ad  at the top of the screen</span>
+<span class="cm">* 스크린 상단에 배너 광고를 실행합니다.</span>
 <span class="cm">* @param cpPlaceId</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">showBannerAdAtTop</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="n">cpPlaceId</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Show a banner ad  at the bottom of the screen</span>
+<span class="cm">* 스크린 하단에 배너 광고를 실행합니다.</span>
 <span class="cm">* @param cpPlaceId</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">showBannerAdAtBottom</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="n">cpPlaceId</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Hide the current screen top banner ad</span>
+<span class="cm">* 현재 스크린 상단 배너를 숨깁니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">hideBannerAdAtTop</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Hide the current screen bottom banner AD</span>
+<span class="cm">* 현재 스크린 하단 배너를 숨깁니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">hideBannerAdAtBottom</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Remove banner ads for a ad placementID</span>
+<span class="cm">* 광고 placementID에 따른 배너 광고를 삭제합니다.</span>
 <span class="cm">* @param cpPlaceId</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">removeBannerAdAt</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="n">cpPlaceId</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">* On an Iphonex phone, when the top Banner is blocked by the status bar, you can solve this problem by adjusting the displacement of the top banner</span>
-<span class="cm">* @param padding: The top Banner&#39;s offset value, such as 32, will shift down 32 pixels</span>
-<span class="cm">* This feature is not supported on the Android platform</span>
-<span class="cm">* supported from 3002</span>
+<span class="cm">* 상단 배너가 아이폰X의 상태 표시줄에 의해 블럭되면 상단 배너의 위치를 조정하여 해결할 수 있습니다.</span>
+<span class="cm">* @param padding: 상단 배너의 상쇄 값, 예를 들어 32를 입력하면 32 픽셀만큼 아래로 이동합니다.</span>
+<span class="cm">* 이 기능은 Android 플랫폼에서는 지원되지 않습니다.</span>
+<span class="cm">* 3002 버전부터 지원하고 있습니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setTopBannerPadingForIphonex</span><span class="p">(</span><span class="kt">int</span> <span class="n">padding</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="special-methods">
-<span id="special-methods"></span><h3>3.6 Special methods:<a class="headerlink" href="#special-methods" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="">
+<span id="id4"></span><h3>3.6 참고 설명<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Meet the requirements: don&#39;t want to initialize the automatic loading ads, and require the game to choose the appropriate time to load ads</span>
-<span class="cm">* Run condition: when the SDK disables AD auto-loading by default, and upltv backend turns it off</span>
-<span class="cm">* If the above condition is not true, the SDK will ignore it automatically even if the following methods are called</span>
+<span class="cm">* SDK 초기화할 때, 자동 광고 로딩이 아닌 게임에 따라 맞춤형 설정을 통해 로딩을 하고자 하는 경우</span>
+<span class="cm">* 조건:  SDK가 임의로 자동 광고를 로딩을 할수 없거나 UPLTV의 백그라운드에서 이러한 기능을 꺼 두었을 경우.</span>
+<span class="cm">* 위의 조건에 부합하지 않을 경우 아래의 내용이 호출되어도 SDK는 자동으로 이 항목을 무시합니다.</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">loadAdsByManual</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">* exit app</span>
+<span class="cm">* 앱 나가기</span>
 <span class="cm">*/</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">exitApp</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="gdpr">
-<span id="gdpr"></span><h3>4. GDPR :<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">GDPR</span> <span class="pre">&quot;The</span> <span class="pre">General</span> <span class="pre">Data</span> <span class="pre">Protection</span> <span class="pre">Regulation&quot;</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">data</span> <span class="pre">protection</span> <span class="pre">program</span> <span class="pre">issued</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">European</span> <span class="pre">Union.</span></code> If your product is intended for EU users, we offer the following solutions to ensure that <code class="docutils literal notranslate"><span class="pre">UPSDK</span></code> complies with the GDPR rules.<a class="reference external" href="http://docs.upltv.com/docs/show/199">the solution</a>.</p>
+<span id="id5"></span><h3>4. GDPR<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">GDPR</span> <span class="pre">&quot;The</span> <span class="pre">General</span> <span class="pre">Data</span> <span class="pre">Protection</span> <span class="pre">Regulation&quot;</span></code>은 2018년 5월 25일부터 시행된 EU(유럽연합)의 개인정보보호 법령이며, <br />
+EU 지역  고객분께서 본 제품을 사용하시더라도 <code class="docutils literal notranslate"><span class="pre">UPSDK</span></code>는 아래와 같은 솔루션을 제공함으로써 <code class="docutils literal notranslate"><span class="pre">GDPR</span></code>을 준수하고 있습니다.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">  * This method is called when an external GDPR authorization is performed to synchronize user authorization results to the UPSDK</span>
-<span class="cm">  * Call before the initial UPSDK</span>
+<span class="cm">  * 이 메소드는 게임 유저 승인 결과를 UPSDK와 동기화하기 위해 외부 GDPR 인증을 수행할 때 호출됩니다.</span>
+<span class="cm">  * UPSDK 초기화하기 전에 호출합니다.</span>
 <span class="cm">  * @param status</span>
-<span class="cm">  * Version 3003 and above support this method</span>
+<span class="cm">  * 3003 및 상위 버전에서 지원합니다.</span>
 <span class="cm">  */</span>
  <span class="k">static</span> <span class="kt">void</span> <span class="nf">updateAccessPrivacyInfoStatus</span><span class="p">(</span><span class="n">UpltvGDPRPermissionEnum</span><span class="o">::</span><span class="n">UPAccessPrivacyInfoStatus</span> <span class="n">status</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Gets the current GDPR authorization status and returns the upltvgdprpermissionenumeration value</span>
-<span class="cm"> * Call before the initial UPSDK</span>
-<span class="cm"> * Version 3003 and above support this method</span>
+<span class="cm"> * 현재 GDPR 승인 상태를 가져오고 UpltvGDPRPermissionEnum 값을 리턴합니다.</span>
+<span class="cm"> * UPSDK 초기화 전에 호출합니다.</span>
+<span class="cm"> * 3003 및 상위 버전에서 지원합니다.</span>
 <span class="cm">*/</span>
  <span class="k">static</span> <span class="n">UpltvGDPRPermissionEnum</span><span class="o">::</span><span class="n">UPAccessPrivacyInfoStatus</span> <span class="n">getAccessPrivacyInfoStatus</span><span class="p">();</span>
 
 <span class="cm">/**</span>
-<span class="cm">  * An authorization window pops up to explain important data collection to the user and ask if the user agrees to the authorization</span>
-<span class="cm">  * Data collection will be waived if the user denies authorization</span>
-<span class="cm">  * Call before the initial UPSDK</span>
+<span class="cm">  * 권한 부여 창이 팝업되어 유저에게 데이터 수집 권한을 요청합니다.</span>
+<span class="cm">  * 유저가 권한을 거부하면 관련 데이터 수집이 취소됩니다.</span>
+<span class="cm">  * UPSDK를 초기화하기 전에 호출하시기 바랍니다.</span>
 <span class="cm">  * @param callback</span>
-<span class="cm">  * Version 3003 and above support this method</span>
+<span class="cm">  * 3003 및 상위 버전에서 지원합니다.</span>
 <span class="cm">  */</span>
  <span class="k">static</span> <span class="kt">void</span> <span class="nf">notifyAccessPrivacyInfoStatus</span><span class="p">(</span><span class="n">UpltvSdkGDPRNotifyCallback</span> <span class="n">callback</span><span class="p">);</span>
 
 <span class="cm">/**</span>
-<span class="cm">  * Determine if the user belongs to the European Union</span>
-<span class="cm">  * Call before the initial UPSDK</span>
-<span class="cm">  * Version 3003 and above support this method</span>
+<span class="cm">  * 게임 유저가 EU 지역에 있는지 판단합니다</span>
+<span class="cm">  * UPSDK 초기화 전에 호출합니다.</span>
+<span class="cm">  * 3003 및 상위 버전에서 지원합니다.</span>
 <span class="cm">  */</span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">isEuropeanUnionUser</span><span class="p">(</span><span class="n">UpltvSdkBoolCallback</span> <span class="n">callback</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="special-interface-for-android-platform">
-<span id="special-interface-for-android-platform"></span><h3>5. Special interface for Android platform：<a class="headerlink" href="#special-interface-for-android-platform" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">* Only for the android platform</span>
-<span class="cm">* An exit ad for upltv on the android platform</span>
-<span class="cm">*/</span>
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">onBackPressed</span><span class="p">();</span>
-
-<span class="cm">/**</span>
-<span class="cm">* Set the exit AD callback interface to listen to the event callbacks such as open, click, and close during a display of the exit AD</span>
-<span class="cm">* References to the presentation interface are stored internally and not released</span>
-<span class="cm">* @param callback</span>
-<span class="cm">*/</span>
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">setBackPressedCallback</span><span class="p">(</span><span class="n">UpltvSdkStringCallback_1</span> <span class="n">callback</span><span class="p">);</span>
-
-<span class="cm">/**</span>
-<span class="cm">* Only for the android platform for non-gp packages, you can pass androidid</span>
-<span class="cm">* Call before the initial UPSDK</span>
-<span class="cm">* Version 3004(subversion 5) and above support this method</span>
-<span class="cm">* @param androidid</span>
-<span class="cm">*/</span>
-<span class="k">static</span> <span class="kt">void</span> <span class="n">setCustomerId</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">androidid</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -506,10 +484,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cpp03_sample_catalog.html" class="btn btn-neutral float-right" title="CppPlugin Sample" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cpp03_sample_catalog.html" class="btn btn-neutral float-right" title="CppPlugin 샘플" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cpp01_3_help_ios.html" class="btn btn-neutral" title="IOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cpp01_3_help_ios.html" class="btn btn-neutral" title="iOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -518,7 +496,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -537,15 +515,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

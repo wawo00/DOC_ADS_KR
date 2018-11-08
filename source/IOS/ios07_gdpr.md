@@ -1,27 +1,28 @@
 ## GDPR
 
-`GDPR "The General Data Protection Regulation" is a data protection program issued by the European Union. `
-If your product is intended for EU users, we offer the following solutions to ensure that `UPSDK` complies with the `GDPR' rules.
+`GDPR(The General Data Protection Regulation)`은 2018년 5월 25일부터 시행된 EU(유럽연합)의 개인정보보호 법령이며, <br />
+`UPSDK`는 아래와 같은 솔루션을 제공함으로써 `GDPR`을 준수하고 있습니다. EU 지역에서 서비스 하실 때에 안심하고 <br />
+ 사용하실 수 있습니다.
 
-`UPSDK` supports the EU `GDPR` rules in the `3.0.03` version, and developers who will distribute in EU region must handle this logic.
+GDPR을 따른 UPSDK 버전은 `3.0.03`부터 적용되어 있습니다.
 
-### GDPR Samples
-#### Customizing implementation
-Customized dialog of GDPR according to the style of your game to ensure the best product experience.
-When adopting this scheme, it is only necessary to inform the UPSDK of the authorization result before initializing the UPSDK.
+### GDPR 샘플
+#### I 맞춤형 구현
+서비스를 최상의 상태로 구현하기 위해, 각 사의 게임 화면의 스타일에 따라 GDPR 권한 승인 창을 설정합니다. <br />
+맞춤형 구현을 하셨다면, GDPR 권한 승인 결과를 UPSDK에 알려주시고 초기화를 진행합니다.
 
-Sample：
+샘플：
 ```objective-c
 {
-    // old code for initialization
+    // 이전 초기화 코드
     // AvidlyAdsSdk.init(xxxx);
 
-    // new code for GDPR
+    // GDPR을 위한 새로운 코드
     UPAccessPrivacyInfoStatus result1 = [UPSDK getCurrentAccessPrivacyInfoStatus];
     if (result1 == UPAccessPrivacyInfoStatusNone) {
         [UPSDK checkIsEuropeanUnionUser:^(BOOL isEuropeanUnion) {
             if (isEuropeanUnion) {
-             // if the user is in the EU
+             // 만약 유저가 EU 지역에 있을 때
                 [Test yourOwnMethod:nil completion:^(BOOL isAccepted) {
                     NSLog(@"TODO");
                     if (isAccepted) {
@@ -30,39 +31,39 @@ Sample：
                     else {
                         [UPSDK updateAccessPrivacyInfoStatus:UPAccessPrivacyInfoStatusDenied];
                     }
-              
+
                     [UPSDK initSDK:UPSDKGlobalZoneForeign];
                 }];
             }
             else {
-              
+
                 [UPSDK initSDK:UPSDKGlobalZoneForeign];
             }
         }];
     }
     else {
-       
+
         [UPSDK initSDK:UPSDKGlobalZoneForeign];
     }
 }
 ```
-#### Quick implementation
-If you use the standard authorization process provided by UPSDK, please refer to the following code .
+#### II. 빠른 구현
+UPSDK에서 제공하는 표준 승인 프로세스를 사용하신다면 아래와 같은 코드를 사용합니다.
 
 
-Sample：
+샘플：
 ```objective-c
 {
-    // old code for initialization
+    // 이전 초기화 코드
     // AvidlyAdsSdk.init(xxxx);
 
-    // new code for GDPR
+    // GDPR을 위한 새로운 코드
     UPAccessPrivacyInfoStatus result = [UPSDK getCurrentAccessPrivacyInfoStatus];
     if (result == UPAccessPrivacyInfoStatusNone) {
-      
+
         [UPSDK checkIsEuropeanUnionUser:^(BOOL isEuropeanUnion) {
             if (isEuropeanUnion) {
-                // 是欧盟用户
+                // 만약 게임 유저가 EU 지역에 있을 때
                 [UPSDK requestAuthorizationWithAlert:nil completion:^(BOOL isAccepted) {
                     [UPSDK initSDK:UPSDKGlobalZoneForeign];
                 }];
@@ -79,11 +80,11 @@ Sample：
 ```
 ### GDPR API
 
-#### 1.notifyAccessPrivacyInfoStatus
+#### 1. 개발자가 스스로 GDPR 권한 요청 가능한 상황
 
-The authorization window pops up to explain to the user that we will collect data and ask the user whether to approve the authorization.
- If the user refuses to authorize, the collection of related data will be abandoned. Please call before initializing the UPSDK.
- 
+권한 부여 창이 팝업되어 유저에게 데이터 수집 권한을 요청합니다. <br />
+유저가 권한을 거부하면 관련 데이터 수집이 취소됩니다. UPSDK를 초기화하기 전에 호출하시기 바랍니다.
+
 ```objective-c
 
 + (void)updateAccessPrivacyInfoStatus:(UPAccessPrivacyInfoStatus)status;
@@ -92,15 +93,15 @@ The authorization window pops up to explain to the user that we will collect dat
 `UPAccessPrivacyInfoStatus`:
 ```objective-c
 typedef NS_ENUM (NSInteger, UPAccessPrivacyInfoStatus) {
-    UPAccessPrivacyInfoStatusNone = 0,      //unknown
-    UPAccessPrivacyInfoStatusAccepted = 1,  //agree
-    UPAccessPrivacyInfoStatusDenied = 2,    //disagree
+    UPAccessPrivacyInfoStatusNone = 0,      //승인 여부 알지 못함
+    UPAccessPrivacyInfoStatusAccepted = 1,  //승인
+    UPAccessPrivacyInfoStatusDenied = 2,    //거부
 };
 ```
 
-Notice:Do not send `UPAccessPrivacyInfoStatusNone `
+**주의: `UPAccessPrivacyInfoStatusNone `를 전송하지 않습니다.**
 
-Sample:
+샘플:
 
 ```objective-c
 
@@ -111,8 +112,9 @@ Sample:
 
 ---------
 
-#### 2.checkIsEuropeanUnionUser
-Determine whether the user belongs to the EU region,which can be called before initializing the UPSDK 
+#### 2. 게임유저가 EU 지역 유저 여부를 판단할 수 없는 상황
+UPSDK는 게임 유저에게 EU 지역 유저의 여부 확인 API를 지원해드리고 있습니다. <br />
+UPSDK를 초기화하기 전에 호출하시기 바랍니다.
 
 ```objective-c
 
@@ -121,7 +123,7 @@ Determine whether the user belongs to the EU region,which can be called before i
 
 
 
-Sample:
+샘플:
 
 ```objective-c
 [UPSDK checkIsEuropeanUnionUser:^(BOOL isEuropeanUnion) {
@@ -133,22 +135,22 @@ Sample:
 
 ---------
 
-#### 3.the developer can not request the user to authorize the use of private information.
+#### 3. 개발자가 스스로 게임유저에게 개인정보 사용에 관한 권한 요청을 할 수 없는 상황
 
-In response to this situation, UPSDK provides an API for using Alter to request authorization to use private information from users, as following:
+UPSDK는 다음과 같이 Alter를 사용하여 유저의 개인정보를 사용 할 수 있는 권한 요청 API를 제공해드리고 있습니다.
 
 ```objective-c
 /**
- Alert to request access to private information from users
- 
- @param viewController 
- @param completionBlock Callback,  YES means the user agrees to use the private information, and NO means the user does not agree to use the private information.
+ 게임 유저에게 개인 정보 접근 권한 요청을 합니다.
+
+ @param viewController
+ @param completionBlock Callback,  YES는 게임 유저가 동의했다는 것이고, NO는 거부했다는 것을 의미합니다.
  */
 + (void)requestAuthorizationWithAlert:(UIViewController *)viewController completion:(void (^)(BOOL isAccepted))completionBlock;
 ```
 
 
-Sample:
+샘플:
 
 ```objective-c
 [UPSDK requestAuthorizationWithAlert:vc completion:^(BOOL isAccepted) {
@@ -163,51 +165,55 @@ Sample:
 
 --------
 
-#### 4.Developers want to know the current status of the GDPR authorization
+#### 4. GDPR 승인 여부 확인하기
 
-UPSDK provides an API to obtain current GDPR authorization status
+UPSDK는 현재 GDPR 승인 여부를 확인할 수 있도록 현재 GDPR 권한 승인 여부 확인 API를 제공해드리고 있습니다.
 
 ```objective-c
 /**
- 
- @return Status of GDPR authorization
+
+ @GDPR 승인 상황을 리턴합니다.
  */
 + (UPAccessPrivacyInfoStatus)getCurrentAccessPrivacyInfoStatus;
 ```
 
 
-Return value : `UPAccessPrivacyInfoStatusAccepted` means the user agrees, `UPAccessPrivacyInfoStatusDenied` means the user refuses, `UPAccessPrivacyInfoStatusNone` indicates that the user is unknown or has not requested authorization from the user.
+리턴 값 :
+`UPAccessPrivacyInfoStatusAccepted`는 유저가 동의 했다는 것을 나타내고, <br />
+`UPAccessPrivacyInfoStatusDenied`는 유저가 거부 했다는 것을 나타냅니다. <br />
+`UPAccessPrivacyInfoStatusNone`는 상황을 알 수 없거나 권한요청이 발송되지 않았다는 것을 나타냅니다.
 
-#### 5.Overall Sample:
+#### 5. 전체 샘플
 
 ```objective-c
-//Step1 
+//Step1
 [UPSDK checkIsEuropeanUnionUser:^(BOOL isEuropeanUnion) {
     if (isEuropeanUnion) {
-    
-        // Step2 Request  authorization to use information
+
+        // Step2 개인정보 사용에 대한 승인을 요청합니다.
         [UPSDK requestAuthorizationWithAlert:vc completion:^(BOOL isAccepted) {
             if (isAccepted) {
 
-                // Step3 Update GDPR Authorization Status of UPSDK (Agree)
+                // Step3 UPSDK에게 GDPR 승인 여부를 보내줍니다(동의)
                 [UPSDK updateAccessPrivacyInfoStatus:UPAccessPrivacyInfoStatusAccepted];
             }
             else {
-                
-                 // Step3 Update GDPR Authorization Status of UPSDK (Deny)
+
+                 // Step3 UPSDK에게 GDPR 승인 여부를 보내줍니다(거절)
                 [UPSDK updateAccessPrivacyInfoStatus:UPAccessPrivacyInfoStatusDenied];
             }
 
-            // Step4 Initialization
+            // Step4 초기화
             [UPSDK initSDK:UPSDKGlobalZoneForeign];
         }];
     }
     else {
 
-        // Step4 Initialization
+        // Step4 초기화
         [UPSDK initSDK:UPSDKGlobalZoneForeign];
     }
 }];
 ```
 
-The first step and the second step that can be implemented by developer to improve the user experience. And you alson can use the corresponding API of UPSDK to achieve it.
+Step1과 Step2는 사용자 경험(UX)을 개선하기 위해 개발자께서 각 사에 맞게 구현하실 것을 추천드립니다. <br />
+또는, UPSDK에서 제공하는 이에 맞는 API를 사용하여 해결할 수도 있습니다.

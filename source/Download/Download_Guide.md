@@ -32,6 +32,7 @@
 [Cocos-Lua SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.05_CocosLua.zip "Cocos-Lua SDK v3.0.05 ")
 
 ## Layabox
+
 #### Android
 [Layabox JavaScript v3.0.05](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_Android_JS_3005.zip "Layabox-JavaScript SDK v3.0.05")
 
@@ -43,7 +44,7 @@
 #### iOS
 [Egret TypeScript v3.0.06](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_EGret_TS_3006.zip "Egret TypeScript v3.0.06")
 
-## Google-Play-Services Download
+## Google-Play-Services 다운로드
 [gms v9.0.0](http://cnimg.dataverse.cn/avidlysdk/gms9.0.0.zip "gms_v9.0.0")
 
 [gms v10.0.1](http://cnimg.dataverse.cn/avidlysdk/gms10.0.1.zip "gms_v10.0.1")

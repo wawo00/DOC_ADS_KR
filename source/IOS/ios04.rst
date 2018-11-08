@@ -1,11 +1,11 @@
 =============================
-Banner Ad
+배너 광고(Banner Ad)
 =============================
 
 
-If you are willing to integrate banner ads in an easier way (recommended), please click [HERE](http://docs.upltv.com/docs/show/120 "here");
+배너 광고를 [이곳](http://docs.upltv.com/docs/show/120 "here")에서 빠르고 간편하게 결합하실 수 있으며
 
-If you want to customize your banner ads, please click [HERE](http://docs.upltv.com/docs/show/121 "HERE").
+맞춤형 배너 광고 서비스를 [이곳](http://docs.upltv.com/docs/show/121 "HERE")에서 받으실 수도 있습니다.
 
 Contents:
 

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Solving 65535-Limitation &mdash; UPInteractive Document  documentation</title>
+  <title>65535 제한 문제 해결방법 &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SDK Initializating" href="android03_init.html" />
+    <link rel="next" title="SDK 초기화" href="android03_init.html" />
     <link rel="prev" title="FAQ" href="android01_3_help_faq.html" /> 
 
   
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Solving 65535-Limitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -149,7 +149,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-      <li>Solving 65535-Limitation</li>
+      <li>65535 제한 문제 해결방법</li>
     
     
 
@@ -161,19 +161,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="solving-65535-limitation">
-<span id="solving-65535-limitation"></span><h1>Solving 65535-Limitation<a class="headerlink" href="#solving-65535-limitation" title="Permalink to this headline">¶</a></h1>
-<p>If you mediated too much SDK in framework procedure, it may cause the following condition:</p>
-<p>Conversion to Dalvik format failed: Unable to execute dex: method ID not in [0, 0xffff]: 65536</p>
-<p>We provide you the following methods to solve this limitation.</p>
-<div class="section" id="i-release-proguard">
-<span id="i-release-proguard"></span><h2>I. Release Proguard<a class="headerlink" href="#i-release-proguard" title="Permalink to this headline">¶</a></h2>
-<p>If you have not released proguard in your app, we suggest you to release it. It will effectively help you to exclude some unused class methods. Regarding to Ads SDK Proguard configuration, please refer to <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code> in the downloaded files. If releasing proguard still can not help from exceeding the limitation, please refer to the following methods.</p>
+  <div class="section" id="">
+<span id="id1"></span><h1>65535 제한 문제 해결방법<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+<p>프레임워크 절차에서 너무 많은 미디에이션 SDK를 적용한 경우, 아래와 같은 문제가 발생할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Conversion</span> <span class="n">to</span> <span class="n">Dalvik</span> <span class="nb">format</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">dex</span><span class="p">:</span> <span class="n">method</span> <span class="n">ID</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mh">0xffff</span><span class="p">]:</span> <span class="mi">65536</span><span class="o">**</span>
+</pre></div>
 </div>
-<div class="section" id="ii-multidex-methods">
-<span id="ii-multidex-methods"></span><h2>II. MultiDex Methods<a class="headerlink" href="#ii-multidex-methods" title="Permalink to this headline">¶</a></h2>
-<p>MultiDex methods is designed by Google, aims to break the 65535-Limitation. If you are using Android Studio to develop, it will be much easier. Please follow the steps hereunder to configurate.</p>
-<p>Firstly, add the following configuration into build.gradle project:</p>
+<p>UPLTV는 이러한 제한 문제를 해결할 수 있도록 아래와 같은 메소드를 제공하고 있습니다.</p>
+<div class="section" id="i-proguard">
+<span id="i-proguard"></span><h2>I. Proguard 릴리즈<a class="headerlink" href="#i-proguard" title="Permalink to this headline">¶</a></h2>
+<p>앱에서 Proguard를 릴리즈 하지 않았다면, 릴리즈하기를 권장합니다. 그래야 사용하지 않는 클래스 메소드를 <br />
+효과적으로 제외할 수 있습니다. Ads SDK Proguard 구성의 경우, 다운로드한 파일에 있는 <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>를 <br />
+참조합니다. Proguard를 릴리즈했음에도 제한 문제가 해결되지 않은 경우에는 아래의 방법을 참조하시기 바랍니다.</p>
+</div>
+<div class="section" id="ii-multidex">
+<span id="ii-multidex"></span><h2>II. MultiDex 메소드<a class="headerlink" href="#ii-multidex" title="Permalink to this headline">¶</a></h2>
+<p>MultiDex는 65535제한을 해결하기 위해 Google에서 개발한 메소드입니다. Android Studio를 사용하여 개발중이라면, <br />
+훨씬 간편하게 구현할 수 있습니다. 아래의 단계에 따라 설정을 진행하시기 바랍니다.</p>
+<p>아래의 설정을 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> 프로젝트에 추가합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">android</span> <span class="p">{</span>
     <span class="n">defaultConfig</span> <span class="p">{</span>
         <span class="n">multiDexEnabled</span> <span class="n">true</span>
@@ -181,11 +186,12 @@
 <span class="p">}</span>
 <span class="n">dependencies</span> <span class="p">{</span>  
     <span class="nb">compile</span> <span class="s1">&#39;com.google.android:multidex:1.0.1&#39;</span>
-<span class="p">}</span> 
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>If your project contains<code class="docutils literal notranslate"><span class="pre">Application</span></code> , then let it inherit <code class="docutils literal notranslate"><span class="pre">android.support.multidex.MultiDexApplication</span></code> will be okay.</p>
-<p>If your <code class="docutils literal notranslate"><span class="pre">Application</span></code> has inherited others and you do not want to change, you could use <code class="docutils literal notranslate"><span class="pre">attachBaseContext()</span></code> methods of<code class="docutils literal notranslate"><span class="pre">Application</span></code> to solve the limitation.</p>
+<p>프로젝트가<code class="docutils literal notranslate"><span class="pre">Application</span></code>을 포함하는 경우, <code class="docutils literal notranslate"><span class="pre">android.support.multidex.MultiDexApplication</span></code>의 상속이 허용됩니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Application</span></code> 을 다른 프로젝트에서 상속받았으며 변경을 원치 않는 경우, <code class="docutils literal notranslate"><span class="pre">Application</span></code>의 <code class="docutils literal notranslate"><span class="pre">attachBaseContext()</span></code> 메소드를 <br />
+사용하면 제한 문제를 해결할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">MyApplication</span> <span class="n">extends</span> <span class="n">FooApplication</span> <span class="p">{</span>  
     <span class="nd">@Override</span>  
     <span class="n">protected</span> <span class="n">void</span> <span class="n">attachBaseContext</span><span class="p">(</span><span class="n">Context</span> <span class="n">base</span><span class="p">)</span> <span class="p">{</span>  
@@ -196,12 +202,13 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="iii-using-dex-dynamic-loading-methods">
-<span id="iii-using-dex-dynamic-loading-methods"></span><h2>III. Using Dex Dynamic-Loading Methods<a class="headerlink" href="#iii-using-dex-dynamic-loading-methods" title="Permalink to this headline">¶</a></h2>
-<p>If you are using Eclipse, integrating MiltiDex method will be complex, so we provide you another method: Dex Dynamic-Loading.</p>
-<p>In the downloaded SDK zip package, you can see that the <code class="docutils literal notranslate"><span class="pre">assets</span></code> folder, and then copy the <code class="docutils literal notranslate"><span class="pre">assets</span></code> directory to the project.</p>
-<p><strong>【Attention】 During the copy period, please do not modify files or rename any folders.</strong></p>
-<p><strong>【Attention】Ad Networks like <code class="docutils literal notranslate"><span class="pre">admob</span></code>,<code class="docutils literal notranslate"><span class="pre">batmobi</span></code> and <code class="docutils literal notranslate"><span class="pre">inmobi</span></code> currently do not support this kind of loading.</strong></p>
+<div class="section" id="iii-dex">
+<span id="iii-dex"></span><h2>III. Dex 동적 로딩 메소드 사용하기<a class="headerlink" href="#iii-dex" title="Permalink to this headline">¶</a></h2>
+<p>Eclipse를 사용하는 경우, MiltiDex 메소드 결합이 복잡해질 수 있습니다. <br />
+이를 해결하기 위해, Dex 동적 로딩 메소드를 제공하고 있습니다.</p>
+<p>다운로드한 SDK 압축파일에 있는 <code class="docutils literal notranslate"><span class="pre">assets</span></code>폴더를 프로젝트로 복사합니다.</p>
+<p><strong><font color=#DC143C>【주의】</font> 복사를 진행하는 동안에는 파일을 수정하거나 폴더명을 변경하지 마시기 바랍니다.</strong> <br />
+<strong><font color=#DC143C>【주의】</font> 현재 <code class="docutils literal notranslate"><span class="pre">admob</span></code>, <code class="docutils literal notranslate"><span class="pre">batmobi</span></code>, 그리고 <code class="docutils literal notranslate"><span class="pre">inmobi</span></code>와 같은 광고 네트워크에서는 해당 유형의 로딩을 지원하지 않습니다.</strong></p>
 </div>
 </div>
 
@@ -213,7 +220,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="android03_init.html" class="btn btn-neutral float-right" title="SDK Initializating" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="android03_init.html" class="btn btn-neutral float-right" title="SDK 초기화" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="android01_3_help_faq.html" class="btn btn-neutral" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -225,7 +232,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -244,15 +251,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

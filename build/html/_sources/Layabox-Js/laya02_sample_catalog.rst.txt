@@ -1,5 +1,5 @@
 =============================
-JavaScriptPlugin Sample
+JavaScriptPlugin 샘플
 =============================
 
 .. toctree::

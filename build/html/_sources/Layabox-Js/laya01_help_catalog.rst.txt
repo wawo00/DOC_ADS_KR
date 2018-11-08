@@ -1,13 +1,19 @@
 =============================
-JavaScriptPlugin 
+JavaScriptPlugin
 =============================
 
 
-Although UPLTV ADSDK has done well in mediation and packaging, but there will be some problems when some of our partners integrate at first time. So we optimized the process for integration, and we also gave some suggestion towards those FAQ.
+| UPLTV ADSDK 미디에이션과 패키징 자체로는 문제가 없으나 일부 애드 네트워크에 따라 최초 결합 시에
+| 몇 가지 문제가 발생할 수 있습니다. 이를 방지하기 위해 통합 프로세스를 최적화했으며,
+| 관련 FAQ를 통해 몇 가지 방법을 제안하고 있습니다.
 
-In order to help you integrate UPLTV ADSDK successfully, please read and refer to the contents under this label carefully. We, with all our heart wish  that it will help you and bring much convenience to your business. 
 
-  **Please note that this access document is based on Layabox 1.7.20. If you use other versions of Cocos2d-X and have problem,please ask us for help**
+| UPLTV ADSDK를 성공적으로 결합하려면, 본 문서를 신중히 살펴보고 참조하시기 바랍니다.
+| UPLTV는 귀하의 더욱 성공적이고 편리한 비즈니스를 위해 언제나 최선을 다하고 있습니다.
+
+
+  | 이 액세스 문서는 Laybox 1.7.20을 기반으로 합니다. 만약 다른 버전의 Laybox를 사용하고 있거나 문제가 발생하면
+  | 담당자에게 문의하여 추가 지원을 받아보세요.
 
 .. toctree::
    :maxdepth: 1

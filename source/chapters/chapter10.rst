@@ -2,17 +2,19 @@
 GDPR
 =============================
 
+ | GDPR(The General Data Protection Regulation)은 2018년 5월 25일부터 시행된
+ | EU(유럽연합)의 개인정보보호 법령이며, UPSDK는 아래와 같은 솔루션을 제공함으로써
+ | GDPR 법률을 준수하고 있습니다. EU 지역에서 서비스 하실 때에 안심하고 사용하실 수 있습니다.
+
+GDPR 규정을 따른 UPSDK 버전은 3.0.03 부터 적용되어 있습니다.
 
 
 
-``GDPR "The General Data Protection Regulation"`` is a data protection program issued by the European Union. If your product is intended for EU users, we offer the following solutions to ensure that ``UPSDK`` complies with the ``GDPR`` rules.
-
-
-Support List
+제공 솔루션
 ----------------
 
 +----------------------------+------------------------------+
-|            Net work        |          Version             |
+|          광고 네트워크     |            버전              |
 +============================+==============================+
 |          AppLovin          |  iOS: 5.0.1, Android: 8.0.1  |
 +----------------------------+------------------------------+
@@ -36,7 +38,7 @@ Support List
 
 
 
-Sample
+샘플
 ----------
 
 
@@ -51,4 +53,3 @@ Sample
 5. `UPSDK Cocos2d-x Lua <../Cocos2d-X_Lua/lua02_6.html>`_
 
 6. `UPSDK Cocos2d-x JavaScript <../Cocos2d-X_Js/js02_6.html>`_
-

@@ -1,89 +1,97 @@
 ## Eclipse
 
-### I.Structure of UPSDK CppPlugin 
-For projects built with Eclipse, UPSDK is imported into the project as `*.jar`. Download UPSDK JavaScriptPlugin in ( [Android-JsSDK](http://doc.upltv.com/en/master/chapters/chapter09.html "download"))and unzip：
+### I.UPSDK JavaScript Plugin 구조
+Eclipse로 빌드된 프로젝트의 경우 UPSDK를 `*.jar`형식으로 프로젝트에 가져옵니다. <br />
+UPSDK JavaScriptPlugin를 [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html "download")에서 다운로드 하고 압축 해제를 합니다.
+
 
 ![ec-1-1](http://docc.upltv.com/uploads/201805/5af3e73af0172_5af3e73a.png "ec-1-1")
 
-- `Eclipse`
-   This directory mainly contains the ad dependency library files required for Eclipse project access.
-- `js`
-	This directory mainly contains some *.js source files for bridging the current Cocos2d-X js project with the UPSDK interface call.
-- `Android Studio`
-    If you build project through,please ignore this directory.
-- `proguard-project.txt`
-	The configuration file of confusion,if you need to obfuscate code, add the contents of this file to the file that the project depends on.
-	
+- `Eclipse`: 이 디렉토리에는 일부 jar 및 리소스 파일이 포함되어 있습니다. Android Studio를 사용하여 apk를 <br />
+빌드하는 경우 이 디렉토리를 무시하시기 바랍니다.
+- `js`: 이 디렉토리에는 현재 Cocos2d-X js 프로젝트를 UPSDK 인터페이스로 연동하기 위한 일부 *.js 소스 파일들이 <br />
+포함되어 있습니다.
+- `Android Studio`: 이 디렉토리에는 Android Studio에 필요한 광고 의존성 라이브러리 파일들이 포함되어 있습니다.
+- `proguard-project.txt`: 프로젝트에서 `proguard`를 사용하는 경우, 이 파일의 내용을 프로젝트에서 <br />
+사용하는 `proguard` 위치로 복사합니다.
 
-### II.Import UPSDK main package
+### II. UPSDK 메인 패키지 가져오기
 
-#### 1.Add files of UPSDK
-Take UPSDK v3.0.03 as an example. In the `upsdk_ads` directory, there are three directories: `libs`, `res` and `assets`. Please copy the contents of the directory to the corresponding directory of your Eclipse main project ( If there is no libs directory, create a libs directory with the same level as src in the app folder).
-
-As follows:
+#### 1. UPSDK 파일 추가하기
+UPSDK v3.0.03을 예시로 들겠습니다. `upsdk_ads`디렉토리에는 `libs`, `res` 및 `assets`의 세 개의 디렉토리가 있습니다. <br />
+디렉토리의 콘텐츠들을 Eclipse 메인 프로젝트 해당 디렉토리로 복사합니다. <br />
+(참고:  libs 디렉토리가 없는 경우 src와 동일한 디렉토리를 생성합니다.) <br />
+추가한 후의 구성은 아래와 같습니다.
 
 ![ec-2-1](http://docc.upltv.com/uploads/201805/5af3e8f29e3c9_5af3e8f2.png "ec-2-1")
 
-> `UPAdsSdk_Js_3.0.03.jar`just for reference
+> `UPAdsSdk_Js_3.0.03.jar`은 참조용입니다.
 
-#### 2.Check minSdkVersion and targetSdkVersion in `Manifest`
-UPSDK requires that minSdkVersion cannot be lower than 15, and targetSdkVersion cannot be higher than 26, so check it in the `build.gradle` file，as follows：
+#### 2. `Manifest`에서 minSdkVersion 및 targetSdkVersion 확인하기
+UPSDK를 사용하려면 `minSdkVersion`이 15보다 크고, `targetSdkVersion`이 26보다 작아야 합니다. <br />
+이는 `build.gradle`에서 확인하시기 바랍니다.
+
 ```groovy
  < uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24" />
 ```
-#### 3.Make sure *.so files are aligned
-There are 3 types of .so files of the cpu type in folder name `libs`：
+#### 3. *.so파일이 정렬되었는지 확인하기
+폴더 이름 libs에는 세 가지 유형의 .so 파일이 있습니다.
+
 - armeabi
 - armeabi-v7a
 - x86
 
-According to your needs, just delete the unwanted CPU architecture in the libs directory.
+필요에 따라 libs 디렉토리에서 원하지 않는 CPU 아키텍처를 삭제하시기 바랍니다.
 
-### III.Add ad networdks
-#### 1.Add Google Ads SDK
-
-Please refer to**Add files of UPSDK** to add Google Ads into your porject,as follows：
+### III. 광고 네트워크 추가하기
+#### 1. Google Ads SDK 추가
+다음과 같이 UPSDK의 파일 추가하기를 참조하여 Google 광고를 아래와 같이 프로젝트에 추가합니다.
 
 ![ec-3-1](http://docc.upltv.com/uploads/201805/5af3ebc528686_5af3ebc5.png "ec-3-1")
-> In particular, if your project already has a different version of google play service, use the higher version.
+> 특히 프로젝트에 이미 다른 버전의 Google Play 서비스가 있는 경우 상위 버전을 사용하시기 바랍니다.
 
+#### 2. 기타 광고 네트워크 추가하기
+더 많은 수익을 위해 프로젝트에 가능한 한 많은 광고 라이브러리를 추가합니다. `optional_ads`라는 이름의 폴더는 <br />
+`*.jar`형식으로 존재하는 네트워크 종속성 파일을 포함하고 있습니다. UPSDK의 파일 추가를 참조하여 이 폴더를 <br />
+프로젝트에 추가하고 AndroidManifest 파일의 내용을 프로젝트의 Manifest 파일에 복사합니다.
 
-#### 2.Add other networdks
-To ensure you get more revenue, add as many ad libraries as possible to your project.
-Folder named `optional_ads` contents  network dependencies file that exists in the form of `*.jar`. Please refer to **Add files of UPSDK** to add it to your project, and copy the contents of the AndroidManifest file to your project's Manifest file.
-
-
-### IV. Add Android Support library 
-
-The display of the ad requires the support of the `support` library, so please bring it into your project. We have the corresponding `xxx.jar` file for you in the `android_support_library/libs` folder. You just need to added those files into the `libs` directory,as follows：
+### IV. Android 지원 라이브러리 추가하기
+광고 디스플레이는 지원 라이브러리가 필요하기에 프로젝트로 가져옵니다. `android_support_library/libs`폴더에 <br />
+해당 `xxx.jar` 파일이 있습니다. 다음과 같이 해당 파일을 `libs` 디렉토리에 추가합니다.
 
 ![ec-4-1](http://docc.upltv.com/uploads/201805/5af3e9c639e11_5af3e9c6.png "ec-4-1")
 
-### V. Modify AndroidManifest.xml file
-Please duplicate the content of `AndroidManifest.xml` file into the related location in your project.
+### V. AndroidManifest.xml 파일 수정
+`AndroidManifest.xml` 파일의 콘텐츠를 프로젝트의 관련 위치로 복사합니다.
 
-### Ⅵ. Add *.js files
 
-#### 1.Add files in project
-The UPSDK implements cross-platform calls to the native interface via the *js source file, so all *.js files in `js/upltv` must be copied to the project.
+### Ⅵ. *.js 파일 추가하기
 
-For Cocos2d-x 3.16 version ,we can copy files  to assets/sr. If there are differences in other versions, please refer to the modification, as follows：
+#### 1. 프로젝트에 파일 추가하기
+UPSDK는 *js 소스 파일을 통해네이티브 인터페이스(Native Interface)에 대한 크로스 플랫폼(Cross-Platform) 구현하므로 <br />
+ `js/upltv`에 있는 모든 *.js 및 *.h 파일을 현재 프로젝트에 복사하시기 바랍니다.
+
+Cocos2d-x 3.16 버전을 assets/sr폴더에 복사할 수 있습니다. 버전 차이가 있는 경우 수정을 참조하시기 바랍니다. <br />
+복사 후의 디렉토리는 아래와 같습니다.
 
 ![ec-4-1](http://docc.upltv.com/uploads/201805/5af3ea86801bf_5af3ea86.png "ec-4-1")
->This article is based on cocos2dx-3.16. If your directory does not match this, ask our support team for help.
 
-### 2.Modify android.mk in jni directory
+> 본문은 cocos2dx-3.16을 바탕으로 서술하고 있습니다. 디렉토리가 일치하지 않으면 담당자에게 문의하여 추가 지원을 받아보세요.
 
-Add following codes in application.mk file which located in jni folder.
+#### 2. jni 디렉토리에서 android.mk 수정하기
+
+아래의 코드를 jni 폴더에 있는 application.mk 파일에 추가합니다.
+
 ```groovy
 APP_SHORT_COMMANDS := true
 NDK_TOOLCHAIN_VERSION=4.9
 APP_PLATFORM=android-14
 ```
 
-### Ⅶ.Modify Proguard setting 
-If your project used `proguard`.
-You have to copy contents from `proguard-project.txt` to right location of your project.
+### Ⅶ. Proguard 설정 수정하기
+만약 프로젝트에서 proguard를 사용하신다면 `proguard-project.txt`에서 이 파일의 내용을 프로젝트에서 <br />
+사용하는 `proguard` 위치로 복사합니다.
 
-### Ⅷ.Demo Project
-To help you integrate ads SDK easier and faster, here we provide you a simple [Demo Project ](https://github.com/AvidlyGit/AdSdkDemo-Studio).
+
+### Ⅷ. Demo 프로젝트
+광고 SDK를 쉽고 빠르게 결합할 수 있도록 [Demo 프로젝트](https://github.com/AvidlyGit/AdSdkDemo-Studio)를 제공합니다.

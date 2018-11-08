@@ -1,84 +1,82 @@
+## Unity Plugin 배너 광고(Banner Ad)
 
-
-## Unity Plugin Banner Ad
-
-#### 1.Show Banner Ad
+#### 1. 배너 광고 실행하기
 
 ```csharp
 /*
-* Show banner ads in top of screen
-* cpPlaceId is Ad placement identifier, make sure it correctly
+* 화면 상단에 배너 광고가 실행됩니다.
+* cpPlaceId는 광고 위치 식별자이니 값이 정확한지 확인합니다.
 */
 public static void showBannerAdAtTop(string cpPlaceId);
 
 /*
-* Show banner ads in bottom of screen
+* 화면 하단에 배너 광고가 실행됩니다.
 */
 public static void showBannerAdAtBottom(string cpPlaceId);
 ```
 
 
-#### Sample：
+샘플：
 ```csharp
-// Show a banner ads named 'banner_aaa' in top of screen
+// 화면 상단에 'banner_aaa'의 이름으로 명명된 배너 광고가 실행됩니다.
 public void onBtnBanner_Top_Click()
 {
-    // Add support to iphonex （32 just for testing）
+    // 아이폰X의 지원을 추가합니다. (32는 테스트용입니다.)
     UPSDK.setTopBannerForIphonex(32);
-    // Add support to huaweiP20
+    // 화웨이 P20의 지원을 추가합니다.
     UPSDK.setTopBannerForHuaWeiP20(75);
-    // show banner
+    // 배너를 실행합니다.
     UPSDK.showBannerAdAtTop("banner_aaa");
 }
 
-// Show a banner ads named 'banner_aaa' in bottom of screen
+// 화면 하단에 'banner_aaa'의 이름으로 명명된 배너 광고가 실행됩니다.
 public void onBtnBanner_Bottom_Click()
 {
     UPSDK.showBannerAdAtBottom("banner_bbb");
 }
 ```
 
-> Banner ads do not need to determine the status, call it at the appropriate time, the SDK will automatically load, and automatically show the ad after the successful loading .
-Although the Banner ad is automatically load and displayed, this method should be called as early as possible to get enough time to load ads.
+> 배너 광고는 상태를 확인할 필요가 없으며 적절한 시간에 호출하면 SDK가 자동으로 로드되고, <br />
+로드 성공 후 자동으로 광고를 실행합니다.
 
-
-#### 2.Hide Banner Ad
+#### 2. 배너 광고 숨기기
 ```csharp
-// Hiding current top banner ads
+// 상단의 배너 광고를 숨깁니다.
 public static void hideBannerAdAtTop();
 
-// Hiding current bottom banner ads
+// 하단의 배너 광고를 숨깁니다.
 public static void hideBannerAdAtBottom();
 ```
->  Banner can be displayed again by showBannerAdAtTop() or showBannerAdAtBottom() without reloading.
+>  재로딩을 하지 않고도, showBannerAdAtTop() 또는 showBannerAdAtBottom()을 사용하여 배너 광고를 다시 <br />
+실행 시킬 수 있습니다.
 
 
-#### 3.Remove Banner Ad
+#### 3. 배너 광고 제거하기
 ```csharp
-// Remove the Banner ad based on the palcementid and reload the ad when re-displaying.
+// 특정 광고 위치의 배너 광고를 제거합니다. 다시 디스플레이 될 경우 다시 로드 합니다.
 public static void removeBannerAdAt(string cpPlaceId);
 ```
 
-#### Sample:
+샘플:
 
 ```csharp
-//  Remove banner ad named 'banner_aaa'
+//  'banner_aaa'라는 배너 광고를 제거합니다.
 public void onBtnBanner_TopRemove_Click()
 {
     UPSDK.removeBannerAdAt("banner_aaa");
 }
 
 ```
-#### 4.Adjust the position of top banner
+#### 4. 상단 배너 위치 조정하기
 
 ```csharp
-// only for iphonex
+// 아이폰X용
 void setTopBannerForIphonex(int padding);
-// only for huaweiP20
+// 화웨이 P20용
 void setTopBannerForHuaWeiP20(int padding);
 ```
-Sample:
+샘플:
 ```csharp
-// Top Banne moves down 32 pixels
+// 상단 배너를 32픽셀만큼 아래로 이동시킵니다.
 UPSDK.setTopBannerForIphonex (32);
 ```

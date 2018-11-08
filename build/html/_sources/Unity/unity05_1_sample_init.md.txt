@@ -1,16 +1,18 @@
-## Unity Plugin initialization
+## Unity Plugin 초기화
 ```csharp
 /*
- * Initialize UPSDK
- * Upsdk will only be initialized once even if it is called multiple times.
- * @param zone:0, areas except China (CN)；1, China；2, judging the types of users automatically depending on ip
-* Since version 3003, please call the constant through the UPConstant class: SDKZONE_FOREIGN, SDKZONE_CHINA, SDKZONE_AUTO;
-* Previous versions prior to 3003 still call the constants via the PolyADSDK class.
+ * UPSDK 초기화
+ * UPSDK는 여러 번을 호출되더라도 한 번만 초기화됩니다.
+ *  @param zone-- 0: 중국을 제외한 해외, 1: 중국,  2: IP에 의해 자동 설정
+ * 3003 버전부터, UPConstant 클래스에 있는 상수를 호출합니다.
+ * SDKZONE_FOREIGN, SDKZONE_CHINA, SDKZONE_AUTO;
+ * 3003 하위 버전에서는 PolyADSDK 클래스를 통해 상수를 호출합니다.
  */
 public static string initPolyAdSDK(int zone)
 ```
-#### Sample
-In the demo code, the onButton_init_Click() method is called by clicking the initialization button on the UI. Even if the initialization button is clicked multiple times, ** repeatedly calls UPSDK.initPolyAdSDK()**, but the SDK will only be initialized once**.
+샘플
+Demo 코드에서는 UI에서 초기화 버튼을 클릭하여 onButton_init_Click() 메소드가 호출됩니다. 초기화 버튼을 <br />
+여러 번 클릭하여 UPSDK.initPolyAdSDK()를 반복해서 호출해도, SDK는 한 번만 초기화됩니다.
 ```csharp
 public void onButton_init_Click()
 {
@@ -50,8 +52,8 @@ public void onButton_init_Click()
 }
 ```
 
-The implementation of the callback interface is as followings：
-The code for the sample project illustrates the role of each interface and the meaning of the parameters.Plus callback interface is not required to be implemented if you do not need it.
+콜백 인터페이스의 구현은 다음과 같습니다:  샘플 프로젝트의 코드는 각 인터페이스의 역할과 매개 변수를 나타냅니다. <br />
+필요하지 않은 경우 플러스 콜백 인터페이스를 구현할 필요는 없습니다.
 
 
 ```csharp

@@ -2,39 +2,50 @@
 About UPSDK
 =============================
 
---------
-UPSDK Introduce
---------
+-----------
+UPSDK 소개
+-----------
 
-UPSDK (UPLTV ADSDK) is a mediation product developed by UPLTV. You can visit its webiste http://upltv.com
+| UPSDK(UPLTV ADSDK)는 UPLTV에서 개발한 미디에이션입니다.
+| 홈페이지(http://upltv.com)에서 보다 자세한 내용을 확인하실 수 있습니다.
 
-UPSDK strive to help publishers maximize the total app monetization revenue and optimize users' life-time-value(LTV). By optimizing with big data and AI adjust technique, UPSDK helps publishers increase the monetization revenue stably without sacrificing retention.
+| UPSDK는 광고 게시업체가 앱 수익률을 극대화하고, 사용자의 LTV를 최적화 할 수 있도록 도와드립니다.
+| 빅데이터와 AI기술을 사용하여 최적화를 진행하며, 이를 통해 UPSDK는 게시업체가
+| 유저 리텐션(잔존율, retention)에 영향을 주지 않고도 안정적으로 수익 창출을 할 수 있도록 지원합니다.
 
-
-
---------
-Get Started
---------
-
-Please go to http://upltv.com to sign up. Or you can contact any of our Business Representative colleagues for further supports.
 
 
 
 --------
-How to download UPSDK
+시작하기
 --------
 
-If you have not downloaded or updated UPSDK to its latest version, please go to `UPSDK Download Page <http://docs.upltv.com/docs/show/50>`_ to download the most well-matched version.
-> We have designed different versions according to the different framework/engineering structure of Eclipse and AndroidStudio. Please download the most well-matched version refer to your actual development tool. 
-
-If you are a Unity programme, We ***Strongly*** recommend you "Unity Plugin" for using. It will help you integrate with ADSDK in an easier way. Please go to `Unity Plugin Download Page <http://docs.upltv.com/docs/show/111>`_ for more information.
+UPLTV의 홈페이지(http://upltv.com)에서 회원가입을 하시거나 담당자에게 문의하여 추가적인 지원을 받아보세요.
 
 
---------
-Support & Feedback
---------
 
-If you have, you could contact any of our Business Representative colleagues for further supports. Or you can also email us directly via contact@upltv.com
+
+-------------------
+UPSDK 다운로드 방법
+-------------------
+
+| UPSDK를 다운로드하거나 최신 버전으로 업데이트할 수 없는 경우,
+| `UPSDK 다운로드 페이지 <http://docs.upltv.com/docs/show/50>`_ 에서 사용자 환경에 가장 적합한 버전을 다운로드하세요.
+
+| UPLTV는 Eclipse와 Android Studio의 다양한 프레임워크 및 엔지니어링 구조에 맞는 여러 버전을 개발하였습니다.
+| 사용 중인 개발 도구를 참조하여 가장 적합한 버전을 다운로드하시기 바랍니다.
+
+
+| Unity 프로그램에서는 "Unity Plugin"의 사용을 **강력히** 권장합니다. 이를 통해 ADSDK를 보다 쉽게 통합할 수 있습니다.
+| 더 자세한 정보는 유니티 플러그인 다운로드 페이지 `Unity Plugin 다운로드 페이지 <http://docs.upltv.com/docs/show/111>`_ 에서 확인하세요.
+
+-------------
+지원 & 피드백
+-------------
+
+| 담당자의 연락처가 있다면, 직접 문의하시어 추가 지원을 받아보세요.
+| 이메일 contact@upltv.com 을 통해서 문의할 수도 있습니다.
+
 
 .. toctree::
    :maxdepth: 1

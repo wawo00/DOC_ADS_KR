@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SDK Initializating &mdash; UPInteractive Document  documentation</title>
+  <title>SDK 초기화 &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Banner Ad" href="android04_banner_catalog.html" />
-    <link rel="prev" title="Solving 65535-Limitation" href="android02_65535.html" /> 
+    <link rel="next" title="배너 광고(Banner Ad)" href="android04_banner_catalog.html" />
+    <link rel="prev" title="65535 제한 문제 해결방법" href="android02_65535.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">Solving 65535-Limitation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -149,7 +149,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-      <li>SDK Initializating</li>
+      <li>SDK 초기화</li>
     
     
 
@@ -161,28 +161,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sdk-initializating">
-<span id="sdk-initializating"></span><h1>SDK Initializating<a class="headerlink" href="#sdk-initializating" title="Permalink to this headline">¶</a></h1>
-<p>Put the following code in your <code class="docutils literal notranslate"><span class="pre">Application</span></code> section</p>
+  <div class="section" id="sdk">
+<span id="sdk"></span><h1>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Application</span></code> 섹션에 아래의 코드를 입력하시기 바랍니다.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="kd">final</span> <span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kd">final</span> <span class="n">UPAdsGlobalZone</span> <span class="n">zone</span><span class="o">);</span>
 
     <span class="kd">public</span> <span class="kd">enum</span> <span class="n">UPAdsGlobalZone</span> <span class="o">{</span>
-        <span class="n">UPAdsGlobalZoneForeign</span><span class="o">,</span>     <span class="c1">//Global</span>
-        <span class="n">UPAdsGlobalZoneDomestic</span><span class="o">,</span>    <span class="c1">//China</span>
-        <span class="n">UPAdsGlobalZoneAuto</span><span class="o">,</span>        <span class="c1">//Area according to Ip </span>
+        <span class="n">UPAdsGlobalZoneForeign</span><span class="o">,</span>     <span class="c1">//해외</span>
+        <span class="n">UPAdsGlobalZoneDomestic</span><span class="o">,</span>    <span class="c1">//중국</span>
+        <span class="n">UPAdsGlobalZoneAuto</span><span class="o">,</span>        <span class="c1">//ip에 의해 자동 설정</span>
     <span class="o">}</span>
 </pre></div>
 </div>
 <div class="section" id="setcustomeid">
 <span id="setcustomeid"></span><h2>SetCustomeId<a class="headerlink" href="#setcustomeid" title="Permalink to this headline">¶</a></h2>
-<p>If you want to release products in China, because the GAID cannot be collected  normally. Please call this method before <code class="docutils literal notranslate"><span class="pre">UPAdsSdk.init()</span></code>,and the customerId parameter takes the value of AndroidId.</p>
+<p>GAID는 중국에서 정상적으로 수집될 수 없기 때문에 중국에서 제품을 릴리즈 하시려면 <br />
+<code class="docutils literal notranslate"><span class="pre">UPAdsSdk.init()</span></code>전에  이 메소드를 호출하고 customerId 매개변수의 값을 취하시기 바랍니다.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setCustomerId</span><span class="o">(</span><span class="n">String</span> <span class="n">customerId</span><span class="o">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="debug-model">
-<span id="debug-model"></span><h2>Debug Model<a class="headerlink" href="#debug-model" title="Permalink to this headline">¶</a></h2>
-<p>You can open debug model to get verbose log information during the integration works. Make sure you closed it before release to production.</p>
+<div class="section" id="model">
+<span id="model"></span><h2>디버그 Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
+<p>결합 작업 중에 디버그하면, 상세한 로그 정보를 확인할 수 있습니다. <br />
+단, 제작 단계로 릴리즈하기 전에 반드시 로그 정보를 닫아야 합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="n">setDebuggable</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -197,10 +199,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="android04_banner_catalog.html" class="btn btn-neutral float-right" title="Banner Ad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="android04_banner_catalog.html" class="btn btn-neutral float-right" title="배너 광고(Banner Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android02_65535.html" class="btn btn-neutral" title="Solving 65535-Limitation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android02_65535.html" class="btn btn-neutral" title="65535 제한 문제 해결방법" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -209,7 +211,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -228,15 +230,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

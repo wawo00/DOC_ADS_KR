@@ -1,12 +1,14 @@
 =============================
-UnityPlugin Access
+Unity Plugin 액세스
 =============================
 
-Although UPSDK ADSDK has done well in mediation and packaging regarding to Unity, but due to the differential issue for Unity versions, but after the plugin imported at first time, problems which make compiling failure like import confliction and coding abnormal may occur easily. For this purpose, we learn from the outside supporting experience, then make a further complete summary of experience. We truly hope it could help every of our partners.
+| UPSDK ADSDK를 Unity와 연계하여 미디에이션 및 패키징을 완료하였지만, Unity의 서로 다른 버전의 문제로 인해
+| 초기에 불러오기 한 Plugin이 충돌 및 컴파일 에러가 발생할 수 있습니다. 이를 해결하기 위해, 외부로부터의 서포팅을
+| 받아 노하우를 얻어 UPLTV의 모든 파트너들에게 지원을 해드리고 있습니다.
 
-Regarding to the different supporting methods, we explain these into two section：
+Android 및 iOS로 나눠서 지원 방법을 설명해드리겠습니다.
 
-Contents:
+컨텐츠:
 
 .. toctree::
    :maxdepth: 1

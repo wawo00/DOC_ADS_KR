@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Eclipse" href="android01_2_help_ec.html" />
-    <link rel="prev" title="Quick Start" href="android01_help_catalog.html" /> 
+    <link rel="prev" title="빠른 시작" href="android01_help_catalog.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,29 +82,29 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Android Studio</a></li>
 <li class="toctree-l3"><a class="reference internal" href="android01_2_help_ec.html">Eclipse</a></li>
 <li class="toctree-l3"><a class="reference internal" href="android01_3_help_faq.html">FAQ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">Solving 65535-Limitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -154,7 +154,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-          <li><a href="android01_help_catalog.html">Quick Start</a> &raquo;</li>
+          <li><a href="android01_help_catalog.html">빠른 시작</a> &raquo;</li>
         
       <li>Android Studio</li>
     
@@ -170,33 +170,41 @@
             
   <div class="section" id="android-studio">
 <span id="android-studio"></span><h1>Android Studio<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="i-structure-of-upsdk-directory">
-<span id="i-structure-of-upsdk-directory"></span><h2>I. Structure of UPSDK Directory<a class="headerlink" href="#i-structure-of-upsdk-directory" title="Permalink to this headline">¶</a></h2>
-<p>Regarding to Android Studio or Gradle built project, UPSDK suggests it should be import by other main project in <code class="docutils literal notranslate"><span class="pre">*.aar</span></code> format. You will see the structure of directory for UPSDK Studio when you unzip it:</p>
+<div class="section" id="i-upsdk">
+<span id="i-upsdk"></span><h2>I. UPSDK 디렉토리 구조<a class="headerlink" href="#i-upsdk" title="Permalink to this headline">¶</a></h2>
+<p>Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 <code class="docutils literal notranslate"><span class="pre">*.aar</span></code>형식으로 가져와야 합니다.<br />
+UPSDK Studio를 다운받아 압축해제 하시면 아래의 그림과 같은 목록 구조를 보실 수 있습니다.</p>
 <p><img alt="as_91" src="http://docc.upltv.com/uploads/201808/5b7fdca87b9ae_5b7fdca8.png" /></p>
-<div class="section" id="main-package-of-upsdk">
-<span id="main-package-of-upsdk"></span><h3>1. Main Package of UPSDK<a class="headerlink" href="#main-package-of-upsdk" title="Permalink to this headline">¶</a></h3>
-<p>Please refer to the screenshot above, the file named <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code> is the main package of UPSDK, you have to add it into your main project.</p>
+<div class="section" id="upsdk">
+<span id="upsdk"></span><h3>1. UPSDK 메인 패키지<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<p>위의 스크린샷에서 볼 수 있는 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code> 이 UPSDK의 메인 패키지이며, <br />
+프로젝트에 이를 반드시 추가해야 합니다.</p>
 </div>
-<div class="section" id="networks-dependencies-of-upsdk">
-<span id="networks-dependencies-of-upsdk"></span><h3>2. Networks Dependencies of UPSDK<a class="headerlink" href="#networks-dependencies-of-upsdk" title="Permalink to this headline">¶</a></h3>
-<p>The relationships between UPSDK and other networks are loose and coupled. You could remove some ads dependencies from the main project to reduce the size of application.</p>
-<p>The dependencies of networks except Admob and Facebook, they are existing in xxxx_ads.aar format.</p>
+<div class="section" id="upsdk">
+<span id="id1"></span><h3>2. UPSDK 네트워크 의존성 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<p>UPSDK는 다른 네트워크와 독립적이면서도 긴밀하게 결합되어 있으므로, <br />
+일부 타사 파일을 가져오고 싶지 않은 경우에는 가져올 타사 파일만 별도로 선택하여 앱의 용량을 줄일 수도 있습니다.</p>
+<p>Admob및 Facebook을 제외한 네트워크의 의존성은 <code class="docutils literal notranslate"><span class="pre">xxxx_ads.aar</span></code>형식으로 존재합니다.</p>
 </div>
-<div class="section" id="ads-dependencies-of-admob-and-facebook">
-<span id="ads-dependencies-of-admob-and-facebook"></span><h3>3. Ads Dependencies of Admob and Facebook<a class="headerlink" href="#ads-dependencies-of-admob-and-facebook" title="Permalink to this headline">¶</a></h3>
-<p>Among UPSDK local files, it provides aar dependencies for Admob and Facebook in case of the situation of bad internet or other unexpected problems happened. Even so, we still suggest you to update the dependencies online from gradle of Admob and Facebook long-distance warehouse.
-&gt; Regarding to the specification of how to integrate with Admob and Facebook, it will be particularly introduced later in this section.</p>
+<div class="section" id="admob-facebook">
+<span id="admob-facebook"></span><h3>3. Admob및 Facebook의 광고 의존성<a class="headerlink" href="#admob-facebook" title="Permalink to this headline">¶</a></h3>
+<p>UPSDK 로컬 파일 중, Admob 및 Facebook에 인터넷 연결 상태가 좋지 않거나 <br />
+예기치 않은 문제가 발생할 경우를 대비하여 aar 의존성을 제공합니다. <br />
+그럼에도 불구하고, UPLTV는 Admob및 Facebook의 long-distance warehouse의 gradle의 의존성을 <br />
+온라인으로 업데이트하는 것을 권장합니다.</p>
+<blockquote>
+<div>Admob및 Facebook의 결합 방법과 관련하여, 본 섹션 후반부에 소개될 예정입니다.</div></blockquote>
 </div>
 </div>
-<div class="section" id="ii-using-gradle-of-android-studio-to-import-the-main-package-of-upsdk">
-<span id="ii-using-gradle-of-android-studio-to-import-the-main-package-of-upsdk"></span><h2>II. Using Gradle of Android Studio to import the main package of UPSDK<a class="headerlink" href="#ii-using-gradle-of-android-studio-to-import-the-main-package-of-upsdk" title="Permalink to this headline">¶</a></h2>
-<p>Please refer to the introduction above, add the downloaded files which named  <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code> into <code class="docutils literal notranslate"><span class="pre">libs</span></code> directory in your project.
-After they are added, the effects of Studio project acts like the following screenshot:</p>
+<div class="section" id="ii-android-studio-gradle-upsdk">
+<span id="ii-android-studio-gradle-upsdk"></span><h2>II. Android Studio의 Gradle을 사용하여 UPSDK의 메인 패키지를 가져오기<a class="headerlink" href="#ii-android-studio-gradle-upsdk" title="Permalink to this headline">¶</a></h2>
+<p>위의 설명을 참고하여 다운로드된  <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code>파일을 프로젝트 <code class="docutils literal notranslate"><span class="pre">libs</span></code>디렉토리에 추가하세요. <br />
+Studio 프로젝트의 효과는 아래와 같습니다:</p>
 <p><img alt="as_02" src="http://docc.upltv.com/uploads/201808/5b7fddd4a0a05_5b7fddd4.png" /></p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_3.0.03.aar</span></code> is specified only for example</div></blockquote>
-<p>To make sure aar package which in libs directory could be import correctly by the project, please check the following configuration parameter in <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> files/folder under <code class="docutils literal notranslate"><span class="pre">app</span></code> directory:</p>
+<div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_3.0.03.aar</span></code> 를 실제 파일 이름으로 바꿉니다.</div></blockquote>
+<p>프로젝트에 제대로 aar 패키지가 가져오기 되었는지 <code class="docutils literal notranslate"><span class="pre">app</span></code> 디렉토리의 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> 파일 <br />
+혹은 폴더에서 아래의 구성 매개변수를 확인합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repositories</span> <span class="p">{</span>
     <span class="n">flatDir</span> <span class="p">{</span>
         <span class="n">dirs</span> <span class="s1">&#39;libs&#39;</span>
@@ -204,7 +212,7 @@ After they are added, the effects of Studio project acts like the following scre
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>At last, please add aar into compile method</p>
+<p>컴파일 메소드에 aar을 추가합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
 <span class="o">//</span> <span class="n">your</span> <span class="n">other</span> <span class="n">setting</span>
 <span class="o">//</span> <span class="n">Please</span> <span class="n">replace</span> <span class="n">UPAdsSdk_3</span><span class="o">.</span><span class="mf">0.03</span> <span class="k">with</span> <span class="n">the</span> <span class="n">real</span> <span class="n">file</span> <span class="n">name</span>
@@ -212,34 +220,44 @@ After they are added, the effects of Studio project acts like the following scre
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>So far, aar package of UPSDK has been successfully configurated in your project. Please wait gradle compile works. But the work of importing UPSDK has not been finished yet, the final step is very significant to do: <strong>add other dependencies</strong>.</p>
+<p>UPSDK 패키지가 성공적으로 구성되었습니다. gradle 컴파일 작업을 기다립니다. <br />
+마지막으로 <strong>기타 의존성</strong>을 추가합니다.</p>
 <blockquote>
-<div>As an excellent and powerful mediation platform, UP SDSDK can be flexibly compatible with the runtime library of third-party affiliate networks. So that it can help you yield the greatest returns. As a conclusion, if you want UPSDK to yield the greatest returns, please add the third-party dependencies correctly.</div></blockquote>
-<p>If you are using Gradle of Android Studio to build your project. First of all, you have to import all files like <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code> from <code class="docutils literal notranslate"><span class="pre">for_studio</span></code> directory to you project.
-Each <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> file in directory means a affiliate network which supported by us.
-Since we always choose the best affiliate networks over the world, you can import all of them into your project without any hesitation.
-Also, you still can remove some of them by your own reason , like too much library will make your game size getting big.</p>
+<div>우수하고 강력한 미디에이션 플랫폼인 UPSDK는 타사의 런타임 라이브러리(Runtime library)와 유연하게 호환하여 <br />
+최대한의 수익을 낼 수 있도록 도와 드립니다. 따라서 UPSDK를 통하여 최대한의 수익을 위해 타사 의존성을 <br />
+추가하시기 바랍니다.</div></blockquote>
+<p>Android Studio의 Gradle을 사용하여 프로젝트를 빌드하는 경우 먼저 <code class="docutils literal notranslate"><span class="pre">for_Studio</span></code>디렉토리에서 <br />
+모든 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code>파일을 프로젝트로 가져와야 합니다. 디렉토리에 있는 각 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code>파일은 <br />
+UPLTV와 제휴되어 있는 광고 네트워크를 의미합니다.</p>
+<p>저희는 항상 전세계에서 최고의 광고 네트워크사를 선택하므로, 모든 네트워크를 프로젝트로 가져올 수 있습니다. <br />
+또한, 라이브러리가 너무 많아짐에 따라 커지는 게임의 용량 혹은 기타 사유로 몇 개의 네트워크를 제거하실 수 있습니다.</p>
 </div>
-<div class="section" id="iii-add-dependencies-of-affiliate-networks">
-<span id="iii-add-dependencies-of-affiliate-networks"></span><h2>III. Add dependencies of affiliate networks<a class="headerlink" href="#iii-add-dependencies-of-affiliate-networks" title="Permalink to this headline">¶</a></h2>
-<p>The SDKs of some affiliate networks need to depend on some public third-party libraries. The project which is built by Android Studio could import the dependent third-party library by the following mothods.</p>
-<p><strong>In principle, we suggest you to import dependent third-party library all in your project. But in some cases, you can choose to add some libraries of affiliate networks to reduce the size of your project. But no matter how to make sure the libraries of affiliate networks you added must completely meet the external conditions of current ads on shown. Or, it will leads crashes because it’s lack of some neccessary supports.</strong></p>
-<p>If you want to remove the supports from some affiliate networks, but you do not know how to operate. Please give priority to contact our support team to acheive your goal.</p>
-<div class="section" id="add-aar-of-affiliate-networks">
-<span id="add-aar-of-affiliate-networks"></span><h3>1. Add *.aar of affiliate networks<a class="headerlink" href="#add-aar-of-affiliate-networks" title="Permalink to this headline">¶</a></h3>
-<p>Among the downloaded target files, files named  <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> are the dependent files for the affiliate networks in use. Please refer to <strong>Import UPSDK aar files</strong> to add them in your project.</p>
+<div class="section" id="iii">
+<span id="iii"></span><h2>III. 광고 네트워크 의존성 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
+<p>일부 광고 네트워크의 SDK는 광고 네트워크사의 오픈소스 라이브러리에 의존합니다. <br />
+Android Studio가 만든 프로젝트는 아래의 방법을 통해 종속 타사 라이브러리를 가져올 수 있습니다.</p>
+<p><strong>기본적으로 프로젝트의 종속된 타사 라이브러리를 모두 가져오는 것을 권장하지만 <br />
+경우에 따라 프로젝트의 크기를 줄이기 위해 추가할 광고 네트워크 라이브러리를 선택할 수 있습니다. <br />
+그러나, 추가한 광고 네트워크의 라이브러리가 현재 표시된 광고의 외부 조건을 완전히 충족시켜야 합니다. <br />
+그렇지 않을 경우 충돌이 발생할 수 있습니다.</strong></p>
+<p>일부 광고 네트워크에서 지원을 제거하고 싶지만 방법을 모르는 경우 UPLTV의 기술 팀에 문의하여 <br />
+문제 해결 및 지원 서비스를 받을 수도 있습니다.</p>
+<div class="section" id="aar">
+<span id="aar"></span><h3>1. 광고 네트워크 *.aar 추가하기<a class="headerlink" href="#aar" title="Permalink to this headline">¶</a></h3>
+<p>다운로드한 타겟 파일 중  <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code>라는 파일은 사용 중인 광고 네트워크의 종속 파일입니다. <br />
+<strong>UPSDK aar 파일 가져오기</strong>를 참고하여 프로젝트에 추가합니다.</p>
 </div>
-<div class="section" id="add-other-external-dependencies">
-<span id="add-other-external-dependencies"></span><h3>2. Add other external dependencies<a class="headerlink" href="#add-other-external-dependencies" title="Permalink to this headline">¶</a></h3>
-<p>Because of requiring some extra Android Api supports by some affiliate networks, so you have to add external dependencies as followed.</p>
+<div class="section" id="">
+<span id="id2"></span><h3>2. 다른 외부 의존성 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<p>일부 광고 네트워크에서  Android Api 추가 지원을 요구하기 때문에 다음과 같이 외부 의존성을 추가해야 합니다.</p>
 </div>
-<div class="section" id="configure-jcenter-code-repository">
-<span id="configure-jcenter-code-repository"></span><h3>1. Configure jcenter code repository<a class="headerlink" href="#configure-jcenter-code-repository" title="Permalink to this headline">¶</a></h3>
-<p>Find <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file in your main project. Add <code class="docutils literal notranslate"><span class="pre">jcenter</span></code>  in <code class="docutils literal notranslate"><span class="pre">repositories</span></code> section of the file.</p>
+<div class="section" id="gradle-jcenter">
+<span id="gradle-jcenter"></span><h3>1.  Gradle에 jcenter 추가하기<a class="headerlink" href="#gradle-jcenter" title="Permalink to this headline">¶</a></h3>
+<p>메인 프로젝트의 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>파일을 찾아서  <code class="docutils literal notranslate"><span class="pre">repositories</span></code>섹션에 <code class="docutils literal notranslate"><span class="pre">jcenter</span></code> 를 추가합니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">buildscript</span> <span class="o">{</span>
     <span class="n">repositories</span> <span class="o">{</span>
         <span class="n">mavenCentral</span><span class="o">();</span>
-        <span class="c1">// ******** add jcenter ********</span>
+        <span class="c1">// ******** jcenter 추가하기********</span>
         <span class="n">jcenter</span><span class="o">()</span>
         <span class="n">maven</span> <span class="o">{</span>
             <span class="n">url</span> <span class="s1">&#39;https://maven.google.com/&#39;</span>
@@ -263,9 +281,10 @@ Also, you still can remove some of them by your own reason , like too much libra
 </pre></div>
 </div>
 </div>
-<div class="section" id="add-android-support-library">
-<span id="add-android-support-library"></span><h3>2.  Add Android Support library<a class="headerlink" href="#add-android-support-library" title="Permalink to this headline">¶</a></h3>
-<p>Every affiliate needs <code class="docutils literal notranslate"><span class="pre">android.support.xxx</span></code>, so please import it to your project. If you are using Android Studio in your project, you can modify <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file to add</p>
+<div class="section" id="android">
+<span id="android"></span><h3>2.  Android 지원 라이브러리 추가하기<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h3>
+<p>Admob 등의 많은 광고사에서 요구하기 때문에 <code class="docutils literal notranslate"><span class="pre">android.support.xxx</span></code>를 프로젝트로 불러오기 해야합니다. <br />
+프로젝트에서 Android Studio를 사용하는 경우, <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>파일을 수정하여 추가할 수 있습니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">compile</span> <span class="s1">&#39;com.android.support:recyclerview-v7:26.1.0&#39;</span>
     <span class="n">compile</span> <span class="s1">&#39;com.android.support:support-v4:26.1.0&#39;</span>
@@ -279,21 +298,23 @@ Also, you still can remove some of them by your own reason , like too much libra
 </pre></div>
 </div>
 </div>
-<div class="section" id="add-google-ads-sdk">
-<span id="add-google-ads-sdk"></span><h3>3. Add Google Ads SDK<a class="headerlink" href="#add-google-ads-sdk" title="Permalink to this headline">¶</a></h3>
-<p>If you want to add Admob ads in your project, you need to add Google Ads support in your project. You can follow the following steps to add dependencies:</p>
+<div class="section" id="google-ads-sdk">
+<span id="google-ads-sdk"></span><h3>3. Google Ads SDK 추가하기<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
+<p>Admob 광고를 프로젝트에 추가할 경우 Google 광고 지원을 포함시켜야 합니다. <br />
+아래의 설명에 따라 의존성을 추가하실수 있습니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span>    <span class="n">dependencies</span> <span class="o">{</span>
         <span class="n">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:15.0.1&#39;</span>
     <span class="o">}</span>
 </pre></div>
 </div>
 <blockquote>
-<div>If you only want to add aar files which gms play depends on locally. You could ignore this configuration in gradle file.
-Specially, if the version of gms play-service in your project is different from UPSDK dependencies, please use the higher version.</div></blockquote>
+<div>로컬 gms play가 의존하고 있는 aar파일만 추가하길 희망하신다면 gradle파일에서 이 구성을 무시할 수 있습니다. <br />
+특히 프로젝트의 gms play-service 버전이 UPSDK 의존성과 다른 경우 상위 버전을 사용하세요.</div></blockquote>
 </div>
-<div class="section" id="add-facebook-ads-sdk">
-<span id="add-facebook-ads-sdk"></span><h3>4. Add Facebook Ads SDK<a class="headerlink" href="#add-facebook-ads-sdk" title="Permalink to this headline">¶</a></h3>
-<p>If you want to add Facebook interstitial ads in your project, you need to add Facebook Ads support in your project. You can follow the following steps to add dependencies:</p>
+<div class="section" id="facebook-ads-sdk">
+<span id="facebook-ads-sdk"></span><h3>4. Facebook Ads SDK 추가하기<a class="headerlink" href="#facebook-ads-sdk" title="Permalink to this headline">¶</a></h3>
+<p>Facebook 삽입 광고(Interstitial Ad)를 프로젝트에 추가할 경우 Facebook 광고 지원을 프로젝트에 포함시켜야 합니다. <br />
+아래의 설명에 따라 의존성을 추가하시기 바랍니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
     <span class="nb">compile</span> <span class="s1">&#39;com.facebook.android:audience-network-sdk:4.99.1&#39;</span>
 <span class="p">}</span>
@@ -301,14 +322,14 @@ Specially, if the version of gms play-service in your project is different from 
 </div>
 </div>
 </div>
-<div class="section" id="iv-modify-proguard-setting">
-<span id="iv-modify-proguard-setting"></span><h2>IV. Modify Proguard setting<a class="headerlink" href="#iv-modify-proguard-setting" title="Permalink to this headline">¶</a></h2>
-<p>If your project used <code class="docutils literal notranslate"><span class="pre">proguard</span></code>.
-You have to copy contents from <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code> to right location of your project.</p>
+<div class="section" id="iv-proguard">
+<span id="iv-proguard"></span><h2>IV.  Proguard 설정 수정하기<a class="headerlink" href="#iv-proguard" title="Permalink to this headline">¶</a></h2>
+<p>프로젝트에서 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>를 사용하는 경우, <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>의 내용을 프로젝트에서 사용하는 <br />
+<code class="docutils literal notranslate"><span class="pre">proguard</span></code>의 위치로 복사합니다.</p>
 </div>
-<div class="section" id="v-demo-project">
-<span id="v-demo-project"></span><h2>V. Demo Project<a class="headerlink" href="#v-demo-project" title="Permalink to this headline">¶</a></h2>
-<p>To help you integrate ads SDK easier and faster, here we provide you a simple <a class="reference external" href="https://github.com/UPGit/AdSdkDemo-Studio">Demo Project</a>.</p>
+<div class="section" id="v-demo">
+<span id="v-demo"></span><h2>V. Demo 프로젝트<a class="headerlink" href="#v-demo" title="Permalink to this headline">¶</a></h2>
+<p>광고 SDK를 더 빠르고 쉽게 결할 수 있도록 간편한 <a class="reference external" href="https://github.com/UPGit/AdSdkDemo-Studio">Demo 프로젝트</a>를 제공하고 있습니다.</p>
 </div>
 </div>
 
@@ -323,7 +344,7 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
         <a href="android01_2_help_ec.html" class="btn btn-neutral float-right" title="Eclipse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_help_catalog.html" class="btn btn-neutral" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_help_catalog.html" class="btn btn-neutral" title="빠른 시작" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -332,7 +353,7 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -351,15 +372,21 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

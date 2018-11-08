@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SDK Initial" href="ios03_init.html" />
-    <link rel="prev" title="Xcode Access Document" href="ios01_xcode.html" /> 
+    <link rel="next" title="SDK 초기화" href="ios03_init.html" />
+    <link rel="prev" title="Xcode 액세스 문서" href="ios01_xcode.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ios01_xcode.html">Xcode Access Document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios01_xcode.html">Xcode 액세스 문서</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">CocoaPods Access Document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios03_init.html">SDK Initial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -147,7 +147,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../chapters/chapter02.html">UPSDK IOS</a> &raquo;</li>
+          <li><a href="../chapters/chapter02.html">UPSDK iOS</a> &raquo;</li>
         
       <li>CocoaPods Access Document</li>
     
@@ -163,16 +163,16 @@
             
   <div class="section" id="cocoapods-access-document">
 <span id="cocoapods-access-document"></span><h1>CocoaPods Access Document<a class="headerlink" href="#cocoapods-access-document" title="Permalink to this headline">¶</a></h1>
-<p>If you use CocoaPods to manage dependances of your iOS project, please import our SDK by following steps:</p>
-<p>Add Avidly Repo to CocoaPods:</p>
+<p>CocoaPods을 이용하신다면 아래와 같은 순서로 UPSDK를 가져오기 하시기 바랍니다. <br />
+처음으로 CocoaPods을 이용하여 UPSDK를 연동하시는 분은 먼저, Avidly Repo를 CocoaPods에 추가합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">repo</span> <span class="n">add</span> <span class="n">Avidly</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">guojunliu</span><span class="o">/</span><span class="n">AvidlyAdsSDK</span><span class="o">-</span><span class="n">SpecsRepo</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
-<p>if you have integrated our sdk ago and want to update sdk,please use these codes:</p>
+<p>기존의 UPSDK를 업데이트 하시려면 아래와 같은 코드를 사용하시기 바랍니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">repo</span> <span class="n">update</span> <span class="n">Avidly</span>
 </pre></div>
 </div>
-<p>Add reference to your <code class="docutils literal notranslate"><span class="pre">Podfile</span></code> file in your project</p>
+<p>그리고 참조를 프로젝트 내의 <code class="docutils literal notranslate"><span class="pre">Podfile</span></code> 파일에 아래와 같이 추가합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>platform :ios, &#39;8.0&#39;
 use_frameworks!
 
@@ -182,16 +182,16 @@ target ‘YourAppName’ do
 end
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">~&gt;</span> <span class="pre">3.0.03</span></code> means version to download, we recommend to use the lastest version.</p>
-<p>Enter the project,and run this command:
-Switch into your project directory and run command <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">install</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">~&gt;</span> <span class="pre">3.0.03</span></code>  표시는 버전을 나타내는 것이므로 최신 버전을 사용하시길 바랍니다.</p>
+<p>프로젝트에 들어가서 아래와 같이 <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">install</span></code> 를 실행하시면 됩니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">install</span>
 </pre></div>
 </div>
-<p>Done.</p>
-<div class="section" id="project-configuration">
-<span id="project-configuration"></span><h2>Project configuration<a class="headerlink" href="#project-configuration" title="Permalink to this headline">¶</a></h2>
-<p>1 Add nodes in <code class="docutils literal notranslate"><span class="pre">info.plist</span></code> file, to allow http protocol</p>
+<p>완료.</p>
+<div class="section" id="">
+<span id="id1"></span><h2>프로젝트 구성<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="info-plist-http">
+<span id="info-plist-http"></span><h3>1 <code class="docutils literal notranslate"><span class="pre">info.plist</span></code>에 아래와 같이 노드를 추가하여 http 프로토콜을 승인합니다.<a class="headerlink" href="#info-plist-http" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAppTransportSecurity</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">dict</span><span class="o">&gt;</span>
      <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
@@ -199,8 +199,9 @@ Switch into your project directory and run command <code class="docutils literal
  <span class="o">&lt;/</span><span class="n">dict</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="add-nodes-info-plist-to-require-permissions">
-<span id="add-nodes-info-plist-to-require-permissions"></span><h3>3 Add nodes info.plist, to require permissions<a class="headerlink" href="#add-nodes-info-plist-to-require-permissions" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="info-plist">
+<span id="info-plist"></span><h3>2 <code class="docutils literal notranslate"><span class="pre">info.plist</span></code>에 아래와 같이 노드를 추가하여 권한을 승인합니다.<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCalendarsUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">Some</span> <span class="n">ad</span> <span class="n">content</span> <span class="n">may</span> <span class="n">create</span> <span class="n">a</span> <span class="n">calendar</span> <span class="n">event</span><span class="p">.</span> <span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCameraUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
@@ -209,25 +210,25 @@ Switch into your project directory and run command <code class="docutils literal
  <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">Some</span> <span class="n">ad</span> <span class="n">content</span> <span class="n">may</span> <span class="n">require</span> <span class="n">access</span> <span class="n">to</span> <span class="n">the</span> <span class="n">photo</span> <span class="n">library</span><span class="p">.</span> <span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Note: you can change description into your target language if needed.
+<p>참고: 디스크립션 설정 언어를 변경하실수 있습니다.
 <br></p>
 </div>
 <div class="section" id="bitcode">
-<span id="bitcode"></span><h3>4 Bitcode<a class="headerlink" href="#bitcode" title="Permalink to this headline">¶</a></h3>
-<p>We support Bitcode, please choose use Bitcode if needed.
-Note: YouLan and Domob SDK do not support Bitcode.
+<span id="bitcode"></span><h3>3 Bitcode<a class="headerlink" href="#bitcode" title="Permalink to this headline">¶</a></h3>
+<p>Youlan 과 Domob SDK는 Bitcode를 지원하지 않습니다. <br />
+하지만 UPLTV에서는 Bitcode도 지원해드리고 있으니 필요하시면 담당자에게 문의하여 추가 지원을 받아보세요.
 <br></p>
 </div>
 </div>
 <div class="section" id="version">
 <span id="version"></span><h2>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
-<p>You can find SDK version in file <em>UPSDKVersion.h</em></p>
+<p>SDK 버전을 <code class="docutils literal notranslate"><span class="pre">UPSDKVersion.h</span></code>  파일에서 현재 SDK 버전 번호를 바로 확인 하실 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//sdk version</span>
 <span class="cp">#define UPSDKVERSION  @&quot;3003&quot;</span>
 </pre></div>
 </div>
 <blockquote>
-<div>as we see,the version of upsdk is 3003</div></blockquote>
+<div>UPSDK의 현재 버전은 3003 입니다.</div></blockquote>
 </div>
 </div>
 
@@ -239,10 +240,10 @@ Note: YouLan and Domob SDK do not support Bitcode.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ios03_init.html" class="btn btn-neutral float-right" title="SDK Initial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ios03_init.html" class="btn btn-neutral float-right" title="SDK 초기화" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios01_xcode.html" class="btn btn-neutral" title="Xcode Access Document" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios01_xcode.html" class="btn btn-neutral" title="Xcode 액세스 문서" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -251,7 +252,7 @@ Note: YouLan and Domob SDK do not support Bitcode.
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -270,15 +271,21 @@ Note: YouLan and Domob SDK do not support Bitcode.
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

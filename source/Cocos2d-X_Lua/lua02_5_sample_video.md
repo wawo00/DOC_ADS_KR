@@ -1,15 +1,16 @@
-## Reward video Ad
+## 리워드 동영상 광고(Rewarded Video Ad)
 
-### 1. Load callback of Reward video
-This API is used to listen for the loading results of the current excited video. Once this interface is called back, the internal will be automatically released, and the callback interface needs to be reset when listening again.
+#### 1. 리워드 동영상 광고 콜백 로드하기
+
+이 API는 현재 진행 중인 리워드 동영상 광고의 로딩 결과를 수신하는 데 사용됩니다. 이 인터페이스가 호출되면 <br />
+내부가 자동으로 릴리즈되며 광고를 다시 수신할 때, 콜백 인터페이스를 재설정해야 합니다.
 
 ```lua
-
--- @param loadsuccess  Motivate the callback when the video is loaded loadsuccess(cpadid, msg)
--- @param failCall    Motivate the callback when the video is loaded failed，locadfail(cpadid, msg)
+-- @param loadsuccess 동영상이 loaded loadsuccess(cpadid, msg) 됐을 때, 콜백을 활성화 합니다.
+-- @param failCall    동영상이 loaded failed，locadfail(cpadid, msg) 됐을 때, 콜백을 활성화 합니다.
 upltv:setRewardVideoLoadCallback(loadsuccess, locadfail)
 ```
-Sample：
+샘플：
 ```lua
 local btnshowvideoActivity = createBtnAt(self, left, top, fontsize, "rdLoadCall")
 btnshowvideoActivity:addTouchEventListener(function(sender, eventType)
@@ -18,22 +19,25 @@ btnshowvideoActivity:addTouchEventListener(function(sender, eventType)
             print("=====>RewardVideoLoadCallback success at " .. cpadid)         
         end,
         function(cpadid, msg)
-            print("=====> RewardVideoLoadCallback fail at " .. cpadid .. " because of " .. msg) 
+            print("=====> RewardVideoLoadCallback fail at " .. cpadid .. " because of " .. msg)
         end)
     end
 end)
 ```
-#### 2. Show callback of Reward video Ad
-    Set up the callback interface of video show to listen to the callback of the event (click, close, reward, etc.) of the video advertisement. Reward video shows that the reference to the callback interface is stored internally and not released, so you only need to set it once.
+#### 2. 리워드 동영상 광고의 실행 콜백
+리워드 동영상 광고의 이벤트(클릭, 닫기, 보상 등) 콜백을 수신하도록 콜백 인터페이스를 설정합니다. <br />
+리워드 동영상은 콜백 인터페이스에 대한 참조가 내부적으로 저장되고 릴리스되지 않으므로 한 번만 설정하면 됩니다.
+
+
 ```lua
--- Set the Reward video display callback interface to monitor the event callbacks such as clicks, closes, rewards, etc.
--- References will be saved internally and will not be released
--- Callback event type: display, click, close, reward success, reward failed
+-- 클릭, 닫기, 보상과 같은 이벤트 콜백을 모니터 하는 리워드 동영상 디스플레이 콜백 인터페이스를 설정합니다.
+-- 참조는 내부적으로 저장되고, 릴리즈 되지 않습니다.
+-- 콜백 이벤트 유형: 디스플레이, 클릭, 닫기, 보상 성공, 보상 실패
 -- @param：showCall ,showCall(type, cpadid)
 upltv:setRewardVideoShowCallback(showCall)
 ```
 
-Sample：
+샘플：
 ```lua
 local btnshowvideoActivity = createBtnAt(self, left, top, fontsize, "rdShowCall")
 btnshowvideoActivity:addTouchEventListener(function(sender, eventType)
@@ -57,14 +61,17 @@ btnshowvideoActivity:addTouchEventListener(function(sender, eventType)
     end
 end)
 ```
-#### 3. Judge if the Reward Video ad is ready
-Synchronously return Boolean results, true indicates that the AD is ready to be displayed, and false indicates that the AD is not show and still  in the request
+#### 3. 리워드 동영상 광고 준비 여부 확인하기
+
+Boolean 결과를 동시에 리턴합니다.  True는 광고가 디스플레이 준비가 되었다는 것을 의미하고, <br />
+False는 광고가 실행되지 않고, 여전히 요청상태에 있다는 것을 의미합니다.
+
   ```lua
 
 upltv:isRewardReady()
 ```
 
-Sample：
+샘플：
 ```lua
 local btnloadvideo = createBtnAt(self, left, top, fontsize, "rdReady")
 btnloadvideo:addTouchEventListener(function(sender, eventType)
@@ -78,12 +85,15 @@ btnloadvideo:addTouchEventListener(function(sender, eventType)
     end
 end)
 ```
-#### 4. Show Reward Video Ad 
-When show the Reward Video ad, you need to upload a cpPlaceId, which is the placementid , used for business management, in order to distinguish the source of revenue.
+#### 4. 리워드 동영상 광고 실행하기
+
+리워드 동영상 광고를 실행 할 때, cpPlaceld를 업로드 해야합니다. <br />
+cpPlaceld는 비즈니스 관리와 같이 수익 소스를 구분하기 위한 매개변수입니다.
+
 ```lua
 upltv:showRewardVideo(cpPlaceId)
 ```
-Sample：
+샘플：
 ```lua
 local btnloadvideo = createBtnAt(self, left, top, fontsize, "rdShow")
 btnloadvideo:addTouchEventListener(function(sender, eventType)
@@ -98,13 +108,13 @@ btnloadvideo:addTouchEventListener(function(sender, eventType)
     end
 end)
 ```
-#### 5. Debug view of Reward Video Ad
-In order to help developers to view the use and loading status of ad, we provide a debug page for the ad of the screen, which can be opened to observe the configuration parameters and loading status of the ad.
+#### 5. 리워드 동영상 광고의 디버그 페이지
+개발자가 광고의 사용 및 로딩 상태를 볼 수 있도록 하기 위해, UPLTV는 스크린 광고에 대한 디버그 페이지를 제공합니다. 광고의 매개변수 및 로딩 상태 구조를 확인하실 수 있습니다.
 
 ```lua
 upltv:showRewardDebugUI()
 ```
-Sample：
+샘플：
 ```lua
 local btnshowvideoActivity = createBtnAt(self, left, top, fontsize, "rdDebugUi")
 btnshowvideoActivity:addTouchEventListener(function(sender, eventType)
@@ -113,4 +123,3 @@ btnshowvideoActivity:addTouchEventListener(function(sender, eventType)
     end
 end)
 ```
-

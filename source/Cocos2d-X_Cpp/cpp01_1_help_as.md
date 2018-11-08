@@ -1,31 +1,36 @@
-## Android Studio 
+## Android Studio
 
-### I.Structure of UPSDK CppPlugin
-Regarding to Android Studio or Gradle built project, UPSDK suggests it should be import by other main project in  *.aar  format. Download UPSDK CppPlugin( [Android-CPPSDK](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad") UPSDK CppPlugin)You will see the structure of directory when you unzip it:
+### I. UPSDK CppPlugin의 구조
 
+Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 `*.aar`형식으로 가져와야 합니다. <br />
+([Android-CPPSDK](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad") UPSDK CppPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 <br />
+디렉토리 구조를 보실 수 있습니다.
 
 ![as-1-1](http://docc.upltv.com/uploads/201805/5afd2c552eab2_5afd2c55.png "as-1-1")
->The UPSDK CppPlugin main package is named `UPAdsSdk_Cpp_x.x.xx_dex.aar`.
 
-- `Android Studio`
-    This directory mainly contains the ad dependency library files required for Android Studio.
-- `cpp`
-    This directory mainly contains some *.cpp source files for bridging the current Cocos2d-X cpp project with the UPSDK interface .
-- `Eclipse`
-    This directory contains some jars and resource files. Please ignore this directory if you use  Android Studio to build apk.
-- `proguard-project.txt`
-    The configuration file of confusion,if you need to obfuscate code, add the contents of this file to the file that the project depends on.
-    
+>UPSDK CppPlugin 메인 패키지명은 `UPAdsSdk_Cpp_x.x.xx_dex.aar`입니다.
 
-### II.Import UPSDK main package
-#### 1.Add files of UPSDK
-According to the above introduction, find the file named `UPAdsSdk_Cpp_x.x.xx_dex.aar` in the file directory you downloaded and add it to the `libs` directory of the project (Note: If there is no this directory, try to  create it and in the same directory as src.
-After adding, it looks like this:
+- `Android Studio`: 이 디렉토리에는 Android Studio에 필요한 광고 의존성 라이브러리 파일들이 포함되어 있습니다.
+- `cpp`: 이 디렉토리에는 현재 Cocos2d-X cpp 프로젝트를 UPSDK 인터페이스로 연동하기 위한 일부 <br />
+*.cpp 소스 파일들이 포함되어 있습니다.
+- `Eclipse`: 이 디렉토리에는 일부 jar 및 리소스 파일이 포함되어 있습니다. Android Studio를 사용하여 <br />
+apk를 빌드하는 경우 이 디렉토리를 무시하시기 바랍니다.
+- `proguard-project.txt`: 프로젝트에서 `proguard`를 사용하는 경우, 파일의 내용을 프로젝트에서 <br />
+사용하는 `proguard` 위치로 복사합니다.
+
+### II. UPSDK 메인 패키지 가져오기
+
+#### 1. UPSDK 파일 추가하기
+
+상기 설명에 따라 `UPAdsSdk_Cpp_x.x.xx_dex.aar`라는 파일을 다운로드 받은 파일 디렉토리에서 찾아서 프로젝트의 <br />
+`libs` 디렉토리에 추가합니다. (참고: 이 디렉토리가 없는 경우 src와 동일한 디렉토리를 생성합니다.) <br />
+추가한 후의 구성은 아래와 같습니다.
 
 ![as-2-1](http://docc.upltv.com/uploads/201805/5afd2d4e483b6_5afd2d4e.png "as-2-1")
-> `UPAdsSdk_Cpp_3.0.03_dex` just only for reference
+> `UPAdsSdk_Cpp_3.0.03_dex`는 참조용입니다.
 
-To ensure that the aar package in the libs directory is correctly referenced by the project, check the `build.gradle` file in the `app` directory to add the following  parameters:
+libs 디렉토리의 aar 패키지가 프로젝트에 의해 올바르게 참조되었는지 확인하기 위해 `app` 디렉토리의 <br />
+`build.gradle`파일을 확인하여 다음 매개 변수를 추가합니다.
 
 ```groovy
 repositories {
@@ -35,20 +40,21 @@ repositories {
 }
 
 ```
-Finally add aar to the dependencies scope
+마지막으로 의존성 범위에 aar을 추가합니다.
 
 ```groovy
 dependencies {
-        // Please replace UPAdsSdk_Cpp_3.0.03_dex with the actual file name.
+        // UPAdsSdk_Cpp_3.0.03_dex를 실제 파일 명과 치환합니다.
         compile(name: 'UPAdsSdk_Cpp_3.0.03_dex', ext: 'aar')
 }
 ```
 
-#### 2.Check minSdkVersion and targetSdkVersion in `build.gradle`
-UPSDK requires that minSdkVersion cannot be lower than 15, and targetSdkVersion cannot be higher than 26, so check it in the `build.gradle` file .
+#### 2. `build.gradle`에서 minSdkVersion 및 targetSdkVersion 확인하기
 
+UPSDK를 사용하려면 `minSdkVersion`이 15 보다 크고, `targetSdkVersion`이 26 보다 작아야 합니다. <br />
+이는 `build.gradle` 에서 확인하시기 바랍니다.
 
-Sample：
+샘플：
 
 ```groovy
  defaultConfig {
@@ -56,23 +62,27 @@ Sample：
         targetSdkVersion 26
 }
 ```
-The Cocos2dx-3.X project will automatically generates the default configuration of PROP_MIN_SDK_VERSION and PROP_TARGET_SDK_VERSION in gradle.properties, you only need to modify the values of both.
+cocos2dx-3.X 프로젝트는 `PROP_MIN_SDK_VERSION` 및 `PROP_TARGET_SDK_VERSION`의 디폴트 구성을 <br />
+`gradle.properties`에서 실행하므로 이 두 개의 값만 수정하면 됩니다.
 
-Recommended changes are as follows:
+권장 값은 다음과 같습니다.
 ```
  PROP_MIN_SDK_VERSION=16
  PROP_TARGET_SDK_VERSION=26
 ```
 
-#### 3.Make sure *.so files are aligned
-There are 3 types of .so files of the cpu type in `UPAdsSdk_Cpp_x.x.xx_dex.aar`：
+#### 3. *.so 파일이 정렬되었는지 확인하기
+
+`UPAdsSdk_Cpp_x.x.xx_dex.aar`에는 세 가지 유형의 *.so 파일이 있습니다.
+
 - armeabi
 - armeabi-v7a
 - x86
 
-Please add abiFilters configuration to the `gradle.build` file according to the cup type supported by the project ,that can ensure these files are aligned.
+abiFilters 구성을 `gradle.build` 파일에 프로젝트에서 지원하는 CPU 유형에 따라 추가합니다. <br />
+그리고 파일들이 정렬되어 있는지 확인합니다.
 
-If the current project only supports armeabi-v7a, please refer to the following modifications:
+현재 프로젝트가  armeabi-v7a만 지원하는 경우 아래의 수정 사항을 참조하시기 바랍니다.
 
 ```
 defaultConfig {
@@ -82,31 +92,36 @@ defaultConfig {
  }
 ```
 
->abiFilters 'armeabi-v7a' means this app will be supported in devices which base on armeabi-v7a architecture.
+>AbiFilters `armeabi-v7a'`는 이 앱이 armeabi-v7a 아키텍처에 기반을 둔 디바이스에서 지원됨을 의미합니다.
 
-### III.Add ad networdks
+### III. 광고 네트워크 추가하기
 
-#### 1.Add Google Ads SDK
+#### 1. Google Ads SDK 추가하기
 
-###### 1.**Sample code**
-In the `build.gradle` , download the gms play-service15.0.1 package from Google's remote repository via the compile command.Like this:
-    
+**샘플 코드**
+`build.gradle`에서 컴파일 명령을 통해 Google의 원격 저장소에서 gms Play-service15.0.1 패키지를 <br />
+다음과 같이 다운로드합니다.
+
     dependencies {
         compile 'com.google.android.gms:play-services-ads:15.0.1'
     }
 
 
-> In particular, if your project already has a different version of google play service, use the higher version.
+> 프로젝트에 이미 다른 버전의 Google Play 서비스가 있는 경우 상위 버전을 사용하시기 바랍니다.
 
-#### 2.Add other networdks
-To ensure you get more revenue, add as many ad libraries as possible to your project.
-Please refer to the following method to add the file named `xxx_ads.aar` in `Android Studio/aar` to the project.
-###### Global except China
-The build.gradle is as follows：
+#### 2. 기타 광고 네트워크 추가하기
+
+더 많은 수익을 위해 프로젝트에 가능한 한 많은 광고 라이브러리를 추가합니다. 다음 방법을 참조하여 <br />
+`Android Studio/aar`의 `xxx_ads.aar`파일을 프로젝트에 추가합니다.
+
+###### 중국을 제외한 전 세계 광고
+
+build.gradle은 다음과 같습니다.
+
 ```groovy
 dependencies {
-    //other ads-libs
-    //gson-2.7.jar in folder named android_support_library
+    //다른 광고 네트워크 라이브러리
+    //gson-2.7.jar은 android_support_library 명의 폴더 안에 있습니다.
     compile(name: 'gson-2.7', ext: 'jar')
     compile(name: 'facebook_ads', ext: 'aar')
     compile(name: 'facebook_exo_player', ext: 'aar')
@@ -116,7 +131,7 @@ dependencies {
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'chartboost_ads', ext: 'aar')
     compile(name: 'ironsource_ads', ext: 'aar')
-    
+
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
@@ -124,43 +139,49 @@ dependencies {
 }
 ```
 
-###### Only in China
+###### 중국에서만의 광고
 
-The build.gradle is as follows：
+build.gradle은 다음과 같습니다.
+
 ```groovy
 dependencies {
-    //other ads-libs
-    //gson-2.7.jar in folder named android_support_library
+    //다른 광고 네트워크 라이브러리
+    //gson-2.7.jar은 android_support_library 명의 폴더 안에 있습니다.
     compile(name: 'gson-2.7', ext: 'jar')
     compile(name: 'centrixlink_ads', ext: 'aar')
 
     compile(name: 'mobvista_ads', ext: 'aar')
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'chartboost_ads', ext: 'aar')
-    
+
     compile(name: 'inmobi_ads', ext: 'aar')
     compile(name: 'oneway_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
 }
 ```
 
-###### Global
-Merge the above two files into one file.
+###### 전 세계 광고
 
-### IV.Add Android Support library 
-Every affiliate needs `android.support.xxx`, so please import it to your project. If you are using Android Studio in your project, you can modify `build.gradle` file to add
+위의 두 파일을 하나의 파일로 병합하시기 바랍니다.
 
-Starting with the 3004 version of UPSDK, we recommend the 26.1.0 version of the Android support library (including v4 and v7) because of the upgrade of Admob and other networks. Of course, in special cases, it is also possible to use a lower one such as v25.3.1 of  Android support library.
+### IV. Android 지원 라이브러리 추가하기
 
-#### 1.Import Android Support library
+모든 광고 네트워크사들은 `android.support.xxx`가 필요하기에 프로젝트로 가져옵니다. <br />
+프로젝트에서 Android Studio를 사용하는 경우, `build.gradle`파일을 수정하여 추가할 수 있습니다.
 
-In the `build.gradle` , download the support libraries  from Google's remote repository via the compile command.Like this:
+UPSDK의 3.0.04 버전부터 Admob 및 기타 광고 네트워크의 업그레이드로 인해, Android 지원 라이브러리의(v4 및 v7를 <br />
+포함하여) 26.1.0 버전을 사용하는 것을 권장합니다. 특별한 경우, Android 지원 라이브러리의 v25.3.1과 같은 <br />
+하위 버전을 사용하실 수도 있습니다.
+
+#### 1. Android 지원 라이브러리 가져오기
+
+`build.gradle`에서 컴파일 명령을 통해 Google의 원격 저장소에서 지원 라이브러리를 다음과 같이 다운로드합니다.
 
 ```groovy
-dependencies { 
-    //core lib
+dependencies {
+    //핵심 라이브러리
     compile(name: 'UPAdsSdk_Cpp_3.0.04_dex', ext: 'aar')
-    //support libs
+    //지원 라이브러리
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:appcompat-v7:26.1.0'
@@ -171,23 +192,27 @@ dependencies {
 
 ```
 
-**【Attention】Android Support
- Support libraries must be imported into your project!！**
+**【주의】Android Support 지원 라이브러리를 프로젝트에 가져와야 합니다.**
 
+### V. *.cpp  파일 추가하기
 
-### V.Add *.cpp files
+#### 1. 프로젝트에 파일 추가하기
+UPSDK는 *cpp 소스 파일을 통해 네이티브 인터페이스(Native Interface)에 대한 크로스 플랫폼(Cross-Platform)을 <br />
+구현하므로 `cpp/upltv`에 있는 모든 *.cpp 및 *.h 파일을 현재 프로젝트에 복사하시기 바랍니다.
 
-#### 1.Add files in project
-The UPSDK implements cross-platform calls to the native interface via the *cpp source file, so all *.cpp and *.h files in `cpp/upltv` must be copied to the current project.
+Cocos2d-x 3.16 버전을 Classes 폴더에 복사할 수 있습니다. 버전 차이가 있는 경우 수정을 참조하시기 바랍니다. <br />
+복사 후의 디렉토리는 아래와 같습니다.
 
-Cocos2d-x 3.16 version can be copied to the Classes folder. If there are differences in other versions, please refer to the modification. The effect is as follows：
 ![classes](http://docc.upltv.com/uploads/201804/5acacf5c67cbc_5acacf5c.png "classes")
->This article is based on cocos2dx-3.16. If your directory does not match this, ask our support team for help.
+>본문은 cocos2dx-3.16을 바탕으로 서술하고 있습니다. 디렉토리가 일치하지 않으면 <br />
+담당자에게 문의하여 추가 지원을 받아보세요.
 
-### 2.Modify android.mk in jni directory
-Open the android.mk file which in the jni directory of project.
-Please copy **UpltvAndroid.cpp，CocosUpLtv.cpp，UpltvBridge.cpp** those files into **LOCAL_SRC_FILES**.
-Take Cocos2d-X 3.16 as an example. The addition method is as follows. For other versions, please modify the relative path.:
+### 2. jni 디렉토리에서 android.mk 수정하기
+
+프로젝트의 jni 디렉토리에 있는 android.mk 파일을 엽니다.
+
+**UpltvAndroid.cpp,CocosUpLtv.cpp,UpltvBridge.cpp** 파일을 **LOCAL_SRC_FILES**로 복사합니다. <br />
+Cocos2d-X 3.16을 예시로, 추가 방법은 다음과 같습니다. 기타 버전의 경우 해당되는 경로를 수정합니다.
 
 ```groovy
 LOCAL_SRC_FILES := $(LOCAL_PATH)/hellocpp/main.cpp \
@@ -197,13 +222,17 @@ LOCAL_SRC_FILES := $(LOCAL_PATH)/hellocpp/main.cpp \
                    $(LOCAL_PATH)/../../../Classes/upltv/CocosUpLtv.cpp \
                    $(LOCAL_PATH)/../../../Classes/upltv/UpltvBridge.cpp
 ```
-### Ⅵ.Modify Proguard setting 
-If your project used `proguard`.
-You have to copy contents from `proguard-project.txt` to right location of your project.
+### Ⅵ. Proguard 설정 수정하기
 
-### Ⅶ.Fix up 65535 limitation
+프로젝트에서 `proguard`를 사용하는 경우, `proguard-project.txt`에서 파일의 내용을 프로젝트에서 <br />
+사용하는 `proguard` 위치로 복사합니다.
 
-If the number of methods exceeds 65535 due to access to the UPSDK and cannot be builded correctly, please use the `MultiDex` . If you have any questions about it, please read the [MultiDex Scheme](http://docs.upltv.com/docs/show/78 "Fix up 65535").
+### Ⅶ. 65535 제한 문제 해결
 
-### Ⅷ.Demo Project
-To help you integrate ads SDK easier and faster, here we provide you a simple [Demo Project ](https://github.com/AvidlyGit/AdSdkDemo-Studio "Demo工程").
+UPSDK 액세스의 메소드 수가 65535를 초과하여 빌드할 수 없는 경우 `MultiDex`를 사용합니다. 자세한 내용은 <br />
+[MultiDex Scheme](http://docs.upltv.com/docs/show/78 "Fix up 65535")을 참조하시기 바랍니다.
+
+
+### Ⅷ.Demo 프로젝트
+
+광고 SDK를 쉽고 빠르게 결합할 수 있도록 [Demo 프로젝트 ](https://github.com/AvidlyGit/AdSdkDemo-Studio "Demo工程")를 제공합니다.

@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Solving 65535-Limitation" href="android02_65535.html" />
+    <link rel="next" title="65535 제한 문제 해결방법" href="android02_65535.html" />
     <link rel="prev" title="Eclipse" href="android01_2_help_ec.html" /> 
 
   
@@ -82,29 +82,29 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="android01_1_help_as.html">Android Studio</a></li>
 <li class="toctree-l3"><a class="reference internal" href="android01_2_help_ec.html">Eclipse</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">FAQ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">Solving 65535-Limitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -154,7 +154,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-          <li><a href="android01_help_catalog.html">Quick Start</a> &raquo;</li>
+          <li><a href="android01_help_catalog.html">빠른 시작</a> &raquo;</li>
         
       <li>FAQ</li>
     
@@ -170,27 +170,32 @@
             
   <div class="section" id="faq">
 <span id="faq"></span><h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="i-android-studio-androidmanfiest-xml-confliction-declarations">
-<span id="i-android-studio-androidmanfiest-xml-confliction-declarations"></span><h2>I. Android Studio AndroidManfiest.xml confliction declarations<a class="headerlink" href="#i-android-studio-androidmanfiest-xml-confliction-declarations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="com-google-android-gms-version-confliction-or-deletion-error">
-<span id="com-google-android-gms-version-confliction-or-deletion-error"></span><h3>1. com.google.android.gms.version confliction or deletion error<a class="headerlink" href="#com-google-android-gms-version-confliction-or-deletion-error" title="Permalink to this headline">¶</a></h3>
-<p>In <strong>Android Studio</strong> version, in order to avoid this kind of confliction, from 2.0.21 Studio Version, Avidly ADSDK has romoved the following declarations in AndroidManfiest.xml:</p>
+<div class="section" id="i-android-studio-androidmanfiest-xml">
+<span id="i-android-studio-androidmanfiest-xml"></span><h2>I. Android Studio AndroidManfiest.xml 충돌 선언<a class="headerlink" href="#i-android-studio-androidmanfiest-xml" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com-google-android-gms-version">
+<span id="com-google-android-gms-version"></span><h3>1. com.google.android.gms.version 충돌 또는 삭제 오류<a class="headerlink" href="#com-google-android-gms-version" title="Permalink to this headline">¶</a></h3>
+<p><strong>Android Studio</strong> 버전에서 이와 같은 충돌을 방지하기 위해, <br />
+2.0.21 Studio 버전부터 UPSDK에서는 AndroidManfiest.xml에서 아래의 선언을 삭제하였습니다.</p>
+<div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
+&lt;meta-data
+
+            android:name=&quot;com.google.android.gms.version&quot;
+
+            android:value=&quot;@integer/google_play_services_version&quot;/&gt;
+</pre></div>
+</div>
+<p>따라서, 2.0.21 이전 버전에서 gms.version 충돌이 발생하는 경우, 당사의 기술 지원팀으로 문의하시기 바랍니다.</p>
+<p>하지만, <strong>Android Eclipse</strong> 버전에서는 AndroidManfiest.xml에 아래의 선언을 추가해야 합니다.</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
 &lt;meta-data
             android:name=&quot;com.google.android.gms.version&quot;
             android:value=&quot;@integer/google_play_services_version&quot;/&gt;
 </pre></div>
 </div>
-<p>Thus, for those versions which are older than 2.0.21, if gms.version occurs, please contact our technical colleagues for help.</p>
-<p>However, in <strong>Android Elipse</strong> version, you need to add the following declarations in AndroidManfiest.xml：</p>
-<div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
-&lt;meta-data
-            android:name=&quot;com.google.android.gms.version&quot;
-            android:value=&quot;@integer/google_play_services_version&quot;/&gt;
-</pre></div>
-</div>
-<p>Specially, please check whether if the xml format files in <em>res/values</em> content have <em>google_play_services_version</em> definition. Generally, Avidly ADSDK defined this kind in <em>version_ad.xml</em> files. If there is no definition for it, please copy <em>version_ad.xml</em> to <em>res/values</em> content.</p>
-<p><em>version_ad.xml</em> content：</p>
+<p>특히, <code class="docutils literal notranslate"><span class="pre">res/values</span></code> 콘텐츠에 있는 <code class="docutils literal notranslate"><span class="pre">xml</span></code> 형식의 파일에 <code class="docutils literal notranslate"><span class="pre">Google_play_services_version</span></code>이 정의되어 있는지 <br />
+확인하시기 바랍니다. 일반적으로 UPSDK에서는 <code class="docutils literal notranslate"><span class="pre">version_ad.xml</span></code> 파일에서 이와 같은 정의를 사용하고 있으니, <br />
+이에 대한 정의가 없는 경우, <code class="docutils literal notranslate"><span class="pre">version_ad.xml</span></code>를 <code class="docutils literal notranslate"><span class="pre">res/values</span></code> 디렉토리에 복사하시기 바랍니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">version_ad.xml</span></code> 내용：</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;resources&gt;
     // defined the value of gms version, the kind of integer
@@ -200,9 +205,10 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="activity-confliction-or-deletion-error">
-<span id="activity-confliction-or-deletion-error"></span><h3>2. activity confliction or deletion error<a class="headerlink" href="#activity-confliction-or-deletion-error" title="Permalink to this headline">¶</a></h3>
-<p>In Android Studio versions, Avidly ADSDK from 2.0.21 Studio Version,  has removed the Activity declarations which relied on Admob and Facebook Ads in AndroidManfiest.xml:</p>
+<div class="section" id="">
+<span id="id1"></span><h3>2. 액티비티 충돌 또는 삭제 오류<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<p>Android Studio 버전, 특히 Studio 2.0.21 상위 버전의 UPSDK에서는 AndroidManfiest.xml에서 <br />
+Admob 및 Facebook 광고에 의존하는 액티비티 선언을 삭제하였습니다.</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
 
 &lt;activity
@@ -220,31 +226,37 @@ android:configChanges=&quot;keyboardHidden|orientation|screenSize&quot;
 android:multiprocess=&quot;true&quot;/&gt;
 </pre></div>
 </div>
-<p>The reason why we removed the declaration is when Admob and Facebook work in Studio porject, will import in aar formation and declare relevant components in AndroidManfiest.xml.</p>
-<p>On the contrary, regarding to Eclipse project and Studio project which integrated in jar package, you need to add Acticity manually in AndroidManfiest.xml of main project.</p>
+<p>해당 선언을 삭제한 이유는 Admob과 Facebook이 Studio 프로젝트에서 정상적으로 작동할 때 aar 형식으로 가져온 후, <br />
+관련 구성 요소를 <code class="docutils literal notranslate"><span class="pre">AndroidManfiest.xml</span></code>에서 선언하기 때문입니다.</p>
+<p>반면, jar 패키지로 결합되는 Eclipse 프로젝트와 Studio 프로젝트는 메인 프로젝트의 AndroidManfiest.xml에 <br />
+액티비티 선언을 직접 추가해야 합니다.</p>
 </div>
 </div>
-<div class="section" id="ii-admob-gms-confliction">
-<span id="ii-admob-gms-confliction"></span><h2>II. Admob gms Confliction<a class="headerlink" href="#ii-admob-gms-confliction" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="due-to-facebook-ads-rely-on-admob-ad-confliction-happens">
-<span id="due-to-facebook-ads-rely-on-admob-ad-confliction-happens"></span><h3>1. Due to Facebook Ads rely on Admob Ad, confliction happens.<a class="headerlink" href="#due-to-facebook-ads-rely-on-admob-ad-confliction-happens" title="Permalink to this headline">¶</a></h3>
-<p>When Facebook Ads compile to update audience-network-sdk online, they will not only download audience-network-sdk relevant aar files, but also download the following google gms repository files.</p>
+<div class="section" id="ii-admob-gms">
+<span id="ii-admob-gms"></span><h2>II. Admob gms 충돌<a class="headerlink" href="#ii-admob-gms" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="facebook-admob">
+<span id="facebook-admob"></span><h3>1. Facebook 광고가 Admob 광고에 의존하여 발생하는 충돌<a class="headerlink" href="#facebook-admob" title="Permalink to this headline">¶</a></h3>
+<p>Facebook 광고를 컴파일하여 온라인에서 audience-network-sdk를 업데이트할 때, <br />
+audience-network-sdk와 관련된 aar 파일 뿐만 아니라 Google gms 저장소에 있는 아래의 파일도 함께 다운로드합니다.</p>
 <ul class="simple">
 <li>play-services-ads-8.4.0</li>
 <li>play-services-basement-8.4.0</li>
 </ul>
-<p>If google gms service is updating dependency in another version(such as 10.0.1 version) , Studio Gradle will automatically remove these two 8.4.0; But if google gms service (not 8.4.0) import in <strong>local</strong>, play-services-ads and play-services-basement will occur in the project, <strong>it causes some class repeated-quoted conflictions for gms</strong>.</p>
-<p>Thus, please avoid the flowing conditions:</p>
-<ol class="simple">
-<li>google gms service and facebook audience-network-sdk are updating together;</li>
-<li>google gms service and facebook audience-network-sdk import local aar;</li>
-<li>When google gms service is updating online, facebook audience-network-sdk imports from local aar or jar package.</li>
-</ol>
+<p>Google gms 서비스가 다른 버전(예: 10.0.1 버전)에서 의존성을 업데이트되는 경우, Studio Gradle은 자동으로 <br />
+위 8.4.0 버전을 모두 삭제합니다. 하지만 8.4.0이 아닌 Google gms 서비스를 <strong>Local</strong>에서 불러오기를 하면 프로젝트에 <br />
+play-services-ads 및 play-services-basement가 생성되어 <strong>gms에 대해 클래스 반복 인용 충돌이 발생합니다.</strong></p>
+<p>따라서, 아래의 상황들이 발생되지 않도록 주의하시기 바랍니다.</p>
+<ul class="simple">
+<li>Google gms 서비스와 Facebook Audience Network SDK를 함께 업데이트하기</li>
+<li>Google gms 서비스와 Facebook Audience Network SDK를 함께 aar로 가져오기</li>
+<li>Google gms 서비스를 온라인에서 업데이트할 때, Facebook Audience Network SDK를 aar이나 jar 패키지로 가져오기</li>
+</ul>
 </div>
-<div class="section" id="other-conflictions">
-<span id="other-conflictions"></span><h3>2.Other Conflictions<a class="headerlink" href="#other-conflictions" title="Permalink to this headline">¶</a></h3>
-<p>Admob Ads need gms play service support. Thus regarding to the projects which want to support Admob Ads, must add relevant gms dependencies and configurations.</p>
-<p>Avidly ADSDK for supporting Admob, should rely on the following gms player service library:</p>
+<div class="section" id="">
+<span id="id2"></span><h3>2. 기타 충돌<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<p>Admob 광고에서는 gms 플레이 서비스 지원이 필요합니다. 따라서 Admob 광고 지원을 필요로 하는 프로젝트의 경우, <br />
+관련 gms 의존성과 구성을 추가해야 합니다.</p>
+<p>Admob을 지원하는 UPSDK는 아래의 gms 플레이어 서비스 라이브러리에 의존해야 합니다.</p>
 <ul class="simple">
 <li>play-services-ads-x.x.x</li>
 <li>play-services-ads-lite-x.x.x</li>
@@ -253,22 +265,26 @@ android:multiprocess=&quot;true&quot;/&gt;
 <li>play-services-tasks-x.x.x</li>
 </ul>
 <blockquote>
-<div>Current built-in gms version of Avidly ADSDK is play-services-ads:11.0.4，If the version is different from the main project gms version, please keep the higher gms version. To prevent unnecessary errors, no matter which version you keep, please make sure those five dependencies mentioned above should be at the same version. Or it will cause some class repeated-quoted conflictions.</div></blockquote>
+<div>현재 UPSDK에 장착된 gms 버전은 <code class="docutils literal notranslate"><span class="pre">play-services-ads:11.0.4</span></code> 입니다. 메인 프로젝트의 gms 버전과 다른 경우, <br />
+상위 gms 버전을 유지하세요. 불필요한 오류를 미연에 방지하려면, 버전에 관계없이 앞서 언급한 5개의 의존성을 항상 같은 버전으로 <br />
+유지해야 합니다. 그렇지 않은 경우, 클래스 반복 인용 충돌이 발생할 수 있습니다.</div></blockquote>
 </div>
 </div>
-<div class="section" id="iii-xxx-so-missing-probelms">
-<span id="iii-xxx-so-missing-probelms"></span><h2>III. xxx.so missing probelms<a class="headerlink" href="#iii-xxx-so-missing-probelms" title="Permalink to this headline">¶</a></h2>
-<p>AvidlyAdsSDK_x.x.x.aar and adcolony_ads.aar supply the following three kinds of cpu-typed .so files:</p>
+<div class="section" id="iii-xxx-so">
+<span id="iii-xxx-so"></span><h2>III. xxx.so 누락 문제<a class="headerlink" href="#iii-xxx-so" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">AvidlyAdsSDK_x.x.x.aar</span></code> 및 <code class="docutils literal notranslate"><span class="pre">adcolony_ads.aar</span></code>에서는 아래와 같이 3가지 종류의 CPU 타입 <code class="docutils literal notranslate"><span class="pre">*.so</span></code> 파일을 제공합니다.</p>
 <ul class="simple">
 <li>armeabi</li>
 <li>armeabi-v7a</li>
 <li>x86</li>
 </ul>
-<p>If your project (for example, games developed by cococs engine generally support armeabi only）support less than, more than or different from the above three kinds, when the procedure runs, following errors may occur.</p>
+<p>프로젝트에서 상기 3가지 파일보다 적거나, 많거나, 또는 이와 다른 사항을 지원하는 경우<br />
+(예: Cococs 엔진에서 개발한 게임은 일반적으로 armeabi만 지원함), 프로그램 실행 시 <br />
+아래와 같은 오류가 발생할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">UnsatisfiedLinkError</span><span class="p">:</span>
 <span class="n">Couldn</span><span class="s1">&#39;t load cocos2dlua from loader dalvik.system.PathClassLoader</span>
     <span class="p">[</span><span class="n">DexPathList</span><span class="p">[[</span><span class="nb">zip</span> <span class="n">file</span> <span class="s2">&quot;/data/app/org.cocos2dx.xxxxx-1.apk&quot;</span><span class="p">],</span>
-    <span class="n">nativeLibraryDirectories</span><span class="o">=</span><span class="p">[</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">app</span><span class="o">-</span><span class="n">lib</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">xxxxx</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> 
+    <span class="n">nativeLibraryDirectories</span><span class="o">=</span><span class="p">[</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">app</span><span class="o">-</span><span class="n">lib</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">xxxxx</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
     <span class="o">/</span><span class="n">vendor</span><span class="o">/</span><span class="n">lib</span><span class="p">,</span> <span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">lib</span><span class="p">,</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">datalib</span><span class="p">]]]:</span> <span class="n">findLibrary</span> <span class="n">returned</span> <span class="n">null</span>
               <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Runtime</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="n">Runtime</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">358</span><span class="p">)</span>
               <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">System</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">555</span><span class="p">)</span>
@@ -277,13 +293,12 @@ android:multiprocess=&quot;true&quot;/&gt;
               <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lua</span><span class="o">.</span><span class="n">AppActivity</span><span class="o">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">AppActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">57</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The reason is .so files <strong>unaligned</strong>.</p>
-<p>Second method for solving:</p>
-<ol class="simple">
-<li>Regarding to gradle project, please directly add to support framework in gradle.build file under app catalog :</li>
-</ol>
+<p>이유는 *.so 파일이 CPU 프레임워크와 정렬되지 않았기 때문입니다.</p>
+<p>문제를 해결하는 두가지 방법:</p>
+<ol>
+<li><p class="first">Gradle 프로젝트의 경우, 앱 카탈로그의 gradle.build 파일에 지원 프레임워크를 직접 추가합니다.</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>defaultConfig {
- 
+
         ndk {
             // The assumption is if the app support four kinds of CPU as followed
             abiFilters &#39;armeabi&#39; ,&#39;armeabi-v7a&#39;, &#39;x86&#39;, &#39;arm64-v8a&#39;
@@ -293,8 +308,13 @@ android:multiprocess=&quot;true&quot;/&gt;
 </pre></div>
 </div>
 <blockquote>
-<div>The CPU framework which is added under abiFilters, is the supporting framework for current project.</div></blockquote>
-<p>2.Regarding to Eclipse and grandle.build project which cannot be modified, please delete invalid CPU framework under libs catalog. Regarding to aar files, please open it in RAR software and delete unnessessary CPU frameword.</p>
+<div><p>abiFilters에 추가된 CPU 프레임워크는 현재 프로젝트를 지원하는 프레임워크입니다.</p>
+</div></blockquote>
+</li>
+<li><p class="first">수정할 수 없는 Eclipse 및 <code class="docutils literal notranslate"><span class="pre">grandle.build</span></code> 프로젝트의 경우, 라이브러리 카탈로그에 있는 유효하지 않은 <br />
+CPU 프레임워크를 삭제합니다. aar 파일의 경우, 압축 해제하여 불필요한 CPU 프레임워크를 삭제합니다.</p>
+</li>
+</ol>
 </div>
 </div>
 
@@ -306,7 +326,7 @@ android:multiprocess=&quot;true&quot;/&gt;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="android02_65535.html" class="btn btn-neutral float-right" title="Solving 65535-Limitation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="android02_65535.html" class="btn btn-neutral float-right" title="65535 제한 문제 해결방법" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="android01_2_help_ec.html" class="btn btn-neutral" title="Eclipse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -318,7 +338,7 @@ android:multiprocess=&quot;true&quot;/&gt;
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -337,15 +357,21 @@ android:multiprocess=&quot;true&quot;/&gt;
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

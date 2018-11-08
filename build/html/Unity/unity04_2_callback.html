@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PolyADSDK Callback interfaces &mdash; UPInteractive Document  documentation</title>
+  <title>PolyADSDK 콜백 인터페이스 &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="UnityPlugin API" href="unity05_sample_catalog.html" />
-    <link rel="prev" title="API description" href="unity04_1_api.html" /> 
+    <link rel="next" title="Unity Plugin API" href="unity05_sample_catalog.html" />
+    <link rel="prev" title="API 디스크립션" href="unity04_1_api.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,18 +82,18 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="unity01_guide.html">UnityPlugin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity02_unityplugin.html">How to add plugin in Unity project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity03_integrate_catalog.html">UnityPlugin Access</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="unity04_api_catalog.html">UnityPlugin API Introduction</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="unity04_1_api.html">API description</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">PolyADSDK Callback interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="unity01_guide.html">Unity Plugin 가이드</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity02_unityplugin.html">Unity Plugin 추가하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity03_integrate_catalog.html">Unity Plugin 액세스</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="unity04_api_catalog.html">Unity Plugin API 소개</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="unity04_1_api.html">API 디스크립션</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PolyADSDK 콜백 인터페이스</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="unity05_sample_catalog.html">UnityPlugin API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity06_multidex_catalog.html">UnityPlugin Android MultiDex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity05_sample_catalog.html">Unity Plugin API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity06_multidex_catalog.html">Unity Plugin Android MultiDex</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
@@ -101,7 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -149,11 +149,11 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../chapters/chapter03.html">UPSDK UnityPlugin</a> &raquo;</li>
+          <li><a href="../chapters/chapter03.html">UPSDK Unity Plugin</a> &raquo;</li>
         
-          <li><a href="unity04_api_catalog.html">UnityPlugin API Introduction</a> &raquo;</li>
+          <li><a href="unity04_api_catalog.html">Unity Plugin API 소개</a> &raquo;</li>
         
-      <li>PolyADSDK Callback interfaces</li>
+      <li>PolyADSDK 콜백 인터페이스</li>
     
     
 
@@ -165,120 +165,122 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="polyadsdk-callback-interfaces">
-<span id="polyadsdk-callback-interfaces"></span><h1>PolyADSDK Callback interfaces<a class="headerlink" href="#polyadsdk-callback-interfaces" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="callback-interfaces-for-rewardvideo">
-<span id="callback-interfaces-for-rewardvideo"></span><h2>1. Callback interfaces for RewardVideo：<a class="headerlink" href="#callback-interfaces-for-rewardvideo" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="api-reference">
-<span id="api-reference"></span><h3>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="polyadsdk">
+<span id="polyadsdk"></span><h1>PolyADSDK 콜백 인터페이스<a class="headerlink" href="#polyadsdk" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reward-video-ad">
+<span id="reward-video-ad"></span><h2>1. 리워드 동영상 광고(Reward Video Ad) 콜백 인터페이스<a class="headerlink" href="#reward-video-ad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="api">
+<span id="api"></span><h3>API 참조<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPSDKInitFinishedCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* Rewarded Video Ads</span>
-<span class="cm">* trigger on ad open</span>
+<span class="cm">* 리워드 동영상 광고</span>
+<span class="cm">* 리워드 동영상 광고가 실행될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPRewardDidOpenCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad click</span>
+<span class="cm">* 리워드 동영상 광고가 클릭될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPRewardDidClickCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad close</span>
+<span class="cm">* 리워드 동영상 광고가 닫힐 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPRewardDidCloseCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>  
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad reward OK</span>
+<span class="cm">* 보상 지급이 발생할 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPRewardDidGivenCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad reward FAIL or not match reward conditions</span>
+<span class="cm">* 보상을 지급할 조건에 만족하지 않거나  지급하지 못한 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPRewardDidAbandonCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="sequence-of-callback-interface">
-<span id="sequence-of-callback-interface"></span><h2>Sequence  of Callback interface<a class="headerlink" href="#sequence-of-callback-interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id1"></span><h2>콜백 인터페이스 순서<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="uprewarddidopencallback">
 <span id="uprewarddidopencallback"></span><h3>1. UPRewardDidOpenCallback<a class="headerlink" href="#uprewarddidopencallback" title="Permalink to this headline">¶</a></h3>
-<p>As long as the display of the RewardVideo is successful.</p>
+<p>리워드 동영상 광고가 디스플레이가 성공되면 호출됩니다.</p>
 </div>
 <div class="section" id="uprewarddidclickcallback">
 <span id="uprewarddidclickcallback"></span><h3>2. UPRewardDidClickCallback<a class="headerlink" href="#uprewarddidclickcallback" title="Permalink to this headline">¶</a></h3>
-<p>Called only when  user clicks  RewardVideo.</p>
+<p>리워드 동영상 광고를 클릭할 때만 호출됩니다.</p>
 </div>
 <div class="section" id="uprewarddidgivencallback-uprewarddidabandoncallback">
 <span id="uprewarddidgivencallback-uprewarddidabandoncallback"></span><h3>3. UPRewardDidGivenCallback/UPRewardDidAbandonCallback<a class="headerlink" href="#uprewarddidgivencallback-uprewarddidabandoncallback" title="Permalink to this headline">¶</a></h3>
-<p>As long as the display is successful,there will generate rewards or not issue events based on the results. The UPRewardDidGivenCallback is called when the bonus is issued, UPRewardDidAbandonCallback  is called when the bonus is not issued, and only one of the two is invoked.</p>
+<p>광고가 실행되고, 보상 발생여부는 아래의 결과에 따라 결정됩니다. 보상이 발생했을 때 UPRewardDidGivenCallback이 <br />
+호출됩니다. 보너스가 발생하지 않는다면, UPRewardDidAbandonCallback 가 호출됩니다.</p>
 </div>
 <div class="section" id="uprewarddidclosecallback">
 <span id="uprewarddidclosecallback"></span><h3>4. UPRewardDidCloseCallback<a class="headerlink" href="#uprewarddidclosecallback" title="Permalink to this headline">¶</a></h3>
-<p>The UPRewardDidCloseCallback is always called back when the RewardVidero  closed, and it is the callback that was last executed.</p>
+<p>UPRewardDidCloseCallback은 리워드 동영상 광고가 닫힐 때 호출되며 마지막으로 실행되는 콜백입니다.</p>
 <blockquote>
-<div>To sum up：RewardDidOpen-&gt;RewardDidClick(if have)-&gt;RewardDidGiven(or RewardDidAbandon)-&gt;RewardDidClose.</div></blockquote>
+<div>요약：<code class="docutils literal notranslate"><span class="pre">RewardDidOpen</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">RewardDidClick(if</span> <span class="pre">have)</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">RewardDidGiven(or</span> <span class="pre">RewardDidAbandon)</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">RewardDidClose</span></code></div></blockquote>
 </div>
 </div>
-<div class="section" id="callback-for-interstitial">
-<span id="callback-for-interstitial"></span><h2>2. Callback for Interstitial:<a class="headerlink" href="#callback-for-interstitial" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="api-reference">
-<span id="id1"></span><h3>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="interstitial-ad">
+<span id="interstitial-ad"></span><h2>2. 삽입 광고(Interstitial Ad)에 대한 콜백<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="api">
+<span id="id2"></span><h3>API 참조<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">* Interstitial Ad </span>
-<span class="cm">* trigger on ad display </span>
+<span class="cm">* 삽입 광고</span>
+<span class="cm">* 삽입 광고가 실행될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPInterstitialDidShowCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad click</span>
+<span class="cm">* 삽입 광고가 클릭될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPInterstitialDidClickCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad close</span>
+<span class="cm">* 삽입 광고가 닫힐 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPInterstitialDidCloseCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="sequence-of-callback-interface">
-<span id="id2"></span><h2>Sequence  of Callback interface<a class="headerlink" href="#sequence-of-callback-interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id3"></span><h2>콜백 인터페이스 순서<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upinterstitialdidshowcallback">
 <span id="upinterstitialdidshowcallback"></span><h3>1. UPInterstitialDidShowCallback<a class="headerlink" href="#upinterstitialdidshowcallback" title="Permalink to this headline">¶</a></h3>
-<p>As long as the display of the Interstitial ad is successful.</p>
+<p>삽입 광고의 디스플레이가 성공되면 호출됩니다.</p>
 </div>
 <div class="section" id="upinterstitialdidclickcallback">
 <span id="upinterstitialdidclickcallback"></span><h3>2. UPInterstitialDidClickCallback<a class="headerlink" href="#upinterstitialdidclickcallback" title="Permalink to this headline">¶</a></h3>
-<p>Called only when  user clicks ad.</p>
+<p>게임 유저가 광고를 클릭할 때만 호출됩니다.</p>
 </div>
 <div class="section" id="upinterstitialdidclosecallback">
 <span id="upinterstitialdidclosecallback"></span><h3>3. UPInterstitialDidCloseCallback<a class="headerlink" href="#upinterstitialdidclosecallback" title="Permalink to this headline">¶</a></h3>
-<p>The UPInterstitialDidCloseCallback is called back when the Interstitial ad  closed, and it is the callback that was last executed.</p>
+<p>UPInterstitialDidCloseCallback은 삽입 광고가 닫힐 때 호출되며 마지막으로 실행되는 콜백입니다.</p>
 <blockquote>
-<div>To sum up：InterstitialDidShow-&gt;InterstitialDidClick(if have)-&gt;InterstitialDidClose.</div></blockquote>
+<div>요약：<code class="docutils literal notranslate"><span class="pre">InterstitialDidShow</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">InterstitialDidClick(if</span> <span class="pre">have)</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">InterstitialDidClose</span></code></div></blockquote>
 </div>
 </div>
-<div class="section" id="callback-for-banner">
-<span id="callback-for-banner"></span><h2>3. Callback for Banner:<a class="headerlink" href="#callback-for-banner" title="Permalink to this headline">¶</a></h2>
-<p>UPBannerDidShowCallback is only called when the banner is displayed at first time, UPBannerDidClickCallback is called each time when banner is clicked. UPBannerDidRemoveCallback is called when the banner ad is removed.</p>
+<div class="section" id="">
+<span id="id4"></span><h2>3. 배너 콜백:<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>UPBannerDidShowCallback은 배너가 처음 실행될 때만 호출되고 UPBannerDidClickCallback은 배너를 클릭할 때마다 <br />
+호출됩니다. UPBannerDidRemoveCallback은 배너 광고를 제거하기 호출됩니다.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">* Banner Ad</span>
-<span class="cm">* trigger on ad display </span>
+<span class="cm">* 배너 광고</span>
+<span class="cm">* 배너 광고가 실행될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPBannerDidShowCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad click</span>
+<span class="cm">* 배너 광고가 클릭될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPBannerDidClickCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm">* trigger on ad delete</span>
+<span class="cm">* 광고가 삭제될 경우 콜백이 호출됩니다.</span>
 <span class="cm">*/</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPBannerDidRemoveCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 </pre></div>
@@ -294,10 +296,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="unity05_sample_catalog.html" class="btn btn-neutral float-right" title="UnityPlugin API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="unity05_sample_catalog.html" class="btn btn-neutral float-right" title="Unity Plugin API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity04_1_api.html" class="btn btn-neutral" title="API description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity04_1_api.html" class="btn btn-neutral" title="API 디스크립션" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -306,7 +308,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -325,15 +327,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

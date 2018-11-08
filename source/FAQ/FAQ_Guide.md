@@ -1,222 +1,230 @@
 
-### Q: What should I do if there is no advertisement displayed correctly after embedding the SDK?
+#### 1. SDK를 적용한 후 광고가 올바르게 실행되지 않으면 어떻게 해야 합니까?
 
-If you've set up an "placementid," please make sure you 've sent the correct placementid code to the technicist.
-
-<br />
-
-
-### Q: What advantages does UpLTV have over a single advertising platform , such as AdMob , Mobvista , Vungle, etc.?
- 
-
-1. UpLTV provides better ad fill rate and higher exhibition price ( eCPM ) than a single platform by integrating multiple ad resources. Usually, it will boost your monetization by 20 percent. 
-
-2. UpLTV's one-stop access to multiple high-quality advertising platforms avoids the registration, docking and negotiation among multiple organizations. It makes the billing process simpler and the transfer faster.
-
-3. Our professional technical support team and liquidation consultant team provide the 24/7 online support and even on-site service for key customers.
-
-
-<br />
-4.	我们更认为变现并不是简单的SDK对接，而是一种持续的服务.MaaS（Monetization as a Service） .我们同样重视根据客户的游戏内容提供最佳的广告露出逻辑，这个更依赖于深度的机器学习和人工干预相结合的手段.
-
-### Q: Why is UpLTV more efficient than other integration platforms such as YoMob , Heyzap , and Fyber ?
-1. UPLTV has better loading strategies, traffic distribution and scheduling logic.
-
-2. The goal of UPLTV is to optimize the life cycle value (LTV). It takes the short-term and long-term monetization into consideration and balances the monetization and retention.
-
-3. UPLTV has a better back-end AI data analysis system and provides more room for improvement.
-
-4. We believe that monetization should be an ongoing MaaS (Monetization as a Service) instead of a simple SDK docking. We also value the logic of providing the best advertising based on the customer's game content, which is more dependent on the combination of deep machine learning and manual intervention.
-<br />
-
-### Q: How long does it take to embed the SDK?
-
-Based on our customer feedback, it takes only half a day to embed the SDK.
-
-Please provide us with the test version after finishing the code embedding. We will promptly assist the test to confirm that the code embedding is correct.
-
-When encountering, we are always providing 7/24 customized support for any problems occurred during the embedding process.
+'placementid'를 설정한 경우 정확한 placementid를 기술팀에게 전송했는지 확인하시기 바랍니다.
 
 <br />
 
 
-### Q: How can AI improve monetization based on integration? 
+#### 2. UpLTV는 AdMob, Mobvista, Vungle 등과 같은 단일 광고 플랫폼에 비해 어떤 장점을 가지고 있습니까?
 
-To further enhancing the efficiency of the monetization, the AI system analyzes each user's tolerance and conversion ratio for the ad and provides a fully personalized ad configuration for independent users, 
+1. UPLTV는 여러 광고 리소스를 통합함으로써 단일 광고 플랫폼보다 광고 필레이트(Fillrate)와 노출 가격(eCPM)을 개선합니다. <br />
+일반적으로 수익률을 20%이상 향상시킬 수 있습니다.
 
+2. UPLTV는 여러 개의 고품질 광고 플랫폼을 하나의 SDK로 통합할 수 있어 광고 수익을 간편하게 한 번에 정산합니다.
 
-<br />
-
-### Q: Can I check the benefits brought by each advertising platform in the background? 
-
-There is no revenue data for each platform in the the background by default. However, if necessary, we can provide screenshots of the advertising platform individually, and at the monthly settlement, we can provide the accurate total revenue from each platform.
-
-What we hope is to provide a whole set of optimization services instead of a tool. We hope that our AI can help developers pay attention the overall revenue, advertising ARPU, eCPM and LTV instead of any underlying details.
-
-
-<br />
-
-### Q: Can I choose to block ads from the competitors ?
-
-For the advertising platform that supports blocking competing products, we can do it according to the developer's request.
-<br />
-
-### Q: Can I choose the certain type of advertisement, such as a rewarded video?
-
-Of course, you can.
-<br />
-
-### Q: Can I check the data of rewarded video, interstitial, and banner separately?
-
-Yes, you can.
-<br />
-
-
-### Q: Shall we re-embed the SDK after updating the game version?
-No, you don’t have to.
-
-However, we do recommend that you update the SDK to the latest version to ensure that you always have the best monetization efficiency.
-<br />
-
-### Q: Since the Chartboost has been embedded in the SDK , can you exchange the traffic?
-
-It is not available temporarily. 
-
-We use the advertising resources from Chartboost only as a general advertising platform.
-<br />
-
-
-### Q: What is the size of  the SDK currently? Is it related to the number of ad platforms integration?
-
-The SDK size is less than 1M.
-Its size depends on how many the third-party advertising platforms are integrated. Usually we recommend to choose three to five third-party advertising platforms, which increases the size to 2~3M.
+3. 기술지원, 광고 최적화 팀은 실시간 기술 지원을 해드리며, 필요 시 현장 지원 서비스도 제공하고 있습니다.
 
 <br />
 
 
-### Q: If our game has embedded a single advertising platform such as vungle , unityads , and your SDK integrates the platform as well. Will there be any conflicts?
+#### 3. UPLTV는 왜 YoMob, Heyzap, 그리고 Fyber 등의 다른 미디에이션 플랫폼과 비교하여 더 효율적입니까?
 
-Usually there no conflicts. If there is a conflict, we will provide a customized solution.
+1. UPLTV는 로딩 전략, 트래픽 분배 및 스케줄링 로직이 더 뛰어납니다.
 
-Notes:
+2. 단기 및 장기 수익화를 고려하고 수익화 및 잔존율의 균형을 맞추면서 LTV(LifeTime Value)를 최적화하는 것이 <br />
+UPLTV의 목표입니다.
 
-- We do not recommend re-integration among UPSDK and other third-party ad platforms, which may reduce revenue (repetitive ads).
+3. UPLTV는 더 나은 백엔드 AI 데이터 분석 시스템이며, 분석 지표로 더 많은 개선점을 제공 해드릴 수 있습니다.
 
-- In addition, some third-party ad SDK might have compatibility problems.
-
-Our recommendation is to take over the provisioning strategy directly from the UPSDK in the top-level logic .
-
-If you are concerned about the decline in revenue due to our SDK, we can provide the corresponding claims protection clause in the contract.
-
-<br />
-
-### Q: How do you get priority to show the relatively high price Offer of advertising? Is it a real-time bid?
-
-1.	UpLTV has integrated the data API for every third-party advertising platform, so that it can access to the product information such as the sub-national rate, click-through rate per hour filling rate etc..
-
-2.  Then the more efficient advertising platform will come first through comprehensive calculations.
-
-Currently, real-time bidding is not mainstream in the industry for mobile In-App advertising . We are still using a strategy-based collation.
-
-But it is worth mentioning what we have done. 
-
-- The data provided by the advertising platform will be revised according to our own statistics.
-
--  Full consideration is given to the impact of the ranking itself on prices and CTR, which is corrected by the model.
-
-- Add additional scheduling strategies to capture short-term opportunities for short-term premium offers in some regions.
-
-- Different federation and ad slot combinations are used based on the grouping pattern of user portraits.
-
-
-<br />
-
-### Q: Will your SDK be added to your own interactive advertising platform?
-
-Already joined.
-
-<br />
-
-### Q: Can you set up the horizontal or vertical screen ads display?
-
-Most ad networks support automatic adaptation of resources, and developers don't need to care about adaptation issues.
-
--  If the advertising system is poor due to poor adaptability of the horizontal and vertical screens of an advertising platform, it will be quickly reduced by our automatic algorithm.
-
--	If the revenue (LTV) is good enough, the developers do not need to care about whether the horizontal and vertical screens are adapted.
-<br />
-
-### Q: Is it enough to access your SDK and API only? Is it still necessary to access our own data platform for you to collect data?
-
-No need.
-
- 
-Our SDK has built-in collection and reporting of ad-related events to help game developers optimize revenue. In addition to accessing the SDK, game developers do not need to open up the data platform for us.
-
-However, in order to support the A/B Testing function of the advertisement , we may need to pass the information of “whether it is a paid user” or “whether it has passed the novice tutorial” to the game developer to help us optimize. Specific information has different options depending on the game.
-
-In fact, we provide three levels of access services based on customer needs:
-
--  SDK - integrated into the game concurrent version, relatively junior docking, suitable for small CP, customers who have little or no experience in advertising cash.
-
-- API - Need to pass a small amount of data through the interface (whether it is a paid user), large and medium-sized CP, full awareness of advertising.
-
-- AI - Need to pass more in-game events through the interface (clearance, failure, resurrection, new records, etc.), deep cooperation customers, fully aware of the value of advertising cash.
-
-All of the above are SDK-based and do not require a CP open data platform.
+4. 수익화는 단순한 SDK 적용으로 끝나는게 아니라 지속적인 수익화를 위한 서비스(MaaS, Monetization as a Service)라고 <br />
+생각합니다. 또한 컨텐츠를 바탕으로 딥러닝 & 머신러닝과 수동 개입을 통합하여 최고의 광고를 제공하는 것이 <br />
+중요하다고 믿고 있습니다.
 
 <br />
 
 
-### Q: Can eCPM set a low price?
+#### 4. SDK를 연동하는 데 시간이 얼마나 걸립니까?
 
-It’s not available.
-
-In fact, we will use Floor eCPM to limit the price of third-party platforms to optimize overall revenue.
-However, in order to improve the LTV, we will not provide the function of limiting eCPM .
-<br />
-
-
-### Q: To what extent can user tags be refined after API access?
-
-There are three main dimensions of UPLTV's attention:
-
--  Willingness to pay
-
--  Retention viscosity
-
--  Active advertising
-
-
-Our AI system will roughly group the high, medium and low groups based on the above three dimensions based on the user's events in the game. Then it will provide personalized advertising display strategies based on groupings.
+피드백을 바탕으로 SDK를 연동하는 데는 반나절 정도 걸립니다. <br />
+코드 적용 후 테스트 버전을 제공해 주시면 저희는 코드가 제대로 적용되었는지 테스트를 통하여 확인합니다. <br />
+임베딩 프로세스 중에 기술 지원팀은 실시간 기술지원을 제공하고 있습니다.
 
 <br />
 
-### Q: How to avoid the tax generated by the payment ?
 
-Our payment account is a Hong Kong company identity. And we will assist mainland developers to complete tax deductions (similar to Google and Facebook).
-<br />
+#### 5. 통합에 기반한 AI는 수익화를 어떻게 개선할 수 있습니까?
 
-### Q: How do you distinguish between subscribers and non-paying users to targeted delivery group ?
+AI 시스템은 광고 허용오차 및 전환비율을 분석하고 사용자를 위한 맞춤형 광고 구성을 제공하며 <br />
+수익화 효율성을 더욱 높입니다.
 
-Analyze user behavior and predict its potential payment probability (based on AI technology).
-Grouping for willingness to pay. Under the premise of not affecting the retention of users , the upper limit of the number of daily viewing advertisements of low- paying users is increased .
-<br />
-
-### Q: Will accessing two CPs at the same time increase the package size?
-
-When we connect with other platforms at the same time, the alliances we support together do not need to re-access. We need to access the alliances that we have but another aggregation does not need. It will not increase the size of the package.
 <br />
 
 
+#### 6. 백그라운드에서 각 광고 플랫폼이 제공하는 수익을 확인할 수 있습니까?
 
-### Q: What is the current price of eCPM in North America for words game?
+기본적으로 백그라운드에서 각 광고 플랫폼에 대한 수익 데이터는 없습니다. 그러나 필요한 경우 광고 플랫폼의 <br />
+수익을 스크린샷으로 개별적으로 제공할 수 있으며, 매월 정산 시 각 광고 플랫폼의 정확한 총 수익을 제공합니다.
 
-- Android incentive video is about $8, Interstitial$5-6;
+UPLTV는 단순한 툴이 아닌 최적화 서비스를 제공하는 것을 목표로 하고 있습니다. 개발자들이 <br />
+ARPU, eCPM, LTV, 그리고 전체 수익을 확인하는 데에 UPLTV의 AI가 도움이 되기를 바랍니다.
 
-- iOS reward video $10, Interstitial 6-8.
-
-Different types of products fluctuate greatly, the above data is for reference only.
-
+<br />
 
 
+#### 7. 경쟁사의 광고를 차단할 수 있습니까?
+
+경쟁 제품 차단을 지원하는 광고 플랫폼의 경우 개발자의 요청에 따라 차단할 수 있습니다.
+
+<br />
+
+
+#### 8. 리워드 동영상 광고(Rewarded Video Ad)와 같은 특정 유형의 광고를 선택할 수 있습니까?
+
+네, 가능합니다.
+
+<br />
+
+
+#### 9. 리워드 동영상 광고(Rewarded Video Ad), 삽입 광고(Interstitial Ad), 그리고 배너 광고(Banner Ad)의 데이터를 따로 확인할 수 있습니까?
+
+네, 가능합니다.
+
+<br />
+
+
+#### 10. 게임 버전을 업데이트한 후에 SDK를 다시 연동해야 합니까?
+
+아니요, SDK를 다시 연동하실 필요가 없습니다. <br />
+그러나 항상 최고의 수익화 효율성을 얻으려면 SDK를 최신 버전으로 업데이트하는 것이 좋습니다.
+
+<br />
+
+
+#### 11. Chartboost가 SDK에 포함되어 있으니, 트래픽을 교환할 수 있습니까?
+
+아직은 사용할 수 없습니다. <br />
+UPLTV는 Chartboost의 광고 리소스를 일반적인 광고 플랫폼으로 사용하고 있습니다.
+
+<br />
+
+
+#### 12. 현재 SDK의 크기가 어떻게 됩니까? 광고 플랫폼 통합 수와 관련이 있습니까?
+
+SDK 크기는 1M 미만이며, 통합 되어있는 타사 광고 플랫폼 수에 따라 크기가 달라집니다. <br />
+일반적으로 3~5개의 타사 광고 플랫폼을 선택하시는 것을 권장하고 있는데, 이 경우 2~3M으로 증가합니다.
+
+<br />
+
+
+#### 13. 게임에 vungle , unityads 와 같은 타사 광고 플랫폼이 이미 연동된 경우, UPLTV SDK 연동시 충돌이 발생합니까?
+
+보통은 충돌이 발생하지 않으며, 충돌 발생 시 맞춤형 솔루션을 제공합니다.
+
+> 주의: <br />
+- UPSDK와 기타 타사 광고 플랫폼 간의 중복 통합을 권장하지 않으며, 이로 인해 광고 수익이 감소될 수 있습니다(반복적인 광고). <br />
+- 또한 일부 타사 광고 SDK에 호환성 문제가 있을 수 있습니다.
+
+top-level logic에서 UPSDK로 바로 provisioning strategy을 인계할 것을 권장합니다. <br />
+UPLTV의 SDK로 인한 수익 감소가 우려될 경우 계약에서 해당 클레임 보호 조항을 제공할 수 있습니다.
+
+<br />
+
+
+#### 14. 어떻게 높은 단가를 우선적으로 보여주게 됩니까, 리얼 타임 비딩입니까?
+
+1.	UPLTV는 모든 타사 광고 플랫폼에 대한 데이터 API를 통합하여 시간당 기본 요금, 클릭당 요금 등과 같은 <br />
+제품 정보에 액세스할 수 있습니다. <br />
+
+2.  그런 다음 종합적인 계산을 통해 보다 효율적인 광고 플랫폼이 최우선적으로 선정 됩니다. <br />
+현재 리얼 타임 비딩은 모바일 In-App 광고 업계에서 주로 사용되고 있지 않습니다. <br />
+
+> 하지만 UPLTV가 한 일은 언급할 가치가 있습니다.
+- 광고 플랫폼이 제공하는 데이터는 UPLTV의 통계에 따라 수정될 것입니다.
+- 이 순위 자체가 가격과 CTR에 미치는 영향을 충분히 고려하며 모델을 통하여 수정됩니다.
+- 일부 지역에서 단기 프리미엄 오퍼를 위한 단기 기회를 포착하기 위한 추가 일정 전략을 추가합니다.
+- 게임 유저 특성에 따른 그룹화 방식에 따라 다른 광고 플랫폼과 광고 슬롯 조합이 사용됩니다.
+
+<br />
+
+
+#### 15. UPLTV의 SDK를 UPLTV 인터랙티브 광고 플랫폼에 추가하실 겁니까?
+
+이미 추가했습니다.
+
+<br />
+
+
+#### 16. 가로형 또는 세로형 광고 디스플레이를 설정할 수 있습니까?
+
+대부분의 광고 네트워크는 리소스의 자동 적용을 지원하므로 개발자분들은 적용 문제에 신경 쓸 필요가 없습니다.
+
+- 광고 시스템의 가로형 및 세로형 스크린의 적용성이 안 좋아서 광고 수익이 낮아질 경우, <br />
+UPLTV의 자동 알고리즘으로 이 광고 시스템이 빠르게 줄어들 것입니다.
+-	수익(LTV)이 충분하면 개발자분들은 가로형 및 세로형 화면이 조정되는지 여부에 대해 신경 쓸 필요가 없을 것입니다.
+
+<br />
+
+
+#### 17. SDK 및 API에만 액세스하면 충분합니까? 데이터를 수집하려면 개발자의 데이터 플랫폼에 액세스해야 합니까?
+
+액세스 하실 필요가 없습니다. <br />
+UPLTV의 SDK에는 게임 개발자가 수익을 최적화할 수 있도록 광고 관련 이벤트의 수집 및 리포팅 기능이 <br />
+내장되어 있습니다. 게임 개발자들은 SDK에 액세스하는 것 외에 데이터 플랫폼을 열 필요가 없습니다.
+
+그러나, 게임 개발자는 광고의 A/B 테스트 기능에 지원을 위해, "결제 유저 여부" 또는 "튜토리얼을 통과했는지 여부"의 <br />
+정보를 UPLTV에게 전달하여 최적화할 수 있습니다. 게임에 따라 맞춤형 제안을 제공하고 있습니다.
+
+실제로 UPLTV는 고객의 요구에 따라 세 가지 수준의 액세스 서비스를 제공합니다.
+-  SDK - 소규모 개발자, 광고 수익화에 경험이 없거나 관심이 별로 없는 고객일 경우 게임 통합 버전에 연동합니다. 상대적으로 junior docking인 편입니다.
+- API - 대형 및 중형 개발자, 광고 수익화에 충분한 인식을 갖고 있는 고객일 경우 인터페이스를 통해 데이터(결제 유저 여부)를 전달해야 합니다.
+- AI - 광고 수익화 가치를 충분히 인지하고 있는 심층 협력 고객일 경우 인터페이스를 통해 보다 많은 게임 내 이벤트(지연, 실패, 부활, 신기록 등)를 전달해야 합니다.
+
+위의 모든 것은 SDK 기반이며 개발자는 데이터 플랫폼을 오픈 하실 필요가 없습니다.
+
+<br />
+
+
+#### 18. eCPM은 가격을 낮출 수 있습니까?
+
+가능하지 않습니다.
+
+실제로 UPLTV는 전체 수익을 최적화하기 위해  Floor eCPM을 사용하여 다른 타사 플랫폼의 가격을 제한할 예정입니다. <br />
+그러나, LTV를 개선하기 위해, eCPM을 제한하는 기능을 제공하지 않을 것입니다.
+
+<br />
+
+
+#### 19. API 액세스 후 유저 태그는 어느 정도까지 다듬을 수 있습니까?
+
+UPLTV에는 다음과 같은 세 가지 주요 차원이 있습니다.
+-  지불 의향
+-  잔존율 점성도
+-  광고 액티브
+
+UPLTV의 AI 시스템은 게임에서 유저의 이벤트에 근거하여 위의 세 가지 요소들을 대략적으로 그룹화할 것입니다. <br />
+그런 다음 그룹별로 맞춤형 광고 디스플레이 전략을 제공합니다.
+
+<br />
+
+
+#### 20. 결제 유저와 비결제 유저를 어떻게 타겟 배송 그룹에 구분합니까?
+
+유저 행동을 분석하고 잠재적인 결제 가능성을 예측합니다(AI 기술 기반). 결제 의향에 따라 유저를 그룹화합니다. <br />
+유저의 잔존율을 최대한 유지하면서 결제 의향이 낮은 유저의 일일 광고 수의 상한을 증가시킵니다.
+
+<br />
+
+
+#### 21. 두 개의 미디에이션을 동시에 연동하면 패키지 용량이 커집니까?
+
+다른 미디에이션과 동시에 연동할 때, UPLTV와 함께 지원하는 타사 광고 플랫폼은 다시 액세스할 필요가 없습니다. <br />
+ UPLTV는 가지고 있지만 상대방이 미디에이션을 갖고 있지 않는 경우에만 따로 액세스해야 합니다. 패키지의 용량이 <br />
+ 늘어나지 않을 것입니다.
+
+<br />
+
+
+#### 22. 북미에서 워드 게임(words game)의 eCPM은 현재 얼마입니까?
+
+- Android 리워드 동영상 광고(Rewarded Video Ad)는 약 8 달러, 삽입 광고(Interstitial Ad)는 5-6 달러 입니다.
+- iOS의 리워드 동영상 광고(Rewarded Video Ad)는 10 달러, 삽입 광고(Interstitial Ad)는 6-8 달러 입니다.
+
+다른 종류의 제품은 크게 변동하며, 위의 데이터는 참조용입니다.
+
+<br />
+
+
+#### 23. 결제는 어느 국가에서 진행되나요?
+
+결제는 UPLTV 홍콩에서 진행됩니다.

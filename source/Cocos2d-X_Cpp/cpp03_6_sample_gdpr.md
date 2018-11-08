@@ -1,24 +1,30 @@
 
 ## GDPR
-`GDPR "The General Data Protection Regulation" is a data protection program issued by the European Union.` If your product is intended for EU users, we offer the following solutions to ensure that `UPSDK` complies with the GDPR' rules.
+`GDPR(The General Data Protection Regulation)`은 2018년 5월 25일부터 시행된 EU(유럽연합)의 개인정보보호 법령이며, <br />
+`UPSDK`는 아래와 같은 솔루션을 제공함으로써 GDPR을 준수하고 있습니다. EU 지역에서 서비스 하실 때에 안심하고 <br />
+ 사용하실 수 있습니다.
 
-### GDPR recommend the use case
-#### Plan 1
-It is recommended to customize the authorization popover interface of GDPR according to the picture style of your game to ensure the best product experience.
-With this scheme, you only need to synchronize the authorization results to the UPSDK and then initialize the UPSDK.
+### GDPR 두 가지 권장 사용 방법
 
-Sample：
+#### 첫 번째 방법
+
+서비스를 최상의 상태로 구현하기 위해, 각 사의 게임 화면의 스타일에 따라 GDPR 권한 허가 창을 설정합니다. <br />
+맞춤형 구현을 하셨다면, GDPR 권한 허가 결과를 UPSDK에 알려주시고 초기화를 진행합니다.
+
+샘플：
+
 ```csharp
 {
     // ...
 
     UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus result = UpltvBridge::getAccessPrivacyInfoStatus();
     if (result == UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus::UPAccessPrivacyInfoStatusUnkown) {
-        // Determine if the user belongs to the EU
-        // Asynchronous callback function gdprUeropeanLocationCallback
+        // 게임 유저가 EU 지역에 있는지 판단합니다.
+        // gdprUeropeanLocationCallback을 동기화 콜백합니다.
+
         UpltvBridge::isEuropeanUnionUser(gdprUeropeanLocationCallback);
     } else {
-        // Assume the issuing area is overseas, and the parameter passes 0
+        // 해외에 있는 것으로 가정하면 매개변수 값은 0을 전송합니다.
         UpltvBridge::initSdkByZone(0);
     }
 
@@ -26,43 +32,42 @@ Sample：
 }
 
 void gdprUeropeanLocationCallback(bool isUeropeanUser) {
-    // isUeropeanUser: true represents users in the EU, otherwise non-eu users
+    // isUeropeanUser: True는 게임 유저가 EU 지역에 있다는 것을 의미하고, 그 외는 EU 지역외 게임 유저를 의미합니다.
     if (isUeropeanUser) {
-        //  is EU user, calls custom authorization inquiry method
-        // callYourOwnGDPRDialog()，That's our hypothetical method
-        // yourOwnGDPRCallback，it's our hypothetical authorization callback method
-        // Please replace according to the actual code
+        //  EU 지역 게임 유저라면, 권한 승인 메소드를 호출합니다.
+        // callYourOwnGDPRDialog()는 가정한 메소드 입니다.
+        // yourOwnGDPRCallback는 가정한 콜백입니다.
+        // 이 코드를 실제 상황에 따라 치환합니다.
         callYourOwnGDPRDialog(yourOwnGDPRCallback);
 
     } else {
-        //  if the user is Non-eu users, directly initialize the SDK
-        // Assume the issuing area is overseas, and the parameter passes 0
+        //  게임 유저가 EU 지역에 있지 않다면 바로 UPSDK 초기화합니다.
+        // 해외에 있는 것으로 가정하면 매개변수 값은 0을 전송합니다.
         UpltvBridge::initSdkByZone(0);
     }
 }
 
 private void yourOwnGDPRCallback(bool result) {
-    // result : true means that the user accepts authorization, and false rejects authorization
-    // Please refer to the following code to complete authorization synchronization and initialization of UPSDK
+    // result : True는 게임 유저가 승인했다는 것을 의미하고, False는 거절을 의미합니다.
+    // 아래를 참조하여 승인 동기화와 UPSDK의 초기화를 완료하시기 바랍니다.
     if (result) {
         UpltvBridge::updateAccessPrivacyInfoStatus(UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus::UPAccessPrivacyInfoStatusAccepted);
     } else {
         UpltvBridge::updateAccessPrivacyInfoStatus(UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus::UPAccessPrivacyInfoStatusDefined);
     }
- 
-    // First should call updateAccessPrivacyInfoStatus (),and then  initialization UPSDK
-    // Assume the issuing area is overseas, and the parameter passes 0
+
+    // updateAccessPrivacyInfoStatus ()를 호출한 후 UPSDK를 초기화합니다.
+    // 해외에 있는 것으로 가정하면 매개변수 값은 0을 전송합니다.
     UpltvBridge::initSdkByZone(0);
 }
 ```
 
 
-#### Plan 2
+#### 두 번째 방법
 
-If you use the standard authorization mechanism provided by UPSDK, refer to the following code to modify the UPSDK initialization process.
+UPSDK에서 제공하는 표준 승인 프로세스를 사용하신다면 아래와 같은 코드를 사용합니다.
 
-Sample：
-
+샘플：
 
 ```csharp
 
@@ -71,11 +76,11 @@ Sample：
 
     UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus result = UpltvBridge::getAccessPrivacyInfoStatus();
     if (result == UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus::UPAccessPrivacyInfoStatusUnkown) {
-        // Judge the users is in the EU
-        //Asynchronous callback function gdprUeropeanLocationCallback
+        // 게임 유저가 EU 지역에 있는지 판단합니다.
+        // gdprUeropeanLocationCallback을 동기화 콜백합니다.
         UpltvBridge::isEuropeanUnionUser(gdprUeropeanLocationCallback);
     } else {
-        // Assume the issuing area is overseas
+        // 해외에 있는 것으로 가정합니다.
         UpltvBridge::initSdkByZone(0);
     }
 
@@ -83,21 +88,21 @@ Sample：
 }
 
 void gdprUeropeanLocationCallback(bool result) {
-    // result: true represents users in the eu, otherwise non-eu users
+    // result: True는 게임 유저가 EU 지역에 있다는 것을 의미하고, 그 외는 EU 지역외 게임 유저를 의미합니다.
     if (result) {
-        // Users in the eu, making authorization inquiries
+        // 권한 승인을 요청합니다.
         UpltvBridge::notifyAccessPrivacyInfoStatus(gdprNotifyCallback);
     } else {
-        // Non-eu users, directly initialize the SDK
-        // Assume the issuing area is overseas
+        // 비 EU 게임 유저라면 바로 SDK 초기화합니다.
+        // 해외에 있는 것으로 가정합니다.
         UpltvBridge::initSdkByZone(0);
     }
 }
 
 void gdprNotifyCallback(UpltvGDPRPermissionEnum::UPAccessPrivacyInfoStatus result, string msg) {
-    // result：User authorization results
-    // Whatever the result, initialize the SDK
-    // Assume the issuing area is overseas
+    // result：게임 유저의 승인 결과
+    // 결과에 상관 없이 SDK를 초기화 합니다.
+    // 해외에 있는 것으로 가정합니다.
     UpltvBridge::initSdkByZone(0);
 }
 ```

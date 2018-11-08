@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Interstitial Ad &mdash; UPInteractive Document  documentation</title>
+  <title>삽입 광고(Interstitial Ad) &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rewarded Video Ad" href="android06_video.html" />
-    <link rel="prev" title="Customizing Banner Ad" href="android04_2_banner_custom.html" /> 
+    <link rel="next" title="리워드 동영상 광고(Rewarded Video Ad)" href="android06_video.html" />
+    <link rel="prev" title="맞춤형 배너 광고(Banner Ad)" href="android04_2_banner_custom.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">Solving 65535-Limitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -149,7 +149,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-      <li>Interstitial Ad</li>
+      <li>삽입 광고(Interstitial Ad)</li>
     
     
 
@@ -162,24 +162,27 @@
            <div itemprop="articleBody">
             
   <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h1>Interstitial Ad<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ads-object-initial">
-<span id="ads-object-initial"></span><h2>Ads Object Initial<a class="headerlink" href="#ads-object-initial" title="Permalink to this headline">¶</a></h2>
-<p>Use the following code to initialize Interstitial Ads</p>
+<span id="interstitial-ad"></span><h1>삽입 광고(Interstitial Ad)<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="">
+<span id="id1"></span><h2>광고 객체 초기화<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>아래의 코드를 사용하여 삽입 광고의 초기화 합니다.</p>
 <blockquote>
-<div>You can set the parameter <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> to any significative name you want. If you’re not sure, please discuss with our <strong>support engineer</strong>. You should use a different <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> for different ads placement. We provide revenue from each  <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> in the feature.
-Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause scene of your game.</div></blockquote>
+<div>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> 를 의미 있는 이름으로 설정할 수 있습니다. 정확한 판단이 어렵다면, <br />
+UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 각 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에서 발생한 수익을 <br />
+제공하고 있으므로, 광고 노출 위치마다 다른 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>를 사용해야 합니다. 가령, 게임의 정지 화면에서 <br />
+UPSDK의 초기화 설정할 때는 &quot;정지&quot; 또는 &quot;메뉴&quot;를 사용할 수 있습니다.</div></blockquote>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mInterstitialAd</span> <span class="o">=</span> <span class="n">new</span> <span class="n">UPInterstitialAd</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="s2">&quot;Placement ID&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="load-callback">
-<span id="load-callback"></span><h2>Load Callback<a class="headerlink" href="#load-callback" title="Permalink to this headline">¶</a></h2>
-<p>You can use interface <code class="docutils literal notranslate"><span class="pre">load</span></code> to check process of loading. This is optional. You can ignore it if there are no special requirements.</p>
+<span id="load-callback"></span><h2>로드 콜백(Load Callback)<a class="headerlink" href="#load-callback" title="Permalink to this headline">¶</a></h2>
+<p>인터페이스 <code class="docutils literal notranslate"><span class="pre">load</span></code>를 사용하여 콜백 기능을 설정할 수 있습니다. <br />
+이는 선택사항이며, 특별히 필요하지 않으면, 사용하지 않아도 됩니다.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">load</span><span class="o">(</span><span class="n">UPInterstitialLoadCallback</span> <span class="n">callback</span><span class="o">)</span>
 </pre></div>
 </div>
-<p>Sample codes:</p>
+<p>샘플 코드:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPInterstitialAd</span> <span class="n">mInterstitialAdAAA</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UPInterstitialAd</span><span class="o">(</span><span class="n">InterstitialActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&quot;inter_aaa&quot;</span><span class="o">);</span>
 <span class="kd">final</span> <span class="n">UPInterstitialLoadCallback</span> <span class="n">callback</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UPInterstitialLoadCallback</span><span class="o">()</span> <span class="o">{</span>
         <span class="nd">@Override</span>
@@ -187,7 +190,7 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
             <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">&quot;InterstitialAd &quot;</span> <span class="o">+</span> <span class="n">placement</span> <span class="o">+</span> <span class="s">&quot; onLoadSuccessed:&quot;</span><span class="o">);</span>
 
             <span class="k">if</span> <span class="o">(</span><span class="n">placement</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;inter_aaa&quot;</span><span class="o">))</span> <span class="o">{</span>
-                <span class="c1">// load successed,could show </span>
+                <span class="c1">// load successed,could show</span>
             <span class="o">}</span>
         <span class="o">}</span>
 
@@ -206,8 +209,9 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
 </div>
 </div>
 <div class="section" id="action-callback">
-<span id="action-callback"></span><h2>Action Callback<a class="headerlink" href="#action-callback" title="Permalink to this headline">¶</a></h2>
-<p>You can use interface <code class="docutils literal notranslate"><span class="pre">setUPInterstitialAdListener</span></code> to setup callback functions. This is optional. You can ignore it if there are no special requirements.</p>
+<span id="action-callback"></span><h2>액션 콜백(Action Callback)<a class="headerlink" href="#action-callback" title="Permalink to this headline">¶</a></h2>
+<p>인터페이스 <code class="docutils literal notranslate"><span class="pre">setUPInterstitialAdListener</span></code>를 사용하여 콜백 기능을 설정할 수 있습니다. <br />
+이는 선택사항이며, 특별히 필요하지 않으면, 사용하지 않아도 됩니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">setUPInterstitialAdListener</span><span class="p">(</span><span class="n">new</span> <span class="n">UPInterstitialAdListener</span><span class="p">()</span> <span class="p">{</span>
     <span class="nd">@Override</span>
     <span class="n">public</span> <span class="n">void</span> <span class="n">onClicked</span><span class="p">()</span> <span class="p">{</span>
@@ -227,33 +231,34 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
 </pre></div>
 </div>
 </div>
-<div class="section" id="show-interstitial-ads">
-<span id="show-interstitial-ads"></span><h2>Show Interstitial Ads<a class="headerlink" href="#show-interstitial-ads" title="Permalink to this headline">¶</a></h2>
-<p>Call <code class="docutils literal notranslate"><span class="pre">show</span></code> method to display ads whenever you want in your game.</p>
-<p><strong>Note: Call <code class="docutils literal notranslate"><span class="pre">isReady</span></code> before <code class="docutils literal notranslate"><span class="pre">show</span></code> to make sure everything is ready</strong></p>
+<div class="section" id="">
+<span id="id2"></span><h2>삽입 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">show</span></code> 메소드를 호출하여 게임에서 원할 때마다 광고를 노출할 수 있습니다.</p>
+<p><strong>참고: <code class="docutils literal notranslate"><span class="pre">show</span></code> 메소드를 호출하기 전에 <code class="docutils literal notranslate"><span class="pre">isReady</span></code>를 호출하여 동영상이 준비되었는지 확인하시기바랍니다.</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">mInterstitialAd</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">isReady</span><span class="p">())</span> <span class="p">{</span>
     <span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="debug-page">
-<span id="debug-page"></span><h2>Debug Page<a class="headerlink" href="#debug-page" title="Permalink to this headline">¶</a></h2>
-<p>In order to make you understand the working and loading status for video ads easily, we provide you “Video Ads Debug
-” page to help you know the working condition of video ads, you could adjust by using the following code:</p>
+<div class="section" id="">
+<span id="id3"></span><h2>디버그 페이지<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>동영상 광고의 디스플레이 및 로딩 상태를 쉽게 이해할 수 있도록, 디버그 페이지를 통해 동영상 광고의 작동 상태를 <br />
+알 수 있도록 제공하고 있습니다.</p>
+<p>아래의 코드를 사용하여 디버그 페이지를 조정할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">mInterstitialAd</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">showInterstitialDebugActivity</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The page looks like this. Columns (left to right):</p>
+<p>페이지 구성은 다음과 같습니다. (왼쪽에서 오른쪽으로)</p>
 <ul class="simple">
-<li>Affiliate name</li>
-<li>Is this Affiliate SDK integrated?</li>
-<li>Is this Affiliate opened by server side configuration?</li>
-<li>Did this Affiliate Ads successfully load?</li>
+<li>광고 네트워크</li>
+<li>SDK 적용 여부 및 버전정보</li>
+<li>서버 구성을 통한 광고 실행 여부</li>
+<li>광고 로딩 성공 여부</li>
 </ul>
-<p>You can play ads by clicking the item if the ads successfully loaded.</p>
+<p>광고가 성공적으로 로딩된 경우, 해당 항목을 클릭하면 광고가 실행됩니다.</p>
 <p><img alt="as_debug_inter_view1" src="http://docc.upltv.com/uploads/201810/5bcd4065a93a4_5bcd4065.png" />
 <img alt="as_debug_inter_view2" src="http://docc.upltv.com/uploads/201810/5bcd408d13bcb_5bcd408d.png" /></p>
 </div>
@@ -267,10 +272,10 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="android06_video.html" class="btn btn-neutral float-right" title="Rewarded Video Ad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="android06_video.html" class="btn btn-neutral float-right" title="리워드 동영상 광고(Rewarded Video Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android04_2_banner_custom.html" class="btn btn-neutral" title="Customizing Banner Ad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android04_2_banner_custom.html" class="btn btn-neutral" title="맞춤형 배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -279,7 +284,7 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -298,15 +303,21 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

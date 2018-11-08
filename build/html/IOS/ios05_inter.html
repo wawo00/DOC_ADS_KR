@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Interstitial Ad &mdash; UPInteractive Document  documentation</title>
+  <title>삽입 광고(Interstitial Ad) &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rewarded Video Ad" href="ios06_video.html" />
-    <link rel="prev" title="Customizing Banner Ad" href="ios04_2_banner_custom.html" /> 
+    <link rel="next" title="리워드 동영상 광고(Rewarded Video Ad)" href="ios06_video.html" />
+    <link rel="prev" title="맞춤형 배너 광고(Banner Ad)" href="ios04_2_banner_custom.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ios01_xcode.html">Xcode Access Document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios01_xcode.html">Xcode 액세스 문서</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios02_cocoapods.html">CocoaPods Access Document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios03_init.html">SDK Initial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -147,9 +147,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../chapters/chapter02.html">UPSDK IOS</a> &raquo;</li>
+          <li><a href="../chapters/chapter02.html">UPSDK iOS</a> &raquo;</li>
         
-      <li>Interstitial Ad</li>
+      <li>삽입 광고(Interstitial Ad)</li>
     
     
 
@@ -162,72 +162,75 @@
            <div itemprop="articleBody">
             
   <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h1>Interstitial Ad<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h1>
-<p>Related methods and delegate interfaces was defined in file <code class="docutils literal notranslate"><span class="pre">UPIntersitialWrapper.h</span></code></p>
-<div class="section" id="reference-header-file">
-<span id="reference-header-file"></span><h2>Reference header file<a class="headerlink" href="#reference-header-file" title="Permalink to this headline">¶</a></h2>
+<span id="interstitial-ad"></span><h1>삽입 광고(Interstitial Ad)<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h1>
+<p>관련 방법과 프록시 인터페이스는 <code class="docutils literal notranslate"><span class="pre">UPIntersitialWrapper.h</span></code> 파일에 정의되어 있습니다.</p>
+<div class="section" id="">
+<span id="id1"></span><h2>참조 해더 파일<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import   &lt;UPSDK/UPSDK.h&gt;</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="methods-of-implementation-class">
-<span id="methods-of-implementation-class"></span><h2>Methods of implementation class<a class="headerlink" href="#methods-of-implementation-class" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="implementation-class">
+<span id="implementation-class"></span><h2>implementation class 메소드<a class="headerlink" href="#implementation-class" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>You can set parameter <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> to any significative name you want. If you not sure about should discussed with our <strong>support engineer</strong>. You should use different <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> for different ads placement. We provide revenue from each  <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> in the feature.
-Eg: You may use “Pause” or “Menu” when initial our SDK in the pause scene of your game.</div></blockquote>
+<div>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> 를 의미 있는 이름으로 설정할 수 있습니다. 정확한 판단이 어렵다면, <br />
+UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 각 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에서 발생한 수익을 <br />
+제공하고 있으므로, 광고 노출 위치마다 다른 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>를 사용해야 합니다. <br />
+가령, 게임의 정지 화면에서 UPSDK의 초기화 설정할 때는 &quot;정지&quot; 또는 &quot;메뉴&quot;를 사용할 수 있습니다.</div></blockquote>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@interface</span> <span class="nc">UpIntersitialWrapper</span> : <span class="bp">NSObject</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Initial method </span>
+<span class="cm">* 초기화 메소드</span>
 <span class="cm">* @ param avidPlacement：Placement ID</span>
 <span class="cm">**/</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">initAvidPlacement:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">avidPlacement</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Setup delegate callback object </span>
-<span class="cm">* @ param delegate：UpIntersitialDelegate </span>
+<span class="cm">* 콜백 객체 프록시 설정하기</span>
+<span class="cm">* @ param delegate：UpIntersitialDelegate</span>
 <span class="cm">**/</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setDelegate:</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">UpIntersitialDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Check if Video Ads was ready to play</span>
+<span class="cm">* 비디오 광고가 재생 준비 되었는지 확인하기</span>
 <span class="cm">**/</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">isReady</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm">* Setup delegate callback object </span>
-<span class="cm">* @ param viewController：UIViewController Object, to control redirection when clicked </span>
+<span class="cm">* 콜백 객체 프록시 설정하기</span>
+<span class="cm">* @ param viewController: UIViewController 객체, 클릭시 스킵 위치 설정</span>
 <span class="cm">**/</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">show:</span><span class="p">(</span><span class="bp">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewController</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Callback of loading ads</span>
-<span class="cm"> * @param delegate，delegate for callback</span>
+<span class="cm"> * 광고 로딩 콜백</span>
+<span class="cm"> * @param delegate，콜백 프록시</span>
 <span class="cm"> **/</span>
  <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">load</span><span class="p">:(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">UPIntersitialLoadDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="n">delegate</span><span class="p">;</span>
 <span class="k">@end</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="upintersitialdelegate-callback-protocol">
-<span id="upintersitialdelegate-callback-protocol"></span><h2>UpIntersitialDelegate Callback protocol<a class="headerlink" href="#upintersitialdelegate-callback-protocol" title="Permalink to this headline">¶</a></h2>
-<p>It’s not necessary to implement callback protocol of Interstitial Ad. You can implement it by your situation.</p>
+<div class="section" id="upintersitialdelegate">
+<span id="upintersitialdelegate"></span><h2>UpIntersitialDelegate 콜백 프로토콜<a class="headerlink" href="#upintersitialdelegate" title="Permalink to this headline">¶</a></h2>
+<p>삽입 광고의 콜백 프로토콜을 설정할 수 있습니다. <br />
+이는 선택사항이며, 필요하시면 아래의 방법을 통해 구현 하실 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@protocol</span> <span class="nc">UpIntersitialDelegate</span> <span class="o">&lt;</span><span class="bp">NSObject</span><span class="o">&gt;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * method will be called when Interstitial successful displaied</span>
+<span class="cm"> * 삽입 광고가 디스플레이 되면 호출됩니다</span>
 <span class="cm"> * @ param wrapper ：sender, UpIntersitialWrapper object</span>
 <span class="cm"> */</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">interstitialAdDidShow</span><span class="p">:(</span><span class="n">UpIntersitialWrapper</span> <span class="o">*</span><span class="p">)</span><span class="n">wrapper</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * When Interstitial Ad closed</span>
+<span class="cm"> * 삽입 광고가 닫혔을 때, 호출됩니다.</span>
 <span class="cm"> * @ param wrapper sender, UpIntersitialWrapper object</span>
 <span class="cm"> */</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">interstitialAdDidClose:</span><span class="p">(</span><span class="n">UpIntersitialWrapper</span> <span class="o">*</span><span class="p">)</span><span class="nv">wrapper</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * When Interstitial Ad clicked</span>
+<span class="cm"> * 삽입 광고가 클릭됬을 때 호출됩니다.</span>
 <span class="cm"> * @ param wrapper sender, UpIntersitialWrapper object</span>
 <span class="cm"> */</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">interstitialAdDidClick:</span><span class="p">(</span><span class="n">UpIntersitialWrapper</span> <span class="o">*</span><span class="p">)</span><span class="nv">wrapper</span><span class="p">;</span>
@@ -236,49 +239,53 @@ Eg: You may use “Pause” or “Menu” when initial our SDK in the pause scen
 </pre></div>
 </div>
 </div>
-<div class="section" id="demo-code-xcode">
-<span id="demo-code-xcode"></span><h2>Demo code - Xcode<a class="headerlink" href="#demo-code-xcode" title="Permalink to this headline">¶</a></h2>
-<p>In demo project of XCode, declare <code class="docutils literal notranslate"><span class="pre">STInterstitialViewController</span></code> class, to display Interstitial Ads. Define class <code class="docutils literal notranslate"><span class="pre">STInterstitialViewController.h</span></code> first. The code here is pretty simple.</p>
+<div class="section" id="demo-xcode">
+<span id="demo-xcode"></span><h2>Demo 코드 - Xcode<a class="headerlink" href="#demo-xcode" title="Permalink to this headline">¶</a></h2>
+<p>이 부분에서는 Xcode를 사용한 예시만 설명드리고 있습니다. <br />
+다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.</p>
+<p>Xcode의 Demo 프로젝트에서,
+<code class="docutils literal notranslate"><span class="pre">STInterstitialViewController</span></code> 클래스를 선언하여 삽입 광고를 디스플레이 합니다. <br />
+먼저, <code class="docutils literal notranslate"><span class="pre">STInterstitialViewController.h</span></code>를 아래와 같이 정의합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@interface</span> <span class="nc">STInterstitialViewController</span> : <span class="bp">UIViewController</span>
 
 <span class="k">@end</span>
 </pre></div>
 </div>
-<p>In <code class="docutils literal notranslate"><span class="pre">STInterstitialViewController.m</span></code>, you need a few lines of code to finish Interstitial ad loading and impression.</p>
-<p>First, define a object of <code class="docutils literal notranslate"><span class="pre">UpIntersitialWrapper</span></code>: <code class="docutils literal notranslate"><span class="pre">_intersitialWrapper</span></code>. We can use this object to control Interstitial ad loading and impression.</p>
-<p>In most of case, you should use different object of  <code class="docutils literal notranslate"><span class="pre">UpIntersitialWrapper</span></code> for different Interstitial ad placement.</p>
-<p>Code:</p>
+<p>삽입 광고의 로딩 및 광고 실행을 완성하기 위해 <code class="docutils literal notranslate"><span class="pre">STInterstitialViewController.m</span></code>에서 몇 줄의 코드 라인을 작성합니다. <br />
+먼저, <code class="docutils literal notranslate"><span class="pre">UpIntersitialWrapper:</span></code>객체 <code class="docutils literal notranslate"><span class="pre">_intersitialWrapper</span></code>를 정의합니다. 이 객체를 가지고 삽입 광고의 로딩 및 실행을 <br />
+컨트롤 할 수 있습니다. 삽입 광고 실행 위치마다 다른 <code class="docutils literal notranslate"><span class="pre">UpIntersitialWrapper</span></code> 의 객체를 사용해야 합니다.</p>
+<p>코드:</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@interface</span> <span class="nc">STInterstitialViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">UpIntersitialDelegate</span><span class="o">&gt;</span>
 <span class="p">{</span>
-<span class="c1">//Declare a wrapper object, you can declare more object if needed</span>
+<span class="c1">// wrapper 객체를 선언합니다. 필요시, 더 많은 객체 선언을 할 수도 있습니다.</span>
     <span class="n">UpIntersitialWrapper</span> <span class="o">*</span><span class="n">_intersitialWrapper</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">@end</span>
 </pre></div>
 </div>
-<p>Add following code:</p>
+<p>아래 코드를 추가합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>  <span class="p">{</span>
     <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
     <span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIColor</span> <span class="n">whiteColor</span><span class="p">];</span>
-    
-    <span class="c1">// Add a button in viewDidLoad to test Interstitial ad loading and impression</span>
+
+    <span class="c1">// viewDidLoad에 버튼을 추가하여 삽입 광고 로딩 및 승인을 테스트합니다.</span>
     <span class="bp">UIButton</span> <span class="o">*</span><span class="n">button</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIButton</span> <span class="nl">buttonWithType</span><span class="p">:</span><span class="n">UIButtonTypeRoundedRect</span><span class="p">];</span>
     <span class="n">button</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIColor</span> <span class="n">orangeColor</span><span class="p">];</span>
     <span class="n">button</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">250</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
     <span class="p">[</span><span class="n">button</span> <span class="nl">setTitle</span><span class="p">:</span><span class="s">@&quot;Interstital Ad Test&quot;</span> <span class="nl">forState</span><span class="p">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-    <span class="c1">// intersitialClick will be triggered when button clicked</span>
+    <span class="c1">// 버튼 클릭시 intersitialClick 가 호출됩니다.</span>
     <span class="p">[</span><span class="n">button</span> <span class="nl">addTarget</span><span class="p">:</span><span class="nb">self</span> <span class="nl">action</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">intersitialClick</span><span class="p">)</span> <span class="nl">forControlEvents</span><span class="p">:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
     <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">addSubview</span><span class="p">:</span><span class="n">button</span><span class="p">];</span>
-    
+
 <span class="p">}</span>
 
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">intersitialClick</span> <span class="p">{</span>
-    <span class="c1">// Let&#39;s use &quot;inter_bbb&quot;  as placement id of _intersitialWrapper</span>
+    <span class="c1">// inter_bbb가 _intersitialWrapper에 해당되는 광고 위치라고 가정합니다.</span>
     <span class="n">_intersitialWrapper</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UpIntersitialWrapper</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initAvidPlacement</span><span class="p">:</span><span class="s">@&quot;inter_bbb&quot;</span><span class="p">];</span>
-    <span class="c1">// setup callback delegate </span>
+    <span class="c1">// 콜백 프록시를 설정합니다.</span>
     <span class="p">[</span><span class="n">_intersitialWrapper</span> <span class="nl">setDelegate</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
-    
-    <span class="c1">// Check if interstitial ads was ready to show</span>
+
+    <span class="c1">// 삽입 광고가 준비되었는지 확인합니다.</span>
     <span class="k">if</span> <span class="p">([</span><span class="n">_intersitialWrapper</span> <span class="n">isReady</span><span class="p">])</span> <span class="p">{</span>
         <span class="p">[</span><span class="n">_intersitialWrapper</span> <span class="nl">show</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
     <span class="p">}</span>
@@ -289,23 +296,22 @@ Eg: You may use “Pause” or “Menu” when initial our SDK in the pause scen
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>There are only 3 steps to show and control a interstitial ad by following code.</p>
-<ol class="simple">
-<li>Declare global object, for example:</li>
-</ol>
+<p>아래의 3단계 코딩을 통해 삽입 광고 디스플레이 및 컨트롤이 가능합니다.</p>
+<ol>
+<li><p class="first">글로벌 객체를 선언합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="n">UpIntersitialWrapper</span> <span class="o">*</span><span class="n">_intersitialWrapper</span><span class="p">;</span>
 </pre></div>
 </div>
-<ol class="simple">
-<li>Initial object
-As following example, “inter_bbb” is a real exist ad placement. Wrong placement id will caused a failure on ads loading.</li>
-</ol>
+</li>
+<li><p class="first">객체를 아래와 같이 설정합니다.
+‘inter_bbb’는 실제 광고 위치입니다. 실제 광고 위치와 다를 경우 <br />
+광고 로딩에 문제를 야기할 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">_intersitialWrapper</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UpIntersitialWrapper</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initAvidPlacement</span><span class="p">:</span><span class="s">@&quot;inter_bbb&quot;</span><span class="p">];</span>
 </pre></div>
 </div>
-<ol class="simple">
-<li>Show Ads
-Use following code to display Ad</li>
+</li>
+<li><p class="first">아래와 같은 코드를 사용하여 광고를 디스플레이합니다.</p>
+</li>
 </ol>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">([</span><span class="n">_intersitialWrapper</span> <span class="n">isReady</span><span class="p">])</span> <span class="p">{</span>
      <span class="p">[</span><span class="n">_intersitialWrapper</span> <span class="nl">show</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
@@ -323,10 +329,10 @@ Use following code to display Ad</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ios06_video.html" class="btn btn-neutral float-right" title="Rewarded Video Ad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ios06_video.html" class="btn btn-neutral float-right" title="리워드 동영상 광고(Rewarded Video Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios04_2_banner_custom.html" class="btn btn-neutral" title="Customizing Banner Ad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios04_2_banner_custom.html" class="btn btn-neutral" title="맞춤형 배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -335,7 +341,7 @@ Use following code to display Ad</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -354,15 +360,21 @@ Use following code to display Ad</li>
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

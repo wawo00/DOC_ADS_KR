@@ -1,34 +1,34 @@
-## SDK Initial
+## SDK 초기화
 
-This part will explain in Xcode. Please refer to Xcode if you are using other project. I apologize for the inconvenience you may take from here.
+Xcode에 대한 부분입니다. 이 부분에서는 Xcode를 사용한 예시만 설명드리고 있습니다. <br />
+다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.
 
-Let's say if you are using AppDelegate (implement UIApplicationDelegate) as your main class file of your iOS project. Initialize SDK by following steps:
+AppDelegate를 사용하고 계시다면 아래와 같은 순서대로 SDK 초기화를 합니다.
 
- 1. Add reference in AppDelegate.m
+1. 아래의 참조를 `AppDelegate.m`에 추가합니다.
 
-```objective-c
-#import    <UPSDK/UPSDK.h>
-```
+    ```objective-c
+    #import    <UPSDK/UPSDK.h>
+    ```
 
- 2. SDK initial at the entrance of the app
+2. SDK 초기화 설정하기
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
     [UPSDK initSDK];
 
     // your other code
-    
+
     return YES;
 }
 ```
 
-if you know which areas you will publish, please use the following codes：
+희망 퍼블리시 위치를 아래와 같이 설정하실 수 있습니다.
 ```objective-c
 /**
- SDK Initial(based on the areas for publishing)
-
- @param  zone, areas for publishing
+SDK 초기화 (퍼블리시 지역)
+@param zone, 퍼블리시 지역
  */
 + (void)initSDK:(UPSDKGlobalZone)zone;
 ```
@@ -37,24 +37,24 @@ if you know which areas you will publish, please use the following codes：
 
 ```objective-c
 typedef NS_ENUM(NSUInteger, UPSDKGlobalZone) {
-    UPSDKGlobalZoneForeign = 0,     //Globally except China
-    UPSDKGlobalZoneDomestic = 1,    /China
-    UPSDKGlobalZoneAuto = 2,        //Verifying by IPs
+    UPSDKGlobalZoneForeign = 0,     //해외
+    UPSDKGlobalZoneDomestic = 1,    //중국
+    UPSDKGlobalZoneAuto = 2,        //ip에 의해 자동으로 설정
 };
 ```
-if you app will be published in China:
+앱을 중국에서 퍼블리시 하시려면 아래와 같이 입력합니다.
 
 ```objective-c
 [UPSDK initSDK:UPSDKGlobalZoneDomestic];
 ```
 
-if you app will be published globally except china:
+중국을 제외한 전 세계로 퍼블리시 하시려면 아래와 같이 입력합니다.
 
 ```objective-c
 [UPSDK initSDK: UPSDKGlobalZoneForeign];
 ```
 
-if you app will be publish in the world and you don not konw  exact areas :
+지역을 특정하지 않으시려면 아래와 같이 입력합니다.
 
 ```objective-c
 [UPSDK initSDK: UPSDKGlobalZoneAuto];

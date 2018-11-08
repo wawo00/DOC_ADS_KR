@@ -1,32 +1,41 @@
 ## Android Studio
 
-### I. Structure of UPSDK Directory
-Regarding to Android Studio or Gradle built project, UPSDK suggests it should be import by other main project in `*.aar` format. You will see the structure of directory for UPSDK Studio when you unzip it:
+### I. UPSDK 디렉토리 구조
+Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 `*.aar`형식으로 가져와야 합니다.<br />
+UPSDK Studio를 다운받아 압축해제 하시면 아래의 그림과 같은 목록 구조를 보실 수 있습니다.
 
 ![as_91](http://docc.upltv.com/uploads/201808/5b7fdca87b9ae_5b7fdca8.png "as_91")
 
-#### 1. Main Package of UPSDK
-Please refer to the screenshot above, the file named `UPAdsSdk_x.x.xx.aar` is the main package of UPSDK, you have to add it into your main project.
+#### 1. UPSDK 메인 패키지
+위의 스크린샷에서 볼 수 있는 `UPAdsSdk_x.x.xx.aar` 이 UPSDK의 메인 패키지이며, <br />
+프로젝트에 이를 반드시 추가해야 합니다.
 
-#### 2. Networks Dependencies of UPSDK
-The relationships between UPSDK and other networks are loose and coupled. You could remove some ads dependencies from the main project to reduce the size of application.
+#### 2. UPSDK 네트워크 의존성 추가하기
+UPSDK는 다른 네트워크와 독립적이면서도 긴밀하게 결합되어 있으므로, <br />
+일부 타사 파일을 가져오고 싶지 않은 경우에는 가져올 타사 파일만 별도로 선택하여 앱의 용량을 줄일 수도 있습니다.
 
-The dependencies of networks except Admob and Facebook, they are existing in xxxx_ads.aar format.
+Admob및 Facebook을 제외한 네트워크의 의존성은 `xxxx_ads.aar`형식으로 존재합니다.
 
-#### 3. Ads Dependencies of Admob and Facebook
-Among UPSDK local files, it provides aar dependencies for Admob and Facebook in case of the situation of bad internet or other unexpected problems happened. Even so, we still suggest you to update the dependencies online from gradle of Admob and Facebook long-distance warehouse.
-    > Regarding to the specification of how to integrate with Admob and Facebook, it will be particularly introduced later in this section.
+#### 3. Admob및 Facebook의 광고 의존성
+UPSDK 로컬 파일 중, Admob 및 Facebook에 인터넷 연결 상태가 좋지 않거나 <br />
+예기치 않은 문제가 발생할 경우를 대비하여 aar 의존성을 제공합니다. <br />
+그럼에도 불구하고, UPLTV는 Admob및 Facebook의 long-distance warehouse의 gradle의 의존성을 <br />
+온라인으로 업데이트하는 것을 권장합니다.
 
-### II. Using Gradle of Android Studio to import the main package of UPSDK
+> Admob및 Facebook의 결합 방법과 관련하여, 본 섹션 후반부에 소개될 예정입니다.
 
-Please refer to the introduction above, add the downloaded files which named  `UPAdsSdk_x.x.xx.aar` into `libs` directory in your project.
-After they are added, the effects of Studio project acts like the following screenshot:
+### II. Android Studio의 Gradle을 사용하여 UPSDK의 메인 패키지를 가져오기
+
+위의 설명을 참고하여 다운로드된  `UPAdsSdk_x.x.xx.aar`파일을 프로젝트 `libs`디렉토리에 추가하세요. <br />
+Studio 프로젝트의 효과는 아래와 같습니다:
 
 ![as_02](http://docc.upltv.com/uploads/201808/5b7fddd4a0a05_5b7fddd4.png "as_02")
 
-> `UPAdsSdk_3.0.03.aar` is specified only for example
+> `UPAdsSdk_3.0.03.aar` 를 실제 파일 이름으로 바꿉니다.
 
-To make sure aar package which in libs directory could be import correctly by the project, please check the following configuration parameter in `build.gradle` files/folder under `app` directory:
+
+프로젝트에 제대로 aar 패키지가 가져오기 되었는지 `app` 디렉토리의 `build.gradle` 파일 <br />
+혹은 폴더에서 아래의 구성 매개변수를 확인합니다.
 
     repositories {
         flatDir {
@@ -34,7 +43,7 @@ To make sure aar package which in libs directory could be import correctly by th
         }
     }
 
-At last, please add aar into compile method
+컴파일 메소드에 aar을 추가합니다.
 
     dependencies {
     // your other setting
@@ -42,37 +51,48 @@ At last, please add aar into compile method
      compile(name: 'UPAdsSdk_3.0.03', ext: 'aar')
     }
 
-So far, aar package of UPSDK has been successfully configurated in your project. Please wait gradle compile works. But the work of importing UPSDK has not been finished yet, the final step is very significant to do: **add other dependencies**.
+UPSDK 패키지가 성공적으로 구성되었습니다. gradle 컴파일 작업을 기다립니다. <br />
+마지막으로 **기타 의존성**을 추가합니다.
 
-> As an excellent and powerful mediation platform, UP SDSDK can be flexibly compatible with the runtime library of third-party affiliate networks. So that it can help you yield the greatest returns. As a conclusion, if you want UPSDK to yield the greatest returns, please add the third-party dependencies correctly.
+> 우수하고 강력한 미디에이션 플랫폼인 UPSDK는 타사의 런타임 라이브러리(Runtime library)와 유연하게 호환하여 <br />
+최대한의 수익을 낼 수 있도록 도와 드립니다. 따라서 UPSDK를 통하여 최대한의 수익을 위해 타사 의존성을 <br />
+추가하시기 바랍니다.
 
-If you are using Gradle of Android Studio to build your project. First of all, you have to import all files like `UPAdsSdk_x.x.xx.aar` from `for_studio` directory to you project.
-Each `xxx_ads.aar` file in directory means a affiliate network which supported by us. 
-Since we always choose the best affiliate networks over the world, you can import all of them into your project without any hesitation.
-Also, you still can remove some of them by your own reason , like too much library will make your game size getting big.
+Android Studio의 Gradle을 사용하여 프로젝트를 빌드하는 경우 먼저 `for_Studio`디렉토리에서 <br />
+모든 `UPAdsSdk_x.x.xx.aar`파일을 프로젝트로 가져와야 합니다. 디렉토리에 있는 각 `xxx_ads.aar`파일은 <br />
+UPLTV와 제휴되어 있는 광고 네트워크를 의미합니다.
 
-### III. Add dependencies of affiliate networks
+저희는 항상 전세계에서 최고의 광고 네트워크사를 선택하므로, 모든 네트워크를 프로젝트로 가져올 수 있습니다. <br />
+또한, 라이브러리가 너무 많아짐에 따라 커지는 게임의 용량 혹은 기타 사유로 몇 개의 네트워크를 제거하실 수 있습니다.  
 
-The SDKs of some affiliate networks need to depend on some public third-party libraries. The project which is built by Android Studio could import the dependent third-party library by the following mothods.
+### III. 광고 네트워크 의존성 추가하기
 
-**In principle, we suggest you to import dependent third-party library all in your project. But in some cases, you can choose to add some libraries of affiliate networks to reduce the size of your project. But no matter how to make sure the libraries of affiliate networks you added must completely meet the external conditions of current ads on shown. Or, it will leads crashes because it's lack of some neccessary supports.**
+일부 광고 네트워크의 SDK는 광고 네트워크사의 오픈소스 라이브러리에 의존합니다. <br />
+Android Studio가 만든 프로젝트는 아래의 방법을 통해 종속 타사 라이브러리를 가져올 수 있습니다.
 
-If you want to remove the supports from some affiliate networks, but you do not know how to operate. Please give priority to contact our support team to acheive your goal.
+**기본적으로 프로젝트의 종속된 타사 라이브러리를 모두 가져오는 것을 권장하지만 <br />
+경우에 따라 프로젝트의 크기를 줄이기 위해 추가할 광고 네트워크 라이브러리를 선택할 수 있습니다. <br />
+그러나, 추가한 광고 네트워크의 라이브러리가 현재 표시된 광고의 외부 조건을 완전히 충족시켜야 합니다. <br />
+그렇지 않을 경우 충돌이 발생할 수 있습니다.**
 
-#### 1. Add *.aar of affiliate networks
-Among the downloaded target files, files named  `xxx_ads.aar` are the dependent files for the affiliate networks in use. Please refer to **Import UPSDK aar files** to add them in your project.
+일부 광고 네트워크에서 지원을 제거하고 싶지만 방법을 모르는 경우 UPLTV의 기술 팀에 문의하여 <br />
+문제 해결 및 지원 서비스를 받을 수도 있습니다.
 
-#### 2. Add other external dependencies
-Because of requiring some extra Android Api supports by some affiliate networks, so you have to add external dependencies as followed.
+#### 1. 광고 네트워크 *.aar 추가하기
+다운로드한 타겟 파일 중  `xxx_ads.aar`라는 파일은 사용 중인 광고 네트워크의 종속 파일입니다. <br />
+**UPSDK aar 파일 가져오기**를 참고하여 프로젝트에 추가합니다.
 
-#### 1. Configure jcenter code repository
-Find `build.gradle` file in your main project. Add `jcenter`  in `repositories` section of the file.
+#### 2. 다른 외부 의존성 추가하기
+일부 광고 네트워크에서  Android Api 추가 지원을 요구하기 때문에 다음과 같이 외부 의존성을 추가해야 합니다.
+
+#### 1.  Gradle에 jcenter 추가하기
+메인 프로젝트의 `build.gradle`파일을 찾아서  `repositories`섹션에 `jcenter` 를 추가합니다.
 
 ```groovy
 buildscript {
     repositories {
         mavenCentral();
-        // ******** add jcenter ********
+        // ******** jcenter 추가하기********
         jcenter()
         maven {
             url 'https://maven.google.com/'
@@ -95,8 +115,9 @@ allprojects {
 }
 ```
 
-#### 2.  Add Android Support library 
-Every affiliate needs `android.support.xxx`, so please import it to your project. If you are using Android Studio in your project, you can modify `build.gradle` file to add
+#### 2.  Android 지원 라이브러리 추가하기
+Admob 등의 많은 광고사에서 요구하기 때문에 `android.support.xxx`를 프로젝트로 불러오기 해야합니다. <br />
+프로젝트에서 Android Studio를 사용하는 경우, `build.gradle`파일을 수정하여 추가할 수 있습니다.
 ```groovy
 dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
@@ -110,30 +131,32 @@ dependencies {
 }
 ```
 
-#### 3. Add Google Ads SDK
-If you want to add Admob ads in your project, you need to add Google Ads support in your project. You can follow the following steps to add dependencies:
+#### 3. Google Ads SDK 추가하기
+Admob 광고를 프로젝트에 추가할 경우 Google 광고 지원을 포함시켜야 합니다. <br />
+아래의 설명에 따라 의존성을 추가하실수 있습니다.
 ```groovy
     dependencies {
         compile 'com.google.android.gms:play-services-ads:15.0.1'
     }
 
 ```
-> If you only want to add aar files which gms play depends on locally. You could ignore this configuration in gradle file.
-> Specially, if the version of gms play-service in your project is different from UPSDK dependencies, please use the higher version. 
+>로컬 gms play가 의존하고 있는 aar파일만 추가하길 희망하신다면 gradle파일에서 이 구성을 무시할 수 있습니다. <br />
+특히 프로젝트의 gms play-service 버전이 UPSDK 의존성과 다른 경우 상위 버전을 사용하세요.
 
-#### 4. Add Facebook Ads SDK
-If you want to add Facebook interstitial ads in your project, you need to add Facebook Ads support in your project. You can follow the following steps to add dependencies:
+#### 4. Facebook Ads SDK 추가하기
+Facebook 삽입 광고(Interstitial Ad)를 프로젝트에 추가할 경우 Facebook 광고 지원을 프로젝트에 포함시켜야 합니다. <br />
+아래의 설명에 따라 의존성을 추가하시기 바랍니다.
 
     dependencies {
         compile 'com.facebook.android:audience-network-sdk:4.99.1'
     }
-    
 
 
 
-### IV. Modify Proguard setting 
-If your project used `proguard`.
-You have to copy contents from `proguard-project.txt` to right location of your project.
 
-### V. Demo Project
-To help you integrate ads SDK easier and faster, here we provide you a simple [Demo Project](https://github.com/UPGit/AdSdkDemo-Studio "Demo").
+### IV.  Proguard 설정 수정하기
+프로젝트에서 `proguard`를 사용하는 경우, `proguard-project.txt`의 내용을 프로젝트에서 사용하는 <br />
+`proguard`의 위치로 복사합니다.
+
+### V. Demo 프로젝트
+광고 SDK를 더 빠르고 쉽게 결할 수 있도록 간편한 [Demo 프로젝트](https://github.com/UPGit/AdSdkDemo-Studio "Demo")를 제공하고 있습니다.

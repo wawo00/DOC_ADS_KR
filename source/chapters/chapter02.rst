@@ -1,5 +1,5 @@
 =============================
-UPSDK IOS
+UPSDK iOS
 =============================
 
 
@@ -16,4 +16,3 @@ UPSDK IOS
    ../IOS/ios06_video
    ../IOS/ios07_gdpr
    ../IOS/ios08_demo
-

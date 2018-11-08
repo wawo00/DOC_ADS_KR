@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rewarded Video Ad &mdash; UPInteractive Document  documentation</title>
+  <title>리워드 동영상 광고(Rewarded Video Ad) &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="GDPR" href="android07_gdpr.html" />
-    <link rel="prev" title="Interstitial Ad" href="android05_inter.html" /> 
+    <link rel="prev" title="삽입 광고(Interstitial Ad)" href="android05_inter.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">Solving 65535-Limitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -149,7 +149,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-      <li>Rewarded Video Ad</li>
+      <li>리워드 동영상 광고(Rewarded Video Ad)</li>
     
     
 
@@ -162,23 +162,25 @@
            <div itemprop="articleBody">
             
   <div class="section" id="rewarded-video-ad">
-<span id="rewarded-video-ad"></span><h1>Rewarded Video Ad<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ads-object-initialization">
-<span id="ads-object-initialization"></span><h2>Ads Object Initialization<a class="headerlink" href="#ads-object-initialization" title="Permalink to this headline">¶</a></h2>
-<p>Initialize Rewarded Video like this:</p>
+<span id="rewarded-video-ad"></span><h1>리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="">
+<span id="id1"></span><h2>광고 객체 초기화 설정<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>리워드 동영상은 아래와 같은 방법을 통해 초기화를 할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mVideoAd</span> <span class="o">=</span> <span class="n">UPRewardVideoAd</span><span class="o">.</span><span class="n">getInstance</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="show-rewarded-video-ads">
-<span id="show-rewarded-video-ads"></span><h2>Show Rewarded Video Ads<a class="headerlink" href="#show-rewarded-video-ads" title="Permalink to this headline">¶</a></h2>
-<p>When you want show Rewarded Video ads, call <code class="docutils literal notranslate"><span class="pre">isReady</span></code> to check if the video was ready. You can determine your “play” button display status with the return value of <code class="docutils literal notranslate"><span class="pre">isReady</span></code>.
-Then, you should call <code class="docutils literal notranslate"><span class="pre">show</span></code> method to display video ads.
-Please use the correct value of parameter <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> for different ads placement.</p>
-<p><strong>Don’t forget to call <code class="docutils literal notranslate"><span class="pre">isReady</span></code> before <code class="docutils literal notranslate"><span class="pre">show</span></code> to make sure there is a video available.</strong></p>
+<div class="section" id="">
+<span id="id2"></span><h2>리워드 동영상 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>리워드 동영상 광고를 노출하려면, <code class="docutils literal notranslate"><span class="pre">isReady</span></code>를 호출하여 동영상이 준비되었는지 확인해야 합니다. <code class="docutils literal notranslate"><span class="pre">isReady</span></code>의 리턴 값으로 <br />
+&quot;재생&quot; 버튼 표시 상태를 정한 후, <code class="docutils literal notranslate"><span class="pre">show</span></code>메소드를 호출하여 동영상 광고를 표시합니다. 각각의 광고 노출 위치에 <br />
+해당하는 올바른 매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> 값을 사용하여 주시기 바랍니다.</p>
+<p><strong>반드시 <code class="docutils literal notranslate"><span class="pre">show</span></code> 메소드를 호출하기 전에 <code class="docutils literal notranslate"><span class="pre">isReady</span></code>를 호출하여 동영상이 준비되었는지 확인하십시오.</strong></p>
 <blockquote>
-<div>You can set the parameter <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> to any significative name you want. If you’re not sure, please discuss with our <strong>support engineer</strong>. You should use a different <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> for different ads placement. We provide revenue from each  <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> in the feature.
-Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause scene of your game.</div></blockquote>
+<div>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> 를 의미 있는 이름으로 설정할 수 있습니다. 정확한 판단이 어렵다면, <br />
+UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 각 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에서 발생한 수익을 <br />
+제공하고 있으므로, 광고 노출 위치마다 다른 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>를 사용해야 합니다. 가령, 게임의 정지 화면에서 <br />
+UPSDK의 초기화 설정할 때는 &quot;정지&quot; 또는 &quot;메뉴&quot;를 사용할 수 있습니다.</div></blockquote>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">mVideoAd</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="n">mVideoAd</span><span class="o">.</span><span class="n">isReady</span><span class="p">())</span> <span class="p">{</span>
     <span class="n">mVideoAd</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Ad Placement&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -186,9 +188,10 @@ Eg: You may use “Pause” or “Menu” when initializing our SDK in the pause
 </div>
 </div>
 <div class="section" id="callback">
-<span id="callback"></span><h2>Callback<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h2>
-<p>You can use the interface <code class="docutils literal notranslate"><span class="pre">setUPVideoAdListener</span></code> to setup callback functions.
-For the most part, you only need to care about the method <code class="docutils literal notranslate"><span class="pre">onVideoAdReward</span></code> and <code class="docutils literal notranslate"><span class="pre">onVideoAdDontReward</span></code>, which can tell you if you should give the user a reward or not.</p>
+<span id="callback"></span><h2>콜백(Callback)<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h2>
+<p>인터페이스 <code class="docutils literal notranslate"><span class="pre">setUPVideoAdListener</span></code>를 사용하여 콜백 기능을 설정할 수 있습니다. 보통 게임 유저에게 리워드를 지급할지에 <br />
+대한 여부를 결정하는 메소드<code class="docutils literal notranslate"><span class="pre">onVideoAdReward</span></code>와<code class="docutils literal notranslate"><span class="pre">onVideoAdDontReward</span></code>를 확인하면 됩니다.</p>
+<p><strong>참고: <code class="docutils literal notranslate"><span class="pre">onVideoAdReward</span></code>의 콜백을 받은 후 리워드를 지급하고, 다른 상황에서는 지급하지 않습니다.</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mVideoAd</span><span class="o">.</span><span class="n">setUPVideoAdListener</span><span class="p">(</span><span class="n">new</span> <span class="n">UPRewardVideoAdListener</span><span class="p">()</span> <span class="p">{</span>
     <span class="nd">@Override</span>
     <span class="n">public</span> <span class="n">void</span> <span class="n">onVideoAdClicked</span><span class="p">()</span> <span class="p">{</span>
@@ -218,22 +221,23 @@ For the most part, you only need to care about the method <code class="docutils 
 </pre></div>
 </div>
 </div>
-<div class="section" id="debug-page">
-<span id="debug-page"></span><h2>Debug Page<a class="headerlink" href="#debug-page" title="Permalink to this headline">¶</a></h2>
-<p>We provide a debug page to assist your integration works. You can easily access all status of video ads during development process with the following code:</p>
+<div class="section" id="">
+<span id="id3"></span><h2>디버그 페이지<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>동영상 광고의 디스플레이 및 로딩 상태를 쉽게 이해할 수 있도록, 디버그 페이지를 통해 동영상 광고의 작동 상태를 <br />
+알 수 있도록 제공하고 있습니다. 아래의 코드를 사용하여 디버그 페이지를 조정할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">mVideoAd</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">mVideoAd</span><span class="o">.</span><span class="n">showVideoDebugActivity</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The page looks like this. Columns (left to right):</p>
+<p>페이지 구성은 아래와 같습니다(왼쪽에서 오른쪽으로).</p>
 <ul class="simple">
-<li>Affiliate name</li>
-<li>Is this Affiliate SDK integrated?</li>
-<li>Is this Affiliate opened by server side configuration?</li>
-<li>Did this Affiliate Ads successfully load?</li>
+<li>광고 네트워크</li>
+<li>SDK 적용 여부 및 버전정보</li>
+<li>서버 구성을 통한 광고 실행 여부</li>
+<li>광고 로딩 성공 여부</li>
 </ul>
-<p>You can play ads by clicking the item if the ads successfully loaded.</p>
+<p>광고가 성공적으로 로딩된 경우, 해당 항목을 클릭하면 광고가 실행됩니다.</p>
 <p><img alt="as_debug_video_view1" src="http://docc.upltv.com/uploads/201810/5bcd40ce08dbf_5bcd40ce.jpg" />
 <img alt="as_debug_video_view2" src="http://docc.upltv.com/uploads/201810/5bcd40de0f43d_5bcd40de.jpg" /></p>
 </div>
@@ -250,7 +254,7 @@ For the most part, you only need to care about the method <code class="docutils 
         <a href="android07_gdpr.html" class="btn btn-neutral float-right" title="GDPR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android05_inter.html" class="btn btn-neutral" title="Interstitial Ad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android05_inter.html" class="btn btn-neutral" title="삽입 광고(Interstitial Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -259,7 +263,7 @@ For the most part, you only need to care about the method <code class="docutils 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -278,15 +282,21 @@ For the most part, you only need to care about the method <code class="docutils 
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

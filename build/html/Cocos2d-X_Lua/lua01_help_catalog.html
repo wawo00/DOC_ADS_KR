@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LuaPlugin &mdash; UPInteractive Document  documentation</title>
+  <title>Lua Plugin &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -82,23 +82,23 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">LuaPlugin</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Lua Plugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="lua01_1_help_as.html">Android Studio</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lua01_2_help_ec.html">Android Eclipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lua01_3_help_ios.html">IOS Xcode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua01_3_help_ios.html">iOS Xcode</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="lua02_sample_catalog.html">LuaPlugin Sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lua02_sample_catalog.html">Lua Plugin 샘플</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -148,7 +148,7 @@
         
           <li><a href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a> &raquo;</li>
         
-      <li>LuaPlugin</li>
+      <li>Lua Plugin</li>
     
     
 
@@ -160,17 +160,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="luaplugin">
-<h1>LuaPlugin<a class="headerlink" href="#luaplugin" title="Permalink to this headline">¶</a></h1>
-<p>Although UPLTV ADSDK has done well in mediation and packaging, but there will be some problems when some of our partners integrate at first time. So we optimized the process for integration, and we also gave some suggestion towards those FAQ.</p>
-<p>In order to help you integrate UPLTV ADSDK successfully, please read and refer to the contents under this label carefully. We, with all our heart wish  that it will help you and bring much convenience to your business.</p>
+  <div class="section" id="lua-plugin">
+<h1>Lua Plugin<a class="headerlink" href="#lua-plugin" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">UPLTV ADSDK 미디에이션과 패키징 자체로는 문제가 없으나 일부 애드 네트워크에 따라 최초 결합 시에</div>
+<div class="line">몇 가지 문제가 발생할 수 있습니다. 이를 방지하기 위해 통합 프로세스를 최적화했으며, 관련 FAQ를 통해 몇 가지 방법을</div>
+<div class="line">제안하고 있습니다.</div>
+</div>
+<div class="line-block">
+<div class="line">UPLTV ADSDK를 성공적으로 결합하려면, 본 문서를 신중히 살펴보고 참조하시기 바랍니다.</div>
+<div class="line">UPLTV는 귀하의 더욱 성공적이고 편리한 비즈니스를 위해 언제나 최선을 다하고 있습니다.</div>
+</div>
 <blockquote>
-<div><strong>Please note that this access document is based on cocos2d-X 3.16. If you use other versions of Cocos2d-X and have problem,please ask us for help</strong></div></blockquote>
+<div><div class="line-block">
+<div class="line">이 액세스 문서는 cocos2d-X 3.16을 기반으로 합니다. 만약 다른 버전의 cocos2d-X를 사용하고 있거나</div>
+<div class="line">문제가 발생하면 담당자에게 문의하여 추가 지원을 받아보세요.</div>
+</div>
+</div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lua01_1_help_as.html">Android Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lua01_2_help_ec.html">Android Eclipse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lua01_3_help_ios.html">IOS Xcode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lua01_3_help_ios.html">iOS Xcode</a></li>
 </ul>
 </div>
 </div>
@@ -195,7 +206,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -214,15 +225,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

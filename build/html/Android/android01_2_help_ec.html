@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -82,29 +82,29 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="android01_help_catalog.html">Quick Start</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="android01_help_catalog.html">빠른 시작</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="android01_1_help_as.html">Android Studio</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Eclipse</a></li>
 <li class="toctree-l3"><a class="reference internal" href="android01_3_help_faq.html">FAQ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">Solving 65535-Limitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK Initializating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android06_video.html">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android02_65535.html">65535 제한 문제 해결방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android06_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -154,7 +154,7 @@
         
           <li><a href="../chapters/chapter01.html">UPSDK Android</a> &raquo;</li>
         
-          <li><a href="android01_help_catalog.html">Quick Start</a> &raquo;</li>
+          <li><a href="android01_help_catalog.html">빠른 시작</a> &raquo;</li>
         
       <li>Eclipse</li>
     
@@ -170,36 +170,50 @@
             
   <div class="section" id="eclipse">
 <span id="eclipse"></span><h1>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="i-structure-of-upsdk-directory">
-<span id="i-structure-of-upsdk-directory"></span><h2>I. Structure of UPSDK Directory<a class="headerlink" href="#i-structure-of-upsdk-directory" title="Permalink to this headline">¶</a></h2>
-<p>If you are using Eclipse or Ant to build Android project, it will be more complex than using Android Studio to build. The structure of UPSDK Eclipse version is like following when after unarchive:</p>
+<div class="section" id="i-upsdk">
+<span id="i-upsdk"></span><h2>I. UPSDK 디렉토리 구조<a class="headerlink" href="#i-upsdk" title="Permalink to this headline">¶</a></h2>
+<p>Eclipse 또는 앤트(Ant)를 사용하여 Android 프로젝트를 빌드하면, Android Studio를 사용할 때보다 <br />
+훨씬 복잡해질 수 있습니다. UPSDK Eclipse 버전을 다운로드 하고 압축 해제 한 후의 폴더들은 아래의 그림과 같습니다.</p>
 <p><img alt="" src="http://docc.upltv.com/uploads/201808/5b8756d508084_5b8756d5.png" /></p>
-<p>Main package of UPSDK Eclipse is located in <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> folder, please refer to the screenshot, <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> is the main package of Eclipse project, it must be added into your porject.</p>
+<p>UPSDK Eclipse의 메인 패키지는 <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> 폴더에 있습니다. 위의 스크린샷에서 볼 수 있는 <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> 가 <br />
+Eclipse 프로젝트의 메인 패키지이며, 이를 프로젝트에 반드시 추가해야 합니다.</p>
 </div>
-<div class="section" id="ii-duplicate-main-package-of-upsdk-eclipse-into-your-project">
-<span id="ii-duplicate-main-package-of-upsdk-eclipse-into-your-project"></span><h2>II. Duplicate main package of UPSDK Eclipse into your project<a class="headerlink" href="#ii-duplicate-main-package-of-upsdk-eclipse-into-your-project" title="Permalink to this headline">¶</a></h2>
-<p>In the directory of <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code>, there are <code class="docutils literal notranslate"><span class="pre">libs</span></code> and <code class="docutils literal notranslate"><span class="pre">res</span></code>, and other folders. Please duplicate all content to
-these folder into equivalent folders of your Eclipse project.</p>
+<div class="section" id="upsdk-eclipse">
+<span id="upsdk-eclipse"></span><h2>UPSDK Eclipse의 메인 패키지를 프로젝트로 복사하기<a class="headerlink" href="#upsdk-eclipse" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code>디렉토리에는 <code class="docutils literal notranslate"><span class="pre">libs</span></code>,<code class="docutils literal notranslate"><span class="pre">assets</span></code>그리고<code class="docutils literal notranslate"><span class="pre">res</span></code> 와 다른 몇 개의 파일들로 구성되어 있습니다. <br />
+Eclipse 메인 프로젝트로 디렉토리 내의 모든 파일들을 복사하세요.</p>
 <blockquote>
-<div>Regarding to the files are not *.so, when you find repeated names of files after duplication, please carefully operate: <strong>Only operate to cover the repeated names of files which are the original files of UpAdsSdk.</strong> If the conflicts of duplication of names is not as above, please refer to your experience to handle(for example, files under res/values/ directories can be re-named). Of course, you could turn to our technical team for resolution and supports.</div></blockquote>
+<div>*.so로 된 파일 이외의 파일중에서, 복사 후에 중복된 파일명을 발견했다면 신중히 확인하고 실행하시기 바랍니다. <br />
+<strong>이름이 중복된 파일이 UpAdsSdk 원본 파일인 경우에는 덮어쓰기를 합니다.</strong> 상기된 파일명 중복이 아닌 경우, <br />
+개발자 본인의 경험에 따라(예를 들어, res/values/ 디렉토리에 있는 파일명 변경) 조치를 취합니다. <br />
+UPLTV의 기술 팀에 문의하여 문제 해결 및 지원 서비스를 받을 수도 있습니다.</div></blockquote>
 </div>
-<div class="section" id="iii-add-other-dependencies">
-<span id="iii-add-other-dependencies"></span><h2>III. Add other dependencies<a class="headerlink" href="#iii-add-other-dependencies" title="Permalink to this headline">¶</a></h2>
-<p>The SDKs of some affiliate networks need to depend on some public third-party libraries, so you may need to include them in your project manually. These library files are existing as  <code class="docutils literal notranslate"><span class="pre">xxx_ads</span></code>folders among the folders you downloaded.
-The relationships between UPSDK and other networks are loose and coupled. If you do not want to import some affiliate networks, you do not need to import those files.</p>
-<p><code class="docutils literal notranslate"><span class="pre">batmobi_ads</span></code> as the sample, if your project needs filled with Mobvista ads, please duplicate related files under the directories of <code class="docutils literal notranslate"><span class="pre">batmobi_ads/libs/</span></code> and <code class="docutils literal notranslate"><span class="pre">batmobi_ads/res/</span></code> into the directories of <code class="docutils literal notranslate"><span class="pre">libs</span></code> and <code class="docutils literal notranslate"><span class="pre">res</span></code> in your project,plus,add content of <code class="docutils literal notranslate"><span class="pre">AndroidManifest_Inmobi</span></code>  into  <code class="docutils literal notranslate"><span class="pre">manifest.xml</span></code> which in your project.</p>
-<p><strong>Please make sure to follow the suggestions below to import 3rd-party libraries which UPSDK needs to depend on in your project. Or the system may crash due to lacking of some neccessary supports.</strong></p>
-<div class="section" id="iv-add-android-support-library">
-<span id="iv-add-android-support-library"></span><h3>IV. Add Android Support library<a class="headerlink" href="#iv-add-android-support-library" title="Permalink to this headline">¶</a></h3>
-<p>The display of the ad requires the support of the <code class="docutils literal notranslate"><span class="pre">support</span></code> library, so please bring it into your project. We have the corresponding <code class="docutils literal notranslate"><span class="pre">xxx.jar</span></code> file for you in the <code class="docutils literal notranslate"><span class="pre">android_support_library/libs</span></code> folder. You just need to added those files into the <code class="docutils literal notranslate"><span class="pre">libs</span></code> directory.</p>
-<p><strong>Android Support library is a forced dependency，please include it into your project ,or the game might crash !</strong></p>
+<div class="section" id="iii">
+<span id="iii"></span><h2>III. 다른 의존성 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
+<p>일부 타사의 SDK는 타사의 오픈소스 라이브러리에 대한 의존을 필요로 하기에 직접 프로젝트에 포함시켜야 합니다. <br />
+이러한 라이브러리 파일들은 다운로드한 폴더 중 <code class="docutils literal notranslate"><span class="pre">xxx_ads</span></code>폴더 형태로 존재하게 됩니다. <br />
+UPSDK는 다른 네트워크와 독립적이면서도 긴밀하게 결합되어 있으므로, 일부 타사를 가져오고 싶지 않은 경우에는, <br />
+희망 타사 파일만 별도로 선택할 수도 있습니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">batmobi_ads</span></code> 폴더의 경우, Mobvista 광고로 프로젝트를 채우고 싶다면 <code class="docutils literal notranslate"><span class="pre">batmobi_ads/libs/</span></code>와 <br />
+<code class="docutils literal notranslate"><span class="pre">batmobi_ads/res/</span></code> 디렉토리에 있는 관련 파일들을 프로젝트 내 <code class="docutils literal notranslate"><span class="pre">libs</span></code>와 <code class="docutils literal notranslate"><span class="pre">res</span></code> 디렉토리로 복사해야 합니다. <br />
+그리고 <code class="docutils literal notranslate"><span class="pre">AndroidManifest_Inmobi</span></code>의 내용을 프로젝트에 있는<code class="docutils literal notranslate"><span class="pre">manifest.xml</span></code>파일로 추가합니다.</p>
+<p><strong>프로젝트에서 UPSDK가 의존을 필요로 하는 타사 라이브러리를 가져올 경우, 아래의 권장 사항을 따라주시기 바랍니다. <br />
+그렇지 않으면, 필요한 지원이 부족하다는 사유로 시스템에서 충돌이 발생할 수 있습니다.</strong></p>
+<div class="section" id="iv-android">
+<span id="iv-android"></span><h3>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h3>
+<p>일부 타사에서는 <code class="docutils literal notranslate"><span class="pre">support</span></code>를 필요로 하므로, 이를 프로젝트에 포함시켜야 합니다. <br />
+UPLTV는 <code class="docutils literal notranslate"><span class="pre">android_support_library/libs</span></code> 폴더에 있는 <code class="docutils literal notranslate"><span class="pre">xxx.jar</span></code>를 제공합니다. <br />
+파일들을 <code class="docutils literal notranslate"><span class="pre">libs</span></code> 폴더로 추가하시기 바랍니다.</p>
+<p><strong>Android 지원 라이브러리는 강제로 지정된 의존성이므로, 이를 프로젝트에 포함시키지 않으면, <br />
+게임에서 충돌이 발생할 수 있습니다</strong></p>
 </div>
-<div class="section" id="v-add-google-ads-sdk">
-<span id="v-add-google-ads-sdk"></span><h3>V. Add Google Ads SDK<a class="headerlink" href="#v-add-google-ads-sdk" title="Permalink to this headline">¶</a></h3>
-<p>If your project will be published globally, we suggest you to inlude Google Ads supports. We have provided related <code class="docutils literal notranslate"><span class="pre">play-services-xxx.jar</span></code> files in the directory of <code class="docutils literal notranslate"><span class="pre">admob_xxx/libs</span></code>.</p>
-<p>At the same time, please check whether your AndroidManifest.xml includes the definitions below:</p>
+<div class="section" id="v-google-sdk">
+<span id="v-google-sdk"></span><h3>V. Google 광고 SDK 추가하기<a class="headerlink" href="#v-google-sdk" title="Permalink to this headline">¶</a></h3>
+<p>전 세계에 걸쳐 프로젝트를 게시하는 경우, Google 광고 지원을 포함할 것을 권장합니다. <br />
+UPLTV는 <code class="docutils literal notranslate"><span class="pre">admob_xxx/libs</span></code> 디렉토리에 있는 <code class="docutils literal notranslate"><span class="pre">play-services-xxx.jar</span></code> 관련 파일을 제공합니다.</p>
+<p>그리고 AndroidManifest.xml에 아래와 같이 정의가 포함되어 있는지 확인하시기 바랍니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
-&lt;meta-data  
+&lt;meta-data
     android:name=&quot;com.google.android.gms.version&quot;
     android:value=&quot;@integer/google_play_services_version&quot;/&gt;
 
@@ -213,18 +227,18 @@ The relationships between UPSDK and other networks are loose and coupled. If you
 </div>
 </div>
 </div>
-<div class="section" id="vi-modify-androidmanifest-xml-file">
-<span id="vi-modify-androidmanifest-xml-file"></span><h2>VI. Modify AndroidManifest.xml file<a class="headerlink" href="#vi-modify-androidmanifest-xml-file" title="Permalink to this headline">¶</a></h2>
-<p>Please duplicate the content of <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> file into the related location in your project.</p>
+<div class="section" id="vi-androidmanifest-xml">
+<span id="vi-androidmanifest-xml"></span><h2>VI. AndroidManifest.xml 파일 수정하기<a class="headerlink" href="#vi-androidmanifest-xml" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> 파일의 내용을 프로젝트의 관련 위치에 복사합니다.</p>
 </div>
-<div class="section" id="vii-modify-proguard-setting">
-<span id="vii-modify-proguard-setting"></span><h2>VII. Modify Proguard setting<a class="headerlink" href="#vii-modify-proguard-setting" title="Permalink to this headline">¶</a></h2>
-<p>If your project used <code class="docutils literal notranslate"><span class="pre">proguard</span></code>.
-You have to copy contents from <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code> to right location of your project.</p>
+<div class="section" id="vii-proguard">
+<span id="vii-proguard"></span><h2>VII. Proguard 설정 수정하기<a class="headerlink" href="#vii-proguard" title="Permalink to this headline">¶</a></h2>
+<p>프로젝트에서 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>를 사용하는 경우, <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>의 내용을 프로젝트에서 <br />
+사용하는 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 위치로 복사합니다.</p>
 </div>
-<div class="section" id="viii-demo-project">
-<span id="viii-demo-project"></span><h2>VIII. Demo Project<a class="headerlink" href="#viii-demo-project" title="Permalink to this headline">¶</a></h2>
-<p>To help you integrate ads SDK easier and faster, here we provide you a simple<a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Eclipse">Demo Project</a>.</p>
+<div class="section" id="viii-demo">
+<span id="viii-demo"></span><h2>VIII.  Demo 프로젝트<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
+<p>광고 SDK를 더 빠르고 쉽게 결합할 수 있도록 간편한 <a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Eclipse">Demo 프로젝트</a>를 제공하고 있습니다.</p>
 </div>
 </div>
 
@@ -248,7 +262,7 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -267,15 +281,21 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

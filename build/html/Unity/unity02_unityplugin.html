@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How to add plugin in Unity project &mdash; UPInteractive Document  documentation</title>
+  <title>Unity Plugin 추가하기 &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="UnityPlugin Access" href="unity03_integrate_catalog.html" />
-    <link rel="prev" title="UnityPlugin Guide" href="unity01_guide.html" /> 
+    <link rel="next" title="Unity Plugin 액세스" href="unity03_integrate_catalog.html" />
+    <link rel="prev" title="Unity Plugin 가이드" href="unity01_guide.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,14 +82,14 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="unity01_guide.html">UnityPlugin Guide</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">How to add plugin in Unity project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity03_integrate_catalog.html">UnityPlugin Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity04_api_catalog.html">UnityPlugin API Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity05_sample_catalog.html">UnityPlugin API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity06_multidex_catalog.html">UnityPlugin Android MultiDex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="unity01_guide.html">Unity Plugin 가이드</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Unity Plugin 추가하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity03_integrate_catalog.html">Unity Plugin 액세스</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity04_api_catalog.html">Unity Plugin API 소개</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity05_sample_catalog.html">Unity Plugin API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity06_multidex_catalog.html">Unity Plugin Android MultiDex</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -145,9 +145,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../chapters/chapter03.html">UPSDK UnityPlugin</a> &raquo;</li>
+          <li><a href="../chapters/chapter03.html">UPSDK Unity Plugin</a> &raquo;</li>
         
-      <li>How to add plugin in Unity project</li>
+      <li>Unity Plugin 추가하기</li>
     
     
 
@@ -159,33 +159,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-add-plugin-in-unity-project">
-<span id="how-to-add-plugin-in-unity-project"></span><h1>How to add plugin in Unity project<a class="headerlink" href="#how-to-add-plugin-in-unity-project" title="Permalink to this headline">¶</a></h1>
-<p>The downloaded UPSDK Unity Plugin, is a kind of *.unitypackage file. This document will give typical examples in two different platforms, please refer them as followed:</p>
+  <div class="section" id="unity-plugin">
+<span id="unity-plugin"></span><h1>Unity Plugin 추가하기<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<p>다운로드 된 UPSDK Unity Plugin은 *.unitypackage 파일입니다. 이 문서에서는 두 가지 플랫폼의 대표적인 예시를 <br />
+설명하고 있으니, 아래를 참고하시기 바랍니다.</p>
 <blockquote>
-<div>Egineer who is familiar with this procedure, please skpi this section.</div></blockquote>
-<div class="section" id="updating-the-plugin">
-<span id="updating-the-plugin"></span><h2>1. Updating the plugin<a class="headerlink" href="#updating-the-plugin" title="Permalink to this headline">¶</a></h2>
-<p>If you have integrated UPSDK Unity Plugin before, to make sure the correctness of plugin library after updating, we suggest that please completely delete UPSDK Unity Plugin before the updating.</p>
-<p>In your Unity project, please check whether <code class="docutils literal notranslate"><span class="pre">Assets/PolyADSDK/Plugins/</span></code> and <code class="docutils literal notranslate"><span class="pre">Assets/StreamingAssets/UPSDK_android/</span></code> exist. Generally, when you delete <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> and <code class="docutils literal notranslate"><span class="pre">UPSDK_android</span></code> folder(including its subcatalog), the whole import plugin will be completely deleted.</p>
-<p>If you have edit the name of <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> catalog or the location of its subcatalog, please find out its corrected location and delete it. Specially, if you added some files after updating <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> and those files need to be retained, please be careful in case deleting them.</p>
-<p>Please continue <strong>NEXT STEP</strong>.</p>
+<div>이 절차를 숙지하고 계신 개발자 분께서는, 다음 섹션으로 넘어갑니다.</div></blockquote>
+<div class="section" id="plugin">
+<span id="plugin"></span><h2>1. Plugin 업데이트하기<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h2>
+<p>이전에 UPSDK Unity Plugin을 결합한 경우, 업데이트 후 Plugin 라이브러리가 올바른지 확인하기위해 업데이트 전에, UPSDK Unity Plugin을 제거합니다.</p>
+<p>Unity 프로젝트에 <code class="docutils literal notranslate"><span class="pre">Assets/PolyADSDK/Plugins/</span></code> 과 <code class="docutils literal notranslate"><span class="pre">Assets/StreamingAssets/UPSDK_android/</span></code>가 존재하는지 확인합니다. <br />
+일반적으로 <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> 및 <code class="docutils literal notranslate"><span class="pre">UPSDK_android</span></code> 폴더(하위 카탈로그 포함)를 삭제하면 전체 불러온 Plugin이 완전히 삭제됩니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> 카탈로그의 이름 또는 하위 카탈로그의 위치를 편집한 경우 수정된 위치를 찾아 삭제합니다. <br />
+특히 <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code>를 업데이트한 후 일부 중요 파일을 추가한 경우 삭제 시 유의합니다.</p>
 </div>
-<div class="section" id="in-your-project-select-assets-right-click-and-select-import-package-custom-package">
-<span id="in-your-project-select-assets-right-click-and-select-import-package-custom-package"></span><h2>2. In your project, select Assets, right click and select: Import Package -&gt; Custom Package<a class="headerlink" href="#in-your-project-select-assets-right-click-and-select-import-package-custom-package" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id1"></span><h2>2. 패키지 불러오기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>프로젝트에서 Asset을 선택하고 마우스 오른쪽 버튼을 클릭한 후 <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Package</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Custom</span> <span class="pre">Package</span></code>를 선택합니다.</p>
 <p><img alt="import" src="http://docc.upltv.com/uploads/201705/592e66a727d89_592e66a7.png" /></p>
 </div>
-<div class="section" id="choose-your-downloaded-plugin-package-such-as-export-unitypackage-then-please-click-open-button-unity-will-automatically-load-the-plugin-package">
-<span id="choose-your-downloaded-plugin-package-such-as-export-unitypackage-then-please-click-open-button-unity-will-automatically-load-the-plugin-package"></span><h2>3. Choose your downloaded plugin package: such as  export.unitypackage. Then please click “open” button, Unity will automatically load the plugin package.<a class="headerlink" href="#choose-your-downloaded-plugin-package-such-as-export-unitypackage-then-please-click-open-button-unity-will-automatically-load-the-plugin-package" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plugin">
+<span id="id2"></span><h2>3. Plugin 패키지 선택하기<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h2>
+<p>다운로드한 Plugin 패키지(예: export.unitypackage)를 선택합니다. 그런 다음 <code class="docutils literal notranslate"><span class="pre">open</span></code>버튼을 클릭합니다. <br />
+Unity가 Plugin 패키지를 자동으로 로드합니다.</p>
 <p><img alt="open file" src="http://docc.upltv.com/uploads/201705/592e684f54573_592e684f.png" /></p>
 </div>
-<div class="section" id="when-untiy-finishes-loading-the-plugin-package-you-will-see-a-pop-up-window-that-shows-you-which-plugin-resources-to-import-like-the-picture-below">
-<span id="when-untiy-finishes-loading-the-plugin-package-you-will-see-a-pop-up-window-that-shows-you-which-plugin-resources-to-import-like-the-picture-below"></span><h2>4.When Untiy finishes loading the plugin package, you will see a pop-up window that shows you which plugin resources to import, like the picture below:<a class="headerlink" href="#when-untiy-finishes-loading-the-plugin-package-you-will-see-a-pop-up-window-that-shows-you-which-plugin-resources-to-import-like-the-picture-below" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id3"></span><h2>4. 패키지 로드하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>Unity가 Plugin 패키지 로드를 마치면 아래와 같은 Plugin 리소스를 불러올 수 있는 팝업 창이 나타납니다.</p>
 <p><img alt="import plugin" src="http://docc.upltv.com/uploads/201705/592e69ba77ebf_592e69ba.png" /></p>
-<p>Generally select “All” button, then click “Import” to import. If your project only supports Android, you should ignore “<strong>IOS</strong>” button; if your project only supports iOS, please ignore “<strong>Android</strong>” button.</p>
+<p>일반적으로 &quot;All&quot; 버튼을 선택한 다음 <code class="docutils literal notranslate"><span class="pre">Import</span></code>를 클릭하여 불러옵니다. Android 플랫폼에만 지원하는 경우, <br />
+<strong>iOS</strong>버튼은 무시합니다. iOS만 지원하는 경우에는 <strong>Android</strong> 버튼은 무시합니다.</p>
 </div>
-<div class="section" id="after-importing-plugin-for-upsdk-successfully-you-could-see-a-folder-named-polyadsdk-in-your-project-among-the-examples-all-resources-for-plugin-will-be-imported-completely-as-we-considered-about-the-supports-for-both-android-and-ios">
-<span id="after-importing-plugin-for-upsdk-successfully-you-could-see-a-folder-named-polyadsdk-in-your-project-among-the-examples-all-resources-for-plugin-will-be-imported-completely-as-we-considered-about-the-supports-for-both-android-and-ios"></span><h2>5. After importing plugin for UPSDK successfully, you could see a folder named **PolyADSDK******in your project. Among the examples, all resources for plugin will be imported completely as we considered about the supports for both Android and iOS.<a class="headerlink" href="#after-importing-plugin-for-upsdk-successfully-you-could-see-a-folder-named-polyadsdk-in-your-project-among-the-examples-all-resources-for-plugin-will-be-imported-completely-as-we-considered-about-the-supports-for-both-android-and-ios" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id4"></span><h2>5. 로드 완료<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>UPSDK의 Plugin을 불러온 후 프로젝트에 <strong>PolyADSDK</strong>라는 폴더가 표시됩니다. 예시로, Android플랫폼 및 iOS플랫폼 <br />
+모두에 대한 지원을 하신다면 Plugin에 대한 모든 리소스를 불러오기 합니다.</p>
 <p><img alt="load ok" src="http://docc.upltv.com/uploads/201705/592e6b65dd56e_592e6b65.png" /></p>
 </div>
 </div>
@@ -198,10 +207,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="unity03_integrate_catalog.html" class="btn btn-neutral float-right" title="UnityPlugin Access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="unity03_integrate_catalog.html" class="btn btn-neutral float-right" title="Unity Plugin 액세스" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity01_guide.html" class="btn btn-neutral" title="UnityPlugin Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity01_guide.html" class="btn btn-neutral" title="Unity Plugin 가이드" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -210,7 +219,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -229,15 +238,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

@@ -1,5 +1,5 @@
 =============================
-UPSDK UnityPlugin
+UPSDK Unity Plugin
 =============================
 
 .. toctree::
@@ -7,7 +7,7 @@ UPSDK UnityPlugin
    :titlesonly:
    :glob:
 
-  
+
    ../Unity/unity01_guide
    ../Unity/unity02_unityplugin
    ../Unity/unity03_integrate_catalog

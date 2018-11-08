@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>UnityPlugin Guide &mdash; UPInteractive Document  documentation</title>
+  <title>Unity Plugin 가이드 &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How to add plugin in Unity project" href="unity02_unityplugin.html" />
-    <link rel="prev" title="UPSDK UnityPlugin" href="../chapters/chapter03.html" /> 
+    <link rel="next" title="Unity Plugin 추가하기" href="unity02_unityplugin.html" />
+    <link rel="prev" title="UPSDK Unity Plugin" href="../chapters/chapter03.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,14 +82,14 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">UnityPlugin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity02_unityplugin.html">How to add plugin in Unity project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity03_integrate_catalog.html">UnityPlugin Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity04_api_catalog.html">UnityPlugin API Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity05_sample_catalog.html">UnityPlugin API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unity06_multidex_catalog.html">UnityPlugin Android MultiDex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Unity Plugin 가이드</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity02_unityplugin.html">Unity Plugin 추가하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity03_integrate_catalog.html">Unity Plugin 액세스</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity04_api_catalog.html">Unity Plugin API 소개</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity05_sample_catalog.html">Unity Plugin API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity06_multidex_catalog.html">Unity Plugin Android MultiDex</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -145,9 +145,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../chapters/chapter03.html">UPSDK UnityPlugin</a> &raquo;</li>
+          <li><a href="../chapters/chapter03.html">UPSDK Unity Plugin</a> &raquo;</li>
         
-      <li>UnityPlugin Guide</li>
+      <li>Unity Plugin 가이드</li>
     
     
 
@@ -159,34 +159,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="unityplugin-guide">
-<span id="unityplugin-guide"></span><h1>UnityPlugin Guide<a class="headerlink" href="#unityplugin-guide" title="Permalink to this headline">¶</a></h1>
-<p>UPSDK Unity Plugin including UPLTV AD SDK (Android,IOS platform and dependent library), designed for C#, provides native API calls, and implements business functions such as interstitial ad, reward video ad, and banner ad.</p>
-<p>Due to the excessive versions of Unity , we have support for the following versions of the following platforms:</p>
-<ol class="simple">
-<li>Android,only support Unity 5.0.0 and following version</li>
-<li>Ios,only support Unity 5.1.0 and following version</li>
-</ol>
+  <div class="section" id="unity-plugin">
+<span id="unity-plugin"></span><h1>Unity Plugin 가이드<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<p>C#으로 설계된 UPLTV AD SDK(Android,iOS 플랫폼 및 의존성 라이브러리)를 포함하는 <br />
+UPSDK Unity Plugin은 native API 호출을 제공하며, 삽입 광고(Interstitial Ad), 삽입 광고(Interstitial Ad) <br />
+및 배너 광고(Banner Ad)와 같은 비즈니스 기능을 구현합니다.</p>
+<p>UPLTV는 아래와 같은 플랫폼 및 버전을 지원합니다.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">Android</span></code>에서는 Unity 5.0.0 및 상위 버전만 지원합니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">iOS</span></code>에서는 Unity 5.1.0 및 상위 버전만 지원합니다.</li>
+</ul>
 <blockquote>
-<div>If you need to support an earlier version, please contact us.</div></blockquote>
-<p>The UPSDK Unity Plugin contains the support components needed for the android and ios platforms. Considering that the IOS SDK body size is very different from the Android version, three access methods will be provided, please choose the suitable way according to the actual situation.</p>
-<ol>
-<li><p class="first">Only Android platform</p>
-<p>If your app is only be released for the Android market, only the Android platform plugin is your best choice. The size of the plugin is less than 10M , is very lightweight compared to IOS (540 M).</p>
-</li>
-<li><p class="first">Only Ios platform</p>
-<p>If your app is only be released for the Ios market, only the Ios platform plugin is your best choice. Since the plug-in package is large (including the IOS support of UPSDK and the third-party library), please keep the network connection stable when downloading.</p>
-</li>
-</ol>
+<div>하위 버전에 대한 지원이 필요하시다면 담당자에게 문의하여 추가 지원을 받아보세요.</div></blockquote>
+<p>UPSDK Unity Plugin에는 Android 및 iOS 플랫폼에 필요한 지원 요소가 포함되어 있습니다. <br />
+iOS SDK의 용량은 Android 버전과 차이가 크므로, 세 가지 액세스 방법이 제공됩니다. <br />
+상황에 따라 적절한 방법을 선택하시기 바랍니다.</p>
+<div class="section" id="android">
+<span id="android"></span><h2>1. Android 플랫폼 전용<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>As the IOS plugin package is much larger than Android, we will no longer provide a individual IOS plugin package..</div></blockquote>
-<ol>
-<li><p class="first">Android and Ios platform</p>
-<p>If your app designed  for both Android and iOS markets, such plugin will be your best choice. This package includes Android and Ios support of UPSDK and corresponding third-party libraries (about 550M, please keep the network work well when downloading),</p>
-</li>
-</ol>
-<div class="section" id="download-in-upsdk-unity-plugin-download">
-<span id="download-in-upsdk-unity-plugin-download"></span><h2>Download in <a class="reference external" href="http://doc.upltv.com/en/master/chapters/chapter09.html">UPSDK Unity Plugin DownLoad</a> .<a class="headerlink" href="#download-in-upsdk-unity-plugin-download" title="Permalink to this headline">¶</a></h2>
+<div>Android 플랫폼용으로만 앱을 출시하는 경우 Android 플랫폼 Plugin만 선택하는 것이 좋습니다. <br />
+Plugin의 크기(&lt;10M)는 iOS(540M)에 비해 매우 가볍습니다. <br /></div></blockquote>
+</div>
+<div class="section" id="ios">
+<span id="ios"></span><h2>2. iOS 플랫폼 전용<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>iOS 플랫폼용으로만 앱을 출시하는 경우 iOS 플랫폼 Plugin만 선택하는 것이 좋습니다. <br />
+Plugin 패키지가 크므로(UPSDK의 iOS 지원 및 타사 라이브러리 포함) 다운로드할 때 네트워크 연결을 <br />
+안정적으로 유지하시기바랍니다. <br />
+iOS Plugin 패키지가 Android보다 훨씬 크기 때문에, 더 이상 iOS Plugin 패키지를 개별로 제공하지 않습니다. <br /></div></blockquote>
+</div>
+<div class="section" id="android-and-ios">
+<span id="android-and-ios"></span><h2>3. Android and iOS<a class="headerlink" href="#android-and-ios" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Android 및 iOS 플랫폼을 모두 고려해 설계된 앱인 경우, UPSDK Unity Plugin을 권장합니다. <br />
+이 패키지(550M)에는 UPSDK 및 해당 타사 라이브러리의 Android 및 iOS 지원이 포함됩니다. <br />
+(다운로드 시 안정된 네트워크 상태를 유지하시기 바랍니다).</div></blockquote>
+</div>
+<div class="section" id="upsdk-unity-plugin">
+<span id="upsdk-unity-plugin"></span><h2><a class="reference external" href="http://doc.upltv.com/en/master/chapters/chapter09.html">UPSDK Unity Plugin 다운로드</a><a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -198,10 +208,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="unity02_unityplugin.html" class="btn btn-neutral float-right" title="How to add plugin in Unity project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="unity02_unityplugin.html" class="btn btn-neutral float-right" title="Unity Plugin 추가하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../chapters/chapter03.html" class="btn btn-neutral" title="UPSDK UnityPlugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../chapters/chapter03.html" class="btn btn-neutral" title="UPSDK Unity Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -210,7 +220,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -229,15 +239,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

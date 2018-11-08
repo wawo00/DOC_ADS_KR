@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Eclipse" href="js01_2_help_ec.html" />
-    <link rel="prev" title="JavaScriptPlugin" href="js01_help_catalog.html" /> 
+    <link rel="prev" title="JavaScript Plugin" href="js01_help_catalog.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="js01_help_catalog.html">JavaScriptPlugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="js01_help_catalog.html">JavaScript Plugin</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Android Studio</a></li>
 <li class="toctree-l3"><a class="reference internal" href="js01_2_help_ec.html">Eclipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="js01_3_help_ios.html">IOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="js01_4_help_ios_cocoscreator.html">IOS CocosCreator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="js01_3_help_ios.html">iOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="js01_4_help_ios_cocoscreator.html">iOS CocosCreator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="js02_sample_catalog.html">JavaScriptPlugin Sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js02_sample_catalog.html">JavaScript Plugin 샘플</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -149,7 +149,7 @@
         
           <li><a href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a> &raquo;</li>
         
-          <li><a href="js01_help_catalog.html">JavaScriptPlugin</a> &raquo;</li>
+          <li><a href="js01_help_catalog.html">JavaScript Plugin</a> &raquo;</li>
         
       <li>Android Studio</li>
     
@@ -165,33 +165,38 @@
             
   <div class="section" id="android-studio">
 <span id="android-studio"></span><h1>Android Studio<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="i-structure-of-upsdk-javascriptplugin">
-<span id="i-structure-of-upsdk-javascriptplugin"></span><h2>I.Structure of  UPSDK JavaScriptPlugin<a class="headerlink" href="#i-structure-of-upsdk-javascriptplugin" title="Permalink to this headline">¶</a></h2>
-<p>Regarding to Android Studio or Gradle built project, UPSDK suggests it should be import by other main project in  *.aar  format. Download UPSDK CppPlugin( <a class="reference external" href="http://doc.upltv.com/en/master/chapters/chapter09.html">Android-JsSDK</a> UPSDK JsPlugin)You will see the structure of directory when you unzip it:</p>
+<div class="section" id="i-upsdk-javascript-plugin">
+<span id="i-upsdk-javascript-plugin"></span><h2>I. UPSDK JavaScript Plugin 구조<a class="headerlink" href="#i-upsdk-javascript-plugin" title="Permalink to this headline">¶</a></h2>
+<p>Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 <code class="docutils literal notranslate"><span class="pre">*.aar</span></code>형식으로 가져와야 합니다.  <br />
+UPSDK JsPlugin(<a class="reference external" href="http://doc.upltv.com/en/master/chapters/chapter09.html">Android-JsSDK</a> UPSDK JsPlugin)를 다운받아 압축해제 하시면 <br />
+아래의 그림과 같은 디렉토리 구조를 보실 수 있습니다.</p>
 <p><img alt="as-1-1" src="http://docc.upltv.com/uploads/201805/5af3e11a11839_5af3e11a.png" /></p>
 <blockquote>
-<div>The UPSDK JsPlugin main package is named<code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_x.x.xx_dex.aar</span></code>.</div></blockquote>
+<div>UPSDK JsPlugin 메인 패키지 명은 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_x.x.xx_dex.aar</span></code> 입니다.</div></blockquote>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio</span></code>
-This directory mainly contains the ad dependency library files required for Android Studio.</li>
-<li><code class="docutils literal notranslate"><span class="pre">js</span></code>
-This directory mainly contains some *.js source files for bridging the current Cocos2d-X js project with the UPSDK interface .</li>
-<li><code class="docutils literal notranslate"><span class="pre">Eclipse</span></code>
-This directory contains some jars and resource files. Please ignore this directory if you use  Android Studio to build apk.</li>
-<li><code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>
-The configuration file of confusion,if you need to obfuscate code, add the contents of this file to the file that the project depends on.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio</span></code>: 이 디렉토리에는 Android Studio에 필요한 광고 의존성 라이브러리 파일들이 포함되어 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">js</span></code> : 이 디렉토리에는 현재 Cocos2d-X js 프로젝트를 UPSDK 인터페이스로 연동하기 위한 일부 *.js 소스 파일들이 <br />
+포함되어 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Eclipse</span></code>: 이 디렉토리에는 일부 jar 및 리소스 파일이 포함되어 있습니다. Android Studio를 사용하여 <br />
+apk를 빌드하는 경우 이 디렉토리를 무시하시기 바랍니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>: 프로젝트에서 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>를 사용하는 경우, 이 파일의 내용을 프로젝트에서 <br />
+사용하는 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 위치로 복사합니다.</li>
 </ul>
 </div>
-<div class="section" id="ii-import-upsdk-main-package">
-<span id="ii-import-upsdk-main-package"></span><h2>II.Import UPSDK main package<a class="headerlink" href="#ii-import-upsdk-main-package" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="add-files-of-upsdk">
-<span id="add-files-of-upsdk"></span><h3>1.Add files of UPSDK<a class="headerlink" href="#add-files-of-upsdk" title="Permalink to this headline">¶</a></h3>
-<p>According to the above introduction, find the file named <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_x.x.xx_dex.aar</span></code> in the file directory you downloaded and add it to the <code class="docutils literal notranslate"><span class="pre">libs</span></code> directory of the project (Note: If there is no this directory, try to  create it and in the same directory as src.
-After adding, it looks like this:</p>
+<div class="section" id="ii-upsdk">
+<span id="ii-upsdk"></span><h2>II. UPSDK 메인 패키지 가져오기<a class="headerlink" href="#ii-upsdk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="upsdk">
+<span id="upsdk"></span><h3>1. UPSDK 파일 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<p>상기 설명에 따라 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_x.x.xx_dex.aar</span></code>라는 파일을 다운로드 받은 파일 디렉토리에서 찾아서 프로젝트의 <br />
+<code class="docutils literal notranslate"><span class="pre">libs</span></code>디렉토리에 추가합니다.</p>
+<blockquote>
+<div>(참고: 이 디렉토리가 없는 경우 src와 동일한 디렉토리를 생성합니다.)</div></blockquote>
+<p>추가한 후의 구성은 아래와 같습니다.</p>
 <p><img alt="as-2-1" src="http://docc.upltv.com/uploads/201805/5af3e2cdeb793_5af3e2cd.png" /></p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_3.0.03_dex</span></code>just only for reference</div></blockquote>
-<p>To ensure that the aar package in the libs directory is correctly referenced by the project, check the <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file in the <code class="docutils literal notranslate"><span class="pre">app</span></code> directory to add the following  parameters:</p>
+<div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_3.0.03_dex</span></code>는 참조용입니다.</div></blockquote>
+<p>libs 디렉토리의 aar 패키지가 프로젝트에 의해 올바르게 참조되었는지 확인하기위해 <code class="docutils literal notranslate"><span class="pre">app</span></code> 디렉토리의 <br />
+<code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>파일을 확인하여 다음 매개 변수를 추가합니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">repositories</span> <span class="o">{</span>
         <span class="n">flatDir</span> <span class="o">{</span>
              <span class="n">dirs</span> <span class="s1">&#39;libs&#39;</span>
@@ -199,41 +204,44 @@ After adding, it looks like this:</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Finally add aar to the dependencies scope</p>
+<p>마지막으로 의존성 범위에 aar을 추가합니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
-<span class="c1">// Please replace UPAdsSdk_Js_3.0.03_dex with the actual file name.</span>
+<span class="c1">// UPAdsSdk_Js_3.0.03_dex를 실제 파일 명과 치환합니다.</span>
 <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;UPAdsSdk_Js_3.0.03_dex&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="check-minsdkversion-and-targetsdkversion-in-build-gradle">
-<span id="check-minsdkversion-and-targetsdkversion-in-build-gradle"></span><h3>2.Check minSdkVersion and targetSdkVersion in <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code><a class="headerlink" href="#check-minsdkversion-and-targetsdkversion-in-build-gradle" title="Permalink to this headline">¶</a></h3>
-<p>UPSDK requires that minSdkVersion cannot be lower than 15, and targetSdkVersion cannot be higher than 26, so check it in the <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file .</p>
-<p>Sample：</p>
+<div class="section" id="build-gradle-minsdkversion-targetsdkversion">
+<span id="build-gradle-minsdkversion-targetsdkversion"></span><h3>2. <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 minSdkVersion 및 targetSdkVersion 확인하기<a class="headerlink" href="#build-gradle-minsdkversion-targetsdkversion" title="Permalink to this headline">¶</a></h3>
+<p>UPSDK를 사용하려면 <code class="docutils literal notranslate"><span class="pre">minSdkVersion</span></code>이 15 보다 크고, <code class="docutils literal notranslate"><span class="pre">targetSdkVersion</span></code>이 26 보다 작아야 합니다.  <br />
+이는 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 확인하시기 바랍니다.</p>
+<p>샘플：</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span> <span class="n">defaultConfig</span> <span class="o">{</span>
         <span class="n">minSdkVersion</span> <span class="mi">16</span>
         <span class="n">targetSdkVersion</span> <span class="mi">26</span>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>The Cocos2dx-3.X project will automatically generates the default configuration of PROP_MIN_SDK_VERSION and PROP_TARGET_SDK_VERSION in gradle.properties, you only need to modify the values of both.</p>
-<p>Recommended changes are as follows:</p>
+<p>cocos2dx-3.X 프로젝트는 <code class="docutils literal notranslate"><span class="pre">PROP_MIN_SDK_VERSION</span></code> 및 <code class="docutils literal notranslate"><span class="pre">PROP_TARGET_SDK_VERSION</span></code>의 디폴트 구성을 <br />
+<code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code>에서 실행하므로 이 두 개의 값만 수정하면 됩니다.</p>
+<p>권장 값은 다음과 같습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">PROP_MIN_SDK_VERSION</span><span class="o">=</span><span class="mi">16</span>
  <span class="n">PROP_TARGET_SDK_VERSION</span><span class="o">=</span><span class="mi">26</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="make-sure-so-files-are-aligned">
-<span id="make-sure-so-files-are-aligned"></span><h3>3.Make sure *.so files are aligned<a class="headerlink" href="#make-sure-so-files-are-aligned" title="Permalink to this headline">¶</a></h3>
-<p>There are 3 types of .so files of the cpu type in <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_x.x.xx_dex.aar</span></code>：</p>
+<div class="section" id="so">
+<span id="so"></span><h3>3. *.so 파일이 정렬되었는지 확인하기<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Js_x.x.xx_dex.aar</span></code>에는 세 가지 유형의 .so 파일이 있습니다.</p>
 <ul class="simple">
 <li>armeabi</li>
 <li>armeabi-v7a</li>
 <li>x86</li>
 </ul>
-<p>Please add abiFilters configuration to the <code class="docutils literal notranslate"><span class="pre">gradle.build</span></code> file according to the cup type supported by the project ,that can ensure these files are aligned.</p>
-<p>If the current project only supports armeabi-v7a, please refer to the following modifications:</p>
+<p>aviFilters 구성을 <code class="docutils literal notranslate"><span class="pre">gradle.build</span></code> 파일에 프로젝트에서 지원하는 CPU 유형에 따라 추가합니다. <br />
+그리고 파일들이 정렬되어 있는지 확인합니다.</p>
+<p>현재 프로젝트가  armeabi-v7a만 지원하는 경우 아래의 수정 사항을 참조하시기 바랍니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaultConfig</span> <span class="p">{</span>
         <span class="n">ndk</span> <span class="p">{</span>
             <span class="n">abiFilters</span> <span class="s1">&#39;armeabi-v7a&#39;</span>
@@ -242,35 +250,36 @@ After adding, it looks like this:</p>
 </pre></div>
 </div>
 <blockquote>
-<div>abiFilters ‘armeabi-v7a’ means this app will be supported in devices which base on armeabi-v7a architecture.</div></blockquote>
+<div>abiFilters <code class="docutils literal notranslate"><span class="pre">armeabi-v7a</span></code>는 이 앱이 armeabi-v7a 아키텍처에 기반을 둔 디바이스에서 지원됨을 의미합니다.</div></blockquote>
 </div>
 </div>
-<div class="section" id="iii-add-ad-networdks">
-<span id="iii-add-ad-networdks"></span><h2>III.Add ad networdks<a class="headerlink" href="#iii-add-ad-networdks" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="add-google-ads-sdk">
-<span id="add-google-ads-sdk"></span><h3>1.Add Google Ads SDK<a class="headerlink" href="#add-google-ads-sdk" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="sample-code">
-<span id="sample-code"></span><h4>1.<strong>Sample code</strong><a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h4>
-<p>In the <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> , download the gms play-service15.0.1 package from Google’s remote repository via the compile command.Like this:</p>
+<div class="section" id="iii">
+<span id="iii"></span><h2>III. 광고 네트워크 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="google-ads-sdk">
+<span id="google-ads-sdk"></span><h3>1. Google Ads SDK 추가하기<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="">
+<span id="id1"></span><h4>1. 샘플 코드<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 컴파일 명령을 통해 Google의 원격 저장소에서 gms Play-service15.0.1 패키지를 <br />
+다음과 같이 다운로드합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
     <span class="nb">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:15.0.1&#39;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <blockquote>
-<div>In particular, if your project already has a different version of google play service, use the higher version.</div></blockquote>
+<div><strong>프로젝트에 이미 다른 버전의 Google Play 서비스가 있는 경우 상위 버전을 사용하시기 바랍니다.</strong></div></blockquote>
 </div>
 </div>
-<div class="section" id="add-other-networdks">
-<span id="add-other-networdks"></span><h3>2.Add other networdks<a class="headerlink" href="#add-other-networdks" title="Permalink to this headline">¶</a></h3>
-<p>To ensure you get more revenue, add as many ad libraries as possible to your project.
-Please refer to the following method to add the file named <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> in <code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio/aar</span></code> to the project.</p>
-<div class="section" id="global-except-china">
-<span id="global-except-china"></span><h4>Global except China<a class="headerlink" href="#global-except-china" title="Permalink to this headline">¶</a></h4>
-<p>The build.gradle is as follows下：</p>
+<div class="section" id="">
+<span id="id2"></span><h3>2. 기타 광고 네트워크 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<p>더 많은 수익을 위해 프로젝트에 가능한 한 많은 광고 라이브러리를 추가합니다. <br />
+다음 방법을 참조하여 <code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio/aar</span></code> 의 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> 파일을 프로젝트에 추가합니다.</p>
+<div class="section" id="">
+<span id="id3"></span><h4>중국을 제외한 전 세계 광고<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<p>build.gradle은 다음과 같습니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
-    <span class="c1">//other ads-libs</span>
-    <span class="c1">//gson-2.7.jar in folder named android_support_library</span>
+    <span class="c1">//다른 광고 네트워크 라이브러리</span>
+    <span class="c1">//gson-2.7.jar 은 android_support_library 명의 폴더 안에 있습니다.</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;gson-2.7&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;jar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;facebook_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;facebook_exo_player&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
@@ -280,7 +289,7 @@ Please refer to the following method to add the file named <code class="docutils
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;vungle_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;chartboost_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;ironsource_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-    
+
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;adcolony_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;applovin_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;playable_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
@@ -289,19 +298,19 @@ Please refer to the following method to add the file named <code class="docutils
 </pre></div>
 </div>
 </div>
-<div class="section" id="only-in-china">
-<span id="only-in-china"></span><h4>Only in China<a class="headerlink" href="#only-in-china" title="Permalink to this headline">¶</a></h4>
-<p>The build.gradle is as follows：</p>
+<div class="section" id="">
+<span id="id4"></span><h4>중국에서만의 광고<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<p>build.gradle은 다음과 같습니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
-    <span class="c1">//other ads-libs</span>
-    <span class="c1">//gson-2.7.jar in folder named android_support_library</span>
+    <span class="c1">//다른 광고 네트워크 라이브러리</span>
+    <span class="c1">//gson-2.7.jar 은 android_support_library 명의 폴더 안에 있습니다.</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;gson-2.7&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;jar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;centrixlink_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
 
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;mobvista_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;vungle_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;chartboost_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-    
+
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;inmobi_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;oneway_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;playable_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
@@ -309,23 +318,26 @@ Please refer to the following method to add the file named <code class="docutils
 </pre></div>
 </div>
 </div>
-<div class="section" id="global">
-<span id="global"></span><h4>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h4>
-<p>Merge the above two files into one file.</p>
+<div class="section" id="">
+<span id="id5"></span><h4>전 세계 광고<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<p>위의 두 파일을 하나의 파일로 병합하시기 바랍니다.</p>
 </div>
 </div>
 </div>
-<div class="section" id="iv-add-android-support-library">
-<span id="iv-add-android-support-library"></span><h2>IV.Add Android Support library<a class="headerlink" href="#iv-add-android-support-library" title="Permalink to this headline">¶</a></h2>
-<p>Every affiliate needs <code class="docutils literal notranslate"><span class="pre">android.support.xxx</span></code>, so please import it to your project. If you are using Android Studio in your project, you can modify <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file to add</p>
-<p>Starting with the 3004 version of UPSDK, we recommend the 26.1.0 version of the Android support library (including v4 and v7) because of the upgrade of Admob and other networks. Of course, in special cases, it is also possible to use a lower one such as v25.3.1 of  Android support library.</p>
-<div class="section" id="import-android-support-library">
-<span id="import-android-support-library"></span><h3>1.Import Android Support library<a class="headerlink" href="#import-android-support-library" title="Permalink to this headline">¶</a></h3>
-<p>In the <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> , download the support libraries  from Google’s remote repository via the compile command.Like this:</p>
-<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span> 
-    <span class="c1">//core lib</span>
+<div class="section" id="iv-android">
+<span id="iv-android"></span><h2>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h2>
+<p>모든 광고 네트워크사들은 <code class="docutils literal notranslate"><span class="pre">android.support.xxx</span></code>가 필요하기에 프로젝트로 가져옵니다. 프로젝트에서 Android Studio를 <br />
+사용하는 경우, <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>파일을 수정하여 추가할 수 있습니다.</p>
+<p>UPSDK의 3.0.04 버전부터 Admob 및 기타 광고 네트워크의 업그레이드로 인해, Android 지원 라이브러리의(v4 및 v7를 <br />
+포함하여) 26.1.0 버전을 사용하는 것을 권장합니다. 특별한 경우, Android 지원 라이브러리의 v25.3.1과 같은 <br />
+하위 버전을 사용하실 수도 있습니다.</p>
+<div class="section" id="android">
+<span id="android"></span><h3>1. Android 지원 라이브러리 가져오기<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 컴파일 명령을 통해 Google의 원격 저장소에서 지원 라이브러리를 다음과 같이 다운로드합니다.</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="c1">//핵심 라이브러리</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;UPAdsSdk_Js_3.0.04_dex&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-    <span class="c1">//support libs</span>
+    <span class="c1">//지원 라이브러리</span>
     <span class="n">compile</span> <span class="s1">&#39;com.android.support:recyclerview-v7:26.1.0&#39;</span>
     <span class="n">compile</span> <span class="s1">&#39;com.android.support:support-v4:26.1.0&#39;</span>
     <span class="n">compile</span> <span class="s1">&#39;com.android.support:appcompat-v7:26.1.0&#39;</span>
@@ -335,33 +347,36 @@ Please refer to the following method to add the file named <code class="docutils
 <span class="o">}</span>
 </pre></div>
 </div>
-<p><strong>【Attention】Android Support
-Support libraries must be imported into your project!</strong></p>
+<p><strong>【주의】‘Android Support’ 지원 라이브러리를 프로젝트에 가져와야 합니다.</strong></p>
 </div>
 </div>
-<div class="section" id="v-add-js-files">
-<span id="v-add-js-files"></span><h2>V.Add *.js files<a class="headerlink" href="#v-add-js-files" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="add-files-in-project">
-<span id="add-files-in-project"></span><h3>1.Add files in project<a class="headerlink" href="#add-files-in-project" title="Permalink to this headline">¶</a></h3>
-<p>The UPSDK implements cross-platform calls to the native interface via the *js source file, so all *.js and *.h files in <code class="docutils literal notranslate"><span class="pre">js/upltv</span></code> must be copied to the current project.</p>
-<p>Cocos2d-x 3.16 version can be copied to the Classes folder. If there are differences in other versions, please refer to the modification. The effect is as follows：
-<img alt="classes" src="http://docc.upltv.com/uploads/201805/5af3e577f12a1_5af3e577.png" /></p>
+<div class="section" id="v-js">
+<span id="v-js"></span><h2>V. *.js파일 추가하기<a class="headerlink" href="#v-js" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="">
+<span id="id6"></span><h3>1. 프로젝트에 파일 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<p>UPSDK는 *.js 소스 파일을 통해 네이티브 인터페이스(Native Interface)에 대한 크로스 플랫폼(Cross-Platform)을 <br />
+구현하므로 <code class="docutils literal notranslate"><span class="pre">js/upltv</span></code>에 있는 모든 *.js 및 *.h 파일을 현재 프로젝트에 복사하시기 바랍니다.</p>
+<p>Cocos2d-x 3.16 버전을 Classes 폴더에 복사할 수 있습니다. 버전 차이가 있는 경우 수정을 참조하시기 바랍니다. <br />
+복사 후의 디렉토리는 아래와 같습니다.</p>
+<p><img alt="classes" src="http://docc.upltv.com/uploads/201805/5af3e577f12a1_5af3e577.png" /></p>
 <blockquote>
-<div>This article is based on cocos2dx-3.16. If your directory does not match this, ask our support team for help.</div></blockquote>
+<div>본문은 cocos2dx-3.16을 바탕으로 서술하고 있습니다. 디렉토리가 일치하지 않으면 담당자에게 문의하여 <br />
+추가 지원을 받아보세요.</div></blockquote>
 </div>
 </div>
-<div class="section" id="vi-modify-proguard-setting">
-<span id="vi-modify-proguard-setting"></span><h2>Ⅵ.Modify Proguard setting<a class="headerlink" href="#vi-modify-proguard-setting" title="Permalink to this headline">¶</a></h2>
-<p>If your project used <code class="docutils literal notranslate"><span class="pre">proguard</span></code>.
-You have to copy contents from <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code> to right location of your project.</p>
+<div class="section" id="vi-proguard">
+<span id="vi-proguard"></span><h2>Ⅵ. Proguard 설정 수정하기<a class="headerlink" href="#vi-proguard" title="Permalink to this headline">¶</a></h2>
+<p>만약 프로젝트에서 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>를 사용하신다면 <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>에서 이 파일의 내용을 프로젝트에서 <br />
+사용하는 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 위치로 복사합니다.</p>
 </div>
-<div class="section" id="vii-fix-up-65535-limitation">
-<span id="vii-fix-up-65535-limitation"></span><h2>Ⅶ.Fix up 65535 limitation<a class="headerlink" href="#vii-fix-up-65535-limitation" title="Permalink to this headline">¶</a></h2>
-<p>If the number of methods exceeds 65535 due to access to the UPSDK and cannot be builded correctly, please use the <code class="docutils literal notranslate"><span class="pre">MultiDex</span></code> . If you have any questions about it, please read the <a class="reference external" href="http://docs.upltv.com/docs/show/78">MultiDex Scheme</a>.</p>
+<div class="section" id="vii-65535">
+<span id="vii-65535"></span><h2>Ⅶ. 65535 제한문제 해결<a class="headerlink" href="#vii-65535" title="Permalink to this headline">¶</a></h2>
+<p>UPSDK 액세스의 메서드 수가 65535를 초과하여 빌드할 수 없는 경우 MultiDex를 사용합니다. 자세한 내용은 <br />
+<a class="reference external" href="http://docs.upltv.com/docs/show/78">MultiDex Scheme</a>을 참조하시기 바랍니다.</p>
 </div>
 <div class="section" id="viii-demo">
-<span id="viii-demo"></span><h2>Ⅷ.Demo<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
-<p>To help you integrate ads SDK easier and faster, here we provide you a simple <a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Studio">Demo Project </a>.</p>
+<span id="viii-demo"></span><h2>Ⅷ. Demo 프로젝트<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
+<p>광고 SDK를 쉽고 빠르게 결합할 수 있도록 <a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Studio">Demo 프로젝트</a>를 제공합니다.</p>
 </div>
 </div>
 
@@ -376,7 +391,7 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
         <a href="js01_2_help_ec.html" class="btn btn-neutral float-right" title="Eclipse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="js01_help_catalog.html" class="btn btn-neutral" title="JavaScriptPlugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="js01_help_catalog.html" class="btn btn-neutral" title="JavaScript Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -385,7 +400,7 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -404,15 +419,21 @@ You have to copy contents from <code class="docutils literal notranslate"><span 
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rewarded Video Ad &mdash; UPInteractive Document  documentation</title>
+  <title>리워드 동영상 광고(Rewarded Video Ad) &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="GDPR" href="ios07_gdpr.html" />
-    <link rel="prev" title="Interstitial Ad" href="ios05_inter.html" /> 
+    <link rel="prev" title="삽입 광고(Interstitial Ad)" href="ios05_inter.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ios01_xcode.html">Xcode Access Document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios01_xcode.html">Xcode 액세스 문서</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios02_cocoapods.html">CocoaPods Access Document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios03_init.html">SDK Initial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">Banner Ad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ios05_inter.html">Interstitial Ad</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Rewarded Video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios03_init.html">SDK 초기화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios05_inter.html">삽입 광고(Interstitial Ad)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios08_demo.html">Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -147,9 +147,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../chapters/chapter02.html">UPSDK IOS</a> &raquo;</li>
+          <li><a href="../chapters/chapter02.html">UPSDK iOS</a> &raquo;</li>
         
-      <li>Rewarded Video Ad</li>
+      <li>리워드 동영상 광고(Rewarded Video Ad)</li>
     
     
 
@@ -162,93 +162,95 @@
            <div itemprop="articleBody">
             
   <div class="section" id="rewarded-video-ad">
-<span id="rewarded-video-ad"></span><h1>Rewarded Video Ad<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h1>
-<p>All Rewarded video interfaces and protocol were defined in file <code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code></p>
-<p>Add header file <code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code> in your XCode project:</p>
+<span id="rewarded-video-ad"></span><h1>리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h1>
+<p>리워드 동영상 인터페이스 및 프로토콜은 <code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code> 파일에 정의되어 있습니다.</p>
+<p>헤더파일 <code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code>를 Xcode 프로젝트에 추가합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import    &lt;UPSDK/UPSDK.h&gt;</span>
 </pre></div>
 </div>
-<p>The only difference between Rewarded Video and Interstitial Ad was <strong>“Rewarded Video was using Singleton design model”</strong>.
-But their interfaces and methods are looks very similar.</p>
-<p><em>UPRewardWrapper.h</em> methods：</p>
+<p>리워드 동영상 광고는 싱글턴 디자인 모델을 사용한다는 점에서 삽입 광고와 다르지만, <br />
+인터페이스와 메소드는 삽입 광고와 비슷해 보입니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code> 메소드：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@interface</span> <span class="n">UPRewardWrapper</span> <span class="p">:</span> <span class="n">NSObject</span>
 
 <span class="o">/*</span>
- <span class="o">*</span> <span class="n">Get</span> <span class="n">Singleton</span> <span class="nb">object</span> <span class="n">of</span> <span class="n">Wrapper</span>
+ <span class="o">*</span> <span class="n">wrapper</span> <span class="n">의</span> <span class="n">단독</span> <span class="n">객체</span> <span class="n">가져오기</span>
  <span class="o">*/</span>
 <span class="o">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">shareInstance</span><span class="p">;</span>
 
 <span class="o">/*</span>
- <span class="o">*</span> <span class="n">Setup</span> <span class="n">callback</span> <span class="n">delegate</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span>
+ <span class="o">*</span> <span class="n">콜백</span> <span class="n">프록시</span> <span class="n">설정하기</span> <span class="p">(</span><span class="n">선택</span> <span class="n">사항입니다</span><span class="p">)</span>
  <span class="o">*/</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">setDelegate</span><span class="p">:(</span><span class="nb">id</span><span class="o">&lt;</span><span class="n">UPRewardDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="n">delegate</span><span class="p">;</span>
 
 <span class="o">/*</span>
- <span class="o">*</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">video</span> <span class="n">was</span> <span class="n">reay</span> <span class="n">to</span> <span class="n">show</span> <span class="ow">or</span> <span class="ow">not</span>
+ <span class="o">*</span> <span class="n">동영상이</span> <span class="n">준비되었는지</span> <span class="n">확인합니다</span>
  <span class="o">*/</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isReady</span><span class="p">;</span>
 
 <span class="o">/**</span>
- <span class="o">*</span> <span class="n">Show</span> <span class="n">video</span>
- <span class="o">*</span> <span class="nd">@param</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">used</span> <span class="k">for</span> <span class="n">redireaction</span><span class="p">,</span> <span class="n">must</span> <span class="n">be</span> <span class="n">correctly</span> <span class="nb">set</span>
- <span class="o">*</span> <span class="nd">@param</span> <span class="n">adid</span><span class="p">,</span> <span class="n">Ad</span> <span class="n">Placement</span> <span class="n">ID</span><span class="p">,</span> <span class="n">used</span> <span class="k">for</span> <span class="n">tracking</span> <span class="ow">and</span> <span class="n">analysis</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">customize</span> <span class="n">it</span> <span class="n">yourself</span> 
+ <span class="o">*</span> <span class="n">동영상</span> <span class="n">실행하기</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">redirection을</span> <span class="n">위해</span> <span class="n">사용</span> <span class="n">되므로</span> <span class="n">정확하게</span> <span class="n">입력하시기</span> <span class="n">바랍니다</span><span class="o">.</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">adid</span><span class="p">,</span> <span class="n">Ad</span> <span class="n">Placement</span> <span class="n">ID</span><span class="p">,</span> <span class="n">트래킹과</span> <span class="n">분석용으로</span> <span class="n">맞춤</span> <span class="n">설정합니다</span><span class="o">.</span>
  <span class="o">**/</span>
 
 <span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">show</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">viewController</span> <span class="n">placeId</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">adId</span><span class="p">;</span>
 <span class="o">/**</span>
-<span class="o">*</span> <span class="n">callback</span> <span class="n">of</span> <span class="n">loading</span> <span class="n">ads</span>
-<span class="o">*</span> <span class="nd">@param</span> <span class="n">delegate</span><span class="p">,</span><span class="n">delegate</span> <span class="n">of</span> <span class="n">callback</span>
+<span class="o">*</span> <span class="n">광고</span> <span class="n">로딩의</span> <span class="n">콜백</span>
+<span class="o">*</span> <span class="nd">@param</span> <span class="n">delegate</span><span class="p">,</span> <span class="n">콜백</span> <span class="n">프록시</span>
 <span class="o">**/</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">load</span><span class="p">:(</span><span class="nb">id</span><span class="o">&lt;</span><span class="n">UPRewardLoadDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="n">delegate</span><span class="p">;</span>
 <span class="nd">@end</span>
 </pre></div>
 </div>
-<p>As what Interstitial Ad and Banner Ad did, Rewarded video Ads also defined callback delegate protocol. <code class="docutils literal notranslate"><span class="pre">UPRewardDelegate</span></code> was also declared in <code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code>.</p>
+<p>리워드 동영상 광고는 삽입 광고 및 배너 광고와 마찬가지로 콜백을 프록시 프로토콜로 정의합니다.  <br />
+<code class="docutils literal notranslate"><span class="pre">UPRewardDelegate</span></code>를 <code class="docutils literal notranslate"><span class="pre">UPRewardWrapper.h</span></code>에서 선언합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@protocol</span> <span class="nc">UPRewardDelegate</span> <span class="o">&lt;</span><span class="bp">NSObject</span><span class="o">&gt;</span>
 
 <span class="cm">/*</span>
-<span class="cm"> * Rewarded Video Open</span>
+<span class="cm"> * 리워드 동영상 열기</span>
 <span class="cm"> */</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">UPRewardVideoAdDidOpen</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm"> * Rewarded Video Click</span>
+<span class="cm"> * 리워드 동영상 클릭하기</span>
 <span class="cm"> */</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidCilck</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm"> * Rewarded Video Close</span>
+<span class="cm"> * 리워드 동영상 닫기</span>
 <span class="cm"> */</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidClose</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm"> * Ready to reward</span>
-<span class="cm"> * @param reward: data for reward</span>
+<span class="cm"> * 보상 준비하기</span>
+<span class="cm"> * @param reward: 보상 관련 데이터입니다.</span>
 <span class="cm"> */</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidRewardUserWithReward:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">reward</span><span class="p">;</span>
 
 <span class="cm">/*</span>
-<span class="cm"> * Fail to meet the condition, no reward</span>
-<span class="cm"> * @param error: detail reasons</span>
+<span class="cm"> * 조건을 만족하지 못했을 때, 보상을 주지 않습니다.</span>
+<span class="cm"> * @param error: 조건을 만족하지 못한 사유</span>
 <span class="cm"> */</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDontReward:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
 
 <span class="k">@end</span>
 </pre></div>
 </div>
-<div class="section" id="code-example">
-<span id="code-example"></span><h2>Code example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h2>
-<p>Define a class <code class="docutils literal notranslate"><span class="pre">STRewardViewController</span></code> to test rewarded video</p>
+<div class="section" id="">
+<span id="id1"></span><h2>코드 예시<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">STRewardViewController</span></code>클래스를 정의하여 리워드 동영상을 테스트 합니다.</p>
 <blockquote>
-<div>Only for XCode project</div></blockquote>
+<div>이 부분에서는 Xcode를 사용한 예시만 설명드리고 있습니다. <br />
+다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.</div></blockquote>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@interface</span> <span class="n">STRewardViewController</span> <span class="p">:</span> <span class="n">UIViewController</span>
 
 <span class="nd">@end</span>
 </pre></div>
 </div>
 <blockquote>
-<div>Add a button to <code class="docutils literal notranslate"><span class="pre">STRewardViewController</span></code>, show rewarded video when clicked. So, it’s that simple.</div></blockquote>
-<p>Add following codes in file <code class="docutils literal notranslate"><span class="pre">STRewardViewController.m</span></code>.</p>
+<div><code class="docutils literal notranslate"><span class="pre">STRewardViewController</span></code>에 버튼을 추가하여 간편하게 리워드 동영상을 확인할 수 있습니다.</div></blockquote>
+<p>아래의 코드를 <code class="docutils literal notranslate"><span class="pre">STRewardViewController.m</span></code> 파일에 추가합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import    &lt;UPSDK/UPSDK.h&gt;</span>
 
 <span class="k">@interface</span> <span class="nc">STRewardViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">UPRewardDelegate</span><span class="o">&gt;</span>
@@ -256,20 +258,19 @@ But their interfaces and methods are looks very similar.</p>
 <span class="k">@end</span>
 </pre></div>
 </div>
-<blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">STRewardViewController</span></code> will implement protocol <code class="docutils literal notranslate"><span class="pre">UPRewardDelegate</span></code>, to monitor video events happened.</div></blockquote>
-<p>Continue add following code,</p>
+<p><code class="docutils literal notranslate"><span class="pre">STRewardViewController</span></code>는 프로토콜 <code class="docutils literal notranslate"><span class="pre">UPRewardDelegate</span></code>를 실행하여 동영상 실행에 관련된 사항을 모니터링 할 수 있습니다.</p>
+<p>아래의 코드를 이어서 추가합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
     <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
     <span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIColor</span> <span class="n">whiteColor</span><span class="p">];</span>
-    
+
     <span class="bp">UIButton</span> <span class="o">*</span><span class="n">button</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIButton</span> <span class="nl">buttonWithType</span><span class="p">:</span><span class="n">UIButtonTypeRoundedRect</span><span class="p">];</span>
     <span class="n">button</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIColor</span> <span class="n">orangeColor</span><span class="p">];</span>
     <span class="n">button</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">250</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
     <span class="p">[</span><span class="n">button</span> <span class="nl">setTitle</span><span class="p">:</span><span class="s">@&quot;Reward Video&quot;</span> <span class="nl">forState</span><span class="p">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
     <span class="p">[</span><span class="n">button</span> <span class="nl">addTarget</span><span class="p">:</span><span class="nb">self</span> <span class="nl">action</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">rewardClick</span><span class="p">)</span> <span class="nl">forControlEvents</span><span class="p">:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
     <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">addSubview</span><span class="p">:</span><span class="n">button</span><span class="p">];</span>
-    
+
     <span class="p">[[</span><span class="n">UPRewardWrapper</span> <span class="n">shareInstance</span><span class="p">]</span> <span class="nl">setDelegate</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
 <span class="p">}</span>
 
@@ -285,35 +286,35 @@ But their interfaces and methods are looks very similar.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Now, you’ve finished main testing code of rewarded video. Click “Rewarded Video” button after run this project. You will see video ads.
-If you see a tips “Reward not ready”, that means video ads was not ready to play, please check your network status.</p>
-<p>At last, add code for video delegate protocol.</p>
+<p>리워드 동영상 광고의 메인 테스팅 코드가 완성되었습니다. 이 프로젝트를 실행 한 후 <code class="docutils literal notranslate"><span class="pre">Rewarded</span> <span class="pre">Video</span></code> 버튼을 클릭하여 <br />
+동영상 광고를 볼 수 있습니다. <code class="docutils literal notranslate"><span class="pre">Reward</span> <span class="pre">not</span> <span class="pre">ready</span></code> 문구가 나오면, 네트워크 상태를 확인해 주시기 바랍니다.</p>
+<p>마지막으로 동영상 프록시 프로토콜을 위한 코드를 추가합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma mark - UPRewardDelegate</span>
-<span class="c1">//Ad Show</span>
+<span class="c1">//리워드 동영상 광고 실행하기</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidOpen</span>
 <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;UPRewardVideoAdDidOpen&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">//Ad click</span>
+<span class="c1">//리워드 동영상 광고 클릭하기</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidCilck</span>
 <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;UPRewardVideoAdDidCilck&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">//Ad Close</span>
+<span class="c1">//리워드 동영상 광고 닫기</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidClose</span>
 <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;UPRewardVideoAdDidClose&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">//Reward</span>
+<span class="c1">//리워드 동영상을 통해 보상하기. 만약 이 메소드를 호출한다면 게임 유저에게 보상이 지급됩니다.</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDidRewardUserWithReward:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">reward</span>
 <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;UPRewardVideoAdDidRewardUserWithReward&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">//No Reward</span>
+<span class="c1">//게임 유저에게 보상하지 않기. 만약 이 메소드를 호출한다면 조건을 만족시키지 못했으므로 게임 유저에게 보상이 지급되지 않습니다.</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">UPRewardVideoAdDontReward:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span>
 <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;UPRewardVideoAdDontReward&quot;</span><span class="p">);</span>
@@ -321,22 +322,23 @@ If you see a tips “Reward not ready”, that means video ads was not ready to 
 </pre></div>
 </div>
 <blockquote>
-<div>You can watch logs after video displaied, to make sure every event was correctly happened or not.</div></blockquote>
-<p><font color=#DC143C>Attention：you can send reward to players when you receive<code class="docutils literal notranslate"><span class="pre">UPRewardVideoAdDidRewardUserWithReward:</span></code>，</font></p>
+<div>동영상이 디스플레이 된 후의 기록들을 확인하실 수 있습니다. 이를 통해 동영상이 정상적으로 실행 되었는지 <br />
+확인 하실 수 있습니다.</div></blockquote>
+<p><font color=#DC143C>참고: <code class="docutils literal notranslate"><span class="pre">UPRewardVideoAdDidRewardUserWithReward</span></code>를 받은 후에 게임 유저(player)에게 보상(reward)을 줄 수 있습니다.</font></p>
 </div>
-<div class="section" id="callback-of-loading">
-<span id="callback-of-loading"></span><h2>Callback of loading<a class="headerlink" href="#callback-of-loading" title="Permalink to this headline">¶</a></h2>
-<p>Please use <code class="docutils literal notranslate"><span class="pre">[[UPRewardWrapper</span> <span class="pre">shareInstance]</span> <span class="pre">isReady]</span></code> to know Whether ads  loaded successfully.</p>
-<p>But if you need ad load callback, we provide the following ways.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Declare</span> <span class="n">the</span> <span class="n">UPRewardLoadDelegate</span> <span class="n">protocol</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="k">class</span> <span class="nc">and</span> <span class="n">call</span> <span class="n">the</span> <span class="n">method</span>
+<div class="section" id="">
+<span id="id2"></span><h2>로딩 콜백<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">[[UPRewardWrapper</span> <span class="pre">shareInstance]</span> <span class="pre">isReady]</span></code>를 이용하여 광고가 정상적으로 재생 되었는지 확인 할 수 있습니다.</p>
+<p>광고 로드 콜백이 필요하신 분은 아래를 참고하시기 바랍니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">해당</span> <span class="n">클래스에서</span> <span class="n">UPRewardLoadDelegate</span> <span class="n">프로토콜을</span> <span class="n">선언하고</span> <span class="n">메소드를</span> <span class="n">호출합니다</span><span class="o">.</span>
 <span class="p">[[</span><span class="n">UPRewardWrapper</span> <span class="n">shareInstance</span><span class="p">]</span> <span class="n">load</span><span class="p">:</span><span class="bp">self</span><span class="p">];</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Load</span> <span class="n">succesful</span> <span class="n">callback</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">성공된</span> <span class="n">콜백을</span> <span class="n">로딩합니다</span><span class="o">.</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">UPRewardVideoAdDidLoad</span> <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="o">@</span><span class="s2">&quot;reward video ad loaded successfully&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="o">//</span><span class="n">Load</span> <span class="n">failed</span> <span class="n">callback</span>
+<span class="o">//</span> <span class="n">실패한</span> <span class="n">콜백을</span> <span class="n">로딩합니다</span><span class="o">.</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">UPRewardVideoAdDidLoadFail</span> <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="o">@</span><span class="s2">&quot;reward video ad failed to load&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -356,7 +358,7 @@ If you see a tips “Reward not ready”, that means video ads was not ready to 
         <a href="ios07_gdpr.html" class="btn btn-neutral float-right" title="GDPR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios05_inter.html" class="btn btn-neutral" title="Interstitial Ad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios05_inter.html" class="btn btn-neutral" title="삽입 광고(Interstitial Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -365,7 +367,7 @@ If you see a tips “Reward not ready”, that means video ads was not ready to 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -384,15 +386,21 @@ If you see a tips “Reward not ready”, that means video ads was not ready to 
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

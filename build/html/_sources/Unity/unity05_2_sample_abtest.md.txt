@@ -1,40 +1,39 @@
+## Unity Plugin A/B 테스트
 
-## Unity Plugin A/B Test
-
-#### 1.AbTest initialization
+#### 1. A/B 테스트 초기화
 ```csharp
 /*
- * The AbTest must be initialized through this API before getting the ad configuration of AbTest
+ * A/B 테스트의 광고 구조를 받기 전에 API를 통하여 A/B 테스트가 초기화되어야 합니다.
  */
 public static void initAbtConfigJson(string gameAccountId, bool completeTask, int isPaid, string promotionChannelName,  string gender, int age, string[] tags) ;
 ```
-Sample:
+샘플:
 
 ```csharp
 public void onBtnInitABConfig_Click()
 {
-    //The following parameters have no real meaning,just for testing
+    // 다음의 매개 변수는 시험용이라 아무런 의미가 없습니다.
     UPSDK.initAbtConfigJson("mygameAccountId_123", true, 18, "324000", "gender", 33, new string[]{"This is the first element.", "The second one.", "The last one."});
 }
 ```
-#### 2.Get Abtest configuration
+#### 2.  A/B 테스트 구조 받기
 
 ```csharp
-    /*
-	* Get abtest configuration of upsdk ads
-	* returned result could be Json character string, posiblity could be null
-	* Before invoking this API, pl;ease invoke initAbtConfigJson() to finish the initialization for abtest configuration
-	*/
+  /*
+	 * UPSDK 광고의 A/B 테스트 구조를 받습니다.
+   * 리턴 결과는 Json 문자열일 수도 있으며, null일 수 있습니다.
+   * 이 API를 호출하기 전에, initAbtConfigJson()를 먼저 호출하여 A/B Test 구조를 완성합니다.
+	 */
 public static string getAbtConfig(string placementId)；
 
 ```
 
-Sample：
+샘플：
 
 ```csharp
 public void onBtnGetABConfig_Click()
 {   
-	//parameter is placementId
+	// 매개변수는 placementId 입니다.
     string r = UPSDK.getAbtConfig ("hello");
     Debug.Log ("==> onBtnGetABConfig_Click:" + r);
 }

@@ -1,27 +1,34 @@
-## Xcode Access Document
-### Download SDK
-Download latest SDK from [here](http://doc.upltv.com/en/master/chapters/chapter09.html  "SDK Download Page") and unzip. You will got 2 files：
+## Xcode 액세스 문서
+### SDK 다운로드
+최신 SDK 폴더를 [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html  "SDK Download Page")에서 다운로드 하시고 압축을 해제하시면 아래와 같은 파일을 보실 수 있습니다.
 - UPSDK.framework
 - UPSDK.bundle
 
-`UPSDK.framework` is static library of SDK
-`UPSDK.bundle` contains external resources refered by static library, like images.
+`UPSDK.framework` 는 SDK의 정적 라이브러리입니다. <br />
+`UPSDK.bundle` 에는 정적 라이브에서 참조된 외부 리소스(이미지 등)가 포함되어 있습니다.
 </br>
 
-### Add SDK to your Xcode project
-Add `UPSDK.framework` and `UPSDK.bundle` to you Xcode project , as sample `FrameWork`:
+### Xcode프로젝에 SDK 추가하기
+아래의 예시와 같이 `UPSDK.framework` 과 `UPSDK.bundle`를 Xcode 프로젝트에 추가합니다. <br />
+ `Framework`를 예시로 들면 아래와 같습니다.
+
 ![IOS_01](http://docc.upltv.com/uploads/201808/5b88d60fe148e_5b88d60f.png "IOS_01")
 
-### Add 3rd part library required
-We need 3rd part library to display ads. Please import these libraries to your project.
-**Please downlaod 3rd library from [here](http://doc.upltv.com/en/master/chapters/chapter09.html "3rd libraries") **.
+### 타사 라이브러리 추가하기
+타사와의 연결을 위해 타사 라이브러리를 프로젝트에 추가합니다. <br />
+타사 라이브러리는 [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html)에서 다운로드하세요.
+현재 UPSDK의 주요 타사는 아래와 같습니다.
 
 ![ios_02](http://docc.upltv.com/uploads/201808/5b88d65b062ae_5b88d65b.png "ios_02")
 <br>
-- **3rd party library is optional, please add it according to our suggestion. If you have any problems, please contact us.**
+- **타사 라이브러리는 선택사항이지만 사용하시는 것을 권장합니다. <br />
+만약 문제가 발생한다면 담당자에게 문의하여 추가 지원을 받아보세요.**
 </br>
-### Add system reference library 
-Add depends library in: TARGETS → General → Linked Frameworks Libraries
+### 시스템 참조 라이브러리 추가하기
+시스템 참조 라이브러리를 아래 주소에 따라 추가합니다.
+
+TARGETS → General → Linked Frameworks Libraries
+
 - `QuartzCore.framework`
 - `MediaPlayer.framework`
 - `libsqlite3.tbd`
@@ -50,20 +57,22 @@ Add depends library in: TARGETS → General → Linked Frameworks Libraries
 - `EventKitUI.framework`
 - `MobileCoreServices.framework`
 
-**Attention:If you use cocos to build project,please add following library:**
+> **주의: Cocos를 이용하신다면 아래의 라이브러리를 더 추가합니다.**
 
 - `GameController.framework`
 
 <br>
 
-### Project configuration 
-#### 1 Add linker flags
+### 프로젝트 구조
+#### 1 linker flags를 추가하기
 
-- Add `-ObjC` and `-fobjc-arc` through `TARGETS` → `Build Setting` → `Linking` → `Other Linker Flags`  as following image:
+- `TARGETS` → `Build Setting` → `Linking` → `Other Linker Flags` 안에   <br />
+`-ObjC`와 `-fobjc-arc`를 추가하시기 바랍니다. (아래 그림을 참조하세요)
+
 ![ios_03](http://docc.upltv.com/uploads/201808/5b88d8fb6b6a9_5b88d8fb.png "ios_03")
 
 
-#### 2 Add nodes in info.plist to allow http protocol 
+#### 2 info.plist를 추가하여 http 프로토콜 승인하기
 
 ```objective-c
  <key>NSAppTransportSecurity </key>
@@ -73,7 +82,7 @@ Add depends library in: TARGETS → General → Linked Frameworks Libraries
  </dict>
 ```
 
-#### 3 Add nodes info.plist, to require permissions
+#### 3 info.plist를 추가하여 권한 승인받기
 ```objective-c
  <key>NSCalendarsUsageDescription </key>
  <string>Some ad content may create a calendar event. </string>
@@ -83,25 +92,25 @@ Add depends library in: TARGETS → General → Linked Frameworks Libraries
  <string>Some ad content may require access to the photo library. </string>
 ```
 
-Note: you can change description into your target language if needed.
+> 참고: 디스크립션 설정 언어를 변경하실수 있습니다.
 <br>
 
 #### 4 Bitcode
-We support Bitcode, please choose use Bitcode if needed.
-Note: Youlan and Domob SDK do not support Bitcode.
+Youlan 과 Domob SDK는 Bitcode를 지원하지 않습니다. <br />
+하지만 UPLTV에서는 Bitcode도 지원해드리고 있으니 필요하시면 담당자에게 문의하여 추가 지원을 받아보세요.
+
 <br>
 
-5.Configuration of Cocos engine
-If you build project with cocos,please make sure  `Version` filed has been filled,as following:
+#### 5 Cocos로 빌드 하셨다면, 아래와 같은 `Version` 부분에 Version 값을 입력하시기 바랍니다.
 
 ![cocos项目Version字段配置](http://docc.upltv.com/uploads/201709/59afb01ec7612_59afb01e.png "cocos项目Version字段配置")
 <br>
 
-### Version
-You can find SDK version in file *UPSDKVersion.h*
+### 버전
+SDK 버전을 `UPSDKVersion.h`  파일에서 찾으실 수 있습니다.
 
 ```objective-c
 //sdk version
 #define UPSDKVERSION  @"3003"
 ```
-> as we see,the version of upsdk is 3003 
+> UPSDK의 현재 버전은 3003 입니다.

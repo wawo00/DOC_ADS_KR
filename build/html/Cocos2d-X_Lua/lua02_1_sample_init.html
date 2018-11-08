@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="kr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="kr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Initial SDK &mdash; UPInteractive Document  documentation</title>
+  <title>SDK 초기화 &mdash; UPInteractive Document  documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="A/B Test" href="lua02_2_sample_abtest.html" />
-    <link rel="prev" title="LuaPlugin Sample" href="lua02_sample_catalog.html" /> 
+    <link rel="next" title="A/B 테스트" href="lua02_2_sample_abtest.html" />
+    <link rel="prev" title="Lua Plugin 샘플" href="lua02_sample_catalog.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,19 +82,19 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">About UPSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK Unity Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="lua01_help_catalog.html">LuaPlugin</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="lua02_sample_catalog.html">LuaPlugin Sample</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Initial SDK</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lua02_2_sample_abtest.html">A/B Test</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lua02_3_sample_banner.html">Banner AD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lua02_4_sample_inter.html">Interstitial API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lua02_5_sample_video.html">Reward video Ad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lua01_help_catalog.html">Lua Plugin</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="lua02_sample_catalog.html">Lua Plugin 샘플</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SDK 초기화</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua02_2_sample_abtest.html">A/B 테스트</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua02_3_sample_banner.html">배너 광고(Banner Ad)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua02_4_sample_inter.html">삽입 광고(Interstitial Ad) API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua02_5_sample_video.html">리워드 동영상 광고(Rewarded Video Ad)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lua02_6_sample_gdpr.html">GDPR</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lua02_7_sample_demo.html">Download Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua02_7_sample_demo.html">Demo 다운로드</a></li>
 </ul>
 </li>
 </ul>
@@ -102,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK 다운로드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">GDPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">FAQ</a></li>
 </ul>
@@ -152,9 +152,9 @@
         
           <li><a href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua</a> &raquo;</li>
         
-          <li><a href="lua02_sample_catalog.html">LuaPlugin Sample</a> &raquo;</li>
+          <li><a href="lua02_sample_catalog.html">Lua Plugin 샘플</a> &raquo;</li>
         
-      <li>Initial SDK</li>
+      <li>SDK 초기화</li>
     
     
 
@@ -166,25 +166,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="initial-sdk">
-<span id="initial-sdk"></span><h1>Initial SDK<a class="headerlink" href="#initial-sdk" title="Permalink to this headline">¶</a></h1>
-<p>Only used Xcode engineering  as an example for explanation. If you are using other projects, please refer to Xcode engineering operation. Sorry for any inconvenience.</p>
-<p>The UPLTV SDK is very simple to initialize.</p>
-<div class="section" id="add-the-following-reference-to-your-project">
-<span id="add-the-following-reference-to-your-project"></span><h2>Add the following reference to your project<a class="headerlink" href="#add-the-following-reference-to-your-project" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="sdk">
+<span id="sdk"></span><h1>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
+<p>이 부분에서는 Xcode를 사용한 예시만 설명드리고 있습니다. <br />
+다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.</p>
+<p>UPLTV SDK를 통해 간단히 초기화하실 수 있습니다.</p>
+<p>아래의 참조를 프로젝트에 추가합니다.</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">upltv</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;src.app.views.UPLTV&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="initial-upsdk">
-<span id="initial-upsdk"></span><h2>Initial UPSDK<a class="headerlink" href="#initial-upsdk" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- initial sdk</span>
-<span class="c1">-- parameter zone：product distribution area，0:overseas，1:China，2:automatic positioning according to IP</span>
-<span class="c1">-- The callback interface after the SDK initialization is completed. The callback interface contains a Boolean parameter callback(Boolean). True means success</span>
-<span class="n">upltv</span><span class="p">:</span><span class="n">initSDK</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="p">...)</span> 
+<div class="section" id="sdk">
+<span id="id1"></span><h2>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- parameter zone-- 제품 퍼블리싱 지역, 0: 중국을 제외한 해외, 1: 중국,  2: IP에 의해 자동 설정</span>
+<span class="c1">-- SDK 초기화 이후 콜백 인터페이스를 완료합니다. 콜백 인터페이스는 Boolean 매개변수 콜백(Boolean)을 포함하고 있으며, True는 성공을 의미합니다.</span>
+<span class="n">upltv</span><span class="p">:</span><span class="n">initSDK</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="p">...)</span>
 </pre></div>
 </div>
-<p>For example：</p>
+<p>예시：</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">btn</span> <span class="o">=</span> <span class="n">createBtnAt</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">fontsize</span><span class="p">,</span> <span class="s2">&quot;init&quot;</span><span class="p">)</span>
 <span class="n">btn</span><span class="p">:</span><span class="n">addTouchEventListener</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">eventType</span><span class="p">)</span>
     <span class="kr">if</span> <span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="n">eventType</span><span class="p">)</span> <span class="kr">then</span>
@@ -204,30 +202,33 @@
 </div>
 <div class="section" id="setcustomerid">
 <span id="setcustomerid"></span><h2>setCustomerId<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
-<p>Only support Android platform, for non-gp packages, androidid can be passed to avoid additional statistical errors.</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- please call this method before Initializing</span>
-<span class="c1">-- Version 3004(subversion 5) and above support this method</span>
+<p>Android 플랫폼에서만 지원합니다. GP가 아닌 패키지일 경우, 부가적인 통계적 오류를 방지하기 위해 <br />
+androidid로 전달할 수 있습니다.</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 초기화하기 전에 이 메소드를 호출합니다.</span>
+<span class="c1">-- 3004(하위버전 5) 및 상위 버전에서만 이 메소드를 지원하고 있습니다.</span>
 <span class="c1">-- @param androidid</span>
 <span class="n">upltv</span><span class="p">:</span><span class="n">setCustomerId</span><span class="p">(</span><span class="n">androidid</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="add-onapplicationfocus">
-<span id="add-onapplicationfocus"></span><h2>Add onApplicationFocus()<a class="headerlink" href="#add-onapplicationfocus" title="Permalink to this headline">¶</a></h2>
-<p>For the Android platform, we strongly require the following two interfaces of UPSDK to be called when switching between the front and back of the current game, so that the UPSDK can respond correctly internally and avoid unnecessary errors.</p>
-<div class="section" id="call-the-api-when-the-game-returns-to-the-foreground">
-<span id="call-the-api-when-the-game-returns-to-the-foreground"></span><h3>Call the API when the game returns to the foreground<a class="headerlink" href="#call-the-api-when-the-game-returns-to-the-foreground" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="onapplicationfocus">
+<span id="onapplicationfocus"></span><h2>onApplicationFocus() 추가하기<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h2>
+<p>안드로이드 플랫폼에 대해, 현재 게임의 포그라운드/백그라운드 전환 시, 아래의 두 개의 UPSDK의 인터페이스를 <br />
+호출 해야 합니다. UPSDK가 올바르게 반응하여 불필요한 에러를 피할 수 있습니다.</p>
+<div class="section" id="api">
+<span id="api"></span><h3>게임이 포그라운드로 돌아올 때 API를 호출합니다.<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">onApplicationResume</span><span class="o">();</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="call-the-api-when-the-game-returns-to-the-background">
-<span id="call-the-api-when-the-game-returns-to-the-background"></span><h3>Call the API when the game returns to the background<a class="headerlink" href="#call-the-api-when-the-game-returns-to-the-background" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="api">
+<span id="id2"></span><h3>게임이 백그라운드로 돌아올 때 API를 호출합니다.<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">onApplicationPause</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>For example：</p>
-<p>Usually Cocos2d - X engine generates game Activity, inheritance in org. Cocos2dx. Lib. Cocos2dxActivity subclass. In the Demo project, this class is AppActivity.</p>
+<p>예시：</p>
+<p>보통 Cocos2d-X 엔진으로 게임을 활성화 할 때, <code class="docutils literal notranslate"><span class="pre">org.cocos2dx.lib.Cocos2dxActivity</span></code>의 하위 문서를 이어 받습니다. <br />
+Demo 프로젝트 안의 이 클래스는 AppActivity 입니다.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onResume</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">super</span><span class="o">.</span><span class="na">onResume</span><span class="o">();</span>
@@ -253,10 +254,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lua02_2_sample_abtest.html" class="btn btn-neutral float-right" title="A/B Test" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="lua02_2_sample_abtest.html" class="btn btn-neutral float-right" title="A/B 테스트" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="lua02_sample_catalog.html" class="btn btn-neutral" title="LuaPlugin Sample" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lua02_sample_catalog.html" class="btn btn-neutral" title="Lua Plugin 샘플" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -265,7 +266,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv
+        &copy; Copyright 2018, upltv.
 
     </p>
   </div>
@@ -284,15 +285,21 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'kr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/custom.js"></script>
 
   
 

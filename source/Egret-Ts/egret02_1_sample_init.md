@@ -1,17 +1,17 @@
-## Initial SDK
+##  SDK 초기화
 
-Only used Xcode engineering  as an example for explanation. If you are using other projects, please refer to Xcode engineering operation. 
-The UPLTV SDK is very simple to initialize.
+이 부분에서는 Xcode를 사용한 샘플만 설명드리고 있습니다. <br />
+다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.
 
 ```typescript
 /*
-* Please be sure to complete the SDK initialization before using the other API interfaces of the SDK
-* @param zone product distribution area, 0 overseas, 1 mainland China, 2 automatically according to IP positioning
-* @param callback return turn means initial upsdk successful
+* 다른 API 인터페이스의 SDK를 사용하기 전에 SDK 초기화를 완료합니다.
+* @param zone product distribution area, 0: 중국을 제외한 해외, 1: 중국, 2: IP에 의해 자동 설정
+* @param callback SDK 초기화가 완성된 후 콜백되어 성공적으로 완료됨을 알려줍니다.
 */
 static initSDK(zone: number, callback?:(res:boolean)=>void)
 ```
-Sample:
+샘플:
 ```typescript
 let initButton = new eui.Button();
 initButton.label = "initButton";
