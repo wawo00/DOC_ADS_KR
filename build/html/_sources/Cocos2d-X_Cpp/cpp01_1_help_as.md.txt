@@ -3,7 +3,7 @@
 ### I. UPSDK CppPlugin의 구조
 
 Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 `*.aar`형식으로 가져와야 합니다. <br />
-([Android-CPPSDK](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html) UPSDK CppPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 <br />
+([Android-CPPSDK](../chapters/chapter09.html) UPSDK CppPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 <br />
 디렉토리 구조를 보실 수 있습니다.
 
 ![as-1-1](http://docc.upltv.com/uploads/201805/5afd2c552eab2_5afd2c55.png "as-1-1")
@@ -230,9 +230,9 @@ LOCAL_SRC_FILES := $(LOCAL_PATH)/hellocpp/main.cpp \
 ### Ⅶ. 65535 제한 문제 해결
 
 UPSDK 액세스의 메소드 수가 65535를 초과하여 빌드할 수 없는 경우 `MultiDex`를 사용합니다. 자세한 내용은 <br />
-[MultiDex Scheme](http://docs.upltv.com/docs/show/78 "Fix up 65535")을 참조하시기 바랍니다.
+[MultiDex Scheme](../Android/android02_65535.html "Fix up 65535")을 참조하시기 바랍니다.
 
 
 ### Ⅷ.Demo 프로젝트
 
-광고 SDK를 쉽고 빠르게 결합할 수 있도록 [Demo 프로젝트 ](https://upsdk-korean.readthedocs.io/ko/master/Cocos2d-X_Cpp/cpp03_7_sample_demo.html")를 제공합니다.
+광고 SDK를 쉽고 빠르게 결합할 수 있도록 [Demo 프로젝트 ](../Cocos2d-X_Cpp/cpp03_7_sample_demo.html)를 제공합니다.

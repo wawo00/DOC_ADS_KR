@@ -5,7 +5,7 @@
  UPLTV의 기술 팀에 문의하여 문제 해결 및 지원 서비스를 받을 수도 있습니다.
 
 ### 1. SDK 패키지 다운로드하기
-먼저 [UPSDK 다운로드](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad")에서 UPSDK JsPlugin 패키지 다운로드하고 압축해제 하시면, <br />
+먼저 [UPSDK 다운로드](..//chapters/chapter09.html "SDKDownLoad")에서 UPSDK JsPlugin 패키지 다운로드하고 압축해제 하시면, <br />
 아래와 같은 세 개의 디렉토리들이 보입니다.
 
 - `UPSDK.framework`: UPSDK 메인 패키지이므로 현재 프로젝트에 추가합니다.
