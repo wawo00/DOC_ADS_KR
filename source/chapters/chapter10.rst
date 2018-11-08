@@ -42,7 +42,7 @@ GDPR 규정을 따른 UPSDK 버전은 3.0.03 부터 적용되어 있습니다.
 ----------
 
 
-1. `UPSDK Android  <../Android/android08_demo.html>`_
+1. `UPSDK Android  <../Android/android07_gdpr.html>`_
 
 2. `UPSDK IOS  <../IOS/ios07_gdpr.html>`_
 
