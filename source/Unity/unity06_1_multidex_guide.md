@@ -8,8 +8,8 @@
 
 이러한 문제를 해결하기 위해 Unity에서 5.5 버전부터 Multidex를 지원하고 있습니다.
 
-### 1. [Android Studio ](./unity06_2_multidex_dexbyas "Android Studio分包")
+### 1. [Android Studio ](./unity06_2_multidex_dexbyas.html "Android Studio分包")
 Android Studio 2.2.3 및 상위 버전에서는 프로젝트에서 apk 패키징을 gradle을 통해 완료시킬 수 있습니다.
 
-### 2. [UnityIDE ](./unity06_3_multidex_dexbyunity "UnityIDE分包")
+### 2. [UnityIDE ](./unity06_3_multidex_dexbyunity.html "UnityIDE分包")
 필수 파일을 간단하게 복사하고, 세팅을 초기화 시켜 간단하게 Subcontracting 하실 수 있습니다.
