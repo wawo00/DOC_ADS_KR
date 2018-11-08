@@ -3,7 +3,7 @@
 
 ### I. UPSDK LuaPlugin 구조
 Eclipse로 빌드된 프로젝트의 경우 UPSDK를 `*.jar`형식으로 프로젝트에 가져옵니다. <br />
-UPSDK LuaPlugin를 [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html "download")에서 다운로드 하고 압축 해제를 합니다.
+UPSDK LuaPlugin를 [이곳](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html)에서 다운로드 하고 압축 해제를 합니다.
 
 
 ![ec-1-1](http://docc.upltv.com/uploads/201805/5afe9bd143673_5afe9bd1.png "ec-1-1")

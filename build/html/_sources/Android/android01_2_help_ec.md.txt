@@ -67,4 +67,4 @@ UPLTV는 `admob_xxx/libs` 디렉토리에 있는 `play-services-xxx.jar` 관련 
 사용하는 `proguard` 위치로 복사합니다.
 
 ### VIII.  Demo 프로젝트
-광고 SDK를 더 빠르고 쉽게 결합할 수 있도록 간편한 [Demo 프로젝트](https://github.com/AvidlyGit/AdSdkDemo-Eclipse "Demo")를 제공하고 있습니다.
+광고 SDK를 더 빠르고 쉽게 결합할 수 있도록 간편한 [Demo 프로젝트](https://upsdk-korean.readthedocs.io/ko/master/Android/android08_demo.html)를 제공하고 있습니다.

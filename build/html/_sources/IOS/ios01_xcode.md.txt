@@ -1,6 +1,6 @@
 ## Xcode 액세스 문서
 ### SDK 다운로드
-최신 SDK 폴더를 [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html  "SDK Download Page")에서 다운로드 하시고 압축을 해제하시면 아래와 같은 파일을 보실 수 있습니다.
+최신 SDK 폴더를 [이곳](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html)에서 다운로드 하시고 압축을 해제하시면 아래와 같은 파일을 보실 수 있습니다.
 - UPSDK.framework
 - UPSDK.bundle
 

@@ -2,7 +2,7 @@
 
 ### I. UPSDK Lua Plugin 구조
 
-Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 `*.aar`형식으로 가져와야 합니다. UPSDK LuaPlugin([Android-LuaSDK](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad") UPSDK LuaPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 디렉토리 구조를 <br />
+Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 `*.aar`형식으로 가져와야 합니다. UPSDK LuaPlugin([Android-LuaSDK](https://upsdk-korean.readthedocs.io/ko/master/Cocos2d-X_Cpp/cpp03_7_sample_demo.html) UPSDK LuaPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 디렉토리 구조를 <br />
 보실 수 있습니다.
 
 ![as-1-1](http://docc.upltv.com/uploads/201805/5afe99d977ef8_5afe99d9.png "as-1-1")

@@ -4,7 +4,7 @@
 UPLTV의 기술 팀에 문의하여 문제 해결 및 지원 서비스를 받을 수도 있습니다.
 
 ### 1. SDK 패키지 다운로드하기
-먼저 [UPSDK 다운로드](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad")에서 UPSDK LuaPlugin 패키지 다운로드하고 압축해제 하시면, <br />
+먼저 [UPSDK 다운로드](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html)에서 UPSDK LuaPlugin 패키지 다운로드하고 압축해제 하시면, <br />
 아래와 같은 세 개의 디렉토리들이 보입니다.
 
 - `UPSDK.framework`: UPSDK 메인 패키지이므로 현재 프로젝트에 추가합니다.
@@ -32,7 +32,7 @@ UPSDK에 포함된 전체 파일은 다음과 같습니다.
 
 ### 3. 광고 네트워크사 의존성 라이브러리 추가하기
 UPSDK는 실행될 때 광고 네트워크사에 의존하므로 수동으로 의존 라이브러리 파일을 프로젝트로 가져와야 합니다. <br />
- [이곳](http://doc.upltv.com/en/master/chapters/chapter09.html "SDK第三方包下载")을 클릭하셔서 광고 네트워크사 의존성 패키지를 추가하시기 바랍니다.
+ [이곳](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html)을 클릭하셔서 광고 네트워크사 의존성 패키지를 추가하시기 바랍니다.
 
 UPSDK는 현재 아래의 타사에 의존합니다.
 

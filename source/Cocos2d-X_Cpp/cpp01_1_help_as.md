@@ -3,7 +3,7 @@
 ### I. UPSDK CppPlugin의 구조
 
 Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 `*.aar`형식으로 가져와야 합니다. <br />
-([Android-CPPSDK](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad") UPSDK CppPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 <br />
+([Android-CPPSDK](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html) UPSDK CppPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 <br />
 디렉토리 구조를 보실 수 있습니다.
 
 ![as-1-1](http://docc.upltv.com/uploads/201805/5afd2c552eab2_5afd2c55.png "as-1-1")
@@ -235,4 +235,4 @@ UPSDK 액세스의 메소드 수가 65535를 초과하여 빌드할 수 없는 �
 
 ### Ⅷ.Demo 프로젝트
 
-광고 SDK를 쉽고 빠르게 결합할 수 있도록 [Demo 프로젝트 ](https://github.com/AvidlyGit/AdSdkDemo-Studio "Demo工程")를 제공합니다.
+광고 SDK를 쉽고 빠르게 결합할 수 있도록 [Demo 프로젝트 ](https://upsdk-korean.readthedocs.io/ko/master/Cocos2d-X_Cpp/cpp03_7_sample_demo.html")를 제공합니다.

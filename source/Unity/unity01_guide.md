@@ -30,4 +30,4 @@ Plugin 패키지가 크므로(UPSDK의 iOS 지원 및 타사 라이브러리 포
 이 패키지(550M)에는 UPSDK 및 해당 타사 라이브러리의 Android 및 iOS 지원이 포함됩니다. <br />
 (다운로드 시 안정된 네트워크 상태를 유지하시기 바랍니다).
 
-#### [UPSDK Unity Plugin 다운로드](http://doc.upltv.com/en/master/chapters/chapter09.html "SDKDownLoad")
+#### [UPSDK Unity Plugin 다운로드](https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html)
