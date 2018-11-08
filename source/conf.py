@@ -66,7 +66,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'ko'
+language = 'kr'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -149,9 +149,9 @@ latex_elements = {
         \documentclass{article}
 
         \usepackage[utf8]{inputenc}
-        \usepackage{kotex}
-        \usepackage[english]{babel}
         \usepackage[T1]{fontenc}
+        \usepackage{CJKutf8}
+        \usepackage[english]{babel}
         \usepackage{etoolbox}
         \usepackage{newunicodechar}
         \let\xnewunicodechar\newunicodechar
@@ -161,10 +161,13 @@ latex_elements = {
 
         \begin{center}
 
+        \begin{CJK}{UTF8}{mj}
+
         \newunicodechar{λ}{$\lambda$}
         \newunicodechar{⇒}{$\rightarrow$}
         \newunicodechar{←}{$\leftarrow$}
         \texttt{(λ x ⇒ y ← x; y)}
+        \end{CJK}
         \end{center}
         \end{document}
         ''',
