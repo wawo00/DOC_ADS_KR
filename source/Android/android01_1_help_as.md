@@ -159,4 +159,4 @@ Facebook 삽입 광고(Interstitial Ad)를 프로젝트에 추가할 경우 Face
 `proguard`의 위치로 복사합니다.
 
 ### V. Demo 프로젝트
-광고 SDK를 더 빠르고 쉽게 결할 수 있도록 간편한 [Demo 프로젝트](https://github.com/UPGit/AdSdkDemo-Studio "Demo")를 제공하고 있습니다.
+광고 SDK를 더 빠르고 쉽게 결할 수 있도록 간편한 [Demo 프로젝트](https://github.com/AvidlyGit/AdSdkDemo-Studio-Foreign "Demo")를 제공하고 있습니다.
