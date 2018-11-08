@@ -42,14 +42,14 @@ GDPR 규정을 따른 UPSDK 버전은 3.0.03 부터 적용되어 있습니다.
 ----------
 
 
-1. `UPSDK Android  <../Android/android08.html>`_
+1. `UPSDK Android  <../Android/android08_demo.html>`_
 
-2. `UPSDK IOS  <../IOS/ios07.html>`_
+2. `UPSDK IOS  <../IOS/ios07_gdpr.html>`_
 
-3. `UPSDK UnityPlugin <../Unity/unity05_6.html>`_
+3. `UPSDK UnityPlugin <../Unity/unity05_6_sample_gdpr.html>`_
 
-4. `UPSDK Cocos2d-x Cpp <../Cocos2d-X_Cpp/cpp03_6.html>`_
+4. `UPSDK Cocos2d-x Cpp <../Cocos2d-X_Cpp/cpp03_6_sample_gdpr.html>`_
 
-5. `UPSDK Cocos2d-x Lua <../Cocos2d-X_Lua/lua02_6.html>`_
+5. `UPSDK Cocos2d-x Lua <../Cocos2d-X_Lua/lua02_6_sample_gdpr.html>`_
 
-6. `UPSDK Cocos2d-x JavaScript <../Cocos2d-X_Js/js02_6.html>`_
+6. `UPSDK Cocos2d-x JavaScript <../Cocos2d-X_Js/js02_6_sample_gdpr.html>`_

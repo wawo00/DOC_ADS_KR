@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="04807914-d837-4091-a2a1-0a4092b74880" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/chapters/chapter00.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/chapters/chapter00.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/chapters/chapter10.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/chapters/chapter10.doctree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/chapters/chapter00.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/chapters/chapter00.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/chapters/chapter00.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/chapters/chapter00.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Android/android01_1_help_as.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Android/android01_1_help_as.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/chapters/chapter00.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/chapters/chapter00.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/chapters/chapter10.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/chapters/chapter10.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/chapters/chapter10.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/chapters/chapter10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/chapters/chapter10.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/chapters/chapter10.rst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chapter10.rst" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chapter10.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/chapters/chapter10.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+            <state relative-caret-position="300">
+              <caret line="54" column="66" selection-start-line="54" selection-start-column="66" selection-end-line="54" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -58,11 +57,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GDPR_Guide.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GDPR_Guide.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/GDPR/GDPR_Guide.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-450" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="525">
+                <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="6" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -81,10 +82,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/chapters/chapter10.rst" />
         <option value="$PROJECT_DIR$/source/conf.py" />
         <option value="$PROJECT_DIR$/source/chapters/chapter00.rst" />
         <option value="$PROJECT_DIR$/source/Android/android01_1_help_as.md" />
+        <option value="$PROJECT_DIR$/source/chapters/chapter10.rst" />
       </list>
     </option>
   </component>
@@ -126,7 +127,7 @@
               <item name="upsdk.kr" type="b2602c69:ProjectViewProjectNode" />
               <item name="upsdk.kr" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="GDPR" type="462c0819:PsiDirectoryNode" />
+              <item name="Cocos2d-X_Cpp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -169,7 +170,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3807000" />
+    <option name="totallyTimeSpent" value="4285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -184,7 +185,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.2467903" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.38944367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -226,13 +227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/chapters/chapter10.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/chapters/chapter00.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -252,9 +246,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/GDPR/GDPR_Guide.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-450" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="525">
+            <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="6" />
+          </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/chapters/chapter10.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="54" column="66" selection-start-line="54" selection-start-column="66" selection-end-line="54" selection-end-column="66" />
         </state>
       </provider>
     </entry>
