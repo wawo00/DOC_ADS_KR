@@ -148,21 +148,15 @@ latex_elements = {
     'preamble': r'''
         \documentclass{article}
 
-        \usepackage[T1]{fontenc}
-        \usepackage{CJK}
-        \usepackage[english]{babel}
-        \usepackage{utepcsthesis} % thesis style file
-
-        \newenvironment{Korean}{%
-             \CJKfamily{mj}}{}
-        \newcommand{\inKorean}[1]{\begin{CJK}{UTF8}{}\begin{Korean}#1\end{Korean}\end{CJK}}
+        \usepackage{CJKutf8}
 
         \begin{document}
 
-        \makesigpageB{Chair, Prof 1}{Prof 2}{Prof 3}{Prof 4}{\inKorean{교수님 5}}
-
-        \inKorean{본문}
-
+        \begin{CJK}{UTF8}{}
+        \CJKfamily{mj}
+        \begin{verbatim}
+        \end{verbatim}
+        \end{CJK}
         \end{document}
         ''',
 
