@@ -148,24 +148,21 @@ latex_elements = {
     'preamble': r'''
         \documentclass{article}
 
-        \usepackage[utf8]{inputenc}
         \usepackage[T1]{fontenc}
-        \usepackage{xeCJK}
-        \setCJKmainfont{ipaexm.ttf}
-        \setCJKmainfont{batang.ttc}
+        \usepackage{CJK}
         \usepackage[english]{babel}
-        \usepackage{etoolbox}
-        \usepackage{newunicodechar}
-        \let\xnewunicodechar\newunicodechar
-        \AfterEndPreamble{\let\newunicodechar\xnewunicodechar}
+        \usepackage{utepcsthesis} % thesis style file
+
+        \newenvironment{Korean}{%
+             \CJKfamily{mj}}{}
+        \newcommand{\inKorean}[1]{\begin{CJK}{UTF8}{}\begin{Korean}#1\end{Korean}\end{CJK}}
 
         \begin{document}
 
-        \begin{center}
+        \makesigpageB{Chair, Prof 1}{Prof 2}{Prof 3}{Prof 4}{\inKorean{교수님 5}}
 
-        \weCJK{$\alpha + \beta = \int_a^b \sqrt{c + d} dx$}
-        \texttt{(λ x ⇒ y ← x; y)}
-        \end{center}
+        \inKorean{본문}
+
         \end{document}
         ''',
 
