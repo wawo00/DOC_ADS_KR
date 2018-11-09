@@ -149,6 +149,10 @@ latex_elements = {
         \documentclass{article}
 
         \usepackage{CJKutf8}
+        \usepackage{makeidx}
+        \makeindex
+        \renewcommand{\thepage}{%
+        \thechapter.\arabic{page}}
 
         \begin{document}
 
