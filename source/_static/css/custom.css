@@ -37,18 +37,29 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > str
 }
 
 div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > strong > dd > a:after {
-    content: 'English';
+    content: '한국어';
     visibility: visible;
     display: block;
 }
 
 
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd > a {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:first-of-type > a {
     visibility: hidden;
 }
 
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd > a:after {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:first-of-type > a:after {
     content: '中文';
+    visibility: visible;
+    display: block;
+}
+
+
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-of-type(2) > a {
+    visibility: hidden;
+}
+
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-of-type(2) > a:after {
+    content: 'English';
     visibility: visible;
     display: block;
 }
