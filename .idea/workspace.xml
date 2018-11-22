@@ -79,9 +79,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="700" />
-    <option name="width" value="1225" />
-    <option name="height" value="1040" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -129,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="css&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/_static/css&#10;conf.&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/conf.py&#10;js01_3&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Cocos2d-X_Js/js01_3_help_ios.md&#10;laya01_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Layabox-Js/laya01_1_help_as.md&#10;cpp01_3&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Cocos2d-X_Cpp/cpp01_3_help_ios.md&#10;egret01_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Egret-Ts/egret01_1_help_ios.md&#10;lua01_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Cocos2d-X_Lua/lua01_1_help_as.md&#10;03_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity03_1_android.md&#10;ios01_xcode&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/IOS/ios01_xcode.md&#10;unity06_1_multidex_guid&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity06_1_multidex_guide.md&#10;cha&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/chapters/chapter10.rst&#10;unity03_1&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity03_1_android.md&#10;unity06_multi_gu&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/Unity/unity06_1_multidex_guide.md&#10;chapter10&#9;FILE&#9;file://D:/www/Docs/upsdk.kr/source/chapters/chapter10.rst" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../upsdk.en" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
