@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CocoaPods Access Document" href="ios02_cocoapods.html" />
     <link rel="prev" title="UPSDK iOS" href="../chapters/chapter02.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -162,9 +165,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="xcode">
-<span id="xcode"></span><h1>Xcode 액세스 문서<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h1>
+<h1>Xcode 액세스 문서<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sdk">
-<span id="sdk"></span><h2>SDK 다운로드<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h2>
+<h2>SDK 다운로드<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h2>
 <p>최신 SDK 폴더를 <a class="reference external" href="https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html">이곳</a>에서 다운로드 하시고 압축을 해제하시면 아래와 같은 파일을 보실 수 있습니다.</p>
 <ul class="simple">
 <li>UPSDK.framework</li>
@@ -175,28 +178,25 @@
 </br></p>
 </div>
 <div class="section" id="xcode-sdk">
-<span id="xcode-sdk"></span><h2>Xcode프로젝에 SDK 추가하기<a class="headerlink" href="#xcode-sdk" title="Permalink to this headline">¶</a></h2>
+<h2>Xcode프로젝에 SDK 추가하기<a class="headerlink" href="#xcode-sdk" title="Permalink to this headline">¶</a></h2>
 <p>아래의 예시와 같이 <code class="docutils literal notranslate"><span class="pre">UPSDK.framework</span></code> 과 <code class="docutils literal notranslate"><span class="pre">UPSDK.bundle</span></code>를 Xcode 프로젝트에 추가합니다. <br />
 <code class="docutils literal notranslate"><span class="pre">Framework</span></code>를 예시로 들면 아래와 같습니다.</p>
-<p><img alt="IOS_01" src="http://docc.upltv.com/uploads/201808/5b88d60fe148e_5b88d60f.png" /></p>
+<p><img alt="IOS_01" src="http://docc.upltv.com/uploads/201808/5b88d60fe148e_5b88d60f.png" />IOS_01</p>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>타사 라이브러리 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>타사 라이브러리 추가하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>타사와의 연결을 위해 타사 라이브러리를 프로젝트에 추가합니다. <br />
 타사 라이브러리는 <a class="reference external" href="../chapters/chapter09.html">이곳</a>에서 다운로드하세요.
 현재 UPSDK의 주요 타사는 아래와 같습니다.</p>
-<p><img alt="ios_02" src="http://docc.upltv.com/uploads/201808/5b88d65b062ae_5b88d65b.png" />
+<p><img alt="ios_02" src="http://docc.upltv.com/uploads/201808/5b88d65b062ae_5b88d65b.png" />ios_02
 <br></p>
 <ul class="simple">
 <li><strong>타사 라이브러리는 선택사항이지만 사용하시는 것을 권장합니다. <br />
-만약 문제가 발생한다면 담당자에게 문의하여 추가 지원을 받아보세요.</strong>
-</br></li>
+만약 문제가 발생한다면 담당자에게 문의하여 추가 지원을 받아보세요.</strong></li>
 </ul>
-</div>
-<div class="section" id="">
-<span id="id2"></span><h2>시스템 참조 라이브러리 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
-<p>시스템 참조 라이브러리를 아래 주소에 따라 추가합니다.</p>
-<p>TARGETS → General → Linked Frameworks Libraries</p>
+</br>
+### 시스템 참조 라이브러리 추가하기
+시스템 참조 라이브러리를 아래 주소에 따라 추가합니다.<p>TARGETS → General → Linked Frameworks Libraries</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">QuartzCore.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">MediaPlayer.framework</span></code></li>
@@ -231,30 +231,29 @@
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">GameController.framework</span></code></li>
 </ul>
-<p><br></p>
-</div>
-<div class="section" id="">
-<span id="id3"></span><h2>프로젝트 구조<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<br></div>
+<div class="section" id="id2">
+<h2>프로젝트 구조<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="linker-flags">
-<span id="linker-flags"></span><h3>1 linker flags를 추가하기<a class="headerlink" href="#linker-flags" title="Permalink to this headline">¶</a></h3>
+<h3>1 linker flags를 추가하기<a class="headerlink" href="#linker-flags" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">TARGETS</span></code> → <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">Setting</span></code> → <code class="docutils literal notranslate"><span class="pre">Linking</span></code> → <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">Linker</span> <span class="pre">Flags</span></code> 안에   <br />
 <code class="docutils literal notranslate"><span class="pre">-ObjC</span></code>와 <code class="docutils literal notranslate"><span class="pre">-fobjc-arc</span></code>를 추가하시기 바랍니다. (아래 그림을 참조하세요)</li>
 </ul>
-<p><img alt="ios_03" src="http://docc.upltv.com/uploads/201808/5b88d8fb6b6a9_5b88d8fb.png" /></p>
+<p><img alt="ios_03" src="http://docc.upltv.com/uploads/201808/5b88d8fb6b6a9_5b88d8fb.png" />ios_03</p>
 </div>
 <div class="section" id="info-plist-http">
-<span id="info-plist-http"></span><h3>2 info.plist를 추가하여 http 프로토콜 승인하기<a class="headerlink" href="#info-plist-http" title="Permalink to this headline">¶</a></h3>
+<h3>2 info.plist를 추가하여 http 프로토콜 승인하기<a class="headerlink" href="#info-plist-http" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAppTransportSecurity</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">dict</span><span class="o">&gt;</span>
-     <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
-     <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
+	 <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+	 <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
  <span class="o">&lt;/</span><span class="n">dict</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="info-plist">
-<span id="info-plist"></span><h3>3 info.plist를 추가하여 권한 승인받기<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
+<h3>3 info.plist를 추가하여 권한 승인받기<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCalendarsUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">Some</span> <span class="n">ad</span> <span class="n">content</span> <span class="n">may</span> <span class="n">create</span> <span class="n">a</span> <span class="n">calendar</span> <span class="n">event</span><span class="p">.</span> <span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCameraUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
@@ -264,23 +263,21 @@
 </pre></div>
 </div>
 <blockquote>
-<div>참고: 디스크립션 설정 언어를 변경하실수 있습니다.
-<br></div></blockquote>
-</div>
+<div>참고: 디스크립션 설정 언어를 변경하실수 있습니다.</div></blockquote>
+<br></div>
 <div class="section" id="bitcode">
-<span id="bitcode"></span><h3>4 Bitcode<a class="headerlink" href="#bitcode" title="Permalink to this headline">¶</a></h3>
+<h3>4 Bitcode<a class="headerlink" href="#bitcode" title="Permalink to this headline">¶</a></h3>
 <p>Youlan 과 Domob SDK는 Bitcode를 지원하지 않습니다. <br />
 하지만 UPLTV에서는 Bitcode도 지원해드리고 있으니 필요하시면 담당자에게 문의하여 추가 지원을 받아보세요.</p>
-<p><br></p>
-</div>
+<br></div>
 <div class="section" id="cocos-version-version">
-<span id="cocos-version-version"></span><h3>5 Cocos로 빌드 하셨다면, 아래와 같은 <code class="docutils literal notranslate"><span class="pre">Version</span></code> 부분에 Version 값을 입력하시기 바랍니다.<a class="headerlink" href="#cocos-version-version" title="Permalink to this headline">¶</a></h3>
-<p><img alt="cocos项目Version字段配置" src="http://docc.upltv.com/uploads/201709/59afb01ec7612_59afb01e.png" />
+<h3>5 Cocos로 빌드 하셨다면, 아래와 같은 <code class="docutils literal notranslate"><span class="pre">Version</span></code> 부분에 Version 값을 입력하시기 바랍니다.<a class="headerlink" href="#cocos-version-version" title="Permalink to this headline">¶</a></h3>
+<p><img alt="cocos项目Version字段配置" src="http://docc.upltv.com/uploads/201709/59afb01ec7612_59afb01e.png" />cocos项目Version字段配置
 <br></p>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>버전<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>버전<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>SDK 버전을 <code class="docutils literal notranslate"><span class="pre">UPSDKVersion.h</span></code>  파일에서 찾으실 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//sdk version</span>
 <span class="cp">#define UPSDKVERSION  @&quot;3003&quot;</span>
@@ -302,7 +299,7 @@
         <a href="ios02_cocoapods.html" class="btn btn-neutral float-right" title="CocoaPods Access Document" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../chapters/chapter02.html" class="btn btn-neutral" title="UPSDK iOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../chapters/chapter02.html" class="btn btn-neutral float-left" title="UPSDK iOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -311,7 +308,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -328,33 +325,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

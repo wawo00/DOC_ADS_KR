@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin API 소개" href="unity04_api_catalog.html" />
     <link rel="prev" title="Android 액세스" href="unity03_1_android.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -166,84 +169,84 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ios">
-<span id="ios"></span><h1>iOS 액세스<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h1>
+<h1>iOS 액세스<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="i">
-<span id="i"></span><h2>I. 선언<a class="headerlink" href="#i" title="Permalink to this headline">¶</a></h2>
+<h2>I. 선언<a class="headerlink" href="#i" title="Permalink to this headline">¶</a></h2>
 <p>Unity 5.x의 여러 버전 테스트를 통해, Mac에서는 5.1.0 및 상위버전에서만 안정적으로 작동할 수 있다는 것을 <br />
 확인할 수 있었습니다. 따라서 5.1.0 및 하위 버전은 적응 테스트를 완료할 수 없습니다. 프로젝트 버전이 5.1.0보다 <br />
 낮은 경우 최신 버전으로 업데이트 하시기 바랍니다. 업데이트에 문제가 있으면 불러오기 하시고, <br />
 UPLTV의 기술팀 도움이 필요한 경우 UPLTV에 문의하시기 바랍니다.</p>
 </div>
 <div class="section" id="ii-unity-assets-ios">
-<span id="ii-unity-assets-ios"></span><h2>II. Unity 프로젝트 Assets 카탈로그 내의 iOS 프레임워크 점검<a class="headerlink" href="#ii-unity-assets-ios" title="Permalink to this headline">¶</a></h2>
+<h2>II. Unity 프로젝트 Assets 카탈로그 내의 iOS 프레임워크 점검<a class="headerlink" href="#ii-unity-assets-ios" title="Permalink to this headline">¶</a></h2>
 <p>iOS용 Unity Plugin을 성공적으로 불러온 후 Assets 카탈로그에서 <code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/frameworks</span></code> 와 <code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/resources</span></code>의 두 카탈로그가 존재하는지 확인합니다. 카탈로그가 존재하지 않는다면 <br />
 Plugin이 성공적으로 불러오기 되지 않았음을 의미합니다.</p>
 <p>iOS용 Plugin을 성공적으로 불러오면 아래의 사진과 같습니다.</p>
-<p><img alt="aaa" src="http://docc.upltv.com/uploads/201805/5af573a34f61b_5af573a3.png" /></p>
+<p><img alt="aaa" src="http://docc.upltv.com/uploads/201805/5af573a34f61b_5af573a3.png" />aaa</p>
 <p>위 모습에서 보이는 구조에 아래의 파일들이 있는지 확인하시기 바랍니다.</p>
 <div class="section" id="upsdk-adsdk">
-<span id="upsdk-adsdk"></span><h3>1. UPSDK ADSDK 메인 패키지<a class="headerlink" href="#upsdk-adsdk" title="Permalink to this headline">¶</a></h3>
+<h3>1. UPSDK ADSDK 메인 패키지<a class="headerlink" href="#upsdk-adsdk" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/frameworks/UPSDKAdsSDK.framework</span></code> 는 UPSDK ADSDK의 메인 패키지입니다. <br />
 이 파일이 없는 경우 담당자에게 문의하여 추가 지원을 받으시기 바랍니다.</p>
 </div>
-<div class="section" id="upsdk-adsdk">
-<span id="id1"></span><h3>2. 광고 네트워크에 대한 UPSDK ADSDK 의존성<a class="headerlink" href="#upsdk-adsdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>2. 광고 네트워크에 대한 UPSDK ADSDK 의존성<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Under <code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/frameworks</span></code> 카탈로그에 UPSDK ADSDK 메인 패키지를 제외하고 일련의 광고 네트워크 <br />
 의존성이 있어야 합니다. 이 프레임워크는 AdCoony.framework 및 UnityAds.framework과 같이 *.framework 형식으로 <br />
 존재하고, <code class="docutils literal notranslate"><span class="pre">*.a</span></code> 또는 <code class="docutils literal notranslate"><span class="pre">*.h</span></code> 형식의 OneWaySDK 및 Domob-SDK로 존재하기도 합니다.</p>
 </div>
-<div class="section" id="upsdk-adsdk">
-<span id="id2"></span><h3>3. UPSDK ADSDK 리소스 패키지<a class="headerlink" href="#upsdk-adsdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>3. UPSDK ADSDK 리소스 패키지<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/resources</span></code> 는 리워드 동영상 광고의 UI와 인터렉티브하는 아이콘 리소스와 같이 <br />
 UPSDK ADSDK 광고가 사용하는 리소스 파일입니다. 리소스가 부족하면 비정상적 또는 실패로 이어지며, <br />
 <strong>수익화에 영향을 미칠 수 있습니다.</strong></p>
 </div>
 <div class="section" id="xuporter">
-<span id="xuporter"></span><h3>4. XUPorter<a class="headerlink" href="#xuporter" title="Permalink to this headline">¶</a></h3>
+<h3>4. XUPorter<a class="headerlink" href="#xuporter" title="Permalink to this headline">¶</a></h3>
 <p>XUPorter는 오픈 소스입니다. Xcode에서 내보내는 구성 매개 변수를 동적 편집하는 데 사용되며 의존성 패키지 및 <br />
 리소스 패키지를 추가를 포함하고 있습니다. 이 카탈로그의 문서가 부족할 경우 자동으로 조정되지 않습니다. <br />
 또한, 리소스를 수동으로 내보낼 수 있습니다. 자세한 내용은 다음 섹션에서 설명합니다.</p>
 </div>
 </div>
 <div class="section" id="xcode">
-<span id="xcode"></span><h2>Xcode 구성 점검<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
+<h2>Xcode 구성 점검<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
 <p>프로젝트에서 Xcode를 내보내지 못한 경우 아래의 순서에 따라 모든 어댑션 구성을 점검하시기 바랍니다.</p>
 <div class="section" id="deployent-target">
-<span id="deployent-target"></span><h3>1. Deployent Target 설정<a class="headerlink" href="#deployent-target" title="Permalink to this headline">¶</a></h3>
+<h3>1. Deployent Target 설정<a class="headerlink" href="#deployent-target" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Target</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">General</span></code> 패널에서 <code class="docutils literal notranslate"><span class="pre">Deployment</span> <span class="pre">Target</span></code> 값을 7.0 및 그 이상으로 설정합니다. 타사에서 사용하는 <br />
 일부 프레임워크에는 7.0 이상이 필요합니다.</p>
 <p>예시：
-<img alt="ios-target" src="http://docc.upltv.com/uploads/201706/59535d81cf339_59535d81.png" /></p>
+<img alt="ios-target" src="http://docc.upltv.com/uploads/201706/59535d81cf339_59535d81.png" />ios-target</p>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h3>2. 바이너리와 라이브러리 연동 점검<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>2. 바이너리와 라이브러리 연동 점검<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>In Build Phases -&gt; Link Binary with Libraries에서 Plugin에 포함된 <code class="docutils literal notranslate"><span class="pre">*.a</span></code> 파일 및 프레임워크가 추가되었는지 점검합니다.</p>
 <p>성공적으로 추가한 후에는 다음 스크린샷의 빨간색 상자에 표시된 라이브러리 파일이 추가됩니다.</p>
-<p><img alt="ios-lib" src="http://docc.upltv.com/uploads/201706/595361be1b87e_595361be.png" /></p>
+<p><img alt="ios-lib" src="http://docc.upltv.com/uploads/201706/595361be1b87e_595361be.png" />ios-lib</p>
 <p><code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/frameworks</span></code>에 라이브러리 파일이 없는 경우 Xcode 프로젝트를 사용하여 프로젝트에 포함된 <code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/frameworks</span></code> 파일을 수동으로 추가합니다.</p>
 <p><strong>이 중
 <code class="docutils literal notranslate"><span class="pre">libsqlite3.tbd</span></code>, <code class="docutils literal notranslate"><span class="pre">libxml2.tbd</span></code>, <code class="docutils literal notranslate"><span class="pre">libz.tbd</span></code>, <code class="docutils literal notranslate"><span class="pre">libstdc++.tbd</span></code>, <code class="docutils literal notranslate"><span class="pre">WebKit.framework</span></code> 그리고 <code class="docutils literal notranslate"><span class="pre">JavaScriptCore.framework</span></code> 는 <br />
 시스템 라이브러리이기에 반드시 추가되어야 합니다. 일부 타사 광고 네트워크는 이러한 네트워크에 의존하기 때문에 <br />
 누락된 항목이 있으면 수동으로 추가합니다.</strong></p>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h3>3. 번들 리소스 점검<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>3. 번들 리소스 점검<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">Phases</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">Bundle</span> <span class="pre">Resources</span></code>에서 Plugin에 포함된 리소스를 추가했는지 여부를 점검합니다.</p>
 <p>성공적으로 추가한 후에는 리소스 파일이 추가됩니다. 스크린 샷의 빨간색 상자로 표시된 부분을 참조하시기 바랍니다.</p>
-<p><img alt="ios-resources" src="http://docc.upltv.com/uploads/201706/59536339b4e91_59536339.png" /></p>
+<p><img alt="ios-resources" src="http://docc.upltv.com/uploads/201706/59536339b4e91_59536339.png" />ios-resources</p>
 <p>포함되어야 하는 <code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/resources</span></code> 가 없는 경우 Xcode 프로젝트에 <code class="docutils literal notranslate"><span class="pre">PolyADSDK/Plugins/IOS/resources</span></code>의 <br />
 리소스를 수동으로 추가합니다.</p>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h3>4. 기타 링커 플래그 점검<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>4. 기타 링커 플래그 점검<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">Settings</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Linking</span> <span class="pre">-&gt;</span> <span class="pre">Other</span> <span class="pre">Linker</span> <span class="pre">Flags</span></code> 순서에 따라 점검합니다. <br />
 <code class="docutils literal notranslate"><span class="pre">-ObjC</span></code> 및 <code class="docutils literal notranslate"><span class="pre">-fobjc-arc</span></code> 구성이 추가되었는지 점검합니다.</p>
 <p>성공적으로 추가 되었다면 아래의 스크린 샷의 빨간색 상자로 표시된 부분에 구성 매개 변수가 추가됩니다. <br />
 누락된 경우 수동으로 추가하시기 바랍니다.</p>
-<p><img alt="ios-link-set" src="http://docc.upltv.com/uploads/201706/59536443253fc_59536443.png" /></p>
+<p><img alt="ios-link-set" src="http://docc.upltv.com/uploads/201706/59536443253fc_59536443.png" />ios-link-set</p>
 </div>
 <div class="section" id="unity">
-<span id="unity"></span><h3>5. 일부 Unity 버전의 호환성 문제 해결<a class="headerlink" href="#unity" title="Permalink to this headline">¶</a></h3>
+<h3>5. 일부 Unity 버전의 호환성 문제 해결<a class="headerlink" href="#unity" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>5.4.2 ~ 5.4.0 버전에서, 프레임워크(스크린 샷에서 빨간색으로 표시되어 있는)를 불러오지 못한 경우 <br />
 다음 카탈로그에 있는 코드 라이브러리 및 리소스 라이브러리를 수동으로 프로젝트로 불러오기 합니다.</li>
@@ -263,8 +266,8 @@ UPSDK ADSDK 광고가 사용하는 리소스 파일입니다. 리소스가 부�
 <li>5.1.4 및 기타 버전에서 <strong>Bitcode를 포함하지 않는</strong>  에러가 발생한다면, Bitcode 사용에 ‘NO’를 설정합니다.</li>
 </ul>
 </div>
-<div class="section" id="">
-<span id="id6"></span><h3>6. 프로젝트 정리, 리컴파일<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>6. 프로젝트 정리, 리컴파일<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>점검을 마치면 Product -&gt; Clean 후에 컴파일 합니다.</p>
 <p>에러가 여전히 존재하는 경우, 스크린샷 및 로그와 같은 에러 내용을 UPLTV 기술 지원팀 담당자와 상의하세요.</p>
 </div>
@@ -282,7 +285,7 @@ UPSDK ADSDK 광고가 사용하는 리소스 파일입니다. 리소스가 부�
         <a href="unity04_api_catalog.html" class="btn btn-neutral float-right" title="Unity Plugin API 소개" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity03_1_android.html" class="btn btn-neutral" title="Android 액세스" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity03_1_android.html" class="btn btn-neutral float-left" title="Android 액세스" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -291,7 +294,7 @@ UPSDK ADSDK 광고가 사용하는 리소스 파일입니다. 리소스가 부�
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -308,33 +311,16 @@ UPSDK ADSDK 광고가 사용하는 리소스 파일입니다. 리소스가 부�
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

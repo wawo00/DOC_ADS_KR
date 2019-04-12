@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JavaScriptPlugin 샘플" href="laya02_sample_catalog.html" />
     <link rel="prev" title="Eclipse" href="laya01_2_help_ec.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -163,9 +166,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ios">
-<span id="ios"></span><h1>IOS<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h1>
+<h1>IOS<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="i-sdk">
-<span id="i-sdk"></span><h2>I. SDK 패키지 다운로드하기<a class="headerlink" href="#i-sdk" title="Permalink to this headline">¶</a></h2>
+<h2>I. SDK 패키지 다운로드하기<a class="headerlink" href="#i-sdk" title="Permalink to this headline">¶</a></h2>
 <p>먼저 <a class="reference external" href="../chapters/chapter09.html">UPSDK 다운로드</a>에서 Layabox UPSDK JsPlugin 패키지 다운로드하고 압축해제 하시면, <br />
 아래와 같은 세 개의 디렉토리들이 보입니다.</p>
 <ul class="simple">
@@ -174,31 +177,29 @@
 <li><code class="docutils literal notranslate"><span class="pre">UpltvLayaboxJsBridge</span></code>: 이 디렉토리에는 현재 Layabox js 프로젝트와 UPSDK AD 인터페이스 호출을 <br />
 연동하기 위한 <code class="docutils literal notranslate"><span class="pre">*.</span> <span class="pre">js</span></code>  원본 파일들이 들어 있습니다.</li>
 </ul>
-<p></br></p>
-</div>
+</br></div>
 <div class="section" id="ii-layaboxide">
-<span id="ii-layaboxide"></span><h2>II. LayaboxIDE 프로젝트 설정<a class="headerlink" href="#ii-layaboxide" title="Permalink to this headline">¶</a></h2>
+<h2>II. LayaboxIDE 프로젝트 설정<a class="headerlink" href="#ii-layaboxide" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li>Layabox 프로젝트의 <code class="docutils literal notranslate"><span class="pre">src</span></code> 폴더에 <code class="docutils literal notranslate"><span class="pre">UpltvLayaboxJsBridge</span></code>를 복사하고, <code class="docutils literal notranslate"><span class="pre">.js</span></code> 파일만 남겨둡니다.</li>
 <li>아래와 같이 Layabox 프로젝트의 bin폴더 안에 있는 index.html에 <code class="docutils literal notranslate"><span class="pre">UPLTV.js</span></code> 와 <code class="docutils literal notranslate"><span class="pre">UPLTVIos.js</span></code> 의 참조를 추가합니다.</li>
 </ol>
-<p><img alt="" src="http://docc.upltv.com/uploads/201809/5b98bcb7c6c2b_5b98bcb7.png" /></p>
-<p></br></p>
-</div>
+<p><img alt="http://docc.upltv.com/uploads/201809/5b98bcb7c6c2b_5b98bcb7.png" src="http://docc.upltv.com/uploads/201809/5b98bcb7c6c2b_5b98bcb7.png" /></p>
+</br></div>
 <div class="section" id="iii-xcode">
-<span id="iii-xcode"></span><h2>III. Xcode의 프로젝트 설정<a class="headerlink" href="#iii-xcode" title="Permalink to this headline">¶</a></h2>
+<h2>III. Xcode의 프로젝트 설정<a class="headerlink" href="#iii-xcode" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h3>1. UPSDK 메인 패키지 및 소스 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<h3>1. UPSDK 메인 패키지 및 소스 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
 <p>Xcode 프로젝트 디렉토리에 <code class="docutils literal notranslate"><span class="pre">UPSDK.Framework</span></code>,  <code class="docutils literal notranslate"><span class="pre">UPSDK.Bundle</span></code> 및 <code class="docutils literal notranslate"><span class="pre">UpltvLayaboxJsBridge</span></code> 폴더를 동시에 추가합니다.</p>
 <p>UpltvLayaboxJsBridge 폴더안의 <code class="docutils literal notranslate"><span class="pre">*.js</span></code> 파일을 제거하고 아래 같이 Object-C++ 소스코드는 남겨둡니다.</p>
-<p><img alt="" src="http://docc.upltv.com/uploads/201809/5b98bf749a9ba_5b98bf74.png" /></p>
+<p><img alt="http://docc.upltv.com/uploads/201809/5b98bf749a9ba_5b98bf74.png" src="http://docc.upltv.com/uploads/201809/5b98bf749a9ba_5b98bf74.png" /></p>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h3>2. 타사 의존성 라이브러리 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>2. 타사 의존성 라이브러리 추가하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK는 실행될 때 타사 광고 네트워크사에 의존하므로 수동으로 의존 라이브러리 파일을 프로젝트로 가져와야 합니다. <br />
 <a class="reference external" href="http://doc.upltv.com/en/master/chapters/chapter09.html">여기</a>를 클릭하셔서 타사 의존성 패키지를 추가하시기 바랍니다.</p>
 <p>UPSDK는 현재 다음의 타사 광고 네트워크사에 의존합니다.</p>
-<p><img alt="Add all third party SDK packages" src="http://docc.upltv.com/uploads/201709/59afafb9143e9_59afafb9.png" /></p>
+<p><img alt="http://docc.upltv.com/uploads/201709/59afafb9143e9_59afafb9.png" src="http://docc.upltv.com/uploads/201709/59afafb9143e9_59afafb9.png" />Add all third party SDK packages</p>
 <blockquote>
 <div>각 타사 광고 네트워크사는 각각의 폴더에 해당하며, 폴더의 이름은 광고 네트워크사명의 접두사와 버전 번호로 <br />
 표기하였기에 쉽게 식별할 수 있습니다. 폴더는 다른 의존 라이브러리 또는 원본 파일 외에 지원 리소스 파일을 <br />
@@ -211,14 +212,13 @@
 <p>예를 들어, 현재 프로젝트 액세스에서 Applovin, Unity, Vungle, tapjoy 4개의 광고 라이브러리 <br />
 (<code class="docutils literal notranslate"><span class="pre">AppLovinSDK.framework</span></code>, <code class="docutils literal notranslate"><span class="pre">UnityAds.framework</span></code>, <code class="docutils literal notranslate"><span class="pre">VungleSDK.framework</span></code>, <code class="docutils literal notranslate"><span class="pre">Tapjoy.framework</span></code>)를 추가합니다. <br />
 성공적으로 추가한 후의 화면은 아래와 같습니다.</p>
-<p><img alt="" src="http://docc.upltv.com/uploads/201804/5acc6644c33a5_5acc6644.png" /></p>
+<p><img alt="http://docc.upltv.com/uploads/201804/5acc6644c33a5_5acc6644.png" src="http://docc.upltv.com/uploads/201804/5acc6644c33a5_5acc6644.png" /></p>
 <p>위의 예시에서 Tapjoy AD는 일부 외부 리소스 파일에 액세스해야 하므로 프로젝트에 지원 리소스 파일을 <br />
 추가해야 합니다. 지원 리소스 파일은 <code class="docutils literal notranslate"><span class="pre">TARGETS</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">Phases</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">Bundle</span> <span class="pre">Resources</span></code>에 있습니다.</p>
-<p><br>
-<img alt="" src="http://docc.upltv.com/uploads/201804/5acc70803fec8_5acc7080.png" /></p>
-</div>
-<div class="section" id="">
-<span id="id2"></span><h3>3. 시스템 의존성 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<br>
+![](http://docc.upltv.com/uploads/201804/5acc70803fec8_5acc7080.png)</div>
+<div class="section" id="id2">
+<h3>3. 시스템 의존성 추가하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>의존성 라이브러리를 <code class="docutils literal notranslate"><span class="pre">TARGETS</span></code> → <code class="docutils literal notranslate"><span class="pre">General</span></code> → <code class="docutils literal notranslate"><span class="pre">Linked</span> <span class="pre">Frameworks</span> <span class="pre">Libraries</span></code>에 추가합니다.</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">QuartzCore.framework</span></code></li>
@@ -229,12 +229,12 @@
 <li><code class="docutils literal notranslate"><span class="pre">CoreGraphics.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">CFNetwork.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">WebKit.framework</span></code> (선택사항)</li>
-<li><code class="docutils literal notranslate"><span class="pre">WatchConnectivity.framework</span></code> (선택사항)</li>
+<li><code class="docutils literal notranslate"><span class="pre">WatchConnectivity.framework</span></code>	(선택사항)</li>
 <li><code class="docutils literal notranslate"><span class="pre">SystemConfiguration.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">StoreKit.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">Social.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">MessageUI.framework</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">JavaScriptCore.framework</span></code>    (선택사항)</li>
+<li><code class="docutils literal notranslate"><span class="pre">JavaScriptCore.framework</span></code>	(선택사항)</li>
 <li><code class="docutils literal notranslate"><span class="pre">EventKit.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">CoreTelephony.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">AVFoundation.framework</span></code></li>
@@ -248,32 +248,31 @@
 <li><code class="docutils literal notranslate"><span class="pre">CoreLocation.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">EventKitUI.framework</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">MobileCoreServices.framework</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">GameController.framework</span></code>
-<br></li>
+<li><code class="docutils literal notranslate"><span class="pre">GameController.framework</span></code></li>
 </ul>
-</div>
+<br></div>
 </div>
 <div class="section" id="iv">
-<span id="iv"></span><h2>IV 프로젝트 구성<a class="headerlink" href="#iv" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id3"></span><h3>1. 분류 컴파일러 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<h2>IV 프로젝트 구성<a class="headerlink" href="#iv" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1. 분류 컴파일러 추가하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>아래와 같이 <code class="docutils literal notranslate"><span class="pre">TARGETS</span></code> → <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">Setting</span></code> → <code class="docutils literal notranslate"><span class="pre">Linking</span></code> → <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">Linker</span> <span class="pre">Flags</span></code>에 <code class="docutils literal notranslate"><span class="pre">-ObjC</span></code>를 추가합니다.</li>
 </ul>
-<p><img alt="" src="http://docc.upltv.com/uploads/201804/5ae28e70be73c_5ae28e70.png" /></p>
+<p><img alt="http://docc.upltv.com/uploads/201804/5ae28e70be73c_5ae28e70.png" src="http://docc.upltv.com/uploads/201804/5ae28e70be73c_5ae28e70.png" /></p>
 </div>
 <div class="section" id="http-info-plist">
-<span id="http-info-plist"></span><h3>2. HTTP 모드와 호환을 위해 다음 노드를 info.plist에 추가하기<a class="headerlink" href="#http-info-plist" title="Permalink to this headline">¶</a></h3>
+<h3>2. HTTP 모드와 호환을 위해 다음 노드를 info.plist에 추가하기<a class="headerlink" href="#http-info-plist" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAppTransportSecurity</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">dict</span><span class="o">&gt;</span>
-     <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
-     <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
+	 <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+	 <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
  <span class="o">&lt;/</span><span class="n">dict</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="info-plist">
-<span id="info-plist"></span><h3>3. 권한을 얻기위해 다음 노드를 info.plist에 추가하기<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
+<h3>3. 권한을 얻기위해 다음 노드를 info.plist에 추가하기<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
 <p>(AdColony를 사용하는 경우 추가해야 합니다, AdColony를 사용하지 않는 경우에는 추가하지 않아도 됩니다.)</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCalendarsUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">Some</span> <span class="n">ad</span> <span class="n">content</span> <span class="n">may</span> <span class="n">create</span> <span class="n">a</span> <span class="n">calendar</span> <span class="n">event</span><span class="p">.</span> <span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
@@ -284,16 +283,15 @@
 </pre></div>
 </div>
 <p>참고: 언어 및 사용 시나리오에 따라 개발자는 액세스 권한에 대한 설명을 적절하게 조정할 수 있습니다.</p>
-<p><br></p>
-</div>
+<br></div>
 </div>
 <div class="section" id="v-bitcode">
-<span id="v-bitcode"></span><h2>V. Bitcode<a class="headerlink" href="#v-bitcode" title="Permalink to this headline">¶</a></h2>
+<h2>V. Bitcode<a class="headerlink" href="#v-bitcode" title="Permalink to this headline">¶</a></h2>
 <p>Domob은 Bitcode를 지원하지 않습니다. 하지만 UPLTV에서는 Bitcode도 지원해드리고 있으니 필요하시면 <br />
 담당자에게 문의하여 추가 지원을 받아보세요.</p>
 </div>
 <div class="section" id="vi">
-<span id="vi"></span><h2>VI. 버전<a class="headerlink" href="#vi" title="Permalink to this headline">¶</a></h2>
+<h2>VI. 버전<a class="headerlink" href="#vi" title="Permalink to this headline">¶</a></h2>
 <p><em>UPSDKVersion.h</em>에서 UPSDK의 버전을 확인하실 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//version</span>
 <span class="cp">###define AvidlyAdsSDKVERSION  @&quot;3005&quot;</span>
@@ -315,7 +313,7 @@
         <a href="laya02_sample_catalog.html" class="btn btn-neutral float-right" title="JavaScriptPlugin 샘플" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="laya01_2_help_ec.html" class="btn btn-neutral" title="Eclipse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="laya01_2_help_ec.html" class="btn btn-neutral float-left" title="Eclipse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -324,7 +322,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -341,33 +339,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

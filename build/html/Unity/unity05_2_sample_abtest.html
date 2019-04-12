@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin 광고 로드" href="unity05_3_sample_adload.html" />
     <link rel="prev" title="Unity Plugin 초기화" href="unity05_1_sample_init.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -171,9 +174,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin-a-b">
-<span id="unity-plugin-a-b"></span><h1>Unity Plugin A/B 테스트<a class="headerlink" href="#unity-plugin-a-b" title="Permalink to this headline">¶</a></h1>
+<h1>Unity Plugin A/B 테스트<a class="headerlink" href="#unity-plugin-a-b" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-b">
-<span id="a-b"></span><h2>1. A/B 테스트 초기화<a class="headerlink" href="#a-b" title="Permalink to this headline">¶</a></h2>
+<h2>1. A/B 테스트 초기화<a class="headerlink" href="#a-b" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * A/B 테스트의 광고 구조를 받기 전에 API를 통하여 A/B 테스트가 초기화되어야 합니다.</span>
 <span class="cm"> */</span>
@@ -189,21 +192,20 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="a-b">
-<span id="id1"></span><h2>2.  A/B 테스트 구조 받기<a class="headerlink" href="#a-b" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>2.  A/B 테스트 구조 받기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>  /*
-     * UPSDK 광고의 A/B 테스트 구조를 받습니다.
+	 * UPSDK 광고의 A/B 테스트 구조를 받습니다.
    * 리턴 결과는 Json 문자열일 수도 있으며, null일 수 있습니다.
    * 이 API를 호출하기 전에, initAbtConfigJson()를 먼저 호출하여 A/B Test 구조를 완성합니다.
-     */
+	 */
 public static string getAbtConfig(string placementId)；
-
 </pre></div>
 </div>
 <p>샘플：</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">onBtnGetABConfig_Click</span><span class="p">()</span>
 <span class="p">{</span>   
-    <span class="c1">// 매개변수는 placementId 입니다.</span>
+	<span class="c1">// 매개변수는 placementId 입니다.</span>
     <span class="kt">string</span> <span class="n">r</span> <span class="p">=</span> <span class="n">UPSDK</span><span class="p">.</span><span class="n">getAbtConfig</span> <span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
     <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;==&gt; onBtnGetABConfig_Click:&quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
 <span class="p">}</span>
@@ -223,7 +225,7 @@ public static string getAbtConfig(string placementId)；
         <a href="unity05_3_sample_adload.html" class="btn btn-neutral float-right" title="Unity Plugin 광고 로드" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity05_1_sample_init.html" class="btn btn-neutral" title="Unity Plugin 초기화" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity05_1_sample_init.html" class="btn btn-neutral float-left" title="Unity Plugin 초기화" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -232,7 +234,7 @@ public static string getAbtConfig(string placementId)；
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -249,33 +251,16 @@ public static string getAbtConfig(string placementId)；
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

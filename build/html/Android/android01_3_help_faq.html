@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="65535 제한 문제 해결방법" href="android02_65535.html" />
     <link rel="prev" title="Eclipse" href="android01_2_help_ec.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -169,11 +172,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="faq">
-<span id="faq"></span><h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
+<h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="i-android-studio-androidmanfiest-xml">
-<span id="i-android-studio-androidmanfiest-xml"></span><h2>I. Android Studio AndroidManfiest.xml 충돌 선언<a class="headerlink" href="#i-android-studio-androidmanfiest-xml" title="Permalink to this headline">¶</a></h2>
+<h2>I. Android Studio AndroidManfiest.xml 충돌 선언<a class="headerlink" href="#i-android-studio-androidmanfiest-xml" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com-google-android-gms-version">
-<span id="com-google-android-gms-version"></span><h3>1. com.google.android.gms.version 충돌 또는 삭제 오류<a class="headerlink" href="#com-google-android-gms-version" title="Permalink to this headline">¶</a></h3>
+<h3>1. com.google.android.gms.version 충돌 또는 삭제 오류<a class="headerlink" href="#com-google-android-gms-version" title="Permalink to this headline">¶</a></h3>
 <p><strong>Android Studio</strong> 버전에서 이와 같은 충돌을 방지하기 위해, <br />
 2.0.21 Studio 버전부터 UPSDK에서는 AndroidManfiest.xml에서 아래의 선언을 삭제하였습니다.</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
@@ -198,15 +201,15 @@
 <p><code class="docutils literal notranslate"><span class="pre">version_ad.xml</span></code> 내용：</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;resources&gt;
-    // defined the value of gms version, the kind of integer
-    // if the current version is not 9080000, please change to the correct version.
+	// defined the value of gms version, the kind of integer
+	// if the current version is not 9080000, please change to the correct version.
     &lt;integer name=&quot;google_play_services_version&quot;&gt;11020000&lt;/integer&gt;
 &lt;/resources&gt;
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h3>2. 액티비티 충돌 또는 삭제 오류<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>2. 액티비티 충돌 또는 삭제 오류<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Android Studio 버전, 특히 Studio 2.0.21 상위 버전의 UPSDK에서는 AndroidManfiest.xml에서 <br />
 Admob 및 Facebook 광고에 의존하는 액티비티 선언을 삭제하였습니다.</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
@@ -233,9 +236,9 @@ android:multiprocess=&quot;true&quot;/&gt;
 </div>
 </div>
 <div class="section" id="ii-admob-gms">
-<span id="ii-admob-gms"></span><h2>II. Admob gms 충돌<a class="headerlink" href="#ii-admob-gms" title="Permalink to this headline">¶</a></h2>
+<h2>II. Admob gms 충돌<a class="headerlink" href="#ii-admob-gms" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="facebook-admob">
-<span id="facebook-admob"></span><h3>1. Facebook 광고가 Admob 광고에 의존하여 발생하는 충돌<a class="headerlink" href="#facebook-admob" title="Permalink to this headline">¶</a></h3>
+<h3>1. Facebook 광고가 Admob 광고에 의존하여 발생하는 충돌<a class="headerlink" href="#facebook-admob" title="Permalink to this headline">¶</a></h3>
 <p>Facebook 광고를 컴파일하여 온라인에서 audience-network-sdk를 업데이트할 때, <br />
 audience-network-sdk와 관련된 aar 파일 뿐만 아니라 Google gms 저장소에 있는 아래의 파일도 함께 다운로드합니다.</p>
 <ul class="simple">
@@ -252,8 +255,8 @@ play-services-ads 및 play-services-basement가 생성되어 <strong>gms에 대�
 <li>Google gms 서비스를 온라인에서 업데이트할 때, Facebook Audience Network SDK를 aar이나 jar 패키지로 가져오기</li>
 </ul>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h3>2. 기타 충돌<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>2. 기타 충돌<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Admob 광고에서는 gms 플레이 서비스 지원이 필요합니다. 따라서 Admob 광고 지원을 필요로 하는 프로젝트의 경우, <br />
 관련 gms 의존성과 구성을 추가해야 합니다.</p>
 <p>Admob을 지원하는 UPSDK는 아래의 gms 플레이어 서비스 라이브러리에 의존해야 합니다.</p>
@@ -271,7 +274,7 @@ play-services-ads 및 play-services-basement가 생성되어 <strong>gms에 대�
 </div>
 </div>
 <div class="section" id="iii-xxx-so">
-<span id="iii-xxx-so"></span><h2>III. xxx.so 누락 문제<a class="headerlink" href="#iii-xxx-so" title="Permalink to this headline">¶</a></h2>
+<h2>III. xxx.so 누락 문제<a class="headerlink" href="#iii-xxx-so" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">AvidlyAdsSDK_x.x.x.aar</span></code> 및 <code class="docutils literal notranslate"><span class="pre">adcolony_ads.aar</span></code>에서는 아래와 같이 3가지 종류의 CPU 타입 <code class="docutils literal notranslate"><span class="pre">*.so</span></code> 파일을 제공합니다.</p>
 <ul class="simple">
 <li>armeabi</li>
@@ -329,7 +332,7 @@ CPU 프레임워크를 삭제합니다. aar 파일의 경우, 압축 해제하�
         <a href="android02_65535.html" class="btn btn-neutral float-right" title="65535 제한 문제 해결방법" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_2_help_ec.html" class="btn btn-neutral" title="Eclipse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_2_help_ec.html" class="btn btn-neutral float-left" title="Eclipse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -338,7 +341,7 @@ CPU 프레임워크를 삭제합니다. aar 파일의 경우, 압축 해제하�
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -355,33 +358,16 @@ CPU 프레임워크를 삭제합니다. aar 파일의 경우, 압축 해제하�
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="맞춤형 배너 광고(Banner Ad)" href="ios04_2_banner_custom.html" />
     <link rel="prev" title="배너 광고(Banner Ad)" href="ios04_banner_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,7 +171,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="banner-ad">
-<span id="banner-ad"></span><h1>빠른 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
+<h1>빠른 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
 <p>배너 광고를 프로젝트의 상단이나 하단에만 추가하길 원하시면, 아래의 권장 방법을 통해 <br />
 더욱 빠르고 간편하게 결합할 수 있습니다.</p>
 <blockquote>
@@ -176,8 +179,8 @@
 UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 각 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에서 발생한 수익을 <br />
 제공하고 있으므로, 광고 노출 위치마다 다른 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>를 사용해야 합니다. <br />
 가령, 게임의 정지 화면에서 UPSDK의 초기화 설정할 때는 &quot;정지&quot; 또는 &quot;메뉴&quot;를 사용할 수 있습니다.</div></blockquote>
-<div class="section" id="">
-<span id="id1"></span><h2>샘플<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>샘플<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">* 초기화 메소드</span>
 <span class="cm">* 1. avidPlacement 매개변수, Placement ID, 유형은 NSString이며 광고 유형 표시에 사용되므로 공백으로 남겨두면 안됩니다.</span>
@@ -201,24 +204,22 @@ UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 �
 <p>샘플:</p>
 <p><code class="docutils literal notranslate"><span class="pre">ViewController.m</span></code> 를 통해 배너 광고 초기화와 로딩 콜백을 해드릴 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
-    <span class="c1">// …</span>
-    <span class="c1">//  wrapper 대상 초기화</span>
+	<span class="c1">// …</span>
+	<span class="c1">//  wrapper 대상 초기화</span>
     <span class="n">_topStripBanner</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UPBannerStripWrapper</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithPlacement</span><span class="p">:</span><span class="s">@&quot;banner_strip” controller:self showLocation:UPStripShowLocationTypeTop];</span>
-    <span class="c1">// 프록시 콜백 설정</span>
+	<span class="c1">// 프록시 콜백 설정</span>
     <span class="n">_topStripBanner</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
-    <span class="c1">// …</span>
+	<span class="c1">// …</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>다른 코드를 더 입력할 필요 없이, 배너가 자동으로 ViewController 스크린 상단에 디스플레이 됩니다.</p>
-<p><br></p>
-</div>
+<br></div>
 <div class="section" id="recycle-memory">
-<span id="recycle-memory"></span><h2>메모리 리사이클(Recycle memory)<a class="headerlink" href="#recycle-memory" title="Permalink to this headline">¶</a></h2>
+<h2>메모리 리사이클(Recycle memory)<a class="headerlink" href="#recycle-memory" title="Permalink to this headline">¶</a></h2>
 <p>배너를 볼 수 있는 ViewController가 손상(인터페이스에서 제거되거나, nav(NavigitionController)에서 팝업, <br />
 혹은 메모리가 리사이클 되는 등)되더라도 리사이클 할 수 있도록 베너를 nil로 설정하시기 바랍니다.</p>
-<p><br></p>
-</div>
+<br></div>
 </div>
 
 
@@ -232,7 +233,7 @@ UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 �
         <a href="ios04_2_banner_custom.html" class="btn btn-neutral float-right" title="맞춤형 배너 광고(Banner Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios04_banner_catalog.html" class="btn btn-neutral" title="배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios04_banner_catalog.html" class="btn btn-neutral float-left" title="배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -241,7 +242,7 @@ UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 �
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -258,33 +259,16 @@ UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 �
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

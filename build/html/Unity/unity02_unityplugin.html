@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin 액세스" href="unity03_integrate_catalog.html" />
     <link rel="prev" title="Unity Plugin 가이드" href="unity01_guide.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -160,42 +163,42 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin">
-<span id="unity-plugin"></span><h1>Unity Plugin 추가하기<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<h1>Unity Plugin 추가하기<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
 <p>다운로드 된 UPSDK Unity Plugin은 *.unitypackage 파일입니다. 이 문서에서는 두 가지 플랫폼의 대표적인 예시를 <br />
 설명하고 있으니, 아래를 참고하시기 바랍니다.</p>
 <blockquote>
 <div>이 절차를 숙지하고 계신 개발자 분께서는, 다음 섹션으로 넘어갑니다.</div></blockquote>
 <div class="section" id="plugin">
-<span id="plugin"></span><h2>1. Plugin 업데이트하기<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h2>
+<h2>1. Plugin 업데이트하기<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h2>
 <p>이전에 UPSDK Unity Plugin을 결합한 경우, 업데이트 후 Plugin 라이브러리가 올바른지 확인하기위해 업데이트 전에, UPSDK Unity Plugin을 제거합니다.</p>
 <p>Unity 프로젝트에 <code class="docutils literal notranslate"><span class="pre">Assets/PolyADSDK/Plugins/</span></code> 과 <code class="docutils literal notranslate"><span class="pre">Assets/StreamingAssets/UPSDK_android/</span></code>가 존재하는지 확인합니다. <br />
 일반적으로 <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> 및 <code class="docutils literal notranslate"><span class="pre">UPSDK_android</span></code> 폴더(하위 카탈로그 포함)를 삭제하면 전체 불러온 Plugin이 완전히 삭제됩니다.</p>
 <p><code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code> 카탈로그의 이름 또는 하위 카탈로그의 위치를 편집한 경우 수정된 위치를 찾아 삭제합니다. <br />
 특히 <code class="docutils literal notranslate"><span class="pre">PolyADSDK</span></code>를 업데이트한 후 일부 중요 파일을 추가한 경우 삭제 시 유의합니다.</p>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>2. 패키지 불러오기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>2. 패키지 불러오기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>프로젝트에서 Asset을 선택하고 마우스 오른쪽 버튼을 클릭한 후 <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Package</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Custom</span> <span class="pre">Package</span></code>를 선택합니다.</p>
-<p><img alt="import" src="http://docc.upltv.com/uploads/201705/592e66a727d89_592e66a7.png" /></p>
+<p><img alt="import" src="http://docc.upltv.com/uploads/201705/592e66a727d89_592e66a7.png" />import</p>
 </div>
-<div class="section" id="plugin">
-<span id="id2"></span><h2>3. Plugin 패키지 선택하기<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>3. Plugin 패키지 선택하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>다운로드한 Plugin 패키지(예: export.unitypackage)를 선택합니다. 그런 다음 <code class="docutils literal notranslate"><span class="pre">open</span></code>버튼을 클릭합니다. <br />
 Unity가 Plugin 패키지를 자동으로 로드합니다.</p>
-<p><img alt="open file" src="http://docc.upltv.com/uploads/201705/592e684f54573_592e684f.png" /></p>
+<p><img alt="open file" src="http://docc.upltv.com/uploads/201705/592e684f54573_592e684f.png" />open file</p>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>4. 패키지 로드하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>4. 패키지 로드하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Unity가 Plugin 패키지 로드를 마치면 아래와 같은 Plugin 리소스를 불러올 수 있는 팝업 창이 나타납니다.</p>
-<p><img alt="import plugin" src="http://docc.upltv.com/uploads/201705/592e69ba77ebf_592e69ba.png" /></p>
+<p><img alt="import plugin" src="http://docc.upltv.com/uploads/201705/592e69ba77ebf_592e69ba.png" />import plugin</p>
 <p>일반적으로 &quot;All&quot; 버튼을 선택한 다음 <code class="docutils literal notranslate"><span class="pre">Import</span></code>를 클릭하여 불러옵니다. Android 플랫폼에만 지원하는 경우, <br />
 <strong>iOS</strong>버튼은 무시합니다. iOS만 지원하는 경우에는 <strong>Android</strong> 버튼은 무시합니다.</p>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>5. 로드 완료<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>5. 로드 완료<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>UPSDK의 Plugin을 불러온 후 프로젝트에 <strong>PolyADSDK</strong>라는 폴더가 표시됩니다. 예시로, Android플랫폼 및 iOS플랫폼 <br />
 모두에 대한 지원을 하신다면 Plugin에 대한 모든 리소스를 불러오기 합니다.</p>
-<p><img alt="load ok" src="http://docc.upltv.com/uploads/201705/592e6b65dd56e_592e6b65.png" /></p>
+<p><img alt="load ok" src="http://docc.upltv.com/uploads/201705/592e6b65dd56e_592e6b65.png" />load ok</p>
 </div>
 </div>
 
@@ -210,7 +213,7 @@ Unity가 Plugin 패키지를 자동으로 로드합니다.</p>
         <a href="unity03_integrate_catalog.html" class="btn btn-neutral float-right" title="Unity Plugin 액세스" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity01_guide.html" class="btn btn-neutral" title="Unity Plugin 가이드" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity01_guide.html" class="btn btn-neutral float-left" title="Unity Plugin 가이드" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -219,7 +222,7 @@ Unity가 Plugin 패키지를 자동으로 로드합니다.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -236,33 +239,16 @@ Unity가 Plugin 패키지를 자동으로 로드합니다.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

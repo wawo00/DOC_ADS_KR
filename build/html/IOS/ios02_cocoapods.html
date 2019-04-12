@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SDK 초기화" href="ios03_init.html" />
     <link rel="prev" title="Xcode 액세스 문서" href="ios01_xcode.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -162,7 +165,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cocoapods-access-document">
-<span id="cocoapods-access-document"></span><h1>CocoaPods Access Document<a class="headerlink" href="#cocoapods-access-document" title="Permalink to this headline">¶</a></h1>
+<h1>CocoaPods Access Document<a class="headerlink" href="#cocoapods-access-document" title="Permalink to this headline">¶</a></h1>
 <p>CocoaPods을 이용하신다면 아래와 같은 순서로 UPSDK를 가져오기 하시기 바랍니다. <br />
 처음으로 CocoaPods을 이용하여 UPSDK를 연동하시는 분은 먼저, Avidly Repo를 CocoaPods에 추가합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">repo</span> <span class="n">add</span> <span class="n">Avidly</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">guojunliu</span><span class="o">/</span><span class="n">AvidlyAdsSDK</span><span class="o">-</span><span class="n">SpecsRepo</span><span class="o">.</span><span class="n">git</span>
@@ -188,20 +191,20 @@ end
 </pre></div>
 </div>
 <p>완료.</p>
-<div class="section" id="">
-<span id="id1"></span><h2>프로젝트 구성<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>프로젝트 구성<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="info-plist-http">
-<span id="info-plist-http"></span><h3>1 <code class="docutils literal notranslate"><span class="pre">info.plist</span></code>에 아래와 같이 노드를 추가하여 http 프로토콜을 승인합니다.<a class="headerlink" href="#info-plist-http" title="Permalink to this headline">¶</a></h3>
+<h3>1 <code class="docutils literal notranslate"><span class="pre">info.plist</span></code>에 아래와 같이 노드를 추가하여 http 프로토콜을 승인합니다.<a class="headerlink" href="#info-plist-http" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAppTransportSecurity</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">dict</span><span class="o">&gt;</span>
-     <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
-     <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
+	 <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+	 <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
  <span class="o">&lt;/</span><span class="n">dict</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="info-plist">
-<span id="info-plist"></span><h3>2 <code class="docutils literal notranslate"><span class="pre">info.plist</span></code>에 아래와 같이 노드를 추가하여 권한을 승인합니다.<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
+<h3>2 <code class="docutils literal notranslate"><span class="pre">info.plist</span></code>에 아래와 같이 노드를 추가하여 권한을 승인합니다.<a class="headerlink" href="#info-plist" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCalendarsUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">Some</span> <span class="n">ad</span> <span class="n">content</span> <span class="n">may</span> <span class="n">create</span> <span class="n">a</span> <span class="n">calendar</span> <span class="n">event</span><span class="p">.</span> <span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
  <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCameraUsageDescription</span> <span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
@@ -214,14 +217,14 @@ end
 <br></p>
 </div>
 <div class="section" id="bitcode">
-<span id="bitcode"></span><h3>3 Bitcode<a class="headerlink" href="#bitcode" title="Permalink to this headline">¶</a></h3>
+<h3>3 Bitcode<a class="headerlink" href="#bitcode" title="Permalink to this headline">¶</a></h3>
 <p>Youlan 과 Domob SDK는 Bitcode를 지원하지 않습니다. <br />
 하지만 UPLTV에서는 Bitcode도 지원해드리고 있으니 필요하시면 담당자에게 문의하여 추가 지원을 받아보세요.
 <br></p>
 </div>
 </div>
 <div class="section" id="version">
-<span id="version"></span><h2>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
+<h2>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
 <p>SDK 버전을 <code class="docutils literal notranslate"><span class="pre">UPSDKVersion.h</span></code>  파일에서 현재 SDK 버전 번호를 바로 확인 하실 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//sdk version</span>
 <span class="cp">#define UPSDKVERSION  @&quot;3003&quot;</span>
@@ -243,7 +246,7 @@ end
         <a href="ios03_init.html" class="btn btn-neutral float-right" title="SDK 초기화" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios01_xcode.html" class="btn btn-neutral" title="Xcode 액세스 문서" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios01_xcode.html" class="btn btn-neutral float-left" title="Xcode 액세스 문서" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -252,7 +255,7 @@ end
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -269,33 +272,16 @@ end
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

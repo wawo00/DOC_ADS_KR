@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin 배너 광고(Banner Ad)" href="unity05_5_sample_banner.html" />
     <link rel="prev" title="Unity Plugin 광고 로드" href="unity05_3_sample_adload.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -171,9 +174,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin">
-<span id="unity-plugin"></span><h1>Unity Plugin 광고 실행하기<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<h1>Unity Plugin 광고 실행하기<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h2>삽입 광고(Interstitial Ad) 실행하기<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
+<h2>삽입 광고(Interstitial Ad) 실행하기<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showIntersitialAd</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -184,8 +187,8 @@
 추가로 묻습니다. 삽입 광고는 둘 다 참인 경우에만 실행됩니다. <br />
 즉, showIntersitialAd()가 isInterstitialReady()를 호출합니다.</div></blockquote>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>삽입 광고 상태 탐지하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>삽입 광고 상태 탐지하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>일반적으로 showIntersitialAd() 메소드를 호출하여 광고를 디스플레이 할 수 있습니다. <br />
 삽입 광고의 상태에 따라 버튼을 표시 여부를 제어하려는 경우 이 메소드를 사용합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="nb">bool</span> <span class="n">isInterstitialReady</span><span class="p">(</span><span class="n">string</span> <span class="n">cpPlaceId</span><span class="p">)</span>
@@ -209,8 +212,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>리워드 동영상 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>리워드 동영상 광고 실행하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showRewardAd</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpCustomId</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -218,8 +221,8 @@
 <div>매개 변수: cpCustomId는 사용자 정의 식별자를 의미하며, showRewardAd를 호출할 때 <br />
 광고가 준비되었는지도 확인합니다.</div></blockquote>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>리워드 동영상 광고 상태 탐지<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>리워드 동영상 광고 상태 탐지<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>일반적으로 showRewardAd() 메소드를 호출하여 리워드 동영상 광고를 디스플레이 할 수 있습니다. <br />
 이 메소드는 isInterstitialReady()와 유사하며 특정 사항을 충족시키기 위해 제공됩니다.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isRewardReady</span><span class="p">()</span>
@@ -250,7 +253,7 @@
         <a href="unity05_5_sample_banner.html" class="btn btn-neutral float-right" title="Unity Plugin 배너 광고(Banner Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity05_3_sample_adload.html" class="btn btn-neutral" title="Unity Plugin 광고 로드" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity05_3_sample_adload.html" class="btn btn-neutral float-left" title="Unity Plugin 광고 로드" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -259,7 +262,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -276,33 +279,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

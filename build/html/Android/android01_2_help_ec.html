@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="FAQ" href="android01_3_help_faq.html" />
     <link rel="prev" title="Android Studio" href="android01_1_help_as.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -169,17 +172,17 @@
            <div itemprop="articleBody">
             
   <div class="section" id="eclipse">
-<span id="eclipse"></span><h1>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
+<h1>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="i-upsdk">
-<span id="i-upsdk"></span><h2>I. UPSDK 디렉토리 구조<a class="headerlink" href="#i-upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>I. UPSDK 디렉토리 구조<a class="headerlink" href="#i-upsdk" title="Permalink to this headline">¶</a></h2>
 <p>Eclipse 또는 앤트(Ant)를 사용하여 Android 프로젝트를 빌드하면, Android Studio를 사용할 때보다 <br />
 훨씬 복잡해질 수 있습니다. UPSDK Eclipse 버전을 다운로드 하고 압축 해제 한 후의 폴더들은 아래의 그림과 같습니다.</p>
-<p><img alt="" src="http://docc.upltv.com/uploads/201808/5b8756d508084_5b8756d5.png" /></p>
+<p><img alt="http://docc.upltv.com/uploads/201808/5b8756d508084_5b8756d5.png" src="http://docc.upltv.com/uploads/201808/5b8756d508084_5b8756d5.png" /></p>
 <p>UPSDK Eclipse의 메인 패키지는 <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> 폴더에 있습니다. 위의 스크린샷에서 볼 수 있는 <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> 가 <br />
 Eclipse 프로젝트의 메인 패키지이며, 이를 프로젝트에 반드시 추가해야 합니다.</p>
 </div>
 <div class="section" id="upsdk-eclipse">
-<span id="upsdk-eclipse"></span><h2>UPSDK Eclipse의 메인 패키지를 프로젝트로 복사하기<a class="headerlink" href="#upsdk-eclipse" title="Permalink to this headline">¶</a></h2>
+<h2>UPSDK Eclipse의 메인 패키지를 프로젝트로 복사하기<a class="headerlink" href="#upsdk-eclipse" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code>디렉토리에는 <code class="docutils literal notranslate"><span class="pre">libs</span></code>,<code class="docutils literal notranslate"><span class="pre">assets</span></code>그리고<code class="docutils literal notranslate"><span class="pre">res</span></code> 와 다른 몇 개의 파일들로 구성되어 있습니다. <br />
 Eclipse 메인 프로젝트로 디렉토리 내의 모든 파일들을 복사하세요.</p>
 <blockquote>
@@ -189,7 +192,7 @@ Eclipse 메인 프로젝트로 디렉토리 내의 모든 파일들을 복사하
 UPLTV의 기술 팀에 문의하여 문제 해결 및 지원 서비스를 받을 수도 있습니다.</div></blockquote>
 </div>
 <div class="section" id="iii">
-<span id="iii"></span><h2>III. 다른 의존성 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
+<h2>III. 다른 의존성 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
 <p>일부 타사의 SDK는 타사의 오픈소스 라이브러리에 대한 의존을 필요로 하기에 직접 프로젝트에 포함시켜야 합니다. <br />
 이러한 라이브러리 파일들은 다운로드한 폴더 중 <code class="docutils literal notranslate"><span class="pre">xxx_ads</span></code>폴더 형태로 존재하게 됩니다. <br />
 UPSDK는 다른 네트워크와 독립적이면서도 긴밀하게 결합되어 있으므로, 일부 타사를 가져오고 싶지 않은 경우에는, <br />
@@ -200,7 +203,7 @@ UPSDK는 다른 네트워크와 독립적이면서도 긴밀하게 결합되어 
 <p><strong>프로젝트에서 UPSDK가 의존을 필요로 하는 타사 라이브러리를 가져올 경우, 아래의 권장 사항을 따라주시기 바랍니다. <br />
 그렇지 않으면, 필요한 지원이 부족하다는 사유로 시스템에서 충돌이 발생할 수 있습니다.</strong></p>
 <div class="section" id="iv-android">
-<span id="iv-android"></span><h3>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h3>
+<h3>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h3>
 <p>일부 타사에서는 <code class="docutils literal notranslate"><span class="pre">support</span></code>를 필요로 하므로, 이를 프로젝트에 포함시켜야 합니다. <br />
 UPLTV는 <code class="docutils literal notranslate"><span class="pre">android_support_library/libs</span></code> 폴더에 있는 <code class="docutils literal notranslate"><span class="pre">xxx.jar</span></code>를 제공합니다. <br />
 파일들을 <code class="docutils literal notranslate"><span class="pre">libs</span></code> 폴더로 추가하시기 바랍니다.</p>
@@ -208,36 +211,36 @@ UPLTV는 <code class="docutils literal notranslate"><span class="pre">android_su
 게임에서 충돌이 발생할 수 있습니다</strong></p>
 </div>
 <div class="section" id="v-google-sdk">
-<span id="v-google-sdk"></span><h3>V. Google 광고 SDK 추가하기<a class="headerlink" href="#v-google-sdk" title="Permalink to this headline">¶</a></h3>
+<h3>V. Google 광고 SDK 추가하기<a class="headerlink" href="#v-google-sdk" title="Permalink to this headline">¶</a></h3>
 <p>전 세계에 걸쳐 프로젝트를 게시하는 경우, Google 광고 지원을 포함할 것을 권장합니다. <br />
 UPLTV는 <code class="docutils literal notranslate"><span class="pre">admob_xxx/libs</span></code> 디렉토리에 있는 <code class="docutils literal notranslate"><span class="pre">play-services-xxx.jar</span></code> 관련 파일을 제공합니다.</p>
 <p>그리고 AndroidManifest.xml에 아래와 같이 정의가 포함되어 있는지 확인하시기 바랍니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
 &lt;meta-data
-    android:name=&quot;com.google.android.gms.version&quot;
-    android:value=&quot;@integer/google_play_services_version&quot;/&gt;
+	android:name=&quot;com.google.android.gms.version&quot;
+	android:value=&quot;@integer/google_play_services_version&quot;/&gt;
 
 &lt;activity
-    android:name=&quot;com.google.android.gms.ads.AdActivity&quot;
-    android:configChanges=&quot;keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize&quot;
-    android:multiprocess=&quot;true&quot;
-    android:theme=&quot;@android:style/Theme.Translucent&quot;/&gt;
+	android:name=&quot;com.google.android.gms.ads.AdActivity&quot;
+	android:configChanges=&quot;keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize&quot;
+	android:multiprocess=&quot;true&quot;
+	android:theme=&quot;@android:style/Theme.Translucent&quot;/&gt;
 &lt;!-- admob --&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="vi-androidmanifest-xml">
-<span id="vi-androidmanifest-xml"></span><h2>VI. AndroidManifest.xml 파일 수정하기<a class="headerlink" href="#vi-androidmanifest-xml" title="Permalink to this headline">¶</a></h2>
+<h2>VI. AndroidManifest.xml 파일 수정하기<a class="headerlink" href="#vi-androidmanifest-xml" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> 파일의 내용을 프로젝트의 관련 위치에 복사합니다.</p>
 </div>
 <div class="section" id="vii-proguard">
-<span id="vii-proguard"></span><h2>VII. Proguard 설정 수정하기<a class="headerlink" href="#vii-proguard" title="Permalink to this headline">¶</a></h2>
+<h2>VII. Proguard 설정 수정하기<a class="headerlink" href="#vii-proguard" title="Permalink to this headline">¶</a></h2>
 <p>프로젝트에서 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>를 사용하는 경우, <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>의 내용을 프로젝트에서 <br />
 사용하는 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 위치로 복사합니다.</p>
 </div>
 <div class="section" id="viii-demo">
-<span id="viii-demo"></span><h2>VIII.  Demo 프로젝트<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
+<h2>VIII.  Demo 프로젝트<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
 <p>광고 SDK를 더 빠르고 쉽게 결합할 수 있도록 간편한 <a class="reference external" href="https://upsdk-korean.readthedocs.io/ko/master/Android/android08_demo.html">Demo 프로젝트</a>를 제공하고 있습니다.</p>
 </div>
 </div>
@@ -253,7 +256,7 @@ UPLTV는 <code class="docutils literal notranslate"><span class="pre">admob_xxx/
         <a href="android01_3_help_faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_1_help_as.html" class="btn btn-neutral" title="Android Studio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_1_help_as.html" class="btn btn-neutral float-left" title="Android Studio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -262,7 +265,7 @@ UPLTV는 <code class="docutils literal notranslate"><span class="pre">admob_xxx/
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -279,33 +282,16 @@ UPLTV는 <code class="docutils literal notranslate"><span class="pre">admob_xxx/
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

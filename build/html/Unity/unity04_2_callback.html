@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin API" href="unity05_sample_catalog.html" />
     <link rel="prev" title="API 디스크립션" href="unity04_1_api.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -166,11 +169,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="polyadsdk">
-<span id="polyadsdk"></span><h1>PolyADSDK 콜백 인터페이스<a class="headerlink" href="#polyadsdk" title="Permalink to this headline">¶</a></h1>
+<h1>PolyADSDK 콜백 인터페이스<a class="headerlink" href="#polyadsdk" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="reward-video-ad">
-<span id="reward-video-ad"></span><h2>1. 리워드 동영상 광고(Reward Video Ad) 콜백 인터페이스<a class="headerlink" href="#reward-video-ad" title="Permalink to this headline">¶</a></h2>
+<h2>1. 리워드 동영상 광고(Reward Video Ad) 콜백 인터페이스<a class="headerlink" href="#reward-video-ad" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="api">
-<span id="api"></span><h3>API 참조<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<h3>API 참조<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">UPSDKInitFinishedCallback</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
 <span class="cm">/*</span>
@@ -202,32 +205,32 @@
 </div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>콜백 인터페이스 순서<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>콜백 인터페이스 순서<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="uprewarddidopencallback">
-<span id="uprewarddidopencallback"></span><h3>1. UPRewardDidOpenCallback<a class="headerlink" href="#uprewarddidopencallback" title="Permalink to this headline">¶</a></h3>
+<h3>1. UPRewardDidOpenCallback<a class="headerlink" href="#uprewarddidopencallback" title="Permalink to this headline">¶</a></h3>
 <p>리워드 동영상 광고가 디스플레이가 성공되면 호출됩니다.</p>
 </div>
 <div class="section" id="uprewarddidclickcallback">
-<span id="uprewarddidclickcallback"></span><h3>2. UPRewardDidClickCallback<a class="headerlink" href="#uprewarddidclickcallback" title="Permalink to this headline">¶</a></h3>
+<h3>2. UPRewardDidClickCallback<a class="headerlink" href="#uprewarddidclickcallback" title="Permalink to this headline">¶</a></h3>
 <p>리워드 동영상 광고를 클릭할 때만 호출됩니다.</p>
 </div>
 <div class="section" id="uprewarddidgivencallback-uprewarddidabandoncallback">
-<span id="uprewarddidgivencallback-uprewarddidabandoncallback"></span><h3>3. UPRewardDidGivenCallback/UPRewardDidAbandonCallback<a class="headerlink" href="#uprewarddidgivencallback-uprewarddidabandoncallback" title="Permalink to this headline">¶</a></h3>
+<h3>3. UPRewardDidGivenCallback/UPRewardDidAbandonCallback<a class="headerlink" href="#uprewarddidgivencallback-uprewarddidabandoncallback" title="Permalink to this headline">¶</a></h3>
 <p>광고가 실행되고, 보상 발생여부는 아래의 결과에 따라 결정됩니다. 보상이 발생했을 때 UPRewardDidGivenCallback이 <br />
 호출됩니다. 보너스가 발생하지 않는다면, UPRewardDidAbandonCallback 가 호출됩니다.</p>
 </div>
 <div class="section" id="uprewarddidclosecallback">
-<span id="uprewarddidclosecallback"></span><h3>4. UPRewardDidCloseCallback<a class="headerlink" href="#uprewarddidclosecallback" title="Permalink to this headline">¶</a></h3>
+<h3>4. UPRewardDidCloseCallback<a class="headerlink" href="#uprewarddidclosecallback" title="Permalink to this headline">¶</a></h3>
 <p>UPRewardDidCloseCallback은 리워드 동영상 광고가 닫힐 때 호출되며 마지막으로 실행되는 콜백입니다.</p>
 <blockquote>
 <div>요약：<code class="docutils literal notranslate"><span class="pre">RewardDidOpen</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">RewardDidClick(if</span> <span class="pre">have)</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">RewardDidGiven(or</span> <span class="pre">RewardDidAbandon)</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">RewardDidClose</span></code></div></blockquote>
 </div>
 </div>
 <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h2>2. 삽입 광고(Interstitial Ad)에 대한 콜백<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="api">
-<span id="id2"></span><h3>API 참조<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<h2>2. 삽입 광고(Interstitial Ad)에 대한 콜백<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>API 참조<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">* 삽입 광고</span>
 <span class="cm">* 삽입 광고가 실행될 경우 콜백이 호출됩니다.</span>
@@ -247,25 +250,25 @@
 </div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>콜백 인터페이스 순서<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>콜백 인터페이스 순서<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upinterstitialdidshowcallback">
-<span id="upinterstitialdidshowcallback"></span><h3>1. UPInterstitialDidShowCallback<a class="headerlink" href="#upinterstitialdidshowcallback" title="Permalink to this headline">¶</a></h3>
+<h3>1. UPInterstitialDidShowCallback<a class="headerlink" href="#upinterstitialdidshowcallback" title="Permalink to this headline">¶</a></h3>
 <p>삽입 광고의 디스플레이가 성공되면 호출됩니다.</p>
 </div>
 <div class="section" id="upinterstitialdidclickcallback">
-<span id="upinterstitialdidclickcallback"></span><h3>2. UPInterstitialDidClickCallback<a class="headerlink" href="#upinterstitialdidclickcallback" title="Permalink to this headline">¶</a></h3>
+<h3>2. UPInterstitialDidClickCallback<a class="headerlink" href="#upinterstitialdidclickcallback" title="Permalink to this headline">¶</a></h3>
 <p>게임 유저가 광고를 클릭할 때만 호출됩니다.</p>
 </div>
 <div class="section" id="upinterstitialdidclosecallback">
-<span id="upinterstitialdidclosecallback"></span><h3>3. UPInterstitialDidCloseCallback<a class="headerlink" href="#upinterstitialdidclosecallback" title="Permalink to this headline">¶</a></h3>
+<h3>3. UPInterstitialDidCloseCallback<a class="headerlink" href="#upinterstitialdidclosecallback" title="Permalink to this headline">¶</a></h3>
 <p>UPInterstitialDidCloseCallback은 삽입 광고가 닫힐 때 호출되며 마지막으로 실행되는 콜백입니다.</p>
 <blockquote>
 <div>요약：<code class="docutils literal notranslate"><span class="pre">InterstitialDidShow</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">InterstitialDidClick(if</span> <span class="pre">have)</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">InterstitialDidClose</span></code></div></blockquote>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>3. 배너 콜백:<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>3. 배너 콜백:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>UPBannerDidShowCallback은 배너가 처음 실행될 때만 호출되고 UPBannerDidClickCallback은 배너를 클릭할 때마다 <br />
 호출됩니다. UPBannerDidRemoveCallback은 배너 광고를 제거하기 호출됩니다.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -299,7 +302,7 @@
         <a href="unity05_sample_catalog.html" class="btn btn-neutral float-right" title="Unity Plugin API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity04_1_api.html" class="btn btn-neutral" title="API 디스크립션" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity04_1_api.html" class="btn btn-neutral float-left" title="API 디스크립션" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -308,7 +311,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -325,33 +328,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

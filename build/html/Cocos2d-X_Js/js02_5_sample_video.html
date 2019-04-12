@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="GDPR" href="js02_6_sample_gdpr.html" />
     <link rel="prev" title="삽입 광고(Interstitial Ad) API" href="js02_4_sample_inter.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,9 +170,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="rewarded-video-ad">
-<span id="rewarded-video-ad"></span><h1>리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="">
-<span id="id1"></span><h2>1. 리워드 동영상 광고 콜백 로드하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<h1>리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. 리워드 동영상 광고 콜백 로드하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>이 API는 현재 진행 중인 리워드 동영상 광고의 로딩 결과를 수신하는 데 사용됩니다. 이 인터페이스가 호출되면 내부가 <br />
 자동으로 릴리즈되며 광고를 다시 수신할 때, 콜백 인터페이스를 재설정해야 합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//@param loadsuccess 동영상이 //loaded loadsuccess(cpadid, msg) 됐을 때, 콜백을 활성화 합니다.</span>
@@ -191,8 +194,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>2. 리워드 동영상 광고의 실행 콜백<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>2. 리워드 동영상 광고의 실행 콜백<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>리워드 동영상 광고의 이벤트(클릭, 닫기, 보상 등) 콜백을 수신하도록 콜백 인터페이스를 설정합니다. <br />
 리워드 동영상은 콜백 인터페이스에 대한 참조가 내부적으로 저장되고 릴리스되지 않으므로 한 번만 설정하면 됩니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">setRewardVideoShowCallback</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">showCall</span><span class="p">)</span>
@@ -223,8 +226,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>3. 리워드 동영상 광고 준비 여부 확인하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3. 리워드 동영상 광고 준비 여부 확인하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Boolean 결과를 동시에 반환합니다.  True는 광고가 디스플레이 준비가 되었다는 것을 의미하고, False는 광고가 <br />
 실행되지 않고, 여전히 요청상태에 있다는 것을 의미합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">isRewardReady</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
@@ -241,8 +244,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>4. 리워드 동영상 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>4. 리워드 동영상 광고 실행하기<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>리워드 동영상 광고를 실행 할 때, cpPlaceld를 업로드 해야합니다. cpPlaceld는 비즈니스 관리와 같은 <br />
 수익 소스를 구분하기 위한 매개변수입니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// @param cpPlaceId placementid</span>
@@ -262,8 +265,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h2>5. 리워드 동영상 광고의 디버그 페이지<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>5. 리워드 동영상 광고의 디버그 페이지<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>개발자가 광고의 사용 및 로딩 상태를 볼 수 있도록 하기 위해, UPLTV는 스크린 광고에 대한 디버그 페이지를 제공합니다. <br />
 광고의 매개변수 및 로딩 상태 구조를 확인하실 수 있습니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">showRewardDebugUI</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
@@ -292,7 +295,7 @@
         <a href="js02_6_sample_gdpr.html" class="btn btn-neutral float-right" title="GDPR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="js02_4_sample_inter.html" class="btn btn-neutral" title="삽입 광고(Interstitial Ad) API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="js02_4_sample_inter.html" class="btn btn-neutral float-left" title="삽입 광고(Interstitial Ad) API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -301,7 +304,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -318,33 +321,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="A/B 테스트" href="lua02_2_sample_abtest.html" />
     <link rel="prev" title="Lua Plugin 샘플" href="lua02_sample_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,7 +170,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sdk">
-<span id="sdk"></span><h1>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
+<h1>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
 <p>이 부분에서는 Xcode를 사용한 예시만 설명드리고 있습니다. <br />
 다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.</p>
 <p>UPLTV SDK를 통해 간단히 초기화하실 수 있습니다.</p>
@@ -175,8 +178,8 @@
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">upltv</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;src.app.views.UPLTV&quot;</span>
 </pre></div>
 </div>
-<div class="section" id="sdk">
-<span id="id1"></span><h2>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>SDK 초기화<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- parameter zone-- 제품 퍼블리싱 지역, 0: 중국을 제외한 해외, 1: 중국,  2: IP에 의해 자동 설정</span>
 <span class="c1">-- SDK 초기화 이후 콜백 인터페이스를 완료합니다. 콜백 인터페이스는 Boolean 매개변수 콜백(Boolean)을 포함하고 있으며, True는 성공을 의미합니다.</span>
 <span class="n">upltv</span><span class="p">:</span><span class="n">initSDK</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="p">...)</span>
@@ -201,7 +204,7 @@
 </div>
 </div>
 <div class="section" id="setcustomerid">
-<span id="setcustomerid"></span><h2>setCustomerId<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
+<h2>setCustomerId<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
 <p>Android 플랫폼에서만 지원합니다. GP가 아닌 패키지일 경우, 부가적인 통계적 오류를 방지하기 위해 <br />
 androidid로 전달할 수 있습니다.</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 초기화하기 전에 이 메소드를 호출합니다.</span>
@@ -212,17 +215,17 @@ androidid로 전달할 수 있습니다.</p>
 </div>
 </div>
 <div class="section" id="onapplicationfocus">
-<span id="onapplicationfocus"></span><h2>onApplicationFocus() 추가하기<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h2>
+<h2>onApplicationFocus() 추가하기<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h2>
 <p>안드로이드 플랫폼에 대해, 현재 게임의 포그라운드/백그라운드 전환 시, 아래의 두 개의 UPSDK의 인터페이스를 <br />
 호출 해야 합니다. UPSDK가 올바르게 반응하여 불필요한 에러를 피할 수 있습니다.</p>
 <div class="section" id="api">
-<span id="api"></span><h3>게임이 포그라운드로 돌아올 때 API를 호출합니다.<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<h3>게임이 포그라운드로 돌아올 때 API를 호출합니다.<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">onApplicationResume</span><span class="o">();</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="api">
-<span id="id2"></span><h3>게임이 백그라운드로 돌아올 때 API를 호출합니다.<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>게임이 백그라운드로 돌아올 때 API를 호출합니다.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">onApplicationPause</span><span class="o">();</span>
 </pre></div>
 </div>
@@ -257,7 +260,7 @@ Demo 프로젝트 안의 이 클래스는 AppActivity 입니다.</p>
         <a href="lua02_2_sample_abtest.html" class="btn btn-neutral float-right" title="A/B 테스트" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="lua02_sample_catalog.html" class="btn btn-neutral" title="Lua Plugin 샘플" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lua02_sample_catalog.html" class="btn btn-neutral float-left" title="Lua Plugin 샘플" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -266,7 +269,7 @@ Demo 프로젝트 안의 이 클래스는 AppActivity 입니다.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -283,33 +286,16 @@ Demo 프로젝트 안의 이 클래스는 AppActivity 입니다.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Android Eclipse" href="lua01_2_help_ec.html" />
     <link rel="prev" title="Lua Plugin" href="lua01_help_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -163,12 +166,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="android-studio">
-<span id="android-studio"></span><h1>Android Studio<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h1>
+<h1>Android Studio<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="i-upsdk-lua-plugin">
-<span id="i-upsdk-lua-plugin"></span><h2>I. UPSDK Lua Plugin 구조<a class="headerlink" href="#i-upsdk-lua-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>I. UPSDK Lua Plugin 구조<a class="headerlink" href="#i-upsdk-lua-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Android Studio나 Gradle 빌드 프로젝트에 따라 UPSDK는 다른 메인 프로젝트에서 <code class="docutils literal notranslate"><span class="pre">*.aar</span></code>형식으로 가져와야 합니다. UPSDK LuaPlugin(<a class="reference external" href="../chapters/chapter10.html">Android-LuaSDK</a> UPSDK LuaPlugin)를 다운받아 압축해제 하시면 아래의 그림과 같은 디렉토리 구조를 <br />
 보실 수 있습니다.</p>
-<p><img alt="as-1-1" src="http://docc.upltv.com/uploads/201805/5afe99d977ef8_5afe99d9.png" /></p>
+<p><img alt="as-1-1" src="http://docc.upltv.com/uploads/201805/5afe99d977ef8_5afe99d9.png" />as-1-1</p>
 <blockquote>
 <div>UPSDK LuaPlugin 메인 패키지명은<code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Lua_x.x.xx_dex.aar</span></code>입니다.</div></blockquote>
 <ul class="simple">
@@ -181,13 +184,13 @@ apk를 빌드하는 경우 이 디렉토리를 무시하시기 바랍니다.</li
 </ul>
 </div>
 <div class="section" id="ii-upsdk">
-<span id="ii-upsdk"></span><h2>II. UPSDK 메인 패키지 가져오기<a class="headerlink" href="#ii-upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>II. UPSDK 메인 패키지 가져오기<a class="headerlink" href="#ii-upsdk" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h3>1. UPSDK 파일 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<h3>1. UPSDK 파일 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
 <p>상기 설명에 따라 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Lua_x.x.xx_dex..aar</span></code>라는 파일을 다운로드 받은 파일 디렉토리에서 찾아서 프로젝트의 <br />
 <code class="docutils literal notranslate"><span class="pre">libs</span></code> 디렉토리에 추가합니다. (참고: 이 디렉토리가 없는 경우 src와 동일한 디렉토리를 생성합니다.) <br />
 추가한 후의 구성은 아래와 같습니다. <br /></p>
-<p><img alt="as-2-1" src="http://docc.upltv.com/uploads/201805/5afe9acd622e6_5afe9acd.png" /></p>
+<p><img alt="as-2-1" src="http://docc.upltv.com/uploads/201805/5afe9acd622e6_5afe9acd.png" />as-2-1</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Lua_3.0.03_dex</span></code>는 참조용입니다.</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">libs</span></code> 디렉토리의 aar 패키지가 프로젝트에 의해 올바르게 참조되었는지 확인하기위해 <code class="docutils literal notranslate"><span class="pre">app</span></code> 디렉토리의 <br />
@@ -208,7 +211,7 @@ apk를 빌드하는 경우 이 디렉토리를 무시하시기 바랍니다.</li
 </div>
 </div>
 <div class="section" id="build-gradle-minsdkversion-targetsdkversion">
-<span id="build-gradle-minsdkversion-targetsdkversion"></span><h3>2. <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 minSdkVersion 및 targetSdkVersion 확인하기<a class="headerlink" href="#build-gradle-minsdkversion-targetsdkversion" title="Permalink to this headline">¶</a></h3>
+<h3>2. <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 minSdkVersion 및 targetSdkVersion 확인하기<a class="headerlink" href="#build-gradle-minsdkversion-targetsdkversion" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK를 사용하려면 <code class="docutils literal notranslate"><span class="pre">minSdkVersion</span></code>이 15 보다 크고, <code class="docutils literal notranslate"><span class="pre">targetSdkVersion</span></code>이 26 보다 작아야 합니다. <br />
 이는 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>파일에서 확인하시기 바랍니다.</p>
 <p>샘플：</p>
@@ -227,7 +230,7 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 </div>
 </div>
 <div class="section" id="so">
-<span id="so"></span><h3>3. *.so파일이 정렬되었는지 확인<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
+<h3>3. *.so파일이 정렬되었는지 확인<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Lua_x.x.xx_dex.aar</span></code>에는 세 가지 유형의 .so 파일이 있습니다.</p>
 <ul class="simple">
 <li>armeabi</li>
@@ -249,11 +252,11 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 </div>
 </div>
 <div class="section" id="iii">
-<span id="iii"></span><h2>III. 광고 네트워크 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
+<h2>III. 광고 네트워크 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="google-ads-sdk">
-<span id="google-ads-sdk"></span><h3>1. Google Ads SDK 추가하기<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="">
-<span id="id1"></span><h4>1.샘플 코드<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<h3>1. Google Ads SDK 추가하기<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>1.샘플 코드<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 컴파일 명령을 통해 Google의 원격 저장소에서 gms Play-service15.0.1 패키지를 <br />
 다음과 같이 다운로드합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
@@ -265,12 +268,12 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 <div>특히 프로젝트에 이미 다른 버전의 Google Play 서비스가 있는 경우 상위 버전을 사용하시기 바랍니다.</div></blockquote>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h3>2. 기타 광고 네트워크 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>2. 기타 광고 네트워크 추가하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>더 많은 수익을 위해 프로젝트에 가능한 한 많은 광고 라이브러리를 추가합니다. <br />
 다음 방법을 참조하여 <code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio/aar</span></code> 의 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> 파일을 프로젝트에 추가합니다.</p>
-<div class="section" id="">
-<span id="id3"></span><h4>중국을 제외한 전 세계 광고<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id3">
+<h4>중국을 제외한 전 세계 광고<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>build.gradle은 다음과 같습니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="c1">//다른 광고 네트워크 라이브러리</span>
@@ -293,8 +296,8 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h4>중국에서만의 광고<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id4">
+<h4>중국에서만의 광고<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p>build.gradle은 다음과 같습니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="c1">//다른 광고 네트워크 라이브러리</span>
@@ -313,21 +316,21 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h4>전 세계 광고<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id5">
+<h4>전 세계 광고<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p>위의 두 파일을 하나의 파일로 병합하시기 바랍니다.</p>
 </div>
 </div>
 </div>
 <div class="section" id="iv-android">
-<span id="iv-android"></span><h2>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h2>
+<h2>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h2>
 <p>모든 광고 네트워크사들은 <code class="docutils literal notranslate"><span class="pre">android.support.xxx</span></code>가 필요하기에 프로젝트로 가져옵니다. <br />
 프로젝트에서 Android Studio를 사용하는 경우, <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>파일을 수정하여 추가할 수 있습니다.</p>
 <p>UPSDK의 3.0.04 버전부터 Admob 및 기타 광고 네트워크의 업그레이드로 인해, Android 지원 라이브러리의(v4 및 v7를 <br />
 포함하여) 26.1.0 버전을 사용하는 것을 권장합니다. 특별한 경우, Android 지원 라이브러리의 v25.3.1과 같은 <br />
 하위 버전을 사용하실 수도 있습니다.</p>
 <div class="section" id="android">
-<span id="android"></span><h3>1. Android 지원 라이브러리 가져오기<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h3>
+<h3>1. Android 지원 라이브러리 가져오기<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 컴파일 명령을 통해 Google의 원격 저장소에서 지원 라이브러리를 다음과 같이 다운로드합니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="c1">//핵심 라이브러리</span>
@@ -346,17 +349,17 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 </div>
 </div>
 <div class="section" id="v-proguard">
-<span id="v-proguard"></span><h2>Ⅴ. Proguard 설정 수정하기<a class="headerlink" href="#v-proguard" title="Permalink to this headline">¶</a></h2>
+<h2>Ⅴ. Proguard 설정 수정하기<a class="headerlink" href="#v-proguard" title="Permalink to this headline">¶</a></h2>
 <p>만약 프로젝트에서 proguard를 사용하신다면 <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>에서 파일의 내용을 프로젝트에서 <br />
 사용하는 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 위치로 복사합니다.</p>
 </div>
 <div class="section" id="vi-65535">
-<span id="vi-65535"></span><h2>Ⅵ. 65535 제한문제 해결<a class="headerlink" href="#vi-65535" title="Permalink to this headline">¶</a></h2>
+<h2>Ⅵ. 65535 제한문제 해결<a class="headerlink" href="#vi-65535" title="Permalink to this headline">¶</a></h2>
 <p>UPSDK 액세스의 메소드 수가 65535를 초과하여 빌드할 수 없는 경우 <code class="docutils literal notranslate"><span class="pre">MultiDex</span></code>를 사용합니다. 자세한 내용은 <br />
 <a class="reference external" href="../Android/android02_65535.html">MultiDex Scheme</a>을 참조하시기 바랍니다.</p>
 </div>
 <div class="section" id="vii-demo">
-<span id="vii-demo"></span><h2>Ⅶ. Demo 프로젝트<a class="headerlink" href="#vii-demo" title="Permalink to this headline">¶</a></h2>
+<h2>Ⅶ. Demo 프로젝트<a class="headerlink" href="#vii-demo" title="Permalink to this headline">¶</a></h2>
 <p>광고 SDK를 쉽고 빠르게 결합할 수 있도록 <a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Studio">Demo 프로젝트</a>를 제공합니다.</p>
 </div>
 </div>
@@ -372,7 +375,7 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
         <a href="lua01_2_help_ec.html" class="btn btn-neutral float-right" title="Android Eclipse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="lua01_help_catalog.html" class="btn btn-neutral" title="Lua Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lua01_help_catalog.html" class="btn btn-neutral float-left" title="Lua Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -381,7 +384,7 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -398,33 +401,16 @@ gradle.properties에서 실행하므로 이 두 개의 값만 수정하면 됩�
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

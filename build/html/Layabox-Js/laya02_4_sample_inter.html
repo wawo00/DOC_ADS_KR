@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="리워드 동영상 광고(Rewarded Video Ad)" href="laya02_5_sample_video.html" />
     <link rel="prev" title="배너 광고(Banner Ad)" href="laya02_3_sample_banner.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,9 +171,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="interstitial-ad-api">
-<span id="interstitial-ad-api"></span><h1>삽입 광고(Interstitial Ad) API<a class="headerlink" href="#interstitial-ad-api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="">
-<span id="id1"></span><h2>1. 삽입 광고 로드 콜백 설정하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<h1>삽입 광고(Interstitial Ad) API<a class="headerlink" href="#interstitial-ad-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. 삽입 광고 로드 콜백 설정하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>현재 삽입 광고를 수신하기 위해 성공 또는 실패 결과를 로드합니다. 이 인터페이스는 콜백이 발생하면 자동으로 <br />
 릴리즈되며 광고를 다시 수신할 때, 콜백 인터페이스를 재설정해야 합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// @param cpPlaceId   placement ID</span>
@@ -196,8 +199,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>2. 삽입 광고 실행 콜백 설정하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>2. 삽입 광고 실행 콜백 설정하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>콜백의 실행을 수신할 수 있는 삽입 광고의 디스플레이를 위해 콜백 인터페이스를 설정합니다. <br />
 삽입 광고는 콜백 인터페이스에 대한 참조가 저장되고 릴리즈되지 않음을 나타냅니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
@@ -230,8 +233,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>3. 삽입 광고 준비 여부 확인하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3. 삽입 광고 준비 여부 확인하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>삽입 광고의 준비 여부는 매개변수 placementid에 의해 판단되고, Boolean 결과를 동시에 반환합니다. True는 광고가 <br />
 디스플레이 준비가 되었다는 것을 의미하고, False는 광고가 실행되지 않고, 여전히 요청상태에 있다는 것을 의미합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// @param cpPlaceId  cpPlaceId</span>
@@ -250,8 +253,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>4. 삽입 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>4. 삽입 광고 실행하기<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에 따른 삽입 광고가 실행됩니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// @param cpPlaceId placementid</span>
 <span class="nx">showInterstitialAd</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cpPlaceId</span><span class="p">)</span>
@@ -270,8 +273,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h2>5. 삽입 광고의 디버그 페이지<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>5. 삽입 광고의 디버그 페이지<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>개발자가 광고의 사용 및 로딩 상태를 볼 수 있도록 하기 위해, UPLTV는 스크린 광고에 대한 디버그 페이지를 제공합니다. <br />
 광고의 매개변수 및 로딩 상태 구조를 확인하실 수 있습니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">showInterstitialDebugUI</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
@@ -300,7 +303,7 @@
         <a href="laya02_5_sample_video.html" class="btn btn-neutral float-right" title="리워드 동영상 광고(Rewarded Video Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="laya02_3_sample_banner.html" class="btn btn-neutral" title="배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="laya02_3_sample_banner.html" class="btn btn-neutral float-left" title="배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -309,7 +312,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -326,33 +329,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

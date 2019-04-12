@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="GDPR" href="unity05_6_sample_gdpr.html" />
     <link rel="prev" title="Unity Plugin 광고 실행하기" href="unity05_4_sample_adshow.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -171,9 +174,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin-banner-ad">
-<span id="unity-plugin-banner-ad"></span><h1>Unity Plugin 배너 광고(Banner Ad)<a class="headerlink" href="#unity-plugin-banner-ad" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="">
-<span id="id1"></span><h2>1. 배너 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<h1>Unity Plugin 배너 광고(Banner Ad)<a class="headerlink" href="#unity-plugin-banner-ad" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. 배너 광고 실행하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">* 화면 상단에 배너 광고가 실행됩니다.</span>
 <span class="cm">* cpPlaceId는 광고 위치 식별자이니 값이 정확한지 확인합니다.</span>
@@ -209,8 +212,8 @@
 <div>배너 광고는 상태를 확인할 필요가 없으며 적절한 시간에 호출하면 SDK가 자동으로 로드되고, <br />
 로드 성공 후 자동으로 광고를 실행합니다.</div></blockquote>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>2. 배너 광고 숨기기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>2. 배너 광고 숨기기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// 상단의 배너 광고를 숨깁니다.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">hideBannerAdAtTop</span><span class="p">();</span>
 
@@ -222,8 +225,8 @@
 <div>재로딩을 하지 않고도, showBannerAdAtTop() 또는 showBannerAdAtBottom()을 사용하여 배너 광고를 다시 <br />
 실행 시킬 수 있습니다.</div></blockquote>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>3. 배너 광고 제거하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3. 배너 광고 제거하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// 특정 광고 위치의 배너 광고를 제거합니다. 다시 디스플레이 될 경우 다시 로드 합니다.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">removeBannerAdAt</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 </pre></div>
@@ -237,8 +240,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>4. 상단 배너 위치 조정하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>4. 상단 배너 위치 조정하기<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// 아이폰X용</span>
 <span class="k">void</span> <span class="nf">setTopBannerForIphonex</span><span class="p">(</span><span class="kt">int</span> <span class="n">padding</span><span class="p">);</span>
 <span class="c1">// 화웨이 P20용</span>
@@ -264,7 +267,7 @@
         <a href="unity05_6_sample_gdpr.html" class="btn btn-neutral float-right" title="GDPR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity05_4_sample_adshow.html" class="btn btn-neutral" title="Unity Plugin 광고 실행하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity05_4_sample_adshow.html" class="btn btn-neutral float-left" title="Unity Plugin 광고 실행하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -273,7 +276,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -290,33 +293,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

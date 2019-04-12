@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="PolyADSDK 콜백 인터페이스" href="unity04_2_callback.html" />
     <link rel="prev" title="Unity Plugin API 소개" href="unity04_api_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -166,44 +169,44 @@
            <div itemprop="articleBody">
             
   <div class="section" id="api">
-<span id="api"></span><h1>API 디스크립션<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<h1>API 디스크립션<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="upsdk-unity-plugin">
-<span id="upsdk-unity-plugin"></span><h2>UPSDK Unity Plugin 사용<a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>UPSDK Unity Plugin 사용<a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Polymer.PolyADSDK</span> <span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
 <div>API와 콜백 인터페이스(액션)는 정적 메소드로 정의되어 다른 모델에 바로 액세스 될 수 있습니다.</div></blockquote>
 </div>
-<div class="section" id="api">
-<span id="id1"></span><h2>API 참조<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>        <span class="cm">/*</span>
-<span class="cm">        * Plugin 버전 번호를 가져옵니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">getVersionOfPlugin</span><span class="p">();</span>
+<div class="section" id="id1">
+<h2>API 참조<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>		<span class="cm">/*</span>
+<span class="cm">		* Plugin 버전 번호를 가져옵니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">getVersionOfPlugin</span><span class="p">();</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 현재 Plugin에 대해 지원되는 플랫폼의 버전 번호를 가져옵니다.</span>
-<span class="cm">         현재 지원되는 iOS 및  Android 버전을 가져옵니다. 런타임 시 유저 지정 환경에 따라 자동으로 매칭합니다.</span>
-<span class="cm">        public static string getVersionOfPlatform();</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">getVersionOfPlatform</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 현재 Plugin에 대해 지원되는 플랫폼의 버전 번호를 가져옵니다.</span>
+<span class="cm">		 현재 지원되는 iOS 및  Android 버전을 가져옵니다. 런타임 시 유저 지정 환경에 따라 자동으로 매칭합니다.</span>
+<span class="cm">		public static string getVersionOfPlatform();</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">getVersionOfPlatform</span><span class="p">();</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * SDK 초기화</span>
-<span class="cm">        * 2030보다 하위 버전일 경우, 이 메소드로 초기화합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">initPolyAdSDK</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		* SDK 초기화</span>
+<span class="cm">		* 2030보다 하위 버전일 경우, 이 메소드로 초기화합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">initPolyAdSDK</span><span class="p">();</span>
 
-         <span class="cm">/*</span>
-<span class="cm">        * UPSDK를 초기화합니다.</span>
-<span class="cm">        * @param zone:0, 중국을 제외한 해외；1, 중국；2, IP에 의해 자동 설정</span>
-<span class="cm">        * 2030보다 하위 버전일 경우, 이 메소드로 초기화합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">initPolyAdSDK</span><span class="p">(</span><span class="kt">int</span> <span class="n">zone</span><span class="p">);</span>
+		 <span class="cm">/*</span>
+<span class="cm">		* UPSDK를 초기화합니다.</span>
+<span class="cm">		* @param zone:0, 중국을 제외한 해외；1, 중국；2, IP에 의해 자동 설정</span>
+<span class="cm">		* 2030보다 하위 버전일 경우, 이 메소드로 초기화합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">initPolyAdSDK</span><span class="p">(</span><span class="kt">int</span> <span class="n">zone</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * UPSDK 광고를 위한 A/B테스트 구성을 초기화합니다.</span>
+		<span class="cm">/*</span>
+<span class="cm">		* UPSDK 광고를 위한 A/B테스트 구성을 초기화합니다.</span>
 <span class="cm">        * @param gameAccountId        게임 유저의 id (필수사항)</span>
 <span class="cm">        * @param completeTask         게임에서 튜토리얼 완수 여부</span>
 <span class="cm">        * @param isPaid               결제유저 판단, 0이면 비결제 유저</span>
@@ -211,115 +214,115 @@
 <span class="cm">        * @param gender               &quot;M&quot;, &quot;F&quot;</span>
 <span class="cm">        * @param age                  -1은 unknown</span>
 <span class="cm">        * @param tags                 </span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">initAbtConfigJson</span><span class="p">(</span><span class="kt">string</span> <span class="n">gameAccountId</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">completeTask</span><span class="p">,</span> <span class="kt">int</span> <span class="n">isPaid</span><span class="p">,</span> <span class="kt">string</span> <span class="n">promotionChannelName</span><span class="p">,</span>  <span class="kt">string</span> <span class="n">gender</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">tags</span><span class="p">)</span> <span class="p">;</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">initAbtConfigJson</span><span class="p">(</span><span class="kt">string</span> <span class="n">gameAccountId</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">completeTask</span><span class="p">,</span> <span class="kt">int</span> <span class="n">isPaid</span><span class="p">,</span> <span class="kt">string</span> <span class="n">promotionChannelName</span><span class="p">,</span>  <span class="kt">string</span> <span class="n">gender</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">tags</span><span class="p">)</span> <span class="p">;</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * UPSDK 광고의 A/B테스트 구성을 가져옵니다.</span>
-<span class="cm">        * Json 문자열 형식(character string)는 리턴된 결과인데 아마 null 일겁니다.</span>
-<span class="cm">        * API 호출하기 전, initAbtConfigJson() 을 호출해서 A/B테스트 구성 초기화 완성합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">getAbtConfig</span><span class="p">(</span><span class="kt">string</span> <span class="n">placementId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* UPSDK 광고의 A/B테스트 구성을 가져옵니다.</span>
+<span class="cm">		* Json 문자열 형식(character string)는 리턴된 결과인데 아마 null 일겁니다.</span>
+<span class="cm">		* API 호출하기 전, initAbtConfigJson() 을 호출해서 A/B테스트 구성 초기화 완성합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">getAbtConfig</span><span class="p">(</span><span class="kt">string</span> <span class="n">placementId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * 삽입 광고가 준비되었는지 확인합니다.</span>
-<span class="cm">         */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isInterstitialReady</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 삽입 광고가 준비되었는지 확인합니다.</span>
+<span class="cm">		 */</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isInterstitialReady</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 리워드 동영상 광고가 준비되었는지 확인합니다.</span>
-<span class="cm">        * UI 버튼 상태를 업데이트 할 때와 같은 상황에서 이 메소드를 지속적으로 호출하지 않고, setRewardVideoLoadCallback()를 콜백하여 수신합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isRewardReady</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 리워드 동영상 광고가 준비되었는지 확인합니다.</span>
+<span class="cm">		* UI 버튼 상태를 업데이트 할 때와 같은 상황에서 이 메소드를 지속적으로 호출하지 않고, setRewardVideoLoadCallback()를 콜백하여 수신합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">isRewardReady</span><span class="p">();</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 리워드 동영상 광고를 실행합니다. cpCustomId는 사용자 지정 표시이며, 필수 입력 사항입니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showRewardAd</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpCustomId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 리워드 동영상 광고를 실행합니다. cpCustomId는 사용자 지정 표시이며, 필수 입력 사항입니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showRewardAd</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpCustomId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 삽입 광고를 실행합니다.</span>
-<span class="cm">        * cpPlaceId는 사용자 지정 표시이며 올바르게 입력 되었는지 확인합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showInterstitialAd</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 삽입 광고를 실행합니다.</span>
+<span class="cm">		* cpPlaceId는 사용자 지정 표시이며 올바르게 입력 되었는지 확인합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showInterstitialAd</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 스크린 상단에 배너 광고를 실행합니다.</span>
-<span class="cm">        * cpPlaceId는 사용자 지정 표시이며 올바르게 입력 되었는지 확인합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showBannerAdAtTop</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 스크린 상단에 배너 광고를 실행합니다.</span>
+<span class="cm">		* cpPlaceId는 사용자 지정 표시이며 올바르게 입력 되었는지 확인합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showBannerAdAtTop</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 스크린 하단에 배너 광고를 실행합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showBannerAdAtBottom</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 스크린 하단에 배너 광고를 실행합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showBannerAdAtBottom</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * 현재 상단 배너 광고를 숨깁니다.</span>
-<span class="cm">         * 광고 위치를 구분할 필요가 없습니다.</span>
-<span class="cm">         * 재실행 시, showBannerAdAtTop()를 호출해야 합니다.</span>
-<span class="cm">         */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">hideBannerAdAtTop</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 현재 상단 배너 광고를 숨깁니다.</span>
+<span class="cm">		 * 광고 위치를 구분할 필요가 없습니다.</span>
+<span class="cm">		 * 재실행 시, showBannerAdAtTop()를 호출해야 합니다.</span>
+<span class="cm">		 */</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">hideBannerAdAtTop</span><span class="p">();</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * 현재 하단 배너 광고를 숨깁니다.</span>
-<span class="cm">         * 광고 위치를 구분할 필요가 없습니다.</span>
-<span class="cm">         * 재실행 시, showBannerAdAtTop()를 호출해야 합니다.</span>
-<span class="cm">         * 2037 버전부터 지원하고 있습니다.</span>
-<span class="cm">         */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">hideBannerAdAtBottom</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 현재 하단 배너 광고를 숨깁니다.</span>
+<span class="cm">		 * 광고 위치를 구분할 필요가 없습니다.</span>
+<span class="cm">		 * 재실행 시, showBannerAdAtTop()를 호출해야 합니다.</span>
+<span class="cm">		 * 2037 버전부터 지원하고 있습니다.</span>
+<span class="cm">		 */</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">hideBannerAdAtBottom</span><span class="p">();</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 배너 광고 삭제하기</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">removeBannerAdAt</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 배너 광고 삭제하기</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">removeBannerAdAt</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * Android 플랫폼의 manifest.xml 에서 정의한 packagename을 설정합니다.</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">setManifestPackageName</span><span class="p">(</span><span class="kt">string</span> <span class="n">packagename</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		* Android 플랫폼의 manifest.xml 에서 정의한 packagename을 설정합니다.</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">setManifestPackageName</span><span class="p">(</span><span class="kt">string</span> <span class="n">packagename</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">        * 광고 닫기 보여주기 (Android 플랫폼 에서만 가능)</span>
-<span class="cm">        */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">onBackPressed</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		* 광고 닫기 보여주기 (Android 플랫폼 에서만 가능)</span>
+<span class="cm">		*/</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">onBackPressed</span><span class="p">();</span>
 
 
-        <span class="cm">/*</span>
-<span class="cm">         * 리워드 동영상 광고 로딩을 위한 콜백 API를 추가합니다.</span>
-<span class="cm">         * @param success  로딩 성공의 콜백</span>
-<span class="cm">         * @param fail     로딩 실패의 콜백</span>
-<span class="cm">         *</span>
-<span class="cm">         * 콜백 매개변수의 유형: Action &lt;string,string&gt;</span>
-<span class="cm">         * T첫 번째는 cpPlaceID이며 광고의 placementid를 나타내며, 공백 혹은 null 입니다. 두 번째 매개변수는 정보 전달 기능이며, 공백 혹은 null 입니다.</span>
-<span class="cm">         * 2028 버전부터 지원하고 있습니다.</span>
-<span class="cm">         */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">setRewardVideoLoadCallback</span><span class="p">(</span><span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">success</span><span class="p">,</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">fail</span><span class="p">);</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 리워드 동영상 광고 로딩을 위한 콜백 API를 추가합니다.</span>
+<span class="cm">		 * @param success  로딩 성공의 콜백</span>
+<span class="cm">		 * @param fail     로딩 실패의 콜백</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * 콜백 매개변수의 유형: Action &lt;string,string&gt;</span>
+<span class="cm">		 * T첫 번째는 cpPlaceID이며 광고의 placementid를 나타내며, 공백 혹은 null 입니다. 두 번째 매개변수는 정보 전달 기능이며, 공백 혹은 null 입니다.</span>
+<span class="cm">		 * 2028 버전부터 지원하고 있습니다.</span>
+<span class="cm">		 */</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">setRewardVideoLoadCallback</span><span class="p">(</span><span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">success</span><span class="p">,</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">fail</span><span class="p">);</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * 삽입 광고 로딩을 위한 콜백 API를 추가합니다.</span>
-<span class="cm">         * @param cpPlaceId:  삽입 광고의 표시이며, 공백 혹은 null이 되면 안됩니다.</span>
-<span class="cm">         * @param success  로딩 성공의 콜백</span>
-<span class="cm">         * @param fail t   로딩 실패의 콜백</span>
-<span class="cm">         *</span>
-<span class="cm">         * 콜백 매개변수의 유형: Action &lt;string,string&gt;</span>
-<span class="cm">         * 첫 번째는 cpPlaceID이며 광고의 placementid를 나타내며, 공백 혹은 null 입니다. 두 번째 매개변수는 정보 전달 기능이며, 공백 혹은 null 입니다.</span>
-<span class="cm">         * 2028 버전부터 지원하고 있습니다.</span>
-<span class="cm">         */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">setIntersitialLoadCallback</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">,</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">success</span><span class="p">,</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">fail</span><span class="p">)</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 삽입 광고 로딩을 위한 콜백 API를 추가합니다.</span>
+<span class="cm">		 * @param cpPlaceId:  삽입 광고의 표시이며, 공백 혹은 null이 되면 안됩니다.</span>
+<span class="cm">		 * @param success  로딩 성공의 콜백</span>
+<span class="cm">		 * @param fail t   로딩 실패의 콜백</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * 콜백 매개변수의 유형: Action &lt;string,string&gt;</span>
+<span class="cm">		 * 첫 번째는 cpPlaceID이며 광고의 placementid를 나타내며, 공백 혹은 null 입니다. 두 번째 매개변수는 정보 전달 기능이며, 공백 혹은 null 입니다.</span>
+<span class="cm">		 * 2028 버전부터 지원하고 있습니다.</span>
+<span class="cm">		 */</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">setIntersitialLoadCallback</span><span class="p">(</span><span class="kt">string</span> <span class="n">cpPlaceId</span><span class="p">,</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">success</span><span class="p">,</span> <span class="n">Action</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">fail</span><span class="p">)</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * 리워드 동영상 디버그 정보를 보여주는데 사용됩니다.</span>
-<span class="cm">         * 2028 버전부터 지원하고 있습니다.</span>
-<span class="cm">         */</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 리워드 동영상 디버그 정보를 보여주는데 사용됩니다.</span>
+<span class="cm">		 * 2028 버전부터 지원하고 있습니다.</span>
+<span class="cm">		 */</span>
 
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showRewardDebugView</span><span class="p">();</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showRewardDebugView</span><span class="p">();</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * 삽입 광고 디버그 정보를 보여주는데 사용됩니다.</span>
-<span class="cm">         * 2028 버전부터 지원하고 있습니다.</span>
-<span class="cm">         */</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showInterstitialDebugView</span><span class="p">();</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * 삽입 광고 디버그 정보를 보여주는데 사용됩니다.</span>
+<span class="cm">		 * 2028 버전부터 지원하고 있습니다.</span>
+<span class="cm">		 */</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">showInterstitialDebugView</span><span class="p">();</span>
 
 
          <span class="cm">/**</span>
@@ -373,14 +376,14 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>상세 설명<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id3"></span><h3>1. 배너 광고만 적용<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h2>상세 설명<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1. 배너 광고만 적용<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Unity Plugin을 사용하여, <strong>배너 광고만 적용하는 경우</strong>, 광고 위치는 현재 인터페이스의 <strong>상단 혹은 하단</strong>에 있습니다.</p>
 </div>
 <div class="section" id="manifest-string-packagename">
-<span id="manifest-string-packagename"></span><h3>2. <strong>Manifest</strong> 패키지 이름 설정(string packagename)<a class="headerlink" href="#manifest-string-packagename" title="Permalink to this headline">¶</a></h3>
+<h3>2. <strong>Manifest</strong> 패키지 이름 설정(string packagename)<a class="headerlink" href="#manifest-string-packagename" title="Permalink to this headline">¶</a></h3>
 <p>이 API는 Android에서만 작동합니다. AndroidManifest에서 애플리케이션의 패키지 이름이 패키징 후 <br />
 실제 이름과 다를 경우, 이 API를 사용하여 <strong>AndroidManifest</strong>에 해당 <strong>패키지 이름</strong>을 설정합니다.</p>
 </div>
@@ -398,7 +401,7 @@
         <a href="unity04_2_callback.html" class="btn btn-neutral float-right" title="PolyADSDK 콜백 인터페이스" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity04_api_catalog.html" class="btn btn-neutral" title="Unity Plugin API 소개" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity04_api_catalog.html" class="btn btn-neutral float-left" title="Unity Plugin API 소개" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -407,7 +410,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -424,33 +427,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

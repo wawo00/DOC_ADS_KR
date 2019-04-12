@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="삽입 광고(Interstitial Ad)" href="ios05_inter.html" />
     <link rel="prev" title="빠른 배너 광고(Banner Ad)" href="ios04_1_banner_quick.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,28 +171,27 @@
            <div itemprop="articleBody">
             
   <div class="section" id="banner-ad">
-<span id="banner-ad"></span><h1>맞춤형 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
+<h1>맞춤형 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
 <p>UPSDK는 <code class="docutils literal notranslate"><span class="pre">UPBannerStripWrapper</span></code>의 가로형 배너와 <code class="docutils literal notranslate"><span class="pre">UPBannerRectangleWrapper</span></code>의 사각형 배너 두 가지 스타일의 <br />
 배너 광고를 제공하고 있습니다. 원하시는 광고 스타일에 따라 Wrapper 유형을 설정하시기 바랍니다.</p>
 <div class="section" id="h">
-<span id="h"></span><h2>배너 *.h 파일 불러오기<a class="headerlink" href="#h" title="Permalink to this headline">¶</a></h2>
+<h2>배너 *.h 파일 불러오기<a class="headerlink" href="#h" title="Permalink to this headline">¶</a></h2>
 <p>배너에 두 개의 헤더파일(<code class="docutils literal notranslate"><span class="pre">UPBannerStripWrapper.h</span></code>와 <code class="docutils literal notranslate"><span class="pre">UPBannerRectangleWrapper.h</span></code>)이 있습니다.</p>
 <p>헤더 파일을 아래와 같이 설정합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import    &lt;UPSDK/UPSDK.h&gt;</span>
 </pre></div>
 </div>
-<p><br></p>
-</div>
+<br></div>
 <div class="section" id="wrapper">
-<span id="wrapper"></span><h2>Wrapper 객체 설정<a class="headerlink" href="#wrapper" title="Permalink to this headline">¶</a></h2>
+<h2>Wrapper 객체 설정<a class="headerlink" href="#wrapper" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code> 를 의미 있는 이름으로 설정할 수 있습니다. 정확한 판단이 어렵다면, <br />
 UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 각 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에서 발생한 수익을 <br />
 제공하고 있으므로, 광고 노출 위치마다 다른 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>를 사용해야 합니다. <br />
 가령, 게임의 정지 화면에서 UPSDK의 초기화 설정할 때는 &quot;정지&quot; 또는 &quot;메뉴&quot;를 사용할 수 있습니다.</div></blockquote>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>설정 방법<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>설정 방법<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>아래와 같은 방법을 통해 배너의 디스플레이 포지션을 자유롭게 컨트롤 하실 수 있습니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* 1. avidPlacement 매개변수, Placement ID, 유형은 NSString이며 광고 유형 표시에 사용되므로 공백으로 남겨두면 안됩니다.</span>
@@ -201,25 +203,24 @@ UPLTV의 기술 지원팀 담당자와 상의하시기 바랍니다. UPLTV 는 �
 <p>샘플:</p>
 <p>ViewController.m,에서 사각형 배너를 초기화하고, 콜백 프록시를 설정합니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
-    <span class="c1">// …</span>
-    <span class="c1">// wrapper 초기화</span>
+	<span class="c1">// …</span>
+	<span class="c1">// wrapper 초기화</span>
     <span class="n">_bottomRectBanner</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UPBannerRectangleWrapper</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithPlacement</span><span class="p">:</span><span class="s">@&quot;banner_rect_bottom” controller:self];</span>
-    <span class="c1">// 콜백 설정</span>
+	<span class="c1">// 콜백 설정</span>
     <span class="n">_bottomRectBanner</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
-    <span class="c1">// 배너 광고 디스플레이하는 UIView 초기화, size는 unknown</span>
+	<span class="c1">// 배너 광고 디스플레이하는 UIView 초기화, size는 unknown</span>
     <span class="n">_bannerRectView</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)];</span>
     <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">addSubview</span><span class="p">:</span><span class="n">_bannerRectView</span><span class="p">];</span>
     <span class="c1">// 광고 객체 UIView 획득 및 로드하기</span>
     <span class="bp">UIView</span> <span class="o">*</span><span class="n">view</span> <span class="o">=</span> <span class="p">[</span><span class="n">_bottomRectBanner</span> <span class="n">getView</span><span class="p">];</span>
     <span class="p">[</span><span class="n">_bannerRectView</span> <span class="nl">addSubview</span><span class="p">:</span><span class="n">view</span><span class="p">];</span>
-    <span class="c1">// …</span>
+	<span class="c1">// …</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><br></p>
-</div>
-<div class="section" id="">
-<span id="id2"></span><h2>배너 광고 콜백<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<br></div>
+<div class="section" id="id2">
+<h2>배너 광고 콜백<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>UPBannerWrapperProtocol 는 아래 두개의 인터페이스를 포함하는 배너의 콜백입니다.</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">bannerAdClick:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">wrapper</span><span class="p">;</span>
 
@@ -264,14 +265,12 @@ wrapper로부터 인터페이스로 메시지가 전송됩니다. 파라미터(p
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><br></p>
-</div>
+<br></div>
 <div class="section" id="recycle-memory">
-<span id="recycle-memory"></span><h2>메모리 리사이클(Recycle memory)<a class="headerlink" href="#recycle-memory" title="Permalink to this headline">¶</a></h2>
+<h2>메모리 리사이클(Recycle memory)<a class="headerlink" href="#recycle-memory" title="Permalink to this headline">¶</a></h2>
 <p>배너를 볼 수 있는 ViewController가 손상(인터페이스에서 제거되거나, nav(NavigitionController)에서 팝업, <br />
 메모리가 리사이클 되는 등)되더라도 리사이클 할 수 있도록 베너를 nil로 설정하시기 바랍니다.</p>
-<p><br></p>
-</div>
+<br></div>
 </div>
 
 
@@ -285,7 +284,7 @@ wrapper로부터 인터페이스로 메시지가 전송됩니다. 파라미터(p
         <a href="ios05_inter.html" class="btn btn-neutral float-right" title="삽입 광고(Interstitial Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios04_1_banner_quick.html" class="btn btn-neutral" title="빠른 배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios04_1_banner_quick.html" class="btn btn-neutral float-left" title="빠른 배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -294,7 +293,7 @@ wrapper로부터 인터페이스로 메시지가 전송됩니다. 파라미터(p
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -311,33 +310,16 @@ wrapper로부터 인터페이스로 메시지가 전송됩니다. 파라미터(p
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

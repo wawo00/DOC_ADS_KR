@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Demo 다운로드" href="js02_7_sample_demo.html" />
     <link rel="prev" title="리워드 동영상 광고(Rewarded Video Ad)" href="js02_5_sample_video.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,15 +170,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="gdpr">
-<span id="gdpr"></span><h1>GDPR<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h1>
+<h1>GDPR<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">GDPR(The</span> <span class="pre">General</span> <span class="pre">Data</span> <span class="pre">Protection</span> <span class="pre">Regulation)</span></code>은 2018년 5월 25일부터 시행된 EU(유럽연합)의 개인정보보호 법령이며, <br />
 <code class="docutils literal notranslate"><span class="pre">UPSDK</span></code>는 아래와 같은 솔루션을 제공함으로써 GDPR을 준수하고 있습니다. EU 지역에서 서비스 하실 때에 안심하고 <br />
 사용하실 수 있습니다.</p>
 <p>GDPR을 따른 UPSDK 버전은 <code class="docutils literal notranslate"><span class="pre">3.0.03</span></code>부터 적용되어 있습니다.</p>
-<div class="section" id="gdpr">
-<span id="id1"></span><h2>GDPR 두 가지 권장 사용 방법<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id2"></span><h3>첫 번째 방법<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h2>GDPR 두 가지 권장 사용 방법<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>첫 번째 방법<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>서비스를 최상의 상태로 구현하기 위해, 각 사의 게임 화면의 스타일에 따라 GDPR 권한 허가 창을 설정합니다. <br />
 맞춤형 구현을 하셨다면, GDPR 권한 허가 결과를 UPSDK에 알려주시고 초기화를 진행합니다.</p>
 <p>샘플：</p>
@@ -224,8 +227,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h3>두 번째 방법<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>두 번째 방법<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK에서 제공하는 표준 승인 메커니즘을 사용하신다면 아래와 같은 코드를 사용합니다.</p>
 <p>샘플:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">notifyAccessPrivacyInfoStatusCallBack</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
@@ -261,9 +264,9 @@
 </div>
 </div>
 <div class="section" id="gdpr-api">
-<span id="gdpr-api"></span><h2>GDPR API<a class="headerlink" href="#gdpr-api" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="gdpr">
-<span id="id4"></span><h3>1. 개발자가 스스로 GDPR 권한 요청 가능한 상황<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<h2>GDPR API<a class="headerlink" href="#gdpr-api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>1. 개발자가 스스로 GDPR 권한 요청 가능한 상황<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>권한 승인 창이 팝업되어 유저에게 데이터 수집 권한을 요청합니다. <br />
 유저가 권한을 거부하면 관련 데이터 수집이 취소됩니다. UPSDK를 초기화하기 전에 호출합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="nx">notifyAccessPrivacyInfoStatus</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span>
@@ -284,8 +287,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h3>2. 개발자가 스스로 게임유저에게 개인정보 사용에 관한 권한 요청을 할 수 없는 상황<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>2. 개발자가 스스로 게임유저에게 개인정보 사용에 관한 권한 요청을 할 수 없는 상황<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>외부에서 GDPR 승인을 요청할 때, 이 메소드는 UPSDK에게 승인 결과를 알려주기 위해 호출됩니다. <br />
 그리고 UPSDK는 더 이상 권한 승인 요청 팝업을 하지 않습니다. UPSDK 초기화하기 전에 호출합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">updateAccessPrivacyInfoStatus</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">gdprPermissionEnumValue</span><span class="p">)</span>
@@ -303,8 +306,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="gdpr">
-<span id="id6"></span><h3>3. GDPR 승인 여부 확인하기<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>3. GDPR 승인 여부 확인하기<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>게임 유저의 권한 승인 결과를 얻기 위해 UPSDK를 초기화하기 전에 호출합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="nx">getAccessPrivacyInfoStatus</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
 </pre></div>
@@ -314,8 +317,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id7"></span><h3>4. 게임 유저의 지역 확인하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>4. 게임 유저의 지역 확인하기<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK는 게임 유저에게 EU 지역 유저의 여부 확인 API를 제공해드리고 있습니다. <br />
 UPSDK를 초기화하기 전에 호출합니다.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">isEuropeanUnionUser</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span>
@@ -348,7 +351,7 @@ UPSDK를 초기화하기 전에 호출합니다.</p>
         <a href="js02_7_sample_demo.html" class="btn btn-neutral float-right" title="Demo 다운로드" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="js02_5_sample_video.html" class="btn btn-neutral" title="리워드 동영상 광고(Rewarded Video Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="js02_5_sample_video.html" class="btn btn-neutral float-left" title="리워드 동영상 광고(Rewarded Video Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -357,7 +360,7 @@ UPSDK를 초기화하기 전에 호출합니다.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -374,33 +377,16 @@ UPSDK를 초기화하기 전에 호출합니다.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

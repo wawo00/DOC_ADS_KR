@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="맞춤형 배너 광고(Banner Ad)" href="android04_2_banner_custom.html" />
     <link rel="prev" title="배너 광고(Banner Ad)" href="android04_banner_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,16 +171,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="banner-ad">
-<span id="banner-ad"></span><h1>배너 광고(Banner Ad) 빠른 설정<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
+<h1>배너 광고(Banner Ad) 빠른 설정<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="upgameeasybannerwrapper">
-<span id="upgameeasybannerwrapper"></span><h2>UPGameEasyBannerWrapper를 적용한 화면<a class="headerlink" href="#upgameeasybannerwrapper" title="Permalink to this headline">¶</a></h2>
+<h2>UPGameEasyBannerWrapper를 적용한 화면<a class="headerlink" href="#upgameeasybannerwrapper" title="Permalink to this headline">¶</a></h2>
 <p>배너 광고를 프로젝트의 상단이나 하단에만 추가하길 원하며, 배너 광고의 액티비티가 현재 프로젝트의 <br />
 액티비티인 경우, 아래의 권장 방법을 통해 더욱 빠르고 간편하게 결합할 수 있습니다. <br />
 이 경우, UPSDK는 다음의 객체를 패키지로 제공하고 있습니다.
 <code class="docutils literal notranslate"><span class="pre">com.up.ads.wrapper.banner.UPGameEasyBannerWrapper</span></code></p>
 </div>
 <div class="section" id="upgameeasybannerwrapper-api">
-<span id="upgameeasybannerwrapper-api"></span><h2>UPGameEasyBannerWrapper API 인터페이스 소개<a class="headerlink" href="#upgameeasybannerwrapper-api" title="Permalink to this headline">¶</a></h2>
+<h2>UPGameEasyBannerWrapper API 인터페이스 소개<a class="headerlink" href="#upgameeasybannerwrapper-api" title="Permalink to this headline">¶</a></h2>
 <p>UPGameEasyBannerWrapper는 가로형으로 설계되었으므로, <br />
 아래와 같이 <code class="docutils literal notranslate"><span class="pre">UPGameEasyBannerWrapper.getInstance().XXXX()</span></code> 메소드를 사용하여 API 인터페이스를 호출할 수 있습니다.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span>   <span class="cm">/**</span>
@@ -234,8 +237,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="upgameeasybannerwrapper">
-<span id="id1"></span><h2>UPGameEasyBannerWrapper 사용 예시<a class="headerlink" href="#upgameeasybannerwrapper" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>UPGameEasyBannerWrapper 사용 예시<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>아래의 방법을 통해 현재 액티비티 하단에 배너 광고를 간단하게 빌드할 수 있습니다.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
@@ -278,7 +281,7 @@
         <a href="android04_2_banner_custom.html" class="btn btn-neutral float-right" title="맞춤형 배너 광고(Banner Ad)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android04_banner_catalog.html" class="btn btn-neutral" title="배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android04_banner_catalog.html" class="btn btn-neutral float-left" title="배너 광고(Banner Ad)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -287,7 +290,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -304,33 +307,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

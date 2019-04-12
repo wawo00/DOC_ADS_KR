@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="iOS" href="cpp01_3_help_ios.html" />
     <link rel="prev" title="Android Studio" href="cpp01_1_help_as.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -164,11 +167,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="eclipse">
-<span id="eclipse"></span><h1>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
+<h1>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="i-upsdk-cppplugin">
-<span id="i-upsdk-cppplugin"></span><h2>I. UPSDK CppPlugin의 구조<a class="headerlink" href="#i-upsdk-cppplugin" title="Permalink to this headline">¶</a></h2>
+<h2>I. UPSDK CppPlugin의 구조<a class="headerlink" href="#i-upsdk-cppplugin" title="Permalink to this headline">¶</a></h2>
 <p>Eclipse로 빌드된 프로젝트의 경우 UPSDK를 <code class="docutils literal notranslate"><span class="pre">*.jar</span></code>형식으로 프로젝트에 가져옵니다. UPSDK CppPlugin( <a class="reference external" href="https://upsdk-korean.readthedocs.io/ko/master/Cocos2d-X_Cpp/cpp03_7_sample_demo.html">Download Android-CPPSDK </a>)를 다운로드 하고 압축 해제를 합니다.</p>
-<p><img alt="ec-1-1" src="http://docc.upltv.com/uploads/201805/5afd3722e5ab6_5afd3722.png" /></p>
+<p><img alt="ec-1-1" src="http://docc.upltv.com/uploads/201805/5afd3722e5ab6_5afd3722.png" />ec-1-1</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">Eclipse</span></code>: 이 디렉토리에는 Eclipse 프로젝트 액세스에 필요한 광고 의존성 라이브러리 파일이 주로 포함되어 있습니다.</li>
 <li><code class="docutils literal notranslate"><span class="pre">cpp</span></code>: 이 디렉토리에는 주로 현재 Cocos2d-X cpp 프로젝트를 UPSDK 인터페이스 호출과 연동하기 위한 <br />
@@ -179,19 +182,19 @@
 </ul>
 </div>
 <div class="section" id="ii-upsdk">
-<span id="ii-upsdk"></span><h2>II. UPSDK 메인 패키지 가져오기<a class="headerlink" href="#ii-upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>II. UPSDK 메인 패키지 가져오기<a class="headerlink" href="#ii-upsdk" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h3>1. UPSDK 파일 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<h3>1. UPSDK 파일 추가하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK의 3.0.03 버전을 예시로 들겠습니다. <code class="docutils literal notranslate"><span class="pre">upsdk_ads</span></code> 디렉토리에는 <code class="docutils literal notranslate"><span class="pre">libs</span></code>, <code class="docutils literal notranslate"><span class="pre">res</span></code>및 <code class="docutils literal notranslate"><span class="pre">assets</span></code>의 세 개의 디렉토리가 있습니다.</p>
 <p>디렉토리의 콘텐츠들을 Eclipse 메인 프로젝트 해당 디렉토리로 복사합니다. <br />
 (참고:  libs 디렉토리가 없는 경우 src와 동일한 디렉토리를 생성합니다.) <br />
 추가한 후의 구성은 아래와 같습니다.</p>
-<p><img alt="ec-2-1" src="http://docc.upltv.com/uploads/201805/5afd39e93c234_5afd39e9.png" /></p>
+<p><img alt="ec-2-1" src="http://docc.upltv.com/uploads/201805/5afd39e93c234_5afd39e9.png" />ec-2-1</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_Cpp_3.0.03.jar</span></code>은 참조용 입니다.</div></blockquote>
 </div>
 <div class="section" id="minsdkversion-targetsdkversion-in-manifest">
-<span id="minsdkversion-targetsdkversion-in-manifest"></span><h3>2. minSdkVersion 및 targetSdkVersion in <code class="docutils literal notranslate"><span class="pre">Manifest</span></code>에서 확인하기<a class="headerlink" href="#minsdkversion-targetsdkversion-in-manifest" title="Permalink to this headline">¶</a></h3>
+<h3>2. minSdkVersion 및 targetSdkVersion in <code class="docutils literal notranslate"><span class="pre">Manifest</span></code>에서 확인하기<a class="headerlink" href="#minsdkversion-targetsdkversion-in-manifest" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK를 사용하려면 <code class="docutils literal notranslate"><span class="pre">minSdkVersion</span></code>이 15보다 크고, <code class="docutils literal notranslate"><span class="pre">targetSdkVersion</span></code>이 26보다 작아야 합니다. 이는 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>에서 <br />
 확인하시기 바랍니다.</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span> <span class="n">uses</span><span class="o">-</span><span class="n">sdk</span> <span class="nl">android:</span><span class="n">minSdkVersion</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nl">android:</span><span class="n">targetSdkVersion</span><span class="o">=</span><span class="s2">&quot;24&quot;</span> <span class="o">/&gt;</span>
@@ -199,7 +202,7 @@
 </div>
 </div>
 <div class="section" id="so">
-<span id="so"></span><h3>3. *.so 파일이 정렬되었는지 확인하기<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
+<h3>3. *.so 파일이 정렬되었는지 확인하기<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
 <p>폴더 이름 libs에는 세 가지 유형의 <code class="docutils literal notranslate"><span class="pre">libs</span></code>파일이 있습니다.</p>
 <ul class="simple">
 <li>armeabi</li>
@@ -210,16 +213,16 @@
 </div>
 </div>
 <div class="section" id="iii">
-<span id="iii"></span><h2>III. 광고 네트워크 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
+<h2>III. 광고 네트워크 추가하기<a class="headerlink" href="#iii" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="google-ads-sdk">
-<span id="google-ads-sdk"></span><h3>1. Google Ads SDK 추가<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
+<h3>1. Google Ads SDK 추가<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
 <p>다음과 같이 <strong>UPSDK의 파일 추가하기</strong>를 참조하여 Google 광고를 아래와 같이 프로젝트에 추가합니다.</p>
-<p><img alt="ec-3-1" src="http://docc.upltv.com/uploads/201805/5afd45a3b7d61_5afd45a3.png" /></p>
+<p><img alt="ec-3-1" src="http://docc.upltv.com/uploads/201805/5afd45a3b7d61_5afd45a3.png" />ec-3-1</p>
 <blockquote>
 <div>특히 프로젝트에 이미 다른 버전의 Google Play 서비스가 있는 경우 상위 버전을 사용하시기 바랍니다.</div></blockquote>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h3>2. 기타 광고 네트워크 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>2. 기타 광고 네트워크 추가하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>더 많은 수익을 위해 프로젝트에 가능한 한 많은 광고 라이브러리를 추가합니다.</p>
 <p><code class="docutils literal notranslate"><span class="pre">optional_ads</span></code>라는 이름의 폴더는 <code class="docutils literal notranslate"><span class="pre">*.jar</span></code>형식으로 존재하는 네트워크 의존성 파일을 포함하고 있습니다. <strong>UPSDK의 파일 <br />
 추가</strong>를 참조하여 이 폴더를 프로젝트에 추가하고 AndroidManifest 파일의 내용을 프로젝트의 Manifest 파일에 <br />
@@ -227,31 +230,31 @@
 </div>
 </div>
 <div class="section" id="iv-android">
-<span id="iv-android"></span><h2>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h2>
+<h2>IV. Android 지원 라이브러리 추가하기<a class="headerlink" href="#iv-android" title="Permalink to this headline">¶</a></h2>
 <p>광고 디스플레이는 <code class="docutils literal notranslate"><span class="pre">support</span></code> 라이브러리가 필요하기에 프로젝트로 가져옵니다. <code class="docutils literal notranslate"><span class="pre">android_support_library/libs</span></code>폴더에 <br />
 해당 <code class="docutils literal notranslate"><span class="pre">xxx.jar</span></code> 파일이 있습니다. 다음과 같이 해당 파일을 <code class="docutils literal notranslate"><span class="pre">libs</span></code> 디렉토리에 추가합니다.</p>
-<p><img alt="ec-4-1" src="http://docc.upltv.com/uploads/201805/5afd4483c57c1_5afd4483.png" /></p>
+<p><img alt="ec-4-1" src="http://docc.upltv.com/uploads/201805/5afd4483c57c1_5afd4483.png" />ec-4-1</p>
 </div>
 <div class="section" id="v-androidmanifest-xml">
-<span id="v-androidmanifest-xml"></span><h2>V. AndroidManifest.xml 파일 수정<a class="headerlink" href="#v-androidmanifest-xml" title="Permalink to this headline">¶</a></h2>
+<h2>V. AndroidManifest.xml 파일 수정<a class="headerlink" href="#v-androidmanifest-xml" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> 파일의 콘텐츠를 프로젝트의 관련 위치로 복사합니다.</p>
 </div>
 <div class="section" id="vi-cpp">
-<span id="vi-cpp"></span><h2>Ⅵ. *.cpp 파일 추가하기<a class="headerlink" href="#vi-cpp" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id2"></span><h3>1. 프로젝트에 파일 추가하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<h2>Ⅵ. *.cpp 파일 추가하기<a class="headerlink" href="#vi-cpp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1. 프로젝트에 파일 추가하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK는 *cpp 소스 파일을 통해 네이티브 인터페이스(Native Interface)에 대한 크로스 플랫폼(Cross-Platform)을 <br />
 구현하므로 <code class="docutils literal notranslate"><span class="pre">cpp/upltv</span></code>에 있는 모든 *.cpp 및 *.h 파일을 현재 프로젝트에 복사하시기 바랍니다.</p>
 <p>Cocos2d-x 3.16 버전을 Classes 폴더에 복사할 수 있습니다. 버전 차이가 있는 경우 수정을 참조하시기 바랍니다. <br />
 복사 후의 디렉토리는 아래와 같습니다.</p>
-<p><img alt="classes" src="http://docc.upltv.com/uploads/201804/5acac9170fddc_5acac917.png" /></p>
+<p><img alt="classes" src="http://docc.upltv.com/uploads/201804/5acac9170fddc_5acac917.png" />classes</p>
 <blockquote>
 <div>본문은 cocos2dx-3.16을 바탕으로 서술하고 있습니다. 디렉토리가 일치하지 않으면 담당자에게 문의하여 <br />
 추가 지원을 받아보세요.</div></blockquote>
 </div>
 </div>
 <div class="section" id="jni-android-mk">
-<span id="jni-android-mk"></span><h2>2. jni 디렉토리에서 android.mk 수정하기<a class="headerlink" href="#jni-android-mk" title="Permalink to this headline">¶</a></h2>
+<h2>2. jni 디렉토리에서 android.mk 수정하기<a class="headerlink" href="#jni-android-mk" title="Permalink to this headline">¶</a></h2>
 <p>프로젝트의 jni 디렉토리에 있는 android.mk 파일을 엽니다.</p>
 <p><strong>UpltvAndroid.cpp,CocosUpLtv.cpp,UpltvBridge.cpp</strong> 파일을 <strong>LOCAL_SRC_FILES</strong>로 복사합니다. <br />
 Cocos2d-X 3.16을 예시로, 추가 방법은 다음과 같습니다. 기타 버전의 경우 해당되는 경로를 수정합니다.</p>
@@ -265,12 +268,12 @@ Cocos2d-X 3.16을 예시로, 추가 방법은 다음과 같습니다. 기타 버
 </div>
 </div>
 <div class="section" id="vii-proguard">
-<span id="vii-proguard"></span><h2>Ⅶ. Proguard 설정 수정하기<a class="headerlink" href="#vii-proguard" title="Permalink to this headline">¶</a></h2>
+<h2>Ⅶ. Proguard 설정 수정하기<a class="headerlink" href="#vii-proguard" title="Permalink to this headline">¶</a></h2>
 <p>프로젝트에서 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>를 사용하는 경우, <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>에서 파일의 내용을 프로젝트에서 <br />
 사용하는 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 위치로 복사합니다.</p>
 </div>
 <div class="section" id="viii-demo">
-<span id="viii-demo"></span><h2>Ⅷ.Demo 프로젝트<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
+<h2>Ⅷ.Demo 프로젝트<a class="headerlink" href="#viii-demo" title="Permalink to this headline">¶</a></h2>
 <p>광고 SDK를 쉽고 빠르게 결합할 수 있도록 <a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Studio">Demo 프로젝트 </a>를 제공합니다.</p>
 </div>
 </div>
@@ -286,7 +289,7 @@ Cocos2d-X 3.16을 예시로, 추가 방법은 다음과 같습니다. 기타 버
         <a href="cpp01_3_help_ios.html" class="btn btn-neutral float-right" title="iOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cpp01_1_help_as.html" class="btn btn-neutral" title="Android Studio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cpp01_1_help_as.html" class="btn btn-neutral float-left" title="Android Studio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -295,7 +298,7 @@ Cocos2d-X 3.16을 예시로, 추가 방법은 다음과 같습니다. 기타 버
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -312,33 +315,16 @@ Cocos2d-X 3.16을 예시로, 추가 방법은 다음과 같습니다. 기타 버
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

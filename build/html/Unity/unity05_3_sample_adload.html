@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin 광고 실행하기" href="unity05_4_sample_adshow.html" />
     <link rel="prev" title="Unity Plugin A/B 테스트" href="unity05_2_sample_abtest.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -171,14 +174,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin">
-<span id="unity-plugin"></span><h1>Unity Plugin 광고 로드<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<h1>Unity Plugin 광고 로드<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h2>1. 삽입 광고(Interstitial Ad) 로딩의 콜백<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
+<h2>1. 삽입 광고(Interstitial Ad) 로딩의 콜백<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">* 삽입 광고 로딩을 위한 API 콜백을 추가합니다.</span>
-<span class="cm">* @param cpPlaceId:     삽입 광고의 표시이며, 공백 혹은 null이 되면 안됩니다.</span>
-<span class="cm">* @param success        로딩 성공의 콜백</span>
-<span class="cm">* @param fail         로딩 실패의 콜백</span>
+<span class="cm">* @param cpPlaceId:  	삽입 광고의 표시이며, 공백 혹은 null이 되면 안됩니다.</span>
+<span class="cm">* @param success 	    로딩 성공의 콜백</span>
+<span class="cm">* @param fail     	  로딩 실패의 콜백</span>
 <span class="cm">*</span>
 <span class="cm">* 콜백 매개변수의 유형: Action &lt;string,string&gt;</span>
 <span class="cm">* 첫 번째는 cpPlaceID이며 placementId를 나타내며, 공백 혹은 null 입니다. 두 번째 매개변수는 정보 전달 기능이며, 공백 혹은 null 입니다.</span>
@@ -208,12 +211,12 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>2. 리워드 동영상 광고 로딩의 콜백<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>2. 리워드 동영상 광고 로딩의 콜백<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">* 리워드 동영상 광고 로딩을 위한 API 콜백을 추가합니다.</span>
-<span class="cm">* @param success    로딩 성공의 콜백</span>
-<span class="cm">* @param fail       로딩 실패의 콜백</span>
+<span class="cm">* @param success 	로딩 성공의 콜백</span>
+<span class="cm">* @param fail     	로딩 실패의 콜백</span>
 <span class="cm">*</span>
 <span class="cm">* 콜백 매개변수의 유형: Action &lt;string,string&gt;</span>
 <span class="cm">* 첫 번째는 cpPlaceID이며 placementid를 나타내며, 공백 혹은 null 입니다. 두 번째 매개변수는 정보 전달 기능이며, 공백 혹은 null 입니다.</span>
@@ -260,7 +263,7 @@
         <a href="unity05_4_sample_adshow.html" class="btn btn-neutral float-right" title="Unity Plugin 광고 실행하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity05_2_sample_abtest.html" class="btn btn-neutral" title="Unity Plugin A/B 테스트" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity05_2_sample_abtest.html" class="btn btn-neutral float-left" title="Unity Plugin A/B 테스트" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -269,7 +272,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -286,33 +289,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

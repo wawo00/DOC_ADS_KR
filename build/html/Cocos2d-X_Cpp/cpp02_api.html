@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CppPlugin 샘플" href="cpp03_sample_catalog.html" />
     <link rel="prev" title="iOS" href="cpp01_3_help_ios.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -157,13 +160,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="upsdk-cocos2d-x-cpp-api">
-<span id="upsdk-cocos2d-x-cpp-api"></span><h1>UPSDK cocos2d-X Cpp API<a class="headerlink" href="#upsdk-cocos2d-x-cpp-api" title="Permalink to this headline">¶</a></h1>
+<h1>UPSDK cocos2d-X Cpp API<a class="headerlink" href="#upsdk-cocos2d-x-cpp-api" title="Permalink to this headline">¶</a></h1>
 <p>전체 <strong>UpltvCppBridge</strong> 디렉토리에는 * upltvbridge.h * 파일, 주로 외부 액세스 API 및 콜백 기능을 정의합니다.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;UpltvBridge.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>1. 콜백 기능 정의<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>1. 콜백 기능 정의<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">UpltvSdkBoolCallback</span><span class="p">)(</span><span class="kt">bool</span> <span class="n">r</span><span class="p">);</span>
 <span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">UpltvSdkStringBoolCallback</span><span class="p">)(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpadid</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">r</span><span class="p">);</span>
 <span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">UpltvSdkStringCallback_1</span><span class="p">)(</span><span class="n">UpltvAdEventEnum</span><span class="o">::</span><span class="n">AdEventType</span> <span class="n">type</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cpadid</span><span class="p">);</span>
@@ -172,10 +175,10 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>2. 열거형<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id3"></span><h3>2.1  광고 콜백 이벤트<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h2>2. 열거형<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>2.1  광고 콜백 이벤트<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UpltvAdEventEnum</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
@@ -211,7 +214,7 @@
 </div>
 </div>
 <div class="section" id="gdpr">
-<span id="gdpr"></span><h3>2.2 GDPR 승인 상황<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<h3>2.2 GDPR 승인 상황<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UpltvGDPRPermissionEnum</span> <span class="p">{</span>
 
 <span class="k">public</span><span class="o">:</span>
@@ -228,9 +231,9 @@
 </div>
 </div>
 <div class="section" id="api">
-<span id="api"></span><h2>3. API 도입<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<h2>3. API 도입<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sdk">
-<span id="sdk"></span><h3>3.1 SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h3>
+<h3>3.1 SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* UPSDK를 초기화합니다</span>
 <span class="cm">* SDK의 다른 API 인터페이스를 사용하기 전에 SDK 초기화를 완료하시기 바랍니다</span>
@@ -256,7 +259,7 @@
 </div>
 </div>
 <div class="section" id="a-b">
-<span id="a-b"></span><h3>3.2 A/B 테스트 초기화 및 데이터 가져오기<a class="headerlink" href="#a-b" title="Permalink to this headline">¶</a></h3>
+<h3>3.2 A/B 테스트 초기화 및 데이터 가져오기<a class="headerlink" href="#a-b" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* A/B 테스트를 할 때, SDK 초기화 후 A/B테스트 초기화하는데 아래 메소드를 호출합니다.</span>
 <span class="cm">* @param gameAccountId          const char*유형, 게임 유저의 id (필수사항)</span>
@@ -281,7 +284,7 @@
 </div>
 </div>
 <div class="section" id="rewarded-video-ad">
-<span id="rewarded-video-ad"></span><h3>3.3 리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h3>
+<h3>3.3 리워드 동영상 광고(Rewarded Video Ad)<a class="headerlink" href="#rewarded-video-ad" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* 리워드 동영상의 디버그 인터페이스를 엽니다.</span>
 <span class="cm">*/</span>
@@ -321,7 +324,7 @@
 </div>
 </div>
 <div class="section" id="interstitial-ad">
-<span id="interstitial-ad"></span><h3>3.4 삽입 광고(Interstitial Ad)<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h3>
+<h3>3.4 삽입 광고(Interstitial Ad)<a class="headerlink" href="#interstitial-ad" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* 삽입 광고 디버그 인터페이스를 엽니다.</span>
 <span class="cm">*/</span>
@@ -373,7 +376,7 @@
 </div>
 </div>
 <div class="section" id="banner-ad">
-<span id="banner-ad"></span><h3>3.5 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h3>
+<h3>3.5 배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* 배너 광고 placement ID의 콜백 인터페이스를 설정합니다. 콜백 인터페이스는 저장되어</span>
 <span class="cm">upltv:removeBannerAdAt(cpPlaceId) 를 호출할 때 삭제됩니다.</span>
@@ -420,8 +423,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h3>3.6 참고 설명<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>3.6 참고 설명<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* SDK 초기화할 때, 자동 광고 로딩이 아닌 게임에 따라 맞춤형 설정을 통해 로딩을 하고자 하는 경우</span>
 <span class="cm">* 조건:  SDK가 임의로 자동 광고를 로딩을 할수 없거나 UPLTV의 백그라운드에서 이러한 기능을 꺼 두었을 경우.</span>
@@ -436,8 +439,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="gdpr">
-<span id="id5"></span><h3>4. GDPR<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>4. GDPR<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">GDPR</span> <span class="pre">&quot;The</span> <span class="pre">General</span> <span class="pre">Data</span> <span class="pre">Protection</span> <span class="pre">Regulation&quot;</span></code>은 2018년 5월 25일부터 시행된 EU(유럽연합)의 개인정보보호 법령이며, <br />
 EU 지역  고객분께서 본 제품을 사용하시더라도 <code class="docutils literal notranslate"><span class="pre">UPSDK</span></code>는 아래와 같은 솔루션을 제공함으로써 <code class="docutils literal notranslate"><span class="pre">GDPR</span></code>을 준수하고 있습니다.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
@@ -487,7 +490,7 @@ EU 지역  고객분께서 본 제품을 사용하시더라도 <code class="docu
         <a href="cpp03_sample_catalog.html" class="btn btn-neutral float-right" title="CppPlugin 샘플" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cpp01_3_help_ios.html" class="btn btn-neutral" title="iOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cpp01_3_help_ios.html" class="btn btn-neutral float-left" title="iOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -496,7 +499,7 @@ EU 지역  고객분께서 본 제품을 사용하시더라도 <code class="docu
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -513,33 +516,16 @@ EU 지역  고객분께서 본 제품을 사용하시더라도 <code class="docu
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

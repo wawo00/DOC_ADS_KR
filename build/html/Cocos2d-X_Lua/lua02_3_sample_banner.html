@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="삽입 광고(Interstitial Ad) API" href="lua02_4_sample_inter.html" />
     <link rel="prev" title="A/B 테스트" href="lua02_2_sample_abtest.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,11 +170,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="banner-ad">
-<span id="banner-ad"></span><h1>배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
+<h1>배너 광고(Banner Ad)<a class="headerlink" href="#banner-ad" title="Permalink to this headline">¶</a></h1>
 <p>배너 광고(Banner Ad)는 상단 배너와 하단 배너로 구분되며, LuaPlugin은 디스플레이, 숨기기, 제거 및 이벤트 콜백과 같은 <br />
 인터페이스를 제공하여 배너 광고의 구현을 더욱 단순화 합니다.</p>
-<div class="section" id="">
-<span id="id1"></span><h2>1. 배너 콜백<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>1. 배너 콜백<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>배너 광고는 배너 광고 및 클릭, 이벤트 콜백 인터페이스의 디스플레이를 설정해야 합니다. 콜백 인터페이스는 <br />
 Plug-in에 의해 내부적으로 저장되므로 여러 번 설정할 필요가 없습니다. <br />
 upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
@@ -204,8 +207,8 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>2. 상단 배너 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>2. 상단 배너 광고 실행하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에 따른 스크린의 상단에 배너가 실행됩니다.</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- According to  &#39;cpPlaceId&#39; show banner ads at the top of the current screen</span>
 <span class="n">upltv</span><span class="p">:</span><span class="n">showBannerAdAtTop</span><span class="p">(</span><span class="n">cpPlaceId</span><span class="p">)</span>
@@ -240,8 +243,8 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>3. 상단 배너 광고 숨기기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3. 상단 배너 광고 숨기기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">upltv</span><span class="p">:</span><span class="n">hideBannerAdAtTop</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -255,8 +258,8 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>4. 하단 배너 광고 실행하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>4. 하단 배너 광고 실행하기<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>매개변수 <code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">ID</span></code>에 따른 스크린의 하단 배너가 실행됩니다.</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">upltv</span><span class="p">:</span><span class="n">showBannerAdAtBottom</span><span class="p">(</span><span class="n">cpPlaceId</span><span class="p">)</span>
 </pre></div>
@@ -271,8 +274,8 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h2>5. 하단 배너 광고 숨기기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>5. 하단 배너 광고 숨기기<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">upltv</span><span class="p">:</span><span class="n">hideBannerAdAtBottom</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -286,8 +289,8 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id6"></span><h2>6. 배너 광고 삭제하기<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>6. 배너 광고 삭제하기<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>광고 placement ID에 따른 배너를 제거할 수 있습니다.</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">upltv</span><span class="p">:</span><span class="n">removeBannerAdAt</span><span class="p">(</span><span class="n">cpPlaceId</span><span class="p">)</span>
 </pre></div>
@@ -316,7 +319,7 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
         <a href="lua02_4_sample_inter.html" class="btn btn-neutral float-right" title="삽입 광고(Interstitial Ad) API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="lua02_2_sample_abtest.html" class="btn btn-neutral" title="A/B 테스트" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lua02_2_sample_abtest.html" class="btn btn-neutral float-left" title="A/B 테스트" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -325,7 +328,7 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -342,33 +345,16 @@ upltv:removeBannerAdAt(cpPlaceId)라는 호출만 삭제됩니다.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

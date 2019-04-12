@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SDK 초기화" href="android03_init.html" />
     <link rel="prev" title="FAQ" href="android01_3_help_faq.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -161,21 +164,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>65535 제한 문제 해결방법<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>65535 제한 문제 해결방법<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>프레임워크 절차에서 너무 많은 미디에이션 SDK를 적용한 경우, 아래와 같은 문제가 발생할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Conversion</span> <span class="n">to</span> <span class="n">Dalvik</span> <span class="nb">format</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">dex</span><span class="p">:</span> <span class="n">method</span> <span class="n">ID</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mh">0xffff</span><span class="p">]:</span> <span class="mi">65536</span><span class="o">**</span>
 </pre></div>
 </div>
 <p>UPLTV는 이러한 제한 문제를 해결할 수 있도록 아래와 같은 메소드를 제공하고 있습니다.</p>
 <div class="section" id="i-proguard">
-<span id="i-proguard"></span><h2>I. Proguard 릴리즈<a class="headerlink" href="#i-proguard" title="Permalink to this headline">¶</a></h2>
+<h2>I. Proguard 릴리즈<a class="headerlink" href="#i-proguard" title="Permalink to this headline">¶</a></h2>
 <p>앱에서 Proguard를 릴리즈 하지 않았다면, 릴리즈하기를 권장합니다. 그래야 사용하지 않는 클래스 메소드를 <br />
 효과적으로 제외할 수 있습니다. Ads SDK Proguard 구성의 경우, 다운로드한 파일에 있는 <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>를 <br />
 참조합니다. Proguard를 릴리즈했음에도 제한 문제가 해결되지 않은 경우에는 아래의 방법을 참조하시기 바랍니다.</p>
 </div>
 <div class="section" id="ii-multidex">
-<span id="ii-multidex"></span><h2>II. MultiDex 메소드<a class="headerlink" href="#ii-multidex" title="Permalink to this headline">¶</a></h2>
+<h2>II. MultiDex 메소드<a class="headerlink" href="#ii-multidex" title="Permalink to this headline">¶</a></h2>
 <p>MultiDex는 65535제한을 해결하기 위해 Google에서 개발한 메소드입니다. Android Studio를 사용하여 개발중이라면, <br />
 훨씬 간편하게 구현할 수 있습니다. 아래의 단계에 따라 설정을 진행하시기 바랍니다.</p>
 <p>아래의 설정을 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> 프로젝트에 추가합니다.</p>
@@ -203,7 +206,7 @@
 </div>
 </div>
 <div class="section" id="iii-dex">
-<span id="iii-dex"></span><h2>III. Dex 동적 로딩 메소드 사용하기<a class="headerlink" href="#iii-dex" title="Permalink to this headline">¶</a></h2>
+<h2>III. Dex 동적 로딩 메소드 사용하기<a class="headerlink" href="#iii-dex" title="Permalink to this headline">¶</a></h2>
 <p>Eclipse를 사용하는 경우, MiltiDex 메소드 결합이 복잡해질 수 있습니다. <br />
 이를 해결하기 위해, Dex 동적 로딩 메소드를 제공하고 있습니다.</p>
 <p>다운로드한 SDK 압축파일에 있는 <code class="docutils literal notranslate"><span class="pre">assets</span></code>폴더를 프로젝트로 복사합니다.</p>
@@ -223,7 +226,7 @@
         <a href="android03_init.html" class="btn btn-neutral float-right" title="SDK 초기화" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_3_help_faq.html" class="btn btn-neutral" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_3_help_faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -232,7 +235,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -249,33 +252,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

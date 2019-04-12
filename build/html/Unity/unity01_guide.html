@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin 추가하기" href="unity02_unityplugin.html" />
     <link rel="prev" title="UPSDK Unity Plugin" href="../chapters/chapter03.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -160,7 +163,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin">
-<span id="unity-plugin"></span><h1>Unity Plugin 가이드<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<h1>Unity Plugin 가이드<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
 <p>C#으로 설계된 UPLTV AD SDK(Android,iOS 플랫폼 및 의존성 라이브러리)를 포함하는 <br />
 UPSDK Unity Plugin은 native API 호출을 제공하며, 삽입 광고(Interstitial Ad), 삽입 광고(Interstitial Ad) <br />
 및 배너 광고(Banner Ad)와 같은 비즈니스 기능을 구현합니다.</p>
@@ -175,13 +178,13 @@ UPSDK Unity Plugin은 native API 호출을 제공하며, 삽입 광고(Interstit
 iOS SDK의 용량은 Android 버전과 차이가 크므로, 세 가지 액세스 방법이 제공됩니다. <br />
 상황에 따라 적절한 방법을 선택하시기 바랍니다.</p>
 <div class="section" id="android">
-<span id="android"></span><h2>1. Android 플랫폼 전용<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h2>
+<h2>1. Android 플랫폼 전용<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>Android 플랫폼용으로만 앱을 출시하는 경우 Android 플랫폼 Plugin만 선택하는 것이 좋습니다. <br />
 Plugin의 크기(&lt;10M)는 iOS(540M)에 비해 매우 가볍습니다. <br /></div></blockquote>
 </div>
 <div class="section" id="ios">
-<span id="ios"></span><h2>2. iOS 플랫폼 전용<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h2>
+<h2>2. iOS 플랫폼 전용<a class="headerlink" href="#ios" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>iOS 플랫폼용으로만 앱을 출시하는 경우 iOS 플랫폼 Plugin만 선택하는 것이 좋습니다. <br />
 Plugin 패키지가 크므로(UPSDK의 iOS 지원 및 타사 라이브러리 포함) 다운로드할 때 네트워크 연결을 <br />
@@ -189,14 +192,14 @@ Plugin 패키지가 크므로(UPSDK의 iOS 지원 및 타사 라이브러리 포
 iOS Plugin 패키지가 Android보다 훨씬 크기 때문에, 더 이상 iOS Plugin 패키지를 개별로 제공하지 않습니다. <br /></div></blockquote>
 </div>
 <div class="section" id="android-and-ios">
-<span id="android-and-ios"></span><h2>3. Android and iOS<a class="headerlink" href="#android-and-ios" title="Permalink to this headline">¶</a></h2>
+<h2>3. Android and iOS<a class="headerlink" href="#android-and-ios" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>Android 및 iOS 플랫폼을 모두 고려해 설계된 앱인 경우, UPSDK Unity Plugin을 권장합니다. <br />
 이 패키지(550M)에는 UPSDK 및 해당 타사 라이브러리의 Android 및 iOS 지원이 포함됩니다. <br />
 (다운로드 시 안정된 네트워크 상태를 유지하시기 바랍니다).</div></blockquote>
 </div>
 <div class="section" id="upsdk-unity-plugin">
-<span id="upsdk-unity-plugin"></span><h2><a class="reference external" href="https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html">UPSDK Unity Plugin 다운로드</a><a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://upsdk-korean.readthedocs.io/ko/master/chapters/chapter09.html">UPSDK Unity Plugin 다운로드</a><a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -211,7 +214,7 @@ iOS Plugin 패키지가 Android보다 훨씬 크기 때문에, 더 이상 iOS Pl
         <a href="unity02_unityplugin.html" class="btn btn-neutral float-right" title="Unity Plugin 추가하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../chapters/chapter03.html" class="btn btn-neutral" title="UPSDK Unity Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../chapters/chapter03.html" class="btn btn-neutral float-left" title="UPSDK Unity Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -220,7 +223,7 @@ iOS Plugin 패키지가 Android보다 훨씬 크기 때문에, 더 이상 iOS Pl
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -237,33 +240,16 @@ iOS Plugin 패키지가 Android보다 훨씬 크기 때문에, 더 이상 iOS Pl
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="A/B 테스트" href="cpp03_2_sample_abtest.html" />
     <link rel="prev" title="CppPlugin 샘플" href="cpp03_sample_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,20 +171,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sdk">
-<span id="sdk"></span><h1>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
+<h1>SDK 초기화<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
 <p>이 부분에서는 Xcode를 사용한 예시만 설명드리고 있습니다. <br />
 다른 개발 툴을 사용하고 계신 분들께 불편을 끼쳐 드려 죄송합니다.</p>
 <p>UPLTV SDK를 통해 간단히 초기화 하실 수 있습니다.</p>
-<div class="section" id="">
-<span id="id1"></span><h2>아래의 참조를 프로젝트에 추가합니다.<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>아래의 참조를 프로젝트에 추가합니다.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;UpltvBridge.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h2>UPSDK 초기화<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="upsdk">
-<span id="id2"></span><h3>1. 지역 매개변수를 기반으로 UPSDK 초기화하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<h2>UPSDK 초기화<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1. 지역 매개변수를 기반으로 UPSDK 초기화하기<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* Initial SDK</span>
 <span class="cm">*/</span>
@@ -197,8 +200,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="upsdk">
-<span id="id3"></span><h3>2. 영역 매개변수와 콜백 기능을 기반으로 UPSDK 초기화하기<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>2. 영역 매개변수와 콜백 기능을 기반으로 UPSDK 초기화하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>초기화 결과를 알고 싶으시면 아래의 메소드를 사용하시기 바랍니다.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* @param callback SDK 초기화가 완료된 후 콜백 인터페이스, 콜백 인터페이스는 Boolean 매개변수 콜백(Boolean)을 포함하며, 성공 및 실패를 나타냅니다.</span>
@@ -235,7 +238,7 @@
 </div>
 </div>
 <div class="section" id="setcustomerid">
-<span id="setcustomerid"></span><h3>3. setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h3>
+<h3>3. setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h3>
 <p>Android 플랫폼에서만 지원합니다. GP가 아닌 패키지일 경우, 부가적인 통계적 오류를 방지하기 위해 <br />
 androidid로 전달할 수 있습니다.</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>/**
@@ -248,7 +251,7 @@ UpltvBridge::setCustomerId(androidid);
 </div>
 </div>
 <div class="section" id="onapplicationfocus">
-<span id="onapplicationfocus"></span><h3>4. onApplicationFocus() 추가하기<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h3>
+<h3>4. onApplicationFocus() 추가하기<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h3>
 <p>다음 코드를 참조하여 현재 프로젝트의 AppDelegate 클래스에 onApplicationFocus() 메소드를 추가하여 <br />
 UPSDK 게임 포그라운드에 변경 사항을 알립니다.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">AppDelegate</span><span class="o">::</span><span class="n">applicationDidEnterBackground</span><span class="p">()</span> <span class="p">{</span>
@@ -294,7 +297,7 @@ UPSDK 게임 포그라운드에 변경 사항을 알립니다.</p>
         <a href="cpp03_2_sample_abtest.html" class="btn btn-neutral float-right" title="A/B 테스트" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cpp03_sample_catalog.html" class="btn btn-neutral" title="CppPlugin 샘플" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cpp03_sample_catalog.html" class="btn btn-neutral float-left" title="CppPlugin 샘플" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -303,7 +306,7 @@ UPSDK 게임 포그라운드에 변경 사항을 알립니다.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, upltv.
+        &copy; Copyright 2018, upltv
 
     </p>
   </div>
@@ -320,33 +323,16 @@ UPSDK 게임 포그라운드에 변경 사항을 알립니다.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'kr',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/js/custom.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
