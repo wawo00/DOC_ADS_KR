@@ -104,7 +104,7 @@ defaultConfig {
 다음과 같이 다운로드합니다.
 
     dependencies {
-        compile 'com.google.android.gms:play-services-ads:15.0.1'
+        compile 'com.google.android.gms:play-services-ads:17.2.0'
     }
 
 > **프로젝트에 이미 다른 버전의 Google Play 서비스가 있는 경우 상위 버전을 사용하시기 바랍니다.**

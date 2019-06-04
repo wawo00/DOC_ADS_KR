@@ -136,10 +136,10 @@ Admob 광고를 프로젝트에 추가할 경우 Google 광고 지원을 포함�
 아래의 설명에 따라 의존성을 추가하실수 있습니다.
 ```groovy
     dependencies {
-        compile 'com.google.android.gms:play-services-ads:15.0.1'
+        compile 'com.google.android.gms:play-services-ads:17.2.0'
     }
-
 ```
+
 >로컬 gms play가 의존하고 있는 aar파일만 추가하길 희망하신다면 gradle파일에서 이 구성을 무시할 수 있습니다. <br />
 특히 프로젝트의 gms play-service 버전이 UPSDK 의존성과 다른 경우 상위 버전을 사용하세요.
 
