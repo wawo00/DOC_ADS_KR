@@ -15,7 +15,7 @@
 
 [SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.5.zip "SDK v3.0.07")
 
-[Other required SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/Framework_tp_v3.0.07.5.zip "Other required SDK v3.0.07")
+[Other required SDK v3.0.07.4](http://cnimg.dataverse.cn/upsdk/Framework_tp_v3.0.07.4.zip "Other required SDK v3.0.07")
 
 ## Unity SDK
 
@@ -110,4 +110,4 @@
 
 
 ## Current Version
-**Android 3.0.07.4/IOS 3.0.07.4**
+**Android 3.0.07.4/IOS 3.0.07.5**
